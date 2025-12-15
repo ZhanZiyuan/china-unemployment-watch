@@ -1,1 +1,1266 @@
-[]
+[
+  {
+    "date": "2021-12-20",
+    "jobSearch": 0,
+    "unemployment": 9,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 8
+  },
+  {
+    "date": "2021-12-27",
+    "jobSearch": 0,
+    "unemployment": 8.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 7
+  },
+  {
+    "date": "2022-01-03",
+    "jobSearch": 0,
+    "unemployment": 11,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 9
+  },
+  {
+    "date": "2022-01-10",
+    "jobSearch": 0,
+    "unemployment": 5.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 5
+  },
+  {
+    "date": "2022-01-17",
+    "jobSearch": 0,
+    "unemployment": 0,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 0
+  },
+  {
+    "date": "2022-01-24",
+    "jobSearch": 0,
+    "unemployment": 0,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 0
+  },
+  {
+    "date": "2022-01-31",
+    "jobSearch": 0,
+    "unemployment": 3.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 3
+  },
+  {
+    "date": "2022-02-07",
+    "jobSearch": 0,
+    "unemployment": 11.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 9
+  },
+  {
+    "date": "2022-02-14",
+    "jobSearch": 0,
+    "unemployment": 7,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 6
+  },
+  {
+    "date": "2022-02-21",
+    "jobSearch": 0,
+    "unemployment": 10.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 9
+  },
+  {
+    "date": "2022-02-28",
+    "jobSearch": 0,
+    "unemployment": 9,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 8
+  },
+  {
+    "date": "2022-03-07",
+    "jobSearch": 0,
+    "unemployment": 20.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 17
+  },
+  {
+    "date": "2022-03-14",
+    "jobSearch": 0,
+    "unemployment": 12.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-03-21",
+    "jobSearch": 0,
+    "unemployment": 19,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 16
+  },
+  {
+    "date": "2022-03-28",
+    "jobSearch": 0,
+    "unemployment": 13.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-04-04",
+    "jobSearch": 0,
+    "unemployment": 14.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 12
+  },
+  {
+    "date": "2022-04-11",
+    "jobSearch": 0,
+    "unemployment": 16.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 14
+  },
+  {
+    "date": "2022-04-18",
+    "jobSearch": 0,
+    "unemployment": 11.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 9
+  },
+  {
+    "date": "2022-04-25",
+    "jobSearch": 0,
+    "unemployment": 10.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 9
+  },
+  {
+    "date": "2022-05-02",
+    "jobSearch": 0,
+    "unemployment": 16,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 13
+  },
+  {
+    "date": "2022-05-09",
+    "jobSearch": 0,
+    "unemployment": 26.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 22
+  },
+  {
+    "date": "2022-05-16",
+    "jobSearch": 0,
+    "unemployment": 25.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 21
+  },
+  {
+    "date": "2022-05-23",
+    "jobSearch": 0,
+    "unemployment": 18.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 15
+  },
+  {
+    "date": "2022-05-30",
+    "jobSearch": 0,
+    "unemployment": 15,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 13
+  },
+  {
+    "date": "2022-06-06",
+    "jobSearch": 0,
+    "unemployment": 19.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 16
+  },
+  {
+    "date": "2022-06-13",
+    "jobSearch": 0,
+    "unemployment": 17.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 14
+  },
+  {
+    "date": "2022-06-20",
+    "jobSearch": 0,
+    "unemployment": 18.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 15
+  },
+  {
+    "date": "2022-06-27",
+    "jobSearch": 0,
+    "unemployment": 13.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-07-04",
+    "jobSearch": 0,
+    "unemployment": 16,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 13
+  },
+  {
+    "date": "2022-07-11",
+    "jobSearch": 0,
+    "unemployment": 16.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 14
+  },
+  {
+    "date": "2022-07-18",
+    "jobSearch": 0,
+    "unemployment": 15.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 13
+  },
+  {
+    "date": "2022-07-25",
+    "jobSearch": 0,
+    "unemployment": 7.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 6
+  },
+  {
+    "date": "2022-08-01",
+    "jobSearch": 0,
+    "unemployment": 10.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 9
+  },
+  {
+    "date": "2022-08-08",
+    "jobSearch": 0,
+    "unemployment": 19,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 16
+  },
+  {
+    "date": "2022-08-15",
+    "jobSearch": 0,
+    "unemployment": 16.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 14
+  },
+  {
+    "date": "2022-08-22",
+    "jobSearch": 0,
+    "unemployment": 17,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 14
+  },
+  {
+    "date": "2022-08-29",
+    "jobSearch": 0,
+    "unemployment": 14.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 12
+  },
+  {
+    "date": "2022-09-05",
+    "jobSearch": 0,
+    "unemployment": 13,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-09-12",
+    "jobSearch": 0,
+    "unemployment": 25,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 21
+  },
+  {
+    "date": "2022-09-19",
+    "jobSearch": 0,
+    "unemployment": 15.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 13
+  },
+  {
+    "date": "2022-09-26",
+    "jobSearch": 0,
+    "unemployment": 0,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 0
+  },
+  {
+    "date": "2022-10-03",
+    "jobSearch": 0,
+    "unemployment": 13.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-10-10",
+    "jobSearch": 0,
+    "unemployment": 12.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-10-17",
+    "jobSearch": 0,
+    "unemployment": 19.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 16
+  },
+  {
+    "date": "2022-10-24",
+    "jobSearch": 0,
+    "unemployment": 20.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 17
+  },
+  {
+    "date": "2022-10-31",
+    "jobSearch": 0,
+    "unemployment": 31.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 26
+  },
+  {
+    "date": "2022-11-07",
+    "jobSearch": 0,
+    "unemployment": 18.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 16
+  },
+  {
+    "date": "2022-11-14",
+    "jobSearch": 0,
+    "unemployment": 17.3,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 14
+  },
+  {
+    "date": "2022-11-21",
+    "jobSearch": 0,
+    "unemployment": 6.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 5
+  },
+  {
+    "date": "2022-11-28",
+    "jobSearch": 0,
+    "unemployment": 13,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-12-05",
+    "jobSearch": 0,
+    "unemployment": 7.5,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 6
+  },
+  {
+    "date": "2022-12-12",
+    "jobSearch": 0,
+    "unemployment": 13.8,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2022-12-19",
+    "jobSearch": 0,
+    "unemployment": 15,
+    "recruitment": 0,
+    "exams": 0,
+    "compositeIndex": 13
+  },
+  {
+    "date": "2022-12-26",
+    "jobSearch": 0,
+    "unemployment": 20.5,
+    "recruitment": 11.5,
+    "exams": 12.3,
+    "compositeIndex": 33
+  },
+  {
+    "date": "2023-01-02",
+    "jobSearch": 27,
+    "unemployment": 15.5,
+    "recruitment": 11,
+    "exams": 10.3,
+    "compositeIndex": 58
+  },
+  {
+    "date": "2023-01-09",
+    "jobSearch": 14.3,
+    "unemployment": 8.5,
+    "recruitment": 8.8,
+    "exams": 9.3,
+    "compositeIndex": 36
+  },
+  {
+    "date": "2023-01-16",
+    "jobSearch": 0,
+    "unemployment": 11.3,
+    "recruitment": 7.3,
+    "exams": 5,
+    "compositeIndex": 18
+  },
+  {
+    "date": "2023-01-23",
+    "jobSearch": 26,
+    "unemployment": 21,
+    "recruitment": 16.8,
+    "exams": 11,
+    "compositeIndex": 66
+  },
+  {
+    "date": "2023-01-30",
+    "jobSearch": 31.8,
+    "unemployment": 15.5,
+    "recruitment": 16.5,
+    "exams": 11.3,
+    "compositeIndex": 68
+  },
+  {
+    "date": "2023-02-06",
+    "jobSearch": 47.8,
+    "unemployment": 13.5,
+    "recruitment": 17.5,
+    "exams": 7.3,
+    "compositeIndex": 83
+  },
+  {
+    "date": "2023-02-13",
+    "jobSearch": 44.8,
+    "unemployment": 19,
+    "recruitment": 18,
+    "exams": 30.3,
+    "compositeIndex": 100
+  },
+  {
+    "date": "2023-02-20",
+    "jobSearch": 33.5,
+    "unemployment": 16,
+    "recruitment": 18.3,
+    "exams": 13.5,
+    "compositeIndex": 73
+  },
+  {
+    "date": "2023-02-27",
+    "jobSearch": 42.3,
+    "unemployment": 19.5,
+    "recruitment": 17.8,
+    "exams": 14.5,
+    "compositeIndex": 87
+  },
+  {
+    "date": "2023-03-06",
+    "jobSearch": 44.5,
+    "unemployment": 19.8,
+    "recruitment": 18.5,
+    "exams": 11,
+    "compositeIndex": 88
+  },
+  {
+    "date": "2023-03-13",
+    "jobSearch": 43.5,
+    "unemployment": 14.8,
+    "recruitment": 18.5,
+    "exams": 10,
+    "compositeIndex": 82
+  },
+  {
+    "date": "2023-03-20",
+    "jobSearch": 35,
+    "unemployment": 18.5,
+    "recruitment": 16.5,
+    "exams": 11.5,
+    "compositeIndex": 75
+  },
+  {
+    "date": "2023-03-27",
+    "jobSearch": 23,
+    "unemployment": 12,
+    "recruitment": 16.3,
+    "exams": 8.5,
+    "compositeIndex": 53
+  },
+  {
+    "date": "2023-04-03",
+    "jobSearch": 31.3,
+    "unemployment": 9.8,
+    "recruitment": 17.3,
+    "exams": 10.8,
+    "compositeIndex": 63
+  },
+  {
+    "date": "2023-04-10",
+    "jobSearch": 39.3,
+    "unemployment": 13,
+    "recruitment": 15.8,
+    "exams": 6.3,
+    "compositeIndex": 71
+  },
+  {
+    "date": "2023-04-17",
+    "jobSearch": 11.5,
+    "unemployment": 11,
+    "recruitment": 14,
+    "exams": 6.3,
+    "compositeIndex": 36
+  },
+  {
+    "date": "2023-04-24",
+    "jobSearch": 12,
+    "unemployment": 4.3,
+    "recruitment": 11,
+    "exams": 5,
+    "compositeIndex": 28
+  },
+  {
+    "date": "2023-05-01",
+    "jobSearch": 33.5,
+    "unemployment": 13.3,
+    "recruitment": 15.5,
+    "exams": 6,
+    "compositeIndex": 64
+  },
+  {
+    "date": "2023-05-08",
+    "jobSearch": 19.5,
+    "unemployment": 22.5,
+    "recruitment": 14,
+    "exams": 3.5,
+    "compositeIndex": 53
+  },
+  {
+    "date": "2023-05-15",
+    "jobSearch": 39.3,
+    "unemployment": 32.5,
+    "recruitment": 13.8,
+    "exams": 4.8,
+    "compositeIndex": 85
+  },
+  {
+    "date": "2023-05-22",
+    "jobSearch": 40.3,
+    "unemployment": 20.5,
+    "recruitment": 13,
+    "exams": 3.8,
+    "compositeIndex": 75
+  },
+  {
+    "date": "2023-05-29",
+    "jobSearch": 25.5,
+    "unemployment": 15,
+    "recruitment": 14.5,
+    "exams": 6.5,
+    "compositeIndex": 56
+  },
+  {
+    "date": "2023-06-05",
+    "jobSearch": 19.8,
+    "unemployment": 18.5,
+    "recruitment": 11.8,
+    "exams": 7.3,
+    "compositeIndex": 51
+  },
+  {
+    "date": "2023-06-12",
+    "jobSearch": 17.3,
+    "unemployment": 14.8,
+    "recruitment": 10.8,
+    "exams": 6.3,
+    "compositeIndex": 44
+  },
+  {
+    "date": "2023-06-19",
+    "jobSearch": 38,
+    "unemployment": 18,
+    "recruitment": 14.8,
+    "exams": 12.3,
+    "compositeIndex": 77
+  },
+  {
+    "date": "2023-06-26",
+    "jobSearch": 43.5,
+    "unemployment": 20,
+    "recruitment": 13.5,
+    "exams": 15,
+    "compositeIndex": 86
+  },
+  {
+    "date": "2023-07-03",
+    "jobSearch": 27.8,
+    "unemployment": 18.8,
+    "recruitment": 13.5,
+    "exams": 10,
+    "compositeIndex": 63
+  },
+  {
+    "date": "2023-07-10",
+    "jobSearch": 24.5,
+    "unemployment": 18.3,
+    "recruitment": 15.3,
+    "exams": 8.3,
+    "compositeIndex": 59
+  },
+  {
+    "date": "2023-07-17",
+    "jobSearch": 29.5,
+    "unemployment": 14.3,
+    "recruitment": 15.8,
+    "exams": 8.5,
+    "compositeIndex": 62
+  },
+  {
+    "date": "2023-07-24",
+    "jobSearch": 18.5,
+    "unemployment": 9.3,
+    "recruitment": 17.3,
+    "exams": 7.5,
+    "compositeIndex": 46
+  },
+  {
+    "date": "2023-07-31",
+    "jobSearch": 31.8,
+    "unemployment": 4.3,
+    "recruitment": 19,
+    "exams": 4.5,
+    "compositeIndex": 56
+  },
+  {
+    "date": "2023-08-07",
+    "jobSearch": 44,
+    "unemployment": 28.8,
+    "recruitment": 19.8,
+    "exams": 5.5,
+    "compositeIndex": 92
+  },
+  {
+    "date": "2023-08-14",
+    "jobSearch": 19.5,
+    "unemployment": 13.8,
+    "recruitment": 21.3,
+    "exams": 6,
+    "compositeIndex": 52
+  },
+  {
+    "date": "2023-08-21",
+    "jobSearch": 37,
+    "unemployment": 13,
+    "recruitment": 22,
+    "exams": 8,
+    "compositeIndex": 74
+  },
+  {
+    "date": "2023-08-28",
+    "jobSearch": 28.5,
+    "unemployment": 12.8,
+    "recruitment": 23.8,
+    "exams": 6.8,
+    "compositeIndex": 64
+  },
+  {
+    "date": "2023-09-04",
+    "jobSearch": 33.3,
+    "unemployment": 14.8,
+    "recruitment": 24.8,
+    "exams": 12,
+    "compositeIndex": 75
+  },
+  {
+    "date": "2023-09-11",
+    "jobSearch": 35.8,
+    "unemployment": 16,
+    "recruitment": 27.5,
+    "exams": 10,
+    "compositeIndex": 80
+  },
+  {
+    "date": "2023-09-18",
+    "jobSearch": 16.8,
+    "unemployment": 11.3,
+    "recruitment": 23.8,
+    "exams": 11.3,
+    "compositeIndex": 52
+  },
+  {
+    "date": "2023-09-25",
+    "jobSearch": 12,
+    "unemployment": 5.8,
+    "recruitment": 16.3,
+    "exams": 8,
+    "compositeIndex": 35
+  },
+  {
+    "date": "2023-10-02",
+    "jobSearch": 30,
+    "unemployment": 11.5,
+    "recruitment": 28.3,
+    "exams": 13.3,
+    "compositeIndex": 72
+  },
+  {
+    "date": "2023-10-09",
+    "jobSearch": 26,
+    "unemployment": 14.5,
+    "recruitment": 22.8,
+    "exams": 20,
+    "compositeIndex": 71
+  },
+  {
+    "date": "2023-10-16",
+    "jobSearch": 16.3,
+    "unemployment": 13.5,
+    "recruitment": 21,
+    "exams": 18.8,
+    "compositeIndex": 56
+  },
+  {
+    "date": "2023-10-23",
+    "jobSearch": 33,
+    "unemployment": 11,
+    "recruitment": 17.8,
+    "exams": 10.3,
+    "compositeIndex": 66
+  },
+  {
+    "date": "2023-10-30",
+    "jobSearch": 22.8,
+    "unemployment": 16,
+    "recruitment": 16.8,
+    "exams": 9,
+    "compositeIndex": 57
+  },
+  {
+    "date": "2023-11-06",
+    "jobSearch": 32.5,
+    "unemployment": 10.8,
+    "recruitment": 16.5,
+    "exams": 8.5,
+    "compositeIndex": 63
+  },
+  {
+    "date": "2023-11-13",
+    "jobSearch": 21.3,
+    "unemployment": 17.8,
+    "recruitment": 13.8,
+    "exams": 12.8,
+    "compositeIndex": 57
+  },
+  {
+    "date": "2023-11-20",
+    "jobSearch": 12,
+    "unemployment": 21.8,
+    "recruitment": 15.5,
+    "exams": 12,
+    "compositeIndex": 50
+  },
+  {
+    "date": "2023-11-27",
+    "jobSearch": 23.8,
+    "unemployment": 13.5,
+    "recruitment": 13,
+    "exams": 8.8,
+    "compositeIndex": 53
+  },
+  {
+    "date": "2023-12-04",
+    "jobSearch": 21,
+    "unemployment": 15.3,
+    "recruitment": 13,
+    "exams": 11.5,
+    "compositeIndex": 53
+  },
+  {
+    "date": "2023-12-11",
+    "jobSearch": 19.8,
+    "unemployment": 13.8,
+    "recruitment": 12.8,
+    "exams": 17.3,
+    "compositeIndex": 54
+  },
+  {
+    "date": "2023-12-18",
+    "jobSearch": 15,
+    "unemployment": 12.8,
+    "recruitment": 12.5,
+    "exams": 12.3,
+    "compositeIndex": 45
+  },
+  {
+    "date": "2023-12-25",
+    "jobSearch": 15,
+    "unemployment": 14,
+    "recruitment": 11.1,
+    "exams": 7.8,
+    "compositeIndex": 42
+  },
+  {
+    "date": "2024-01-01",
+    "jobSearch": 26,
+    "unemployment": 0,
+    "recruitment": 10.8,
+    "exams": 0,
+    "compositeIndex": 38
+  },
+  {
+    "date": "2024-01-08",
+    "jobSearch": 11,
+    "unemployment": 0,
+    "recruitment": 11.8,
+    "exams": 0,
+    "compositeIndex": 21
+  },
+  {
+    "date": "2024-01-15",
+    "jobSearch": 13.3,
+    "unemployment": 0,
+    "recruitment": 11.5,
+    "exams": 0,
+    "compositeIndex": 23
+  },
+  {
+    "date": "2024-01-22",
+    "jobSearch": 19.3,
+    "unemployment": 0,
+    "recruitment": 10.3,
+    "exams": 0,
+    "compositeIndex": 29
+  },
+  {
+    "date": "2024-01-29",
+    "jobSearch": 11.5,
+    "unemployment": 0,
+    "recruitment": 8.3,
+    "exams": 0,
+    "compositeIndex": 19
+  },
+  {
+    "date": "2024-02-05",
+    "jobSearch": 0,
+    "unemployment": 0,
+    "recruitment": 7,
+    "exams": 0,
+    "compositeIndex": 5
+  },
+  {
+    "date": "2024-02-12",
+    "jobSearch": 38.5,
+    "unemployment": 0,
+    "recruitment": 17.5,
+    "exams": 0,
+    "compositeIndex": 56
+  },
+  {
+    "date": "2024-02-19",
+    "jobSearch": 33,
+    "unemployment": 0,
+    "recruitment": 18.8,
+    "exams": 0,
+    "compositeIndex": 51
+  },
+  {
+    "date": "2024-02-26",
+    "jobSearch": 34.5,
+    "unemployment": 0,
+    "recruitment": 18.5,
+    "exams": 0,
+    "compositeIndex": 52
+  },
+  {
+    "date": "2024-03-04",
+    "jobSearch": 32.5,
+    "unemployment": 0,
+    "recruitment": 22,
+    "exams": 0,
+    "compositeIndex": 52
+  },
+  {
+    "date": "2024-03-11",
+    "jobSearch": 42,
+    "unemployment": 0,
+    "recruitment": 22.8,
+    "exams": 0,
+    "compositeIndex": 64
+  },
+  {
+    "date": "2024-03-18",
+    "jobSearch": 38,
+    "unemployment": 0,
+    "recruitment": 22,
+    "exams": 0,
+    "compositeIndex": 59
+  },
+  {
+    "date": "2024-03-25",
+    "jobSearch": 49.3,
+    "unemployment": 0,
+    "recruitment": 17.5,
+    "exams": 0,
+    "compositeIndex": 69
+  },
+  {
+    "date": "2024-04-01",
+    "jobSearch": 38,
+    "unemployment": 0,
+    "recruitment": 21.5,
+    "exams": 0,
+    "compositeIndex": 58
+  },
+  {
+    "date": "2024-04-08",
+    "jobSearch": 33,
+    "unemployment": 0,
+    "recruitment": 18.5,
+    "exams": 0,
+    "compositeIndex": 51
+  },
+  {
+    "date": "2024-04-15",
+    "jobSearch": 23,
+    "unemployment": 0,
+    "recruitment": 16.3,
+    "exams": 0,
+    "compositeIndex": 38
+  },
+  {
+    "date": "2024-04-22",
+    "jobSearch": 25,
+    "unemployment": 0,
+    "recruitment": 11.8,
+    "exams": 0,
+    "compositeIndex": 37
+  },
+  {
+    "date": "2024-04-29",
+    "jobSearch": 34.3,
+    "unemployment": 0,
+    "recruitment": 16.3,
+    "exams": 0,
+    "compositeIndex": 50
+  },
+  {
+    "date": "2024-05-06",
+    "jobSearch": 9.5,
+    "unemployment": 0,
+    "recruitment": 15,
+    "exams": 0,
+    "compositeIndex": 21
+  },
+  {
+    "date": "2024-05-13",
+    "jobSearch": 11.3,
+    "unemployment": 0,
+    "recruitment": 13.8,
+    "exams": 0,
+    "compositeIndex": 22
+  },
+  {
+    "date": "2024-05-20",
+    "jobSearch": 23,
+    "unemployment": 0,
+    "recruitment": 14,
+    "exams": 0,
+    "compositeIndex": 36
+  },
+  {
+    "date": "2024-05-27",
+    "jobSearch": 12.8,
+    "unemployment": 0,
+    "recruitment": 12,
+    "exams": 0,
+    "compositeIndex": 23
+  },
+  {
+    "date": "2024-06-03",
+    "jobSearch": 21.8,
+    "unemployment": 0,
+    "recruitment": 12,
+    "exams": 0,
+    "compositeIndex": 33
+  },
+  {
+    "date": "2024-06-10",
+    "jobSearch": 19.3,
+    "unemployment": 0,
+    "recruitment": 12.5,
+    "exams": 0,
+    "compositeIndex": 31
+  },
+  {
+    "date": "2024-06-17",
+    "jobSearch": 28.3,
+    "unemployment": 0,
+    "recruitment": 13.3,
+    "exams": 0,
+    "compositeIndex": 42
+  },
+  {
+    "date": "2024-06-24",
+    "jobSearch": 11.3,
+    "unemployment": 0,
+    "recruitment": 13.8,
+    "exams": 0,
+    "compositeIndex": 22
+  },
+  {
+    "date": "2024-07-01",
+    "jobSearch": 21.8,
+    "unemployment": 0,
+    "recruitment": 15.3,
+    "exams": 0,
+    "compositeIndex": 36
+  },
+  {
+    "date": "2024-07-08",
+    "jobSearch": 12.3,
+    "unemployment": 0,
+    "recruitment": 13.8,
+    "exams": 0,
+    "compositeIndex": 23
+  },
+  {
+    "date": "2024-07-15",
+    "jobSearch": 22,
+    "unemployment": 0,
+    "recruitment": 15.3,
+    "exams": 0,
+    "compositeIndex": 36
+  },
+  {
+    "date": "2024-07-22",
+    "jobSearch": 10.8,
+    "unemployment": 0,
+    "recruitment": 17,
+    "exams": 0,
+    "compositeIndex": 24
+  },
+  {
+    "date": "2024-07-29",
+    "jobSearch": 19,
+    "unemployment": 0,
+    "recruitment": 18,
+    "exams": 0,
+    "compositeIndex": 34
+  },
+  {
+    "date": "2024-08-05",
+    "jobSearch": 12.3,
+    "unemployment": 0,
+    "recruitment": 19,
+    "exams": 0,
+    "compositeIndex": 27
+  },
+  {
+    "date": "2024-08-12",
+    "jobSearch": 15,
+    "unemployment": 0,
+    "recruitment": 21.5,
+    "exams": 0,
+    "compositeIndex": 32
+  },
+  {
+    "date": "2024-08-19",
+    "jobSearch": 8.5,
+    "unemployment": 0,
+    "recruitment": 24,
+    "exams": 0,
+    "compositeIndex": 26
+  },
+  {
+    "date": "2024-08-26",
+    "jobSearch": 17.8,
+    "unemployment": 0,
+    "recruitment": 25.8,
+    "exams": 0,
+    "compositeIndex": 38
+  },
+  {
+    "date": "2024-09-02",
+    "jobSearch": 21,
+    "unemployment": 0,
+    "recruitment": 27.8,
+    "exams": 0,
+    "compositeIndex": 43
+  },
+  {
+    "date": "2024-09-09",
+    "jobSearch": 10.5,
+    "unemployment": 0,
+    "recruitment": 22.5,
+    "exams": 0,
+    "compositeIndex": 27
+  },
+  {
+    "date": "2024-09-16",
+    "jobSearch": 24.8,
+    "unemployment": 0,
+    "recruitment": 25.8,
+    "exams": 0,
+    "compositeIndex": 46
+  },
+  {
+    "date": "2024-09-23",
+    "jobSearch": 0,
+    "unemployment": 0,
+    "recruitment": 17,
+    "exams": 0,
+    "compositeIndex": 11
+  },
+  {
+    "date": "2024-09-30",
+    "jobSearch": 9.3,
+    "unemployment": 0,
+    "recruitment": 23.8,
+    "exams": 0,
+    "compositeIndex": 27
+  },
+  {
+    "date": "2024-10-07",
+    "jobSearch": 27,
+    "unemployment": 0,
+    "recruitment": 21.8,
+    "exams": 0,
+    "compositeIndex": 46
+  },
+  {
+    "date": "2024-10-14",
+    "jobSearch": 34.8,
+    "unemployment": 0,
+    "recruitment": 20,
+    "exams": 0,
+    "compositeIndex": 54
+  },
+  {
+    "date": "2024-10-21",
+    "jobSearch": 8.8,
+    "unemployment": 0,
+    "recruitment": 19.8,
+    "exams": 0,
+    "compositeIndex": 23
+  },
+  {
+    "date": "2024-10-28",
+    "jobSearch": 20.5,
+    "unemployment": 0,
+    "recruitment": 17.3,
+    "exams": 0,
+    "compositeIndex": 35
+  },
+  {
+    "date": "2024-11-04",
+    "jobSearch": 20.3,
+    "unemployment": 0,
+    "recruitment": 14.8,
+    "exams": 0,
+    "compositeIndex": 33
+  },
+  {
+    "date": "2024-11-11",
+    "jobSearch": 10.8,
+    "unemployment": 0,
+    "recruitment": 14.5,
+    "exams": 0,
+    "compositeIndex": 22
+  },
+  {
+    "date": "2024-11-18",
+    "jobSearch": 13.8,
+    "unemployment": 0,
+    "recruitment": 15.3,
+    "exams": 0,
+    "compositeIndex": 26
+  },
+  {
+    "date": "2024-11-25",
+    "jobSearch": 23.3,
+    "unemployment": 0,
+    "recruitment": 12.5,
+    "exams": 0,
+    "compositeIndex": 35
+  },
+  {
+    "date": "2024-12-02",
+    "jobSearch": 11.3,
+    "unemployment": 0,
+    "recruitment": 13,
+    "exams": 0,
+    "compositeIndex": 22
+  },
+  {
+    "date": "2024-12-09",
+    "jobSearch": 10,
+    "unemployment": 0,
+    "recruitment": 10.8,
+    "exams": 0,
+    "compositeIndex": 19
+  },
+  {
+    "date": "2024-12-16",
+    "jobSearch": 12,
+    "unemployment": 0,
+    "recruitment": 11.5,
+    "exams": 0,
+    "compositeIndex": 22
+  },
+  {
+    "date": "2024-12-23",
+    "jobSearch": 12.3,
+    "unemployment": 0,
+    "recruitment": 10.5,
+    "exams": 0,
+    "compositeIndex": 21
+  }
+]
