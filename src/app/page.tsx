@@ -6,14 +6,15 @@ import { KeywordsCard } from '@/components/unemployment-watch/keywords-card';
 import { getTrendsData, type DataPoint } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 
-export const revalidate = 3600; // Revalidate data every hour
-
-async function Page() {
-  const data: DataPoint[] = await getTrendsData();
+// This page is now static and will be updated when the data file is updated.
+function Page() {
+  const data: DataPoint[] = getTrendsData();
 
   const currentStatus = (() => {
     if (!data || data.length < 2) {
-      return { index: 0, change: 0, date: new Date().toISOString().split('T')[0] };
+      const latestDate = data && data.length > 0 ? data[data.length - 1].date : new Date().toISOString().split('T')[0];
+      const latestIndex = data && data.length > 0 ? data[data.length - 1].compositeIndex : 0;
+      return { index: latestIndex, change: 0, date: latestDate };
     }
     const latest = data[data.length - 1];
     const prev = data[data.length - 2];
@@ -35,7 +36,7 @@ async function Page() {
           </h1>
           <div className="flex items-center justify-center sm:justify-start gap-2">
             <p className="text-muted-foreground max-w-2xl">
-              基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标 (2021 - 至今)。
+              基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标 (过去5年)。
             </p>
             <Badge variant="outline" className="border-amber-500/50 text-amber-600 dark:text-amber-400 hidden sm:inline-flex">
               仅供研究参考
