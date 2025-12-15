@@ -1,0 +1,37 @@
+name: Update Trends Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch and update trends data
+        run: npm run fetch-trends
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/lib/trends-data.json
+          if ! git diff --staged --quiet; then
+            git commit -m "feat(data): update trends data"
+            git push
+          else
+            echo "No changes to commit."
+          fi

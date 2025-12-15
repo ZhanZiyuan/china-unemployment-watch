@@ -25,7 +25,7 @@ async function fetchYearlyData(keywords: string[], year: number): Promise<TrendD
       startTime: new Date(`${year}-01-01`),
       endTime: new Date(`${year}-12-31`),
     });
-    
+
     const data = JSON.parse(result);
     return data.default.timelineData.map((item: any) => ({
       time: format(new Date(item.time * 1000), 'yyyy-MM-dd'),
@@ -59,7 +59,7 @@ async function fetchAllData() {
       const keywords = KEYWORDS[category as keyof typeof KEYWORDS];
       console.log(`Fetching ${category} data for ${year}...`);
       const yearlyData = await fetchYearlyData(keywords, year);
-      
+
       if (yearlyData.length === 0) {
         console.warn(`  > Received no data for ${category} in ${year}. Likely a rate limit issue. Skipping.`);
       }
@@ -81,7 +81,7 @@ function processData(allData: { [category: string]: TrendData[] }): DataPoint[] 
       const date = parseISO(day.time);
       const weekStart = startOfWeek(date, { weekStartsOn: 1 });
       const weekKey = format(weekStart, 'yyyy-MM-dd');
-      
+
       if (!weeklyData[weekKey]) {
         weeklyData[weekKey] = { jobSearch: [], unemployment: [], recruitment: [], exams: [] };
       }
@@ -102,9 +102,9 @@ function processData(allData: { [category: string]: TrendData[] }): DataPoint[] 
 
     // Composite Formula: 35% Job + 25% Unemp + 20% Recruit + 20% Exams
     const compositeIndex = (
-      (jobSearch * 0.35) + 
-      (unemployment * 0.25) + 
-      (recruitment * 0.20) + 
+      (jobSearch * 0.35) +
+      (unemployment * 0.25) +
+      (recruitment * 0.20) +
       (exams * 0.20)
     );
 
@@ -120,20 +120,20 @@ function processData(allData: { [category: string]: TrendData[] }): DataPoint[] 
 
   console.log("Filtering out incomplete last week...");
   if (finalData.length > 0) {
-      const today = new Date();
-      const lastDataDate = parseISO(finalData[finalData.length - 1].date);
-      if (getWeek(today, { weekStartsOn: 1 }) === getWeek(lastDataDate, { weekStartsOn: 1 }) && getYear(today) === getYear(lastDataDate)) {
-        if (today.getDay() !== 0) { // 0 is Sunday
-          finalData.pop();
-        }
+    const today = new Date();
+    const lastDataDate = parseISO(finalData[finalData.length - 1].date);
+    if (getWeek(today, { weekStartsOn: 1 }) === getWeek(lastDataDate, { weekStartsOn: 1 }) && getYear(today) === getYear(lastDataDate)) {
+      if (today.getDay() !== 0) { // 0 is Sunday
+        finalData.pop();
       }
+    }
   }
 
   if (finalData.length === 0) {
     console.warn("No data points after processing. Returning empty array.");
     return [];
   }
-  
+
   console.log("Normalizing composite index to 0-100 range...");
   const indices = finalData.map(d => d.compositeIndex);
   const minIndex = Math.min(...indices);
@@ -153,12 +153,12 @@ async function main() {
   console.log("Starting Google Trends data fetching process...");
   const rawData = await fetchAllData();
   const processedData = processData(rawData);
-  
+
   const outputPath = path.join(process.cwd(), 'src', 'lib', 'trends-data.json');
   console.log(`Writing ${processedData.length} data points to ${outputPath}...`);
-  
+
   await fs.writeFile(outputPath, JSON.stringify(processedData, null, 2));
-  
+
   console.log("✅ Data fetching complete!");
 }
 
