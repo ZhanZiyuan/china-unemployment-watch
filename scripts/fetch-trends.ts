@@ -1,168 +1,188 @@
 import googleTrends from 'google-trends-api';
-import { format, startOfWeek, parseISO, getWeek, getYear } from 'date-fns';
+import {
+  format,
+  parseISO,
+  startOfWeek,
+  addMonths,
+  differenceInMonths
+} from 'date-fns';
 import fs from 'fs/promises';
 import path from 'path';
 import { KEYWORDS, type DataPoint } from '../src/lib/data';
 
-interface TrendData {
-  time: string;
+/* =========================
+   Types
+========================= */
+
+interface DailyPoint {
+  date: string;
   value: number;
 }
 
-const trendOptions = {
-  geo: 'CN',
-  resolution: 'COUNTRY',
-  category: 0,
+/* =========================
+   Utils
+========================= */
+
+const sleep = (ms: number) =>
+  new Promise(resolve => setTimeout(resolve, ms));
+
+const jitterSleep = async (base = 4000) => {
+  await sleep(base + Math.random() * 6000);
 };
 
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const median = (arr: number[]) => {
+  if (!arr.length) return 0;
+  const s = [...arr].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+};
 
-async function fetchYearlyData(keywords: string[], year: number): Promise<TrendData[]> {
+const zScore = (arr: number[]) => {
+  const mean = arr.reduce((a, b) => a + b, 0) / arr.length;
+  const std = Math.sqrt(
+    arr.reduce((s, x) => s + (x - mean) ** 2, 0) / arr.length
+  );
+  return arr.map(v => (std === 0 ? 0 : (v - mean) / std));
+};
+
+const quantileNormalize = (arr: number[]) => {
+  const sorted = [...arr].sort((a, b) => a - b);
+  const q5 = sorted[Math.floor(sorted.length * 0.05)];
+  const q95 = sorted[Math.floor(sorted.length * 0.95)];
+  return arr.map(v =>
+    Math.max(0, Math.min(100, ((v - q5) / (q95 - q5)) * 100))
+  );
+};
+
+/* =========================
+   Fetch Logic
+========================= */
+
+async function fetchKeywordWindow(
+  keyword: string,
+  start: Date,
+  end: Date
+): Promise<DailyPoint[]> {
   try {
-    const result = await googleTrends.interestOverTime({
-      ...trendOptions,
-      keyword: keywords,
-      startTime: new Date(`${year}-01-01`),
-      endTime: new Date(`${year}-12-31`),
+    const res = await googleTrends.interestOverTime({
+      keyword,
+      geo: 'CN',
+      startTime: start,
+      endTime: end
     });
 
-    const data = JSON.parse(result);
-    return data.default.timelineData.map((item: any) => ({
-      time: format(new Date(item.time * 1000), 'yyyy-MM-dd'),
-      value: item.value.reduce((a: number, b: number) => a + b, 0) / item.value.length,
+    const json = JSON.parse(res);
+    return json.default.timelineData.map((d: any) => ({
+      date: format(new Date(d.time * 1000), 'yyyy-MM-dd'),
+      value: d.value[0]
     }));
-  } catch (error) {
-    if (error instanceof SyntaxError) {
-      // Silently ignore parsing errors, as they are expected during rate limits.
-      // A message is logged in the main function.
-      return [];
-    }
-    console.error(`An unexpected error occurred while fetching data for ${year} and keywords [${keywords.join(', ')}]:`, error);
+  } catch {
     return [];
   }
 }
 
 async function fetchAllData() {
-  const currentYear = new Date().getFullYear();
-  const startYear = currentYear - 5;
-  const years = Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
+  const start = new Date('2021-01-01');
+  const end = new Date();
+  const windowMonths = 18;
+  const stepMonths = 12;
 
-  const allData: { [category: string]: TrendData[] } = {
-    jobSearch: [],
-    unemployment: [],
-    recruitment: [],
-    exams: [],
-  };
+  const all: Record<string, Record<string, number[]>> = {};
 
-  for (const year of years) {
-    for (const category in KEYWORDS) {
-      const keywords = KEYWORDS[category as keyof typeof KEYWORDS];
-      console.log(`Fetching ${category} data for ${year}...`);
-      const yearlyData = await fetchYearlyData(keywords, year);
+  for (const category in KEYWORDS) {
+    all[category] = {};
+    for (const keyword of KEYWORDS[category as keyof typeof KEYWORDS]) {
+      let cursor = start;
 
-      if (yearlyData.length === 0) {
-        console.warn(`  > Received no data for ${category} in ${year}. Likely a rate limit issue. Skipping.`);
+      while (differenceInMonths(end, cursor) >= windowMonths) {
+        const winEnd = addMonths(cursor, windowMonths);
+        const data = await fetchKeywordWindow(keyword, cursor, winEnd);
+
+        for (const d of data) {
+          if (!all[category][d.date]) {
+            all[category][d.date] = [];
+          }
+          all[category][d.date].push(d.value);
+        }
+
+        await jitterSleep();
+        cursor = addMonths(cursor, stepMonths);
       }
-
-      allData[category].push(...yearlyData);
-      await sleep(5000); // Wait 5 seconds to avoid rate limiting
     }
   }
 
-  return allData;
+  return all;
 }
 
-function processData(allData: { [category: string]: TrendData[] }): DataPoint[] {
-  console.log("Aggregating daily data into weekly data...");
-  const weeklyData: { [week: string]: { [category: string]: number[] } } = {};
+/* =========================
+   Processing
+========================= */
 
-  for (const category in allData) {
-    for (const day of allData[category]) {
-      const date = parseISO(day.time);
-      const weekStart = startOfWeek(date, { weekStartsOn: 1 });
-      const weekKey = format(weekStart, 'yyyy-MM-dd');
+function processData(raw: Record<string, Record<string, number[]>>): DataPoint[] {
+  const weekly: Record<string, Record<string, number[]>> = {};
 
-      if (!weeklyData[weekKey]) {
-        weeklyData[weekKey] = { jobSearch: [], unemployment: [], recruitment: [], exams: [] };
-      }
-      weeklyData[weekKey][category].push(day.value);
+  for (const category in raw) {
+    for (const date in raw[category]) {
+      const week = format(
+        startOfWeek(parseISO(date), { weekStartsOn: 1 }),
+        'yyyy-MM-dd'
+      );
+
+      weekly[week] ??= {
+        jobSearch: [],
+        unemployment: [],
+        recruitment: [],
+        exams: []
+      };
+
+      weekly[week][category].push(median(raw[category][date]));
     }
   }
 
-  const sortedWeeks = Object.keys(weeklyData).sort();
-
-  let finalData: DataPoint[] = sortedWeeks.map(weekKey => {
-    const week = weeklyData[weekKey];
-    const avg = (arr: number[]) => arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0;
-
-    const jobSearch = avg(week.jobSearch);
-    const unemployment = avg(week.unemployment);
-    const recruitment = avg(week.recruitment);
-    const exams = avg(week.exams);
-
-    // Composite Formula: 35% Job + 25% Unemp + 20% Recruit + 20% Exams
-    const compositeIndex = (
-      (jobSearch * 0.35) +
-      (unemployment * 0.25) +
-      (recruitment * 0.20) +
-      (exams * 0.20)
-    );
-
+  const weeks = Object.keys(weekly).sort();
+  const rows = weeks.map(w => {
+    const r = weekly[w];
     return {
-      date: weekKey,
-      jobSearch: parseFloat(jobSearch.toFixed(1)),
-      unemployment: parseFloat(unemployment.toFixed(1)),
-      recruitment: parseFloat(recruitment.toFixed(1)),
-      exams: parseFloat(exams.toFixed(1)),
-      compositeIndex: parseFloat(compositeIndex.toFixed(1))
+      date: w,
+      jobSearch: median(r.jobSearch),
+      unemployment: median(r.unemployment),
+      recruitment: median(r.recruitment),
+      exams: median(r.exams)
     };
   });
 
-  console.log("Filtering out incomplete last week...");
-  if (finalData.length > 0) {
-    const today = new Date();
-    const lastDataDate = parseISO(finalData[finalData.length - 1].date);
-    if (getWeek(today, { weekStartsOn: 1 }) === getWeek(lastDataDate, { weekStartsOn: 1 }) && getYear(today) === getYear(lastDataDate)) {
-      if (today.getDay() !== 0) { // 0 is Sunday
-        finalData.pop();
-      }
-    }
-  }
+  const zJob = zScore(rows.map(r => r.jobSearch));
+  const zUn = zScore(rows.map(r => r.unemployment));
+  const zRec = zScore(rows.map(r => r.recruitment));
+  const zExam = zScore(rows.map(r => r.exams));
 
-  if (finalData.length === 0) {
-    console.warn("No data points after processing. Returning empty array.");
-    return [];
-  }
+  const composite = rows.map((_, i) =>
+    zJob[i] * 0.35 +
+    zUn[i] * 0.25 +
+    zRec[i] * 0.20 +
+    zExam[i] * 0.20
+  );
 
-  console.log("Normalizing composite index to 0-100 range...");
-  const indices = finalData.map(d => d.compositeIndex);
-  const minIndex = Math.min(...indices);
-  const maxIndex = Math.max(...indices);
+  const normalized = quantileNormalize(composite);
 
-  if (maxIndex === minIndex) {
-    return finalData.map(d => ({ ...d, compositeIndex: 50 }));
-  }
-
-  return finalData.map(d => ({
-    ...d,
-    compositeIndex: Math.round(((d.compositeIndex - minIndex) / (maxIndex - minIndex)) * 100)
+  return rows.map((r, i) => ({
+    ...r,
+    compositeIndex: Math.round(normalized[i])
   }));
 }
 
+/* =========================
+   Main
+========================= */
+
 async function main() {
-  console.log("Starting Google Trends data fetching process...");
-  const rawData = await fetchAllData();
-  const processedData = processData(rawData);
+  console.log('🚀 Fetching Google Trends...');
+  const raw = await fetchAllData();
+  const processed = processData(raw);
 
-  const outputPath = path.join(process.cwd(), 'src', 'lib', 'trends-data.json');
-  console.log(`Writing ${processedData.length} data points to ${outputPath}...`);
-
-  await fs.writeFile(outputPath, JSON.stringify(processedData, null, 2));
-
-  console.log("✅ Data fetching complete!");
+  const out = path.join(process.cwd(), 'src/lib/trends-data.json');
+  await fs.writeFile(out, JSON.stringify(processed, null, 2));
+  console.log(`✅ Wrote ${processed.length} rows`);
 }
 
-main().catch(err => {
-  console.error("An error occurred during the data fetching process:", err);
-  process.exit(1);
-});
+main();
