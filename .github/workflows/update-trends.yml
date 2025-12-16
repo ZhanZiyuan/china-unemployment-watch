@@ -1,16 +1,9 @@
 name: Update Trends Data
 
 on:
-  # ✅ 每天自动运行一次（UTC 00:00）
-  schedule:
-    - cron: '0 0 * * *'
-
-  # ✅ main 有新提交时也运行一次
   push:
     branches:
       - main
-
-  # ✅ 允许手动触发
   workflow_dispatch:
 
 jobs:
@@ -22,31 +15,21 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Fetch and update trends data
-        run: npm run fetch-trends
+      - run: npm install
+      - run: npm run fetch-trends
 
       - name: Create PR if data changed
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: 'feat(data): update trends data'
           title: 'Update trends data'
-          body: |
-            Automated daily update of Google Trends proxy data.
-
-            - Regions: HK / TW / SG / JP
-            - Incremental + cached fetch
-            - No direct push to main
+          body: 'Automated update of Google Trends proxy data'
           branch: bot/update-trends
           base: main
