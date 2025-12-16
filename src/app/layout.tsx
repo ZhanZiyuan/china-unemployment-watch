@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'China Unemployment Watch',
-  description: '基于 Google Trends 搜索数据构建的非官方中国就业市场影子指数。',
+  description: '基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标。',
 };
 
 export default function RootLayout({

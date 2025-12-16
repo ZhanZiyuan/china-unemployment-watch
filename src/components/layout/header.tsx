@@ -18,7 +18,7 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end space-x-2">
           <Button variant="ghost" size="icon" asChild>
             <a
-              href="https://github.com/firebase/firebase-studio" // Placeholder link
+              href="https://github.com/ZhanZiyuan/china-unemployment-watch" // Placeholder link
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Repository"

@@ -9,7 +9,7 @@ export function KeywordsCard() {
       <CardHeader>
         <div className="flex items-center gap-2">
           <SearchIcon className="w-5 h-5 text-muted-foreground" />
-          <CardTitle>追踪关键词库</CardTitle>
+          <CardTitle>追踪关键词库 (Tracking Keywords)</CardTitle>
         </div>
       </CardHeader>
       <CardContent className="space-y-6">

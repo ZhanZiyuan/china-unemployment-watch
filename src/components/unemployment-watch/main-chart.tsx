@@ -43,7 +43,7 @@ export function MainChart({ data }: MainChartProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>影子失业指数趋势图</CardTitle>
+        <CardTitle>影子失业指数趋势图 (Trends in the Shadow Unemployment Index)</CardTitle>
         <CardDescription>周度数据 (已标准化 0-100)</CardDescription>
       </CardHeader>
       <CardContent>
@@ -52,37 +52,37 @@ export function MainChart({ data }: MainChartProps) {
             <AreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorIndex" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.4}/>
-                  <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                  <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.4} />
+                  <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={gridColor} />
-              <XAxis 
-                dataKey="date" 
+              <XAxis
+                dataKey="date"
                 tickFormatter={(val) => val.slice(0, 7)}
                 stroke={tickColor}
-                tick={{fontSize: 12}}
+                tick={{ fontSize: 12 }}
                 minTickGap={40}
                 axisLine={{ stroke: gridColor }}
                 tickLine={{ stroke: gridColor }}
               />
-              <YAxis 
+              <YAxis
                 stroke={tickColor}
-                tick={{fontSize: 12}}
+                tick={{ fontSize: 12 }}
                 domain={[0, 100]}
                 axisLine={{ stroke: gridColor }}
                 tickLine={{ stroke: gridColor }}
               />
-              <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--accent) / 0.1)' }}/>
-              <Legend iconType="circle" wrapperStyle={{paddingTop: '20px'}}/>
-              <Area 
-                type="monotone" 
-                dataKey="compositeIndex" 
+              <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--accent) / 0.1)' }} />
+              <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
+              <Area
+                type="monotone"
+                dataKey="compositeIndex"
                 name="综合影子指数"
                 stroke="hsl(var(--primary))"
                 strokeWidth={2}
-                fillOpacity={1} 
-                fill="url(#colorIndex)" 
+                fillOpacity={1}
+                fill="url(#colorIndex)"
                 animationDuration={1500}
                 dot={false}
               />
