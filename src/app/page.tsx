@@ -32,7 +32,7 @@ function Page() {
       <main className="container flex flex-1 flex-col gap-8 py-8">
         <div className="text-center sm:text-left space-y-2">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight font-headline text-foreground">
-            中国就业市场影子指数
+            中国失业观察
           </h1>
           <div className="flex items-center justify-center sm:justify-start gap-2">
             <p className="text-muted-foreground max-w-2xl">
@@ -43,7 +43,7 @@ function Page() {
             </Badge>
           </div>
         </div>
-        
+
         <MetricCards currentStatus={currentStatus} />
 
         <MainChart data={data} />
