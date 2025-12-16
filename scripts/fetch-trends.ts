@@ -26,9 +26,17 @@ interface DailyPoint {
 const sleep = (ms: number) =>
   new Promise(resolve => setTimeout(resolve, ms));
 
-const jitterSleep = async (base = 4000) => {
-  await sleep(base + Math.random() * 6000);
+const jitterSleep = async (base = 2500) => {
+  await sleep(base + Math.random() * 2500);
 };
+
+const withTimeout = <T>(p: Promise<T>, ms = 15000): Promise<T | null> =>
+  Promise.race([
+    p,
+    new Promise<null>(resolve =>
+      setTimeout(() => resolve(null), ms)
+    )
+  ]);
 
 const median = (arr: number[]) => {
   if (!arr.length) return 0;
@@ -63,14 +71,22 @@ async function fetchKeywordWindow(
   start: Date,
   end: Date
 ): Promise<DailyPoint[]> {
-  try {
-    const res = await googleTrends.interestOverTime({
+  const res = await withTimeout(
+    googleTrends.interestOverTime({
       keyword,
       geo: 'CN',
       startTime: start,
       endTime: end
-    });
+    }),
+    15000
+  );
 
+  if (!res) {
+    console.warn(`⏱️ timeout: ${keyword}`, format(start, 'yyyy-MM'));
+    return [];
+  }
+
+  try {
     const json = JSON.parse(res);
     return json.default.timelineData.map((d: any) => ({
       date: format(new Date(d.time * 1000), 'yyyy-MM-dd'),
@@ -84,18 +100,26 @@ async function fetchKeywordWindow(
 async function fetchAllData() {
   const start = new Date('2021-01-01');
   const end = new Date();
-  const windowMonths = 18;
-  const stepMonths = 12;
+
+  const windowMonths = 6;   // ✅ 关键修复
+  const stepMonths = 3;
 
   const all: Record<string, Record<string, number[]>> = {};
 
   for (const category in KEYWORDS) {
+    console.log(`\n📂 Category: ${category}`);
     all[category] = {};
+
     for (const keyword of KEYWORDS[category as keyof typeof KEYWORDS]) {
+      console.log(`  🔑 ${keyword}`);
       let cursor = start;
 
       while (differenceInMonths(end, cursor) >= windowMonths) {
         const winEnd = addMonths(cursor, windowMonths);
+        console.log(
+          `    ⏳ ${format(cursor, 'yyyy-MM')} → ${format(winEnd, 'yyyy-MM')}`
+        );
+
         const data = await fetchKeywordWindow(keyword, cursor, winEnd);
 
         for (const d of data) {
@@ -105,8 +129,8 @@ async function fetchAllData() {
           all[category][d.date].push(d.value);
         }
 
+        cursor = addMonths(cursor, stepMonths); // ✅ 永远前进
         await jitterSleep();
-        cursor = addMonths(cursor, stepMonths);
       }
     }
   }
@@ -118,7 +142,9 @@ async function fetchAllData() {
    Processing
 ========================= */
 
-function processData(raw: Record<string, Record<string, number[]>>): DataPoint[] {
+function processData(
+  raw: Record<string, Record<string, number[]>>
+): DataPoint[] {
   const weekly: Record<string, Record<string, number[]>> = {};
 
   for (const category in raw) {
@@ -182,6 +208,7 @@ async function main() {
 
   const out = path.join(process.cwd(), 'src/lib/trends-data.json');
   await fs.writeFile(out, JSON.stringify(processed, null, 2));
+
   console.log(`✅ Wrote ${processed.length} rows`);
 }
 
