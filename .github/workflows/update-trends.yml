@@ -1,35 +1,55 @@
 name: Update Trends Data
 
 on:
+  # 每天 UTC 00:00 定时运行
+  schedule:
+    - cron: '0 0 * * *'
+
+  # 每当有新的提交进入 main（包括 PR merge）
   push:
     branches:
       - main
+
+  # 手动触发
   workflow_dispatch:
 
 jobs:
   update-trends:
     runs-on: ubuntu-latest
 
+    # 防止 actions 自己提交后再次触发自己
+    if: github.actor != 'github-actions[bot]'
+
     permissions:
       contents: write
-      pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'npm'
+          cache: npm
 
-      - run: npm install
-      - run: npm run fetch-trends
+      - name: Install dependencies
+        run: npm install
 
-      - name: Create PR if data changed
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: 'feat(data): update trends data'
-          title: 'Update trends data'
-          body: 'Automated update of Google Trends proxy data'
-          branch: bot/update-trends
-          base: main
+      - name: Fetch Google Trends data
+        run: npm run fetch-trends
+
+      - name: Commit & push if data changed
+        run: |
+          if git status --porcelain | grep .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            git add .
+            git commit -m "feat(data): update trends data [skip ci]"
+            git push origin main
+          else
+            echo "No changes detected, skipping commit."
+          fi
