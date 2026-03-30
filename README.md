@@ -1,4 +1,8 @@
+<p align="center"><img alt="logo" src="./app/icon.svg" width="138" /></p>
+
 # China Unemployment Watch
+
+<p align="right">    <b>English</b> | <a href="./README_zh.md">简体中文</a></p>
 
 [![GitHub deployments](https://img.shields.io/github/deployments/ZhanZiyuan/china-unemployment-watch/Production)](https://github.com/ZhanZiyuan/china-unemployment-watch/deployments)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ZhanZiyuan/china-unemployment-watch)](https://github.com/ZhanZiyuan/china-unemployment-watch/commits/main/)
@@ -89,7 +93,7 @@ Start the development server (with Turbopack):
 npm run dev
 ```
 
-Open [[http://localhost:9002](http://localhost:9002)](http://localhost:9002) in your browser.
+Open <http://localhost:9002> in your browser.
 
 ### Manually Updating Data
 
