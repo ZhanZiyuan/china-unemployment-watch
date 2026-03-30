@@ -8,7 +8,7 @@ import {
 } from 'date-fns';
 import fs from 'fs/promises';
 import path from 'path';
-import { KEYWORDS, type DataPoint } from '../src/lib/data';
+import { KEYWORDS, type DataPoint } from '../lib/data';
 
 /* =========================
    Types
@@ -206,7 +206,7 @@ async function main() {
   const raw = await fetchAllData();
   const processed = processData(raw);
 
-  const out = path.join(process.cwd(), 'src/lib/trends-data.json');
+  const out = path.join(process.cwd(), 'lib/trends-data.json');
   await fs.writeFile(out, JSON.stringify(processed, null, 2));
 
   console.log(`✅ Wrote ${processed.length} rows`);

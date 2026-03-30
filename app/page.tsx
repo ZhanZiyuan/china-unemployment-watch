@@ -13,14 +13,14 @@ function Page() {
   const currentStatus = (() => {
     if (!data || data.length < 2) {
       const latestDate = data && data.length > 0 ? data[data.length - 1].date : new Date().toISOString().split('T')[0];
-      const latestIndex = data && data.length > 0 ? data[data.length - 1].compositeIndex : 0;
+      const latestIndex = data && data.length > 0 ? (data[data.length - 1].compositeIndex ?? 0) : 0;
       return { index: latestIndex, change: 0, date: latestDate };
     }
     const latest = data[data.length - 1];
     const prev = data[data.length - 2];
-    const change = latest.compositeIndex - prev.compositeIndex;
+    const change = (latest.compositeIndex ?? 0) - (prev.compositeIndex ?? 0);
     return {
-      index: latest.compositeIndex,
+      index: latest.compositeIndex ?? 0,
       change: parseFloat(change.toFixed(1)),
       date: latest.date,
     };

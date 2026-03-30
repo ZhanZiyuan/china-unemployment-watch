@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, TrendingUp } from 'lucide-react';
+import { GitBranch, TrendingUp } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import Link from 'next/link';
 import { Button } from '../ui/button';
@@ -23,7 +23,7 @@ export function Header() {
               rel="noopener noreferrer"
               aria-label="GitHub Repository"
             >
-              <Github className="h-5 w-5" />
+              <GitBranch className="h-5 w-5" />
             </a>
           </Button>
           <ThemeToggle />

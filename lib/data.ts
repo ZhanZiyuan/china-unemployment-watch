@@ -6,7 +6,7 @@ export interface DataPoint {
   unemployment: number;
   recruitment: number;
   exams: number;
-  compositeIndex: number;
+  compositeIndex: number | null;
 }
 
 export const KEYWORDS = {
