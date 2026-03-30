@@ -1,13 +1,4 @@
-<p align="center">
-    <img alt="logo" src="./src/app/icon.svg"
-        width="138" />
-</p>
-
 # China Unemployment Watch
-
-<p align="right">
-    <b>English</b> | <a href="./README_zh.md">简体中文</a>
-</p>
 
 [![GitHub deployments](https://img.shields.io/github/deployments/ZhanZiyuan/china-unemployment-watch/Production)](https://github.com/ZhanZiyuan/china-unemployment-watch/deployments)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ZhanZiyuan/china-unemployment-watch)](https://github.com/ZhanZiyuan/china-unemployment-watch/commits/main/)
@@ -31,29 +22,33 @@ The data is automatically updated daily, providing a near real-time view of the 
 - **Transparent Methodology:** The entire data processing pipeline is open-source, from the keywords used to the weighting in the final index.
 - **Modern Tech Stack:** Built with Next.js 15, React 19, and TypeScript for a fast, reliable, and maintainable application.
 - **Responsive Design & Dark Mode:** A clean, mobile-friendly UI built with Shadcn/ui and Tailwind CSS.
-
 ## Data & Methodology
 
 The core of this project is its data pipeline, which can be found in `scripts/fetch-trends.ts`.
 
 - **Data Source:** The raw data is sourced from the **Google Trends API**, targeting the geo-location 'CN' (China).
 - **Keyword Categories:** We track a curated list of keywords grouped into four categories:
+
   - **Job Seeking:** "找工作" (find job), "求职" (job search), etc.
   - **Recruitment:** "招聘" (hiring), "社招" (experienced hire), etc.
   - **Public Exams:** "考研" (postgrad exam), "国考" (national civil service exam), etc.
   - **Unemployment:** "失业" (unemployed), "裁员" (layoffs), etc.
+
 - **Data Fetching:** To overcome Google Trends' scaling limitations, the script fetches data in overlapping 6-month windows.
 - **Processing & Indexing:**
+
   - The raw daily data is aggregated into weekly medians for each category.
   - The data for each category is normalized using a Z-score calculation.
   - A final **Composite Index** is calculated using the following weights:
+
     - `Job Seeking`: 35%
     - `Unemployment`: 25%
     - `Recruitment`: 20%
     - `Public Exams`: 20%
-  - This processed data is then saved as `src/lib/trends-data.json`.
-- **Automation:** A GitHub Actions workflow (see `.github/workflows/update-trends.yml`) runs daily at 00:00 UTC to execute the fetching script and commit the updated data back to the repository.
 
+  - This processed data is then saved as `src/lib/trends-data.json`.
+
+- **Automation:** A GitHub Actions workflow (see `.github/workflows/update-trends.yml`) runs daily at 00:00 UTC to execute the fetching script and commit the updated data back to the repository.
 ## Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org/) 15 (with Turbopack)
@@ -65,7 +60,6 @@ The core of this project is its data pipeline, which can be found in `scripts/fe
 - **Data Fetching:** [google-trends-api](https://www.npmjs.com/package/google-trends-api)
 - **CI/CD:** [GitHub Actions](https://github.com/features/actions)
 - **Hosting:** [Vercel](https://vercel.com/)
-
 ## Getting Started
 
 To run a local copy of this project:
@@ -74,18 +68,15 @@ To run a local copy of this project:
 
 - Node.js v20 or newer
 - `npm` or `yarn`
-
 ### Installation
 
 - Clone the repository:
-
 ```bash
 git clone https://github.com/ZhanZiyuan/china-unemployment-watch.git
 cd china-unemployment-watch
 ```
 
 - Install NPM packages:
-
 ```bash
 npm install
 ```
@@ -98,7 +89,7 @@ Start the development server (with Turbopack):
 npm run dev
 ```
 
-Open [http://localhost:9002](http://localhost:9002) in your browser.
+Open [[http://localhost:9002](http://localhost:9002)](http://localhost:9002) in your browser.
 
 ### Manually Updating Data
 
