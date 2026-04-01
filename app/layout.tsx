@@ -51,12 +51,28 @@ export const metadata: Metadata = {
   },
   description: '基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标。',
   applicationName: 'China Unemployment Watch',
+  category: 'technology',
   alternates: {
     canonical: '/',
   },
+  keywords: [
+    'China unemployment',
+    'Google Trends dashboard',
+    '中国失业观察',
+    '就业焦虑',
+    '求职数据',
+  ],
   openGraph: {
     title: 'China Unemployment Watch',
     description: '基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标。',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'China Unemployment Watch',
+      },
+    ],
     locale: 'zh_CN',
     siteName: 'China Unemployment Watch',
     type: 'website',
@@ -66,6 +82,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'China Unemployment Watch',
     description: '基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标。',
+    images: ['/twitter-image'],
   },
   robots: {
     follow: true,

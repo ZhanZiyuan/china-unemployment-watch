@@ -6,6 +6,7 @@ export default defineConfig([
   ...nextVitals,
   ...nextTypescript,
   globalIgnores([
+    '.*/**',
     '.next/**',
     'out/**',
     'build/**',

@@ -159,8 +159,38 @@
     @apply border-border;
   }
 
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+
+  html.dark::view-transition-old(root) {
+    z-index: 1;
+  }
+
+  html.dark::view-transition-new(root) {
+    z-index: 999;
+  }
+
+  html:not(.dark)::view-transition-old(root) {
+    z-index: 999;
+  }
+
+  html:not(.dark)::view-transition-new(root) {
+    z-index: 1;
+  }
+
   html {
     @apply bg-background;
+  }
+
+  html.theme-fallback-transition *,
+  html.theme-fallback-transition *::before,
+  html.theme-fallback-transition *::after {
+    transition-duration: 450ms;
+    transition-property: background-color, border-color, color, fill, opacity, stroke, box-shadow;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   body {
