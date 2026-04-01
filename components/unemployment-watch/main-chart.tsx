@@ -17,10 +17,22 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-const CustomTooltip = ({ active, payload, label }: any) => {
-  if (active && payload && payload.length) {
+type CustomTooltipProps = {
+  active?: boolean;
+  label?: string;
+  payload?: Array<{
+    value?: number | string;
+    payload: DataPoint;
+  }>;
+};
+
+function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
+  const point = payload?.[0]?.payload;
+  const value = payload?.[0]?.value;
+
+  if (active && point && value !== undefined) {
     return (
-      <div className="rounded-lg border bg-background p-2 shadow-sm">
+      <div className="rounded-lg border bg-background p-2 shadow-xs">
         <div className="grid grid-cols-2 gap-2">
           <div className="flex flex-col space-y-1">
             <span className="text-[0.70rem] uppercase text-muted-foreground">日期</span>
@@ -28,19 +40,19 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
           <div className="flex flex-col space-y-1">
             <span className="text-[0.70rem] uppercase text-muted-foreground">综合指数</span>
-            <span className="font-bold text-primary">{payload[0].value}</span>
+            <span className="font-bold text-primary">{value}</span>
           </div>
         </div>
         <div className="mt-2 border-t pt-2 text-xs text-muted-foreground space-y-1">
-          <p>求职意向: {payload[0].payload.jobSearch}</p>
-          <p>失业焦虑: {payload[0].payload.unemployment}</p>
-          <p>考试/避险: {payload[0].payload.exams}</p>
+          <p>求职意向: {point.jobSearch}</p>
+          <p>失业焦虑: {point.unemployment}</p>
+          <p>考试/避险: {point.exams}</p>
         </div>
       </div>
     );
   }
   return null;
-};
+}
 
 export function MainChart({ data }: MainChartProps) {
   return (

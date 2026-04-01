@@ -6,7 +6,8 @@ import { KeywordsCard } from '@/components/unemployment-watch/keywords-card';
 import { getTrendsData, type DataPoint } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 
-// This page is now static and will be updated when the data file is updated.
+export const dynamic = 'force-static';
+
 function Page() {
   const data: DataPoint[] = getTrendsData();
 

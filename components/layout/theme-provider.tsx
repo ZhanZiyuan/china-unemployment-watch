@@ -1,70 +1,84 @@
-"use client"
+'use client';
 
-import * as React from "react"
+import * as React from 'react';
 
-type Theme = "dark" | "light"
+type Theme = 'dark' | 'light';
 
 type ThemeProviderProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 type ThemeProviderState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
+  theme: Theme;
+  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+};
+
+const STORAGE_KEY = 'theme';
+const ThemeProviderContext = React.createContext<ThemeProviderState | undefined>(undefined);
+
+function getSystemTheme(): Theme {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-const initialState: ThemeProviderState = {
-  theme: "light",
-  setTheme: () => null,
-}
-
-const ThemeProviderContext = React.createContext<ThemeProviderState>(initialState)
-
-export function ThemeProvider({
-  children,
-  ...props
-}: ThemeProviderProps) {
-  const [theme, setTheme] = React.useState<Theme>("light")
-
-  React.useEffect(() => {
-    const storedTheme = window.localStorage.getItem("theme") as Theme | null
-    if (storedTheme) {
-      setTheme(storedTheme)
-    } else {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
-      setTheme(systemTheme)
-    }
-  }, [])
-
-  React.useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove("light", "dark")
-    root.classList.add(theme)
-    localStorage.setItem("theme", theme)
-  }, [theme])
-
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      setTheme(theme)
-    },
+function getInitialTheme(): Theme {
+  if (typeof window === 'undefined') {
+    return 'light';
   }
 
-  return (
-    <ThemeProviderContext.Provider {...props} value={value}>
-      {children}
-    </ThemeProviderContext.Provider>
-  )
+  if (document.documentElement.classList.contains('dark')) {
+    return 'dark';
+  }
+
+  const storedTheme = window.localStorage.getItem(STORAGE_KEY);
+  if (storedTheme === 'dark' || storedTheme === 'light') {
+    return storedTheme;
+  }
+
+  return getSystemTheme();
 }
 
-export const useTheme = () => {
-  const context = React.useContext(ThemeProviderContext)
+function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  root.classList.remove('light', 'dark');
+  root.classList.add(theme);
+  root.style.colorScheme = theme;
+}
 
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider")
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme, setTheme] = React.useState<Theme>(getInitialTheme);
 
-  return context
+  React.useEffect(() => {
+    applyTheme(theme);
+    window.localStorage.setItem(STORAGE_KEY, theme);
+  }, [theme]);
+
+  React.useEffect(() => {
+    if (window.localStorage.getItem(STORAGE_KEY)) {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const syncTheme = () => {
+      setTheme(mediaQuery.matches ? 'dark' : 'light');
+    };
+
+    mediaQuery.addEventListener('change', syncTheme);
+    return () => mediaQuery.removeEventListener('change', syncTheme);
+  }, []);
+
+  return (
+    <ThemeProviderContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeProviderContext.Provider>
+  );
+}
+
+export function useTheme() {
+  const context = React.useContext(ThemeProviderContext);
+
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+
+  return context;
 }
