@@ -19,6 +19,15 @@ interface DailyPoint {
   value: number;
 }
 
+interface InterestOverTimeJson {
+  default: {
+    timelineData: Array<{
+      time: string;
+      value: number[];
+    }>;
+  };
+}
+
 /* =========================
    Utils
 ========================= */
@@ -87,9 +96,9 @@ async function fetchKeywordWindow(
   }
 
   try {
-    const json = JSON.parse(res);
-    return json.default.timelineData.map((d: any) => ({
-      date: format(new Date(d.time * 1000), 'yyyy-MM-dd'),
+    const json = JSON.parse(res) as InterestOverTimeJson;
+    return json.default.timelineData.map((d) => ({
+      date: format(new Date(Number(d.time) * 1000), 'yyyy-MM-dd'),
       value: d.value[0]
     }));
   } catch {
