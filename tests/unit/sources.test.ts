@@ -1,9 +1,10 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { businessDate, monthPeriod } from '../../src/lib/market/dates';
 import { observationSchema } from '../../src/lib/market/schema';
-import { fetchOriginal } from '../../scripts/sources/http';
+import { fetchOriginal, type Original } from '../../scripts/sources/http';
+import { discover } from '../../scripts/sources/collect';
 import { parseLabour } from '../../scripts/sources/nbs-labour';
-import { classify, parseArchive, type Release } from '../../scripts/sources/nbs-release';
+import { archive, classify, parseArchive, type Release } from '../../scripts/sources/nbs-release';
 
 const release: Release = {
   suffix: '202403/t20240318_0.html',
@@ -57,5 +58,50 @@ describe('public HTTP collection', () => {
         init?.signal?.addEventListener('abort', () => reject(init.signal?.reason), { once: true });
       });
     })).rejects.toMatchObject({ name: 'TimeoutError' });
+  });
+});
+
+describe('archive discovery', () => {
+  const nextUrl = `${archive}index_1.html`;
+  function page(url: string, index: number, releases: [string, string][]): Original {
+    const links = releases.map(([id, title]) => (
+      `<a class="pc_1600" title="${title}" href="./${id.slice(0, 6)}/t${id}_1.html">${title}</a>`
+    ));
+    return {
+      meta: { url, fetched_at: '2026-11-17T10:00:00.000Z', status: 200, content_type: 'text/html' },
+      body: Buffer.from(`<script>createPageHTML(7, ${index}, "index", "html");</script>${links.join('')}`),
+    };
+  }
+  const first = page(archive, 0, [['20261116', '10月份国民经济运行总体平稳']]);
+  const next = page(nextUrl, 1, [
+    ['20261031', '2026年10月中国采购经理指数运行情况'],
+    ['20261002', '其他发布'],
+  ]);
+  function socketReset() {
+    return new TypeError('fetch failed', { cause: Object.assign(new Error('socket reset'), { code: 'ECONNRESET' }) });
+  }
+
+  it('retries the interrupted page and stops at the requested window', async () => {
+    const request = vi.fn<typeof fetchOriginal>()
+      .mockResolvedValueOnce(first)
+      .mockRejectedValueOnce(socketReset())
+      .mockResolvedValueOnce(next);
+    const releases = await discover('2026-10-15', '2026-11-17', request);
+    expect(releases.map((item) => item.kind)).toEqual(['nbs-labour', 'nbs-pmi']);
+    expect(request.mock.calls.map(([url]) => url)).toEqual([archive, nextUrl, nextUrl]);
+  });
+
+  it('reports the page and transport error after bounded retries', async () => {
+    const request = vi.fn<typeof fetchOriginal>().mockResolvedValueOnce(first).mockRejectedValue(socketReset());
+    await expect(discover('2026-10-15', '2026-11-17', request))
+      .rejects.toThrow(`${nextUrl}: fetch failed / socket reset [ECONNRESET]`);
+    expect(request).toHaveBeenCalledTimes(4);
+  });
+
+  it('rejects repeated page markup without retrying an invalid listing', async () => {
+    const request = vi.fn<typeof fetchOriginal>().mockResolvedValue(first);
+    await expect(discover('2026-10-15', '2026-11-17', request))
+      .rejects.toThrow(`${nextUrl}: Expected page 1, received page 0`);
+    expect(request).toHaveBeenCalledTimes(2);
   });
 });

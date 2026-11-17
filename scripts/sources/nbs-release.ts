@@ -18,7 +18,9 @@ export function classify(title: string): Release['kind'] | null {
 
 export function parseArchive(html: string) {
   const $ = load(html);
-  const count = Number(/createPageHTML\((\d+),\s*\d+,\s*"index",\s*"html"\)/.exec(html)?.[1]);
+  const pagination = /createPageHTML\((\d+),\s*(\d+),\s*"index",\s*"html"\)/.exec(html);
+  const count = Number(pagination?.[1]);
+  const page = Number(pagination?.[2]);
   const releases = new Map<string, Release>();
   const dates: string[] = [];
   $('a.pc_1600[title][href]').each((_i, a) => {
@@ -31,10 +33,10 @@ export function parseArchive(html: string) {
     const kind = classify(title);
     if (kind) releases.set(suffix, { suffix, listedDate, title, kind });
   });
-  if (!dates.length || !Number.isInteger(count) || count < 1 || count > 500) {
+  if (!dates.length || !Number.isInteger(count) || count < 1 || count > 500 || !Number.isInteger(page) || page >= count) {
     throw new Error('Official release archive markup is unavailable or changed');
   }
-  return { count, oldest: dates.sort()[0], releases: [...releases.values()] };
+  return { count, page, oldest: dates.sort()[0], releases: [...releases.values()] };
 }
 
 export function releaseUrls(release: Release) {
