@@ -1,12 +1,12 @@
 {
-  "attempted_at": "2026-11-17T13:50:42.852Z",
-  "completed_at": "2026-11-17T13:50:47.510Z",
-  "attempted_at_shanghai": "2026-11-17T21:50:42+08:00",
+  "attempted_at": "2026-11-17T14:19:32.997Z",
+  "completed_at": "2026-11-17T14:19:36.549Z",
+  "attempted_at_shanghai": "2026-11-17T22:19:32+08:00",
   "dataset_version": "de656430e957984e6914378b2e852c224b7839031ba852afa6b5d9a93c0149fa",
-  "result": "success",
+  "result": "fetch_failed",
   "source_status": {
-    "nbs-labour": "verified",
-    "nbs-pmi": "verified"
+    "nbs-labour": "fetch_failed",
+    "nbs-pmi": "fetch_failed"
   },
-  "workflow_url": null
+  "workflow_url": "https://github.com/ZhanZiyuan/china-unemployment-watch/actions/runs/44101812376"
 }
