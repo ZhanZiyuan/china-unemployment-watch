@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "c52c4f6b6607e58d62fe04919108b47e5fa8229053bbc59ea30149d9c42fd766",
+  "algorithm_version": "pending-calibration",
+  "generated_at": "2026-11-17T13:38:13.479Z",
+  "observation_start": "2023-01-01",
+  "observation_end": "2026-10-31",
+  "quality_status": "partial_coverage",
+  "latest": "/data/latest.json",
+  "sha256": "03deada5be47af7d5931b164b6d16b0f1c549f6ce63942179436bba523021c6e",
+  "health": "/data/collection-status.json"
+}

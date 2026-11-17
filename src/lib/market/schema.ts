@@ -63,3 +63,76 @@ export const observationSchema = z.object({
 
 export type Observation = z.infer<typeof observationSchema>;
 export const observationKey = (row: Observation) => `${row.source_id}/${row.series_id}/${row.observation_period.start}`;
+
+export const sourceCatalog = {
+  'nbs-labour': { url: 'https://www.stats.gov.cn/sj/zxfb/', access: 'connected' },
+  'nbs-pmi': { url: 'https://www.stats.gov.cn/sj/zxfb/', access: 'connected' },
+  'google-trends': { url: 'https://developers.google.com/search/apis/trends', access: 'approval_required' },
+  'baidu-index': { url: 'https://index.baidu.com/Helper/?tpl=help', access: 'approval_required' },
+  recruitment: { url: null, access: 'unconnected' },
+} as const;
+
+export const indexIds = ['search_pressure', 'employment_demand', 'shadow_pressure', 'exam_search'] as const;
+export const indexSchema = z.object({
+  id: z.enum(indexIds),
+  frequency: frequencySchema,
+  status: z.enum(['insufficient_data', 'experimental']),
+  values: z.array(z.object({ observation_period: periodSchema, value: z.number().finite() }).strict()),
+}).strict().refine((index) => (index.values.length === 0) === (index.status === 'insufficient_data'));
+export type Index = z.infer<typeof indexSchema>;
+
+const coverageSchema = z.object({
+  series_id: observationSchema.shape.series_id,
+  first: z.iso.date().nullable(),
+  last: z.iso.date().nullable(),
+  fetched_at: z.iso.datetime().nullable(),
+  available: z.number().int().nonnegative(),
+  missing: z.array(periodSchema),
+  not_yet_published: periodSchema.nullable(),
+}).strict();
+
+export const datasetSchema = z.object({
+  schema_version: z.literal('1.0.0'),
+  dataset_version: digestSchema,
+  algorithm_version: z.string().min(1),
+  generated_at: z.iso.datetime(),
+  time_zone: z.literal('Asia/Shanghai'),
+  observation_start: z.literal(HISTORY_START),
+  observation_end: z.iso.date().nullable(),
+  initial_end: z.literal('2026-11-17'),
+  quality_status: z.enum(['passed', 'partial_coverage']),
+  quality_flags: z.array(z.object({
+    series_id: observationSchema.shape.series_id,
+    period_end: z.iso.date(),
+    code: z.enum(['unusual_change']),
+  }).strict()),
+  series: z.array(observationSchema),
+  coverage: z.array(coverageSchema),
+  indices: z.array(indexSchema),
+  revision_count: z.number().int().nonnegative(),
+}).strict();
+
+export const manifestSchema = datasetSchema.pick({
+  schema_version: true, dataset_version: true, algorithm_version: true,
+  generated_at: true, observation_start: true, observation_end: true, quality_status: true,
+}).extend({
+  latest: z.literal('/data/latest.json'),
+  sha256: digestSchema,
+  health: z.literal('/data/collection-status.json'),
+}).strict();
+
+export const healthSchema = z.object({
+  attempted_at: z.iso.datetime(),
+  completed_at: z.iso.datetime(),
+  attempted_at_shanghai: z.iso.datetime({ offset: true }),
+  dataset_version: digestSchema.nullable(),
+  result: z.enum(['success', 'fetch_failed', 'invalid']),
+  source_status: z.object({
+    'nbs-labour': z.enum(['verified', 'fetch_failed', 'invalid', 'retained']),
+    'nbs-pmi': z.enum(['verified', 'fetch_failed', 'invalid', 'retained']),
+  }).strict(),
+  workflow_url: z.url().nullable(),
+}).strict();
+
+export type Dataset = z.infer<typeof datasetSchema>;
+export type Health = z.infer<typeof healthSchema>;

@@ -9,7 +9,17 @@ export type Collection = Awaited<ReturnType<typeof collect>>;
 export type ReleaseFailure = { source_id: Release['kind']; release: Release; errors: string[] };
 
 export async function discover(since: string, until: string, request = fetchOriginal) {
-  const latest = parseArchive((await request(archive)).body.toString('utf8'));
+  let latest;
+  try {
+    latest = parseArchive((await request(archive)).body.toString('utf8'));
+  } catch (firstError) {
+    try {
+      latest = parseArchive((await request(`${archive}index.html`)).body.toString('utf8'));
+    } catch (secondError) {
+      const label = (error: unknown) => error instanceof Error ? error.message : String(error);
+      throw new Error(`NBS release archive failed: ${label(firstError)}; ${label(secondError)}`);
+    }
+  }
   const releases = [...latest.releases];
   let oldest = latest.oldest;
   for (let page = 1; page < latest.count && oldest >= since; page += 4) {
@@ -29,11 +39,12 @@ export async function discover(since: string, until: string, request = fetchOrig
     .map((release) => [release.suffix, release])).values()];
 }
 
-export async function collect(since: string, until: string, request = fetchOriginal) {
+export async function collect(since: string, until: string, request = fetchOriginal, select: 'earliest' | 'latest' = 'earliest') {
   const releases = await discover(since, businessDate(new Date()), request);
   const originals = new Map<string, Original>();
   const observations = new Map<string, Observation>();
   const failures: ReleaseFailure[] = [];
+  const originalsByRelease = new Map<string, Release>();
   for (let start = 0; start < releases.length; start += 4) {
     const results = await Promise.all(releases.slice(start, start + 4).map(async (release) => {
       const errors: string[] = [];
@@ -62,10 +73,13 @@ export async function collect(since: string, until: string, request = fetchOrigi
         if (current?.publication_date === row.publication_date && current.value !== row.value) {
           throw new Error(`Conflicting same-day official observations: ${key}`);
         }
-        if (!current || row.publication_date < current.publication_date) {
+        if (!current || (select === 'earliest'
+          ? row.publication_date < current.publication_date
+          : row.publication_date > current.publication_date)) {
           observations.set(key, row);
         }
         originals.set(row.raw_sha256, original);
+        originalsByRelease.set(row.raw_sha256, release);
       }
     }
   }
@@ -73,6 +87,7 @@ export async function collect(since: string, until: string, request = fetchOrigi
     releases,
     observations: [...observations.values()].sort((a, b) => observationKey(a).localeCompare(observationKey(b))),
     originals,
+    originalsByRelease,
     failures,
   };
 }

@@ -12,7 +12,9 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "fetch-data": "node --import tsx scripts/fetch-data.ts",
+    "validate-data": "node --import tsx scripts/validate-data.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

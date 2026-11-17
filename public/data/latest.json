@@ -1,0 +1,3480 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "c52c4f6b6607e58d62fe04919108b47e5fa8229053bbc59ea30149d9c42fd766",
+  "algorithm_version": "pending-calibration",
+  "generated_at": "2026-11-17T13:38:13.479Z",
+  "time_zone": "Asia/Shanghai",
+  "observation_start": "2023-01-01",
+  "observation_end": "2026-10-31",
+  "initial_end": "2026-11-17",
+  "quality_status": "partial_coverage",
+  "quality_flags": [
+    {
+      "series_id": "manufacturing_pmi_employment",
+      "period_end": "2023-04-30",
+      "code": "unusual_change"
+    },
+    {
+      "series_id": "manufacturing_pmi_employment",
+      "period_end": "2024-03-31",
+      "code": "unusual_change"
+    }
+  ],
+  "series": [
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202303/t20230315_1937190.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-02-01",
+        "end": "2023-02-28"
+      },
+      "frequency": "monthly",
+      "value": 5.7,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:16.671Z",
+      "published_at": "2023-03-15T02:00:00.000Z",
+      "publication_date": "2023-03-15",
+      "raw_sha256": "7ade85f2ab3dc15613237efb51bc01d4a3ffb96cb126d6e24f9bc6eca24a85dc",
+      "evidence": "31个大城市城镇调查失业率为5.7%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202304/t20230418_1938706.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-03-01",
+        "end": "2023-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.739Z",
+      "published_at": "2023-04-18T02:00:00.000Z",
+      "publication_date": "2023-04-18",
+      "raw_sha256": "b4333c2124036b6fe053b7f3429a4336dce623dd83b17d1b305611180a6b10cf",
+      "evidence": "31个大城市城镇调查失业率为5.5%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202305/t20230516_1939486.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-04-01",
+        "end": "2023-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5.5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.857Z",
+      "published_at": "2023-05-16T02:00:00.000Z",
+      "publication_date": "2023-05-16",
+      "raw_sha256": "62ef9acba52c73d0ce7e32f47e3642c303aa23ad43337f5fec4e21fe5d6a98f2",
+      "evidence": "31个大城市城镇调查失业率为5.5%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202306/t20230615_1940628.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-05-01",
+        "end": "2023-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5.5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.860Z",
+      "published_at": "2023-06-15T02:00:00.000Z",
+      "publication_date": "2023-06-15",
+      "raw_sha256": "7707d3ea1d6966154f745ae5d99d865a3ae9b9df6eed78ab107ed8dd04e58874",
+      "evidence": "31个大城市城镇调查失业率为5.5%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202307/t20230715_1941271.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-06-01",
+        "end": "2023-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5.5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.571Z",
+      "published_at": "2023-07-17T02:00:00.000Z",
+      "publication_date": "2023-07-17",
+      "raw_sha256": "fe0cdaf29a0f57aa81338eb4b4db636c95f2440931c061bdf77a278723ccf6c6",
+      "evidence": "31个大城市城镇调查失业率为5.5%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202308/t20230815_1941957.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-07-01",
+        "end": "2023-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.471Z",
+      "published_at": "2023-08-15T02:00:00.000Z",
+      "publication_date": "2023-08-15",
+      "raw_sha256": "6fde5ec12bb45cf412b7e8ec9f980e06bd73e72f3cabc6e9c289793898c4663f",
+      "evidence": "31个大城市城镇调查失业率为5.4%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202309/t20230915_1942848.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-08-01",
+        "end": "2023-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.358Z",
+      "published_at": "2023-09-15T02:00:00.000Z",
+      "publication_date": "2023-09-15",
+      "raw_sha256": "53158938440ad1ba957d7158c25912f117295d75eebde85f48e28322d87cde27",
+      "evidence": "31个大城市城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202310/t20231018_1943654.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-09-01",
+        "end": "2023-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.648Z",
+      "published_at": "2023-10-18T02:00:00.000Z",
+      "publication_date": "2023-10-18",
+      "raw_sha256": "c73a8e8116468e017559ed030fb6fc9a18799ca415d3e68e6f9cc4e48ebee71e",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202311/t20231115_1944527.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-10-01",
+        "end": "2023-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.593Z",
+      "published_at": "2023-11-15T02:00:00.000Z",
+      "publication_date": "2023-11-15",
+      "raw_sha256": "f87dfd18959c1792c5845fc49a89d836b724cfde483db8261e7933cc024b3d1d",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202312/t20231215_1945570.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-11-01",
+        "end": "2023-11-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.466Z",
+      "published_at": "2023-12-15T02:00:00.000Z",
+      "publication_date": "2023-12-15",
+      "raw_sha256": "e3bddf44e2fc7952ed4429a06710b3046b90e25aa87e9ab776c8840dd79b22ea",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202401/t20240117_1946624.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2023-12-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.760Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "5bba9682471839c6e2b53e749b09f8d823be6c4395eb96c5aff5443b3df202a4",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240321_1948109.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-02-01",
+        "end": "2024-02-29"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.311Z",
+      "published_at": "2024-03-18T02:00:00.000Z",
+      "publication_date": "2024-03-18",
+      "raw_sha256": "1a2705f0c84106fdd57998045051386c64bb3cb4f19778367cc58b45a87dee2d",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202404/t20240416_1948561.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-03-01",
+        "end": "2024-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.014Z",
+      "published_at": "2024-04-16T02:00:00.000Z",
+      "publication_date": "2024-04-16",
+      "raw_sha256": "fd572ce511a5fefac68dc813af75933ef835196f97289524c08d9450084d40ee",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202405/t20240517_1950397.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-04-01",
+        "end": "2024-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.837Z",
+      "published_at": "2024-05-17T02:00:00.000Z",
+      "publication_date": "2024-05-17",
+      "raw_sha256": "01ad3f07c357dacf9219f12b2232101f99a3f2eefc57f7cce94294dee1476300",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202406/t20240617_1954710.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-05-01",
+        "end": "2024-05-31"
+      },
+      "frequency": "monthly",
+      "value": 4.9,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.284Z",
+      "published_at": "2024-06-17T02:00:00.000Z",
+      "publication_date": "2024-06-17",
+      "raw_sha256": "27b585f341d8f1c1ec2a7174364cab56005b9398e981cfa7dba303d989761265",
+      "evidence": "31个大城市城镇调查失业率为4.9%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202407/t20240715_1955618.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-06-01",
+        "end": "2024-06-30"
+      },
+      "frequency": "monthly",
+      "value": 4.9,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.510Z",
+      "published_at": "2024-07-15T02:00:00.000Z",
+      "publication_date": "2024-07-15",
+      "raw_sha256": "1a205b36b991774d1761046e02aa5de106af6cc4ab0d7e28ebaed624d40f39a1",
+      "evidence": "31个大城市城镇调查失业率为4.9%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202408/t20240815_1955986.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-07-01",
+        "end": "2024-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.574Z",
+      "published_at": "2024-08-15T02:00:00.000Z",
+      "publication_date": "2024-08-15",
+      "raw_sha256": "97a0bb1156c9d987b94a020eb73832e42f0de538eb7e4dbe79eaf8b45b1e9174",
+      "evidence": "31个大城市城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202409/t20240914_1956487.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-08-01",
+        "end": "2024-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.527Z",
+      "published_at": "2024-09-14T02:00:00.000Z",
+      "publication_date": "2024-09-14",
+      "raw_sha256": "eb92cc441d064dda7e1079a4d70c2081b3f725871b05a5c2353e5e4057ffb6de",
+      "evidence": "31个大城市城镇调查失业率为5.4%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202410/t20241018_1957044.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-09-01",
+        "end": "2024-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.281Z",
+      "published_at": "2024-10-18T02:00:00.000Z",
+      "publication_date": "2024-10-18",
+      "raw_sha256": "1ba0684aa174c070d90c664a68b7b742326f49d612e77706a3946e816046630e",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202411/t20241115_1957431.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-10-01",
+        "end": "2024-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.263Z",
+      "published_at": "2024-11-15T02:00:00.000Z",
+      "publication_date": "2024-11-15",
+      "raw_sha256": "30bb41b0173a447e4a9de3e6a181c7165f526e88644d5e7f5626fade5aecf024",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202412/t20241216_1957767.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-11-01",
+        "end": "2024-11-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.696Z",
+      "published_at": "2024-12-16T02:00:00.000Z",
+      "publication_date": "2024-12-16",
+      "raw_sha256": "33050296c2b4908409457b027344156d7919a9be3f791ff2521dd1f47a66db75",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202501/t20250117_1958332.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2024-12-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.758Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "222828d886729dab0ca16418b33bfde34f988c53907a5f4531b39b302f5270e9",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959010.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-02-01",
+        "end": "2025-02-28"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.117Z",
+      "published_at": "2025-03-17T02:00:00.000Z",
+      "publication_date": "2025-03-17",
+      "raw_sha256": "e2e62b3169586638840689fb45d4d7e0f5eb6a82c16406776cdeeba148966a99",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202504/t20250416_1959321.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-03-01",
+        "end": "2025-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.290Z",
+      "published_at": "2025-04-16T02:00:00.000Z",
+      "publication_date": "2025-04-16",
+      "raw_sha256": "ee1fef4aa843a0c6f407f76219a85d5f20af2193c129a2a1d6dbe6e5eb8a47cd",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250519_1959864.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-04-01",
+        "end": "2025-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.471Z",
+      "published_at": "2025-05-19T02:00:00.000Z",
+      "publication_date": "2025-05-19",
+      "raw_sha256": "0741f9e218366fd010a7fe03af0c453e1418d193b32048165af652b77224854c",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202506/t20250616_1960173.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-05-01",
+        "end": "2025-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.729Z",
+      "published_at": "2025-06-16T02:00:00.000Z",
+      "publication_date": "2025-06-16",
+      "raw_sha256": "616b9d44c49ea585d2056cb8471deb1aa245b49487fc5293f8315955ab2fd6ec",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202507/t20250715_1960414.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-06-01",
+        "end": "2025-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.110Z",
+      "published_at": "2025-07-15T02:00:00.000Z",
+      "publication_date": "2025-07-15",
+      "raw_sha256": "6c5729510ece8374aca1c57ba21ae83a8f6ec8f8175291ddee72091e51404af4",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202508/t20250815_1960789.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-07-01",
+        "end": "2025-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.999Z",
+      "published_at": "2025-08-15T02:00:00.000Z",
+      "publication_date": "2025-08-15",
+      "raw_sha256": "5593bc16db3d1d2769a22eefab214742d624fc5b28e63f116ac093d13d936821",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202509/t20250915_1961181.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-08-01",
+        "end": "2025-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.480Z",
+      "published_at": "2025-09-15T02:00:00.000Z",
+      "publication_date": "2025-09-15",
+      "raw_sha256": "cf448dfd9129a524cc0fb36afeb5ae21f248ca47d91a684a85c8a9bff47a87dc",
+      "evidence": "31个大城市城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202510/t20251020_1961612.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-09-01",
+        "end": "2025-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.615Z",
+      "published_at": "2025-10-20T02:00:00.000Z",
+      "publication_date": "2025-10-20",
+      "raw_sha256": "4c86aaee59ee2ca43a45e8c2c632572d89a06193309bdffc45b31a2439773f0e",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202511/t20251114_1961858.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-10-01",
+        "end": "2025-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.075Z",
+      "published_at": "2025-11-14T02:00:00.000Z",
+      "publication_date": "2025-11-14",
+      "raw_sha256": "db096ccca405d0ef311ca7f3473ac45c91819e408efe549aec3acc794ee8722b",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202512/t20251215_1962075.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-11-01",
+        "end": "2025-11-30"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.989Z",
+      "published_at": "2025-12-15T02:00:00.000Z",
+      "publication_date": "2025-12-15",
+      "raw_sha256": "f6c1b60db2b37f16b968c2d38d4d3b06e4b97fb224355c3ebf444cda4271d412",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962330.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2025-12-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.563Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "6589caed6ca2d555035b18e7ecade59ec16ed95ba7467df441814f0149bd4f3d",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202603/t20260316_1962780.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-02-01",
+        "end": "2026-02-28"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.796Z",
+      "published_at": "2026-03-16T02:00:00.000Z",
+      "publication_date": "2026-03-16",
+      "raw_sha256": "5441a300aa62683113e7843019ae34dbe3ffce53750e29f5ff307a4eed3c6aad",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202604/t20260416_1963330.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-03-01",
+        "end": "2026-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.108Z",
+      "published_at": "2026-04-16T02:00:00.000Z",
+      "publication_date": "2026-04-16",
+      "raw_sha256": "40feb7aaf2ccc1aed136d0f24a35161b4bc91b2ee7efefcf2602451263895b39",
+      "evidence": "31个大城市城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202605/t20260518_1963732.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-04-01",
+        "end": "2026-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.377Z",
+      "published_at": "2026-05-18T02:00:00.000Z",
+      "publication_date": "2026-05-18",
+      "raw_sha256": "bfbb7f06a783159cf7d76546edaefb69e1183a909a3f0a8470c6c51b0564065a",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202606/t20260616_1963954.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-05-01",
+        "end": "2026-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.432Z",
+      "published_at": "2026-06-16T02:00:00.000Z",
+      "publication_date": "2026-06-16",
+      "raw_sha256": "42bb72760bd8a35d38fcedb6b33654c18b1d0970747efd95bc84189b835aedbe",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202607/t20260715_1964121.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-06-01",
+        "end": "2026-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:28:44.388Z",
+      "published_at": "2026-07-15T02:00:00.000Z",
+      "publication_date": "2026-07-15",
+      "raw_sha256": "339dbed6e4a9c7c9921236caf9ca9b5d780ab74783476668f6a447130f50825e",
+      "evidence": "31个大城市城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202608/t20260817_1965056.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-07-01",
+        "end": "2026-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.985Z",
+      "published_at": "2026-08-17T07:00:00.000Z",
+      "publication_date": "2026-08-17",
+      "raw_sha256": "086347081a0b7bfba39cded2a371db70b1d586ecec32b4226532694e45cddca0",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965307.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.935Z",
+      "published_at": "2026-09-15T02:00:00.000Z",
+      "publication_date": "2026-09-15",
+      "raw_sha256": "d744d332ccc4c9e6970cfa5ae7465e6bb1b08ff9653f518d5bb94f0821b4ba07",
+      "evidence": "31个大城市城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261019_1965618.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.383Z",
+      "published_at": "2026-10-19T02:00:00.000Z",
+      "publication_date": "2026-10-19",
+      "raw_sha256": "b84d2963ceeae0279bd20a84b9a5c14b837aae7b9103deab8383177c091cc3da",
+      "evidence": "31个大城市城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202611/t20261116_1965844.html",
+      "series_id": "city_unemployment",
+      "observation_period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.164Z",
+      "published_at": "2026-11-16T02:00:00.000Z",
+      "publication_date": "2026-11-16",
+      "raw_sha256": "9f72c2a09bd143ea147cdab267bd71b941203fb521d1f4201607361466744518",
+      "evidence": "31个大城市城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202303/t20230315_1937190.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-02-01",
+        "end": "2023-02-28"
+      },
+      "frequency": "monthly",
+      "value": 5.6,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:16.671Z",
+      "published_at": "2023-03-15T02:00:00.000Z",
+      "publication_date": "2023-03-15",
+      "raw_sha256": "7ade85f2ab3dc15613237efb51bc01d4a3ffb96cb126d6e24f9bc6eca24a85dc",
+      "evidence": "全国城镇调查失业率为5.6%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202304/t20230418_1938706.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-03-01",
+        "end": "2023-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.739Z",
+      "published_at": "2023-04-18T02:00:00.000Z",
+      "publication_date": "2023-04-18",
+      "raw_sha256": "b4333c2124036b6fe053b7f3429a4336dce623dd83b17d1b305611180a6b10cf",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202305/t20230516_1939486.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-04-01",
+        "end": "2023-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.857Z",
+      "published_at": "2023-05-16T02:00:00.000Z",
+      "publication_date": "2023-05-16",
+      "raw_sha256": "62ef9acba52c73d0ce7e32f47e3642c303aa23ad43337f5fec4e21fe5d6a98f2",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202306/t20230615_1940628.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-05-01",
+        "end": "2023-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.860Z",
+      "published_at": "2023-06-15T02:00:00.000Z",
+      "publication_date": "2023-06-15",
+      "raw_sha256": "7707d3ea1d6966154f745ae5d99d865a3ae9b9df6eed78ab107ed8dd04e58874",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202307/t20230715_1941271.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-06-01",
+        "end": "2023-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.571Z",
+      "published_at": "2023-07-17T02:00:00.000Z",
+      "publication_date": "2023-07-17",
+      "raw_sha256": "fe0cdaf29a0f57aa81338eb4b4db636c95f2440931c061bdf77a278723ccf6c6",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202308/t20230815_1941957.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-07-01",
+        "end": "2023-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.471Z",
+      "published_at": "2023-08-15T02:00:00.000Z",
+      "publication_date": "2023-08-15",
+      "raw_sha256": "6fde5ec12bb45cf412b7e8ec9f980e06bd73e72f3cabc6e9c289793898c4663f",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202309/t20230915_1942848.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-08-01",
+        "end": "2023-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.358Z",
+      "published_at": "2023-09-15T02:00:00.000Z",
+      "publication_date": "2023-09-15",
+      "raw_sha256": "53158938440ad1ba957d7158c25912f117295d75eebde85f48e28322d87cde27",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202310/t20231018_1943654.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-09-01",
+        "end": "2023-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.648Z",
+      "published_at": "2023-10-18T02:00:00.000Z",
+      "publication_date": "2023-10-18",
+      "raw_sha256": "c73a8e8116468e017559ed030fb6fc9a18799ca415d3e68e6f9cc4e48ebee71e",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202311/t20231115_1944527.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-10-01",
+        "end": "2023-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.593Z",
+      "published_at": "2023-11-15T02:00:00.000Z",
+      "publication_date": "2023-11-15",
+      "raw_sha256": "f87dfd18959c1792c5845fc49a89d836b724cfde483db8261e7933cc024b3d1d",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202312/t20231215_1945570.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-11-01",
+        "end": "2023-11-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.466Z",
+      "published_at": "2023-12-15T02:00:00.000Z",
+      "publication_date": "2023-12-15",
+      "raw_sha256": "e3bddf44e2fc7952ed4429a06710b3046b90e25aa87e9ab776c8840dd79b22ea",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202401/t20240117_1946624.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2023-12-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.760Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "5bba9682471839c6e2b53e749b09f8d823be6c4395eb96c5aff5443b3df202a4",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240321_1948109.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-02-01",
+        "end": "2024-02-29"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.311Z",
+      "published_at": "2024-03-18T02:00:00.000Z",
+      "publication_date": "2024-03-18",
+      "raw_sha256": "1a2705f0c84106fdd57998045051386c64bb3cb4f19778367cc58b45a87dee2d",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202404/t20240416_1948561.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-03-01",
+        "end": "2024-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.014Z",
+      "published_at": "2024-04-16T02:00:00.000Z",
+      "publication_date": "2024-04-16",
+      "raw_sha256": "fd572ce511a5fefac68dc813af75933ef835196f97289524c08d9450084d40ee",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202405/t20240517_1950397.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-04-01",
+        "end": "2024-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.837Z",
+      "published_at": "2024-05-17T02:00:00.000Z",
+      "publication_date": "2024-05-17",
+      "raw_sha256": "01ad3f07c357dacf9219f12b2232101f99a3f2eefc57f7cce94294dee1476300",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202406/t20240617_1954710.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-05-01",
+        "end": "2024-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.284Z",
+      "published_at": "2024-06-17T02:00:00.000Z",
+      "publication_date": "2024-06-17",
+      "raw_sha256": "27b585f341d8f1c1ec2a7174364cab56005b9398e981cfa7dba303d989761265",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202407/t20240715_1955618.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-06-01",
+        "end": "2024-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.510Z",
+      "published_at": "2024-07-15T02:00:00.000Z",
+      "publication_date": "2024-07-15",
+      "raw_sha256": "1a205b36b991774d1761046e02aa5de106af6cc4ab0d7e28ebaed624d40f39a1",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202408/t20240815_1955986.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-07-01",
+        "end": "2024-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.574Z",
+      "published_at": "2024-08-15T02:00:00.000Z",
+      "publication_date": "2024-08-15",
+      "raw_sha256": "97a0bb1156c9d987b94a020eb73832e42f0de538eb7e4dbe79eaf8b45b1e9174",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202409/t20240914_1956487.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-08-01",
+        "end": "2024-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.527Z",
+      "published_at": "2024-09-14T02:00:00.000Z",
+      "publication_date": "2024-09-14",
+      "raw_sha256": "eb92cc441d064dda7e1079a4d70c2081b3f725871b05a5c2353e5e4057ffb6de",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202410/t20241018_1957044.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-09-01",
+        "end": "2024-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.281Z",
+      "published_at": "2024-10-18T02:00:00.000Z",
+      "publication_date": "2024-10-18",
+      "raw_sha256": "1ba0684aa174c070d90c664a68b7b742326f49d612e77706a3946e816046630e",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202411/t20241115_1957431.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-10-01",
+        "end": "2024-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.263Z",
+      "published_at": "2024-11-15T02:00:00.000Z",
+      "publication_date": "2024-11-15",
+      "raw_sha256": "30bb41b0173a447e4a9de3e6a181c7165f526e88644d5e7f5626fade5aecf024",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202412/t20241216_1957767.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-11-01",
+        "end": "2024-11-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.696Z",
+      "published_at": "2024-12-16T02:00:00.000Z",
+      "publication_date": "2024-12-16",
+      "raw_sha256": "33050296c2b4908409457b027344156d7919a9be3f791ff2521dd1f47a66db75",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202501/t20250117_1958332.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2024-12-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.758Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "222828d886729dab0ca16418b33bfde34f988c53907a5f4531b39b302f5270e9",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959010.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-02-01",
+        "end": "2025-02-28"
+      },
+      "frequency": "monthly",
+      "value": 5.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.117Z",
+      "published_at": "2025-03-17T02:00:00.000Z",
+      "publication_date": "2025-03-17",
+      "raw_sha256": "e2e62b3169586638840689fb45d4d7e0f5eb6a82c16406776cdeeba148966a99",
+      "evidence": "全国城镇调查失业率为5.4%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202504/t20250416_1959321.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-03-01",
+        "end": "2025-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.290Z",
+      "published_at": "2025-04-16T02:00:00.000Z",
+      "publication_date": "2025-04-16",
+      "raw_sha256": "ee1fef4aa843a0c6f407f76219a85d5f20af2193c129a2a1d6dbe6e5eb8a47cd",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250519_1959864.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-04-01",
+        "end": "2025-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.471Z",
+      "published_at": "2025-05-19T02:00:00.000Z",
+      "publication_date": "2025-05-19",
+      "raw_sha256": "0741f9e218366fd010a7fe03af0c453e1418d193b32048165af652b77224854c",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202506/t20250616_1960173.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-05-01",
+        "end": "2025-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.729Z",
+      "published_at": "2025-06-16T02:00:00.000Z",
+      "publication_date": "2025-06-16",
+      "raw_sha256": "616b9d44c49ea585d2056cb8471deb1aa245b49487fc5293f8315955ab2fd6ec",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202507/t20250715_1960414.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-06-01",
+        "end": "2025-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.110Z",
+      "published_at": "2025-07-15T02:00:00.000Z",
+      "publication_date": "2025-07-15",
+      "raw_sha256": "6c5729510ece8374aca1c57ba21ae83a8f6ec8f8175291ddee72091e51404af4",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202508/t20250815_1960789.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-07-01",
+        "end": "2025-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.999Z",
+      "published_at": "2025-08-15T02:00:00.000Z",
+      "publication_date": "2025-08-15",
+      "raw_sha256": "5593bc16db3d1d2769a22eefab214742d624fc5b28e63f116ac093d13d936821",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202509/t20250915_1961181.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-08-01",
+        "end": "2025-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.480Z",
+      "published_at": "2025-09-15T02:00:00.000Z",
+      "publication_date": "2025-09-15",
+      "raw_sha256": "cf448dfd9129a524cc0fb36afeb5ae21f248ca47d91a684a85c8a9bff47a87dc",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202510/t20251020_1961612.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-09-01",
+        "end": "2025-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.615Z",
+      "published_at": "2025-10-20T02:00:00.000Z",
+      "publication_date": "2025-10-20",
+      "raw_sha256": "4c86aaee59ee2ca43a45e8c2c632572d89a06193309bdffc45b31a2439773f0e",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202511/t20251114_1961858.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-10-01",
+        "end": "2025-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.075Z",
+      "published_at": "2025-11-14T02:00:00.000Z",
+      "publication_date": "2025-11-14",
+      "raw_sha256": "db096ccca405d0ef311ca7f3473ac45c91819e408efe549aec3acc794ee8722b",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202512/t20251215_1962075.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-11-01",
+        "end": "2025-11-30"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.989Z",
+      "published_at": "2025-12-15T02:00:00.000Z",
+      "publication_date": "2025-12-15",
+      "raw_sha256": "f6c1b60db2b37f16b968c2d38d4d3b06e4b97fb224355c3ebf444cda4271d412",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962330.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2025-12-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.563Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "6589caed6ca2d555035b18e7ecade59ec16ed95ba7467df441814f0149bd4f3d",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202603/t20260316_1962780.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-02-01",
+        "end": "2026-02-28"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.796Z",
+      "published_at": "2026-03-16T02:00:00.000Z",
+      "publication_date": "2026-03-16",
+      "raw_sha256": "5441a300aa62683113e7843019ae34dbe3ffce53750e29f5ff307a4eed3c6aad",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202604/t20260416_1963330.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-03-01",
+        "end": "2026-03-31"
+      },
+      "frequency": "monthly",
+      "value": 5.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.108Z",
+      "published_at": "2026-04-16T02:00:00.000Z",
+      "publication_date": "2026-04-16",
+      "raw_sha256": "40feb7aaf2ccc1aed136d0f24a35161b4bc91b2ee7efefcf2602451263895b39",
+      "evidence": "全国城镇调查失业率为5.4%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202605/t20260518_1963732.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-04-01",
+        "end": "2026-04-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.377Z",
+      "published_at": "2026-05-18T02:00:00.000Z",
+      "publication_date": "2026-05-18",
+      "raw_sha256": "bfbb7f06a783159cf7d76546edaefb69e1183a909a3f0a8470c6c51b0564065a",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202606/t20260616_1963954.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-05-01",
+        "end": "2026-05-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.432Z",
+      "published_at": "2026-06-16T02:00:00.000Z",
+      "publication_date": "2026-06-16",
+      "raw_sha256": "42bb72760bd8a35d38fcedb6b33654c18b1d0970747efd95bc84189b835aedbe",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202607/t20260715_1964121.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-06-01",
+        "end": "2026-06-30"
+      },
+      "frequency": "monthly",
+      "value": 5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:28:44.388Z",
+      "published_at": "2026-07-15T02:00:00.000Z",
+      "publication_date": "2026-07-15",
+      "raw_sha256": "339dbed6e4a9c7c9921236caf9ca9b5d780ab74783476668f6a447130f50825e",
+      "evidence": "全国城镇调查失业率为5.0%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202608/t20260817_1965056.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-07-01",
+        "end": "2026-07-31"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.985Z",
+      "published_at": "2026-08-17T07:00:00.000Z",
+      "publication_date": "2026-08-17",
+      "raw_sha256": "086347081a0b7bfba39cded2a371db70b1d586ecec32b4226532694e45cddca0",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965307.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "frequency": "monthly",
+      "value": 5.3,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.935Z",
+      "published_at": "2026-09-15T02:00:00.000Z",
+      "publication_date": "2026-09-15",
+      "raw_sha256": "d744d332ccc4c9e6970cfa5ae7465e6bb1b08ff9653f518d5bb94f0821b4ba07",
+      "evidence": "全国城镇调查失业率为5.3%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261019_1965618.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "frequency": "monthly",
+      "value": 5.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.383Z",
+      "published_at": "2026-10-19T02:00:00.000Z",
+      "publication_date": "2026-10-19",
+      "raw_sha256": "b84d2963ceeae0279bd20a84b9a5c14b837aae7b9103deab8383177c091cc3da",
+      "evidence": "全国城镇调查失业率为5.2%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-labour",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202611/t20261116_1965844.html",
+      "series_id": "urban_unemployment",
+      "observation_period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31"
+      },
+      "frequency": "monthly",
+      "value": 5.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.164Z",
+      "published_at": "2026-11-16T02:00:00.000Z",
+      "publication_date": "2026-11-16",
+      "raw_sha256": "9f72c2a09bd143ea147cdab267bd71b941203fb521d1f4201607361466744518",
+      "evidence": "全国城镇调查失业率为5.1%",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1901737.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-01-31"
+      },
+      "frequency": "monthly",
+      "value": 50.9,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:16.597Z",
+      "published_at": "2023-01-31T01:30:00.000Z",
+      "publication_date": "2023-01-31",
+      "raw_sha256": "9445a4ec08943e94a9f8c0ebc3d0dd5b00e4fdd48765237dcab6dcd8c89f64f6",
+      "evidence": "2023年1月 从业人员 50.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202303/t20230301_1919045.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-02-01",
+        "end": "2023-02-28"
+      },
+      "frequency": "monthly",
+      "value": 54.1,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:16.466Z",
+      "published_at": "2023-03-01T01:30:00.000Z",
+      "publication_date": "2023-03-01",
+      "raw_sha256": "196226c74d2a945bada53012fc8626e0bab18a1650d2ba7348cbd0f857c6243a",
+      "evidence": "2023年2月 从业人员 54.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202303/t20230331_1938271.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-03-01",
+        "end": "2023-03-31"
+      },
+      "frequency": "monthly",
+      "value": 53.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.683Z",
+      "published_at": "2023-03-31T01:30:00.000Z",
+      "publication_date": "2023-03-31",
+      "raw_sha256": "521c229bdf0ff6ce0fefacc37049228ceeac9a221b2dbad5cdd1b5ced4d371c9",
+      "evidence": "2023年3月 从业人员 53.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202304/t20230429_1939136.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-04-01",
+        "end": "2023-04-30"
+      },
+      "frequency": "monthly",
+      "value": 48.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.888Z",
+      "published_at": "2023-04-30T01:30:00.000Z",
+      "publication_date": "2023-04-30",
+      "raw_sha256": "cfb8a6a0b4b469eb9314d06b1fa60355e53ddc38ee1dd8267c3da960393edf20",
+      "evidence": "2023年4月 从业人员 48.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202305/t20230531_1940267.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-05-01",
+        "end": "2023-05-31"
+      },
+      "frequency": "monthly",
+      "value": 48.3,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.651Z",
+      "published_at": "2023-05-31T01:30:00.000Z",
+      "publication_date": "2023-05-31",
+      "raw_sha256": "1811f0a41cc001c1e2dd7704042f1ebf07b39817522d986e4481d4d257497b17",
+      "evidence": "2023年5月 从业人员 48.3",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202306/t20230630_1940935.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-06-01",
+        "end": "2023-06-30"
+      },
+      "frequency": "monthly",
+      "value": 48.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.149Z",
+      "published_at": "2023-06-30T01:30:00.000Z",
+      "publication_date": "2023-06-30",
+      "raw_sha256": "8a55094299df18bd5c7b05e5c2b12a78d5b32d5be522132edbf4f25107ee5c72",
+      "evidence": "2023年6月 从业人员 48.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202307/t20230731_1941624.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-07-01",
+        "end": "2023-07-31"
+      },
+      "frequency": "monthly",
+      "value": 49.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.449Z",
+      "published_at": "2023-07-31T01:30:00.000Z",
+      "publication_date": "2023-07-31",
+      "raw_sha256": "b30ec942dac353e4089455aefa1f71b3edb3db2e24baa747cf78405b56c6b66e",
+      "evidence": "2023年7月 从业人员 49.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202308/t20230831_1942429.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-08-01",
+        "end": "2023-08-31"
+      },
+      "frequency": "monthly",
+      "value": 50.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.511Z",
+      "published_at": "2023-08-31T01:30:00.000Z",
+      "publication_date": "2023-08-31",
+      "raw_sha256": "de2a0c9e3eeaa06d5b97e09bc9b54f926b137fd01eed9397fd35e235339de148",
+      "evidence": "2023年8月 从业人员 50.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202309/t20230928_1943291.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-09-01",
+        "end": "2023-09-30"
+      },
+      "frequency": "monthly",
+      "value": 50.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.696Z",
+      "published_at": "2023-09-30T01:30:00.000Z",
+      "publication_date": "2023-09-30",
+      "raw_sha256": "5fc419efabd49116402af527e858cf917b4674a2346e18b36f4f96e2a99a3442",
+      "evidence": "2023年9月 从业人员 50.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202310/t20231031_1944037.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-10-01",
+        "end": "2023-10-31"
+      },
+      "frequency": "monthly",
+      "value": 49.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.469Z",
+      "published_at": "2023-10-31T01:30:00.000Z",
+      "publication_date": "2023-10-31",
+      "raw_sha256": "94bcdbc1c98ab6dcb8b1d84923adef7064df81d13e4d7da99d8cb58e7ff013a9",
+      "evidence": "2023年10月 从业人员 49.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202311/t20231130_1945018.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-11-01",
+        "end": "2023-11-30"
+      },
+      "frequency": "monthly",
+      "value": 49.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.656Z",
+      "published_at": "2023-11-30T01:30:00.000Z",
+      "publication_date": "2023-11-30",
+      "raw_sha256": "468b192bf3e2f645ac5bfe2158f4ce36f88f8feb3c8d7f2633605060eb605bfb",
+      "evidence": "2023年11月 从业人员 49.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202312/t20231229_1946102.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-12-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 48.7,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.730Z",
+      "published_at": "2023-12-31T01:30:00.000Z",
+      "publication_date": "2023-12-31",
+      "raw_sha256": "7f679a77e3950a27339a3c63953b62fc7d20c62ea16af2a2eee8329fd36b2ff7",
+      "evidence": "2023年12月 从业人员 48.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240131_1947009.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-01-31"
+      },
+      "frequency": "monthly",
+      "value": 49,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.681Z",
+      "published_at": "2024-01-31T01:30:00.000Z",
+      "publication_date": "2024-01-31",
+      "raw_sha256": "b0dc7bd0a4655b8d71ca6c336e9c22b5673aba8fe0f0d7fd6ccb22324807d7f9",
+      "evidence": "2024年1月 从业人员 49.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240318_1948006.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-02-01",
+        "end": "2024-02-29"
+      },
+      "frequency": "monthly",
+      "value": 49,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.449Z",
+      "published_at": "2024-03-01T01:30:00.000Z",
+      "publication_date": "2024-03-01",
+      "raw_sha256": "793d9e0a6c7e6f6f041d27d1ea8f28f3798dc3af94b371dbd9fa1f07dc4a477a",
+      "evidence": "2024年2月 从业人员 49.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202404/t20240411_1948446.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-03-01",
+        "end": "2024-03-31"
+      },
+      "frequency": "monthly",
+      "value": 53,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.210Z",
+      "published_at": "2024-03-31T01:30:00.000Z",
+      "publication_date": "2024-03-31",
+      "raw_sha256": "d49ce9cfc27efbd1a079aeadbc03a1c0a9bae29663d4b7a72472791fc772d646",
+      "evidence": "2024年3月 从业人员 53.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202404/t20240430_1948787.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-04-01",
+        "end": "2024-04-30"
+      },
+      "frequency": "monthly",
+      "value": 51.1,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.950Z",
+      "published_at": "2024-04-30T01:30:00.000Z",
+      "publication_date": "2024-04-30",
+      "raw_sha256": "fada8c121c7f76b8aa5985f41777ff6360eaf3aaa38d338dabe8408de05c8b55",
+      "evidence": "2024年4月 从业人员 51.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202405/t20240531_1954176.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-05-01",
+        "end": "2024-05-31"
+      },
+      "frequency": "monthly",
+      "value": 49.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.982Z",
+      "published_at": "2024-05-31T01:30:00.000Z",
+      "publication_date": "2024-05-31",
+      "raw_sha256": "7889465401462f42017a2638dd8b7a91581d55a0e12d4988ccb9aa7e1e794a6c",
+      "evidence": "2024年5月 从业人员 49.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202406/t20240630_1955251.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-06-01",
+        "end": "2024-06-30"
+      },
+      "frequency": "monthly",
+      "value": 49.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.192Z",
+      "published_at": "2024-06-30T01:30:00.000Z",
+      "publication_date": "2024-06-30",
+      "raw_sha256": "46f2f97b8c7117c5fc38a27956628193a3043364d49d50cfde8d677657c7fdaf",
+      "evidence": "2024年6月 从业人员 49.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202407/t20240731_1955901.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-07-01",
+        "end": "2024-07-31"
+      },
+      "frequency": "monthly",
+      "value": 49.3,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.322Z",
+      "published_at": "2024-07-31T01:30:00.000Z",
+      "publication_date": "2024-07-31",
+      "raw_sha256": "7411928c5258a868c4625faa699c2c175863010996d0db56306566634bcbae5c",
+      "evidence": "2024年7月 从业人员 49.3",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202408/t20240831_1956161.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-08-01",
+        "end": "2024-08-31"
+      },
+      "frequency": "monthly",
+      "value": 48.9,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.711Z",
+      "published_at": "2024-08-31T01:30:00.000Z",
+      "publication_date": "2024-08-31",
+      "raw_sha256": "e7aa7e0c9ed2c141b0087a2773634498fa689d91e22dde78bbe809ab3a7af6e5",
+      "evidence": "2024年8月 从业人员 48.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202409/t20240930_1956798.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-09-01",
+        "end": "2024-09-30"
+      },
+      "frequency": "monthly",
+      "value": 49.9,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.893Z",
+      "published_at": "2024-09-30T01:30:00.000Z",
+      "publication_date": "2024-09-30",
+      "raw_sha256": "775167727ed3d668c2ff872f582fbae1be32049782cc3c72132e1eb5e2ad3da6",
+      "evidence": "2024年9月 从业人员 49.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202410/t20241031_1957214.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-10-01",
+        "end": "2024-10-31"
+      },
+      "frequency": "monthly",
+      "value": 50,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.179Z",
+      "published_at": "2024-10-31T01:30:00.000Z",
+      "publication_date": "2024-10-31",
+      "raw_sha256": "38bc23935bb5bcd5466fe75c61cf86199900b846bb6010b7509f25299b99a72c",
+      "evidence": "2024年10月 从业人员 50.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202411/t20241130_1957624.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-11-01",
+        "end": "2024-11-30"
+      },
+      "frequency": "monthly",
+      "value": 50.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.233Z",
+      "published_at": "2024-11-30T01:30:00.000Z",
+      "publication_date": "2024-11-30",
+      "raw_sha256": "58f94d1be062d4ce9d298fdcbbe2ce38e551e38219d38939f40a6e54b3d3925b",
+      "evidence": "2024年11月 从业人员 50.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202412/t20241231_1958118.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-12-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 51,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.843Z",
+      "published_at": "2024-12-31T01:30:00.000Z",
+      "publication_date": "2024-12-31",
+      "raw_sha256": "f2962a5abb0136b9af70143b9eed57a8b66d9b1fe03ea119bc60281e76815d0c",
+      "evidence": "2024年12月 从业人员 51.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202501/t20250127_1958493.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-01-31"
+      },
+      "frequency": "monthly",
+      "value": 49.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.657Z",
+      "published_at": "2025-01-27T01:30:00.000Z",
+      "publication_date": "2025-01-27",
+      "raw_sha256": "3b0148c2b0bbabef8de7d9aade2edf6fb8cc848b03c627320a281ca59adb2285",
+      "evidence": "2025年1月 从业人员 49.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250301_1958837.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-02-01",
+        "end": "2025-02-28"
+      },
+      "frequency": "monthly",
+      "value": 51.1,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.235Z",
+      "published_at": "2025-03-01T01:30:00.000Z",
+      "publication_date": "2025-03-01",
+      "raw_sha256": "2948fee7b46e8b69160e68a4743e38d4b2d53cec24883d5cb48a506f3bcf2d26",
+      "evidence": "2025年2月 从业人员 51.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250331_1959176.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-03-01",
+        "end": "2025-03-31"
+      },
+      "frequency": "monthly",
+      "value": 51.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.148Z",
+      "published_at": "2025-03-31T01:30:00.000Z",
+      "publication_date": "2025-03-31",
+      "raw_sha256": "f367072c1707a0b6efdfaa5cfaa21c698f9d1fb477bb5e383c84ef7ac60347db",
+      "evidence": "2025年3月 从业人员 51.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202504/t20250430_1959521.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-04-01",
+        "end": "2025-04-30"
+      },
+      "frequency": "monthly",
+      "value": 49.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.691Z",
+      "published_at": "2025-04-30T01:30:00.000Z",
+      "publication_date": "2025-04-30",
+      "raw_sha256": "7f1cf3f39b1e1b57bf28aa0d659d3902b18a15274a4905ac8d4b1ae7b479cbb1",
+      "evidence": "2025年4月 从业人员 49.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250531_1959985.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-05-01",
+        "end": "2025-05-31"
+      },
+      "frequency": "monthly",
+      "value": 49.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.740Z",
+      "published_at": "2025-05-31T01:30:00.000Z",
+      "publication_date": "2025-05-31",
+      "raw_sha256": "0c888875e9877594d61e7318137e5f62dba840f3c2547f1deecfa0f3f810b053",
+      "evidence": "2025年5月 从业人员 49.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202506/t20250630_1960283.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-06-01",
+        "end": "2025-06-30"
+      },
+      "frequency": "monthly",
+      "value": 50.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.035Z",
+      "published_at": "2025-06-30T01:30:00.000Z",
+      "publication_date": "2025-06-30",
+      "raw_sha256": "b8252d18f3455391170ca85adee8a769b750858405301314032cbe14bccc6dc2",
+      "evidence": "2025年6月 从业人员 50.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202507/t20250731_1960551.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-07-01",
+        "end": "2025-07-31"
+      },
+      "frequency": "monthly",
+      "value": 49.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.183Z",
+      "published_at": "2025-07-31T01:30:00.000Z",
+      "publication_date": "2025-07-31",
+      "raw_sha256": "454616b0f81d2a7e1c6a6fb640b9f56699f61cd6c703b09537dc77e3f6cd7adc",
+      "evidence": "2025年7月 从业人员 49.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202508/t20250831_1960937.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-08-01",
+        "end": "2025-08-31"
+      },
+      "frequency": "monthly",
+      "value": 49.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.595Z",
+      "published_at": "2025-08-31T01:30:00.000Z",
+      "publication_date": "2025-08-31",
+      "raw_sha256": "701f0d652788ed6c967237438dbab342eeebf6d7af3facdedca87efd985ec410",
+      "evidence": "2025年8月 从业人员 49.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202509/t20250930_1961438.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-09-01",
+        "end": "2025-09-30"
+      },
+      "frequency": "monthly",
+      "value": 49.7,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.561Z",
+      "published_at": "2025-09-30T01:30:00.000Z",
+      "publication_date": "2025-09-30",
+      "raw_sha256": "9d859168b7f9084f95c438e38f177d7c99045ca29014d32916b34a9933a75329",
+      "evidence": "2025年9月 从业人员 49.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202510/t20251031_1961740.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-10-01",
+        "end": "2025-10-31"
+      },
+      "frequency": "monthly",
+      "value": 48.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.888Z",
+      "published_at": "2025-10-31T01:30:00.000Z",
+      "publication_date": "2025-10-31",
+      "raw_sha256": "17a4fdc08f6eebb7fdf9052dba3f00350de765164f0becdab858ccfcd777db95",
+      "evidence": "2025年10月 从业人员 48.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202511/t20251130_1961945.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-11-01",
+        "end": "2025-11-30"
+      },
+      "frequency": "monthly",
+      "value": 49.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.051Z",
+      "published_at": "2025-11-30T01:30:00.000Z",
+      "publication_date": "2025-11-30",
+      "raw_sha256": "ec6031a794b00a74bf5120632f6ba8895c55931c69b77f9be6a0cfe884584533",
+      "evidence": "2025年11月 从业人员 49.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202512/t20251231_1962218.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-12-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 50.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.623Z",
+      "published_at": "2025-12-31T01:30:00.000Z",
+      "publication_date": "2025-12-31",
+      "raw_sha256": "3ce7093cbb77b57e5fe1d6d6a322ea5065af84eaa3c4597eb6fffd32a036ccd7",
+      "evidence": "2025年12月 从业人员 50.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260131_1962416.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-01-01",
+        "end": "2026-01-31"
+      },
+      "frequency": "monthly",
+      "value": 49.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.378Z",
+      "published_at": "2026-01-31T01:30:00.000Z",
+      "publication_date": "2026-01-31",
+      "raw_sha256": "cf2d1924fb061af9816bc23a88184e9691786925d7f10f0c5836569b67bd37dd",
+      "evidence": "2026年1月 从业人员 49.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202603/t20260304_1962699.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-02-01",
+        "end": "2026-02-28"
+      },
+      "frequency": "monthly",
+      "value": 48.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.487Z",
+      "published_at": "2026-03-04T01:30:00.000Z",
+      "publication_date": "2026-03-04",
+      "raw_sha256": "7fc3380bffe2ac913e5dec3c794fff664c943c036e8682e9bddbcb7c29184c04",
+      "evidence": "2026年2月 从业人员 48.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202603/t20260331_1962889.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-03-01",
+        "end": "2026-03-31"
+      },
+      "frequency": "monthly",
+      "value": 51.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.822Z",
+      "published_at": "2026-03-31T01:30:00.000Z",
+      "publication_date": "2026-03-31",
+      "raw_sha256": "7ee3d5e5219e97b20cb2bcbcb1351a6d7c255a937c059d8483caf7fc9b37ff4e",
+      "evidence": "2026年3月 从业人员 51.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202604/t20260430_1963473.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-04-01",
+        "end": "2026-04-30"
+      },
+      "frequency": "monthly",
+      "value": 50.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.702Z",
+      "published_at": "2026-04-30T01:30:00.000Z",
+      "publication_date": "2026-04-30",
+      "raw_sha256": "991e65ff83eee38114fbf278791b4ecae96180cd5e94c9282ed8284cb960d7c5",
+      "evidence": "2026年4月 从业人员 50.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202605/t20260531_1963824.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-05-01",
+        "end": "2026-05-31"
+      },
+      "frequency": "monthly",
+      "value": 49.9,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.325Z",
+      "published_at": "2026-05-31T01:30:00.000Z",
+      "publication_date": "2026-05-31",
+      "raw_sha256": "02457a92c92706cbd54abb0b3bec030730585d977225853c5dc983a394db0936",
+      "evidence": "2026年5月 从业人员 49.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202606/t20260630_1964032.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-06-01",
+        "end": "2026-06-30"
+      },
+      "frequency": "monthly",
+      "value": 51.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.397Z",
+      "published_at": "2026-06-30T01:30:00.000Z",
+      "publication_date": "2026-06-30",
+      "raw_sha256": "dc61b3114d23fe637b5b81586b72f45f4ec37bc0440e43bd25f78150854c0723",
+      "evidence": "2026年6月 从业人员 51.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202607/t20260731_1964253.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-07-01",
+        "end": "2026-07-31"
+      },
+      "frequency": "monthly",
+      "value": 48.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.898Z",
+      "published_at": "2026-07-31T01:30:00.000Z",
+      "publication_date": "2026-07-31",
+      "raw_sha256": "013fe0cd839e4b90d3af3dbba7ba2adf1c6a5ef082d2da76cf5928310ae3ab16",
+      "evidence": "2026年7月 从业人员 48.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202608/t20260831_1965154.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "frequency": "monthly",
+      "value": 50.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.968Z",
+      "published_at": "2026-08-31T01:30:00.000Z",
+      "publication_date": "2026-08-31",
+      "raw_sha256": "8f4ce99e5fabde96755ae9b5ec21262b2ba118cd1376f00a76b34a99e07f85cb",
+      "evidence": "2026年8月 从业人员 50.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260930_1965449.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "frequency": "monthly",
+      "value": 50.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.409Z",
+      "published_at": "2026-09-30T01:30:00.000Z",
+      "publication_date": "2026-09-30",
+      "raw_sha256": "047cf98e1029862267438906eafa9d6f4aa7a0653d2c5857b1d37b7707df813e",
+      "evidence": "2026年9月 从业人员 50.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261031_1965718.html",
+      "series_id": "manufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31"
+      },
+      "frequency": "monthly",
+      "value": 49.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.316Z",
+      "published_at": "2026-10-31T01:30:00.000Z",
+      "publication_date": "2026-10-31",
+      "raw_sha256": "9b9fb05abd638bc38fd709db8bf467795f9705f9c4b253117cdc4ef001329f28",
+      "evidence": "2026年10月 从业人员 49.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1901737.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-01-31"
+      },
+      "frequency": "monthly",
+      "value": 46.7,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:16.597Z",
+      "published_at": "2023-01-31T01:30:00.000Z",
+      "publication_date": "2023-01-31",
+      "raw_sha256": "9445a4ec08943e94a9f8c0ebc3d0dd5b00e4fdd48765237dcab6dcd8c89f64f6",
+      "evidence": "2023年1月 从业人员 46.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202303/t20230301_1919045.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-02-01",
+        "end": "2023-02-28"
+      },
+      "frequency": "monthly",
+      "value": 50.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:16.466Z",
+      "published_at": "2023-03-01T01:30:00.000Z",
+      "publication_date": "2023-03-01",
+      "raw_sha256": "196226c74d2a945bada53012fc8626e0bab18a1650d2ba7348cbd0f857c6243a",
+      "evidence": "2023年2月 从业人员 50.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202303/t20230331_1938271.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-03-01",
+        "end": "2023-03-31"
+      },
+      "frequency": "monthly",
+      "value": 49.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.683Z",
+      "published_at": "2023-03-31T01:30:00.000Z",
+      "publication_date": "2023-03-31",
+      "raw_sha256": "521c229bdf0ff6ce0fefacc37049228ceeac9a221b2dbad5cdd1b5ced4d371c9",
+      "evidence": "2023年3月 从业人员 49.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202304/t20230429_1939136.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-04-01",
+        "end": "2023-04-30"
+      },
+      "frequency": "monthly",
+      "value": 48.3,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:15.888Z",
+      "published_at": "2023-04-30T01:30:00.000Z",
+      "publication_date": "2023-04-30",
+      "raw_sha256": "cfb8a6a0b4b469eb9314d06b1fa60355e53ddc38ee1dd8267c3da960393edf20",
+      "evidence": "2023年4月 从业人员 48.3",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202305/t20230531_1940267.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-05-01",
+        "end": "2023-05-31"
+      },
+      "frequency": "monthly",
+      "value": 48.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.651Z",
+      "published_at": "2023-05-31T01:30:00.000Z",
+      "publication_date": "2023-05-31",
+      "raw_sha256": "1811f0a41cc001c1e2dd7704042f1ebf07b39817522d986e4481d4d257497b17",
+      "evidence": "2023年5月 从业人员 48.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202306/t20230630_1940935.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-06-01",
+        "end": "2023-06-30"
+      },
+      "frequency": "monthly",
+      "value": 46.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:14.149Z",
+      "published_at": "2023-06-30T01:30:00.000Z",
+      "publication_date": "2023-06-30",
+      "raw_sha256": "8a55094299df18bd5c7b05e5c2b12a78d5b32d5be522132edbf4f25107ee5c72",
+      "evidence": "2023年6月 从业人员 46.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202307/t20230731_1941624.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-07-01",
+        "end": "2023-07-31"
+      },
+      "frequency": "monthly",
+      "value": 46.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.449Z",
+      "published_at": "2023-07-31T01:30:00.000Z",
+      "publication_date": "2023-07-31",
+      "raw_sha256": "b30ec942dac353e4089455aefa1f71b3edb3db2e24baa747cf78405b56c6b66e",
+      "evidence": "2023年7月 从业人员 46.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202308/t20230831_1942429.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-08-01",
+        "end": "2023-08-31"
+      },
+      "frequency": "monthly",
+      "value": 46.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:13.511Z",
+      "published_at": "2023-08-31T01:30:00.000Z",
+      "publication_date": "2023-08-31",
+      "raw_sha256": "de2a0c9e3eeaa06d5b97e09bc9b54f926b137fd01eed9397fd35e235339de148",
+      "evidence": "2023年8月 从业人员 46.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202309/t20230928_1943291.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-09-01",
+        "end": "2023-09-30"
+      },
+      "frequency": "monthly",
+      "value": 46.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.696Z",
+      "published_at": "2023-09-30T01:30:00.000Z",
+      "publication_date": "2023-09-30",
+      "raw_sha256": "5fc419efabd49116402af527e858cf917b4674a2346e18b36f4f96e2a99a3442",
+      "evidence": "2023年9月 从业人员 46.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202310/t20231031_1944037.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-10-01",
+        "end": "2023-10-31"
+      },
+      "frequency": "monthly",
+      "value": 46.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:12.469Z",
+      "published_at": "2023-10-31T01:30:00.000Z",
+      "publication_date": "2023-10-31",
+      "raw_sha256": "94bcdbc1c98ab6dcb8b1d84923adef7064df81d13e4d7da99d8cb58e7ff013a9",
+      "evidence": "2023年10月 从业人员 46.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202311/t20231130_1945018.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-11-01",
+        "end": "2023-11-30"
+      },
+      "frequency": "monthly",
+      "value": 46.9,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.656Z",
+      "published_at": "2023-11-30T01:30:00.000Z",
+      "publication_date": "2023-11-30",
+      "raw_sha256": "468b192bf3e2f645ac5bfe2158f4ce36f88f8feb3c8d7f2633605060eb605bfb",
+      "evidence": "2023年11月 从业人员 46.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202312/t20231229_1946102.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2023-12-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 47.1,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:11.730Z",
+      "published_at": "2023-12-31T01:30:00.000Z",
+      "publication_date": "2023-12-31",
+      "raw_sha256": "7f679a77e3950a27339a3c63953b62fc7d20c62ea16af2a2eee8329fd36b2ff7",
+      "evidence": "2023年12月 从业人员 47.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240131_1947009.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-01-31"
+      },
+      "frequency": "monthly",
+      "value": 47,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.681Z",
+      "published_at": "2024-01-31T01:30:00.000Z",
+      "publication_date": "2024-01-31",
+      "raw_sha256": "b0dc7bd0a4655b8d71ca6c336e9c22b5673aba8fe0f0d7fd6ccb22324807d7f9",
+      "evidence": "2024年1月 从业人员 47.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240318_1948006.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-02-01",
+        "end": "2024-02-29"
+      },
+      "frequency": "monthly",
+      "value": 47,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.449Z",
+      "published_at": "2024-03-01T01:30:00.000Z",
+      "publication_date": "2024-03-01",
+      "raw_sha256": "793d9e0a6c7e6f6f041d27d1ea8f28f3798dc3af94b371dbd9fa1f07dc4a477a",
+      "evidence": "2024年2月 从业人员 47.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202404/t20240411_1948446.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-03-01",
+        "end": "2024-03-31"
+      },
+      "frequency": "monthly",
+      "value": 46.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:10.210Z",
+      "published_at": "2024-03-31T01:30:00.000Z",
+      "publication_date": "2024-03-31",
+      "raw_sha256": "d49ce9cfc27efbd1a079aeadbc03a1c0a9bae29663d4b7a72472791fc772d646",
+      "evidence": "2024年3月 从业人员 46.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202404/t20240430_1948787.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-04-01",
+        "end": "2024-04-30"
+      },
+      "frequency": "monthly",
+      "value": 47.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.950Z",
+      "published_at": "2024-04-30T01:30:00.000Z",
+      "publication_date": "2024-04-30",
+      "raw_sha256": "fada8c121c7f76b8aa5985f41777ff6360eaf3aaa38d338dabe8408de05c8b55",
+      "evidence": "2024年4月 从业人员 47.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202405/t20240531_1954176.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-05-01",
+        "end": "2024-05-31"
+      },
+      "frequency": "monthly",
+      "value": 46.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.982Z",
+      "published_at": "2024-05-31T01:30:00.000Z",
+      "publication_date": "2024-05-31",
+      "raw_sha256": "7889465401462f42017a2638dd8b7a91581d55a0e12d4988ccb9aa7e1e794a6c",
+      "evidence": "2024年5月 从业人员 46.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202406/t20240630_1955251.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-06-01",
+        "end": "2024-06-30"
+      },
+      "frequency": "monthly",
+      "value": 45.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.192Z",
+      "published_at": "2024-06-30T01:30:00.000Z",
+      "publication_date": "2024-06-30",
+      "raw_sha256": "46f2f97b8c7117c5fc38a27956628193a3043364d49d50cfde8d677657c7fdaf",
+      "evidence": "2024年6月 从业人员 45.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202407/t20240731_1955901.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-07-01",
+        "end": "2024-07-31"
+      },
+      "frequency": "monthly",
+      "value": 45.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:09.322Z",
+      "published_at": "2024-07-31T01:30:00.000Z",
+      "publication_date": "2024-07-31",
+      "raw_sha256": "7411928c5258a868c4625faa699c2c175863010996d0db56306566634bcbae5c",
+      "evidence": "2024年7月 从业人员 45.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202408/t20240831_1956161.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-08-01",
+        "end": "2024-08-31"
+      },
+      "frequency": "monthly",
+      "value": 45.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.711Z",
+      "published_at": "2024-08-31T01:30:00.000Z",
+      "publication_date": "2024-08-31",
+      "raw_sha256": "e7aa7e0c9ed2c141b0087a2773634498fa689d91e22dde78bbe809ab3a7af6e5",
+      "evidence": "2024年8月 从业人员 45.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202409/t20240930_1956798.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-09-01",
+        "end": "2024-09-30"
+      },
+      "frequency": "monthly",
+      "value": 44.7,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.893Z",
+      "published_at": "2024-09-30T01:30:00.000Z",
+      "publication_date": "2024-09-30",
+      "raw_sha256": "775167727ed3d668c2ff872f582fbae1be32049782cc3c72132e1eb5e2ad3da6",
+      "evidence": "2024年9月 从业人员 44.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202410/t20241031_1957214.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-10-01",
+        "end": "2024-10-31"
+      },
+      "frequency": "monthly",
+      "value": 45.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.179Z",
+      "published_at": "2024-10-31T01:30:00.000Z",
+      "publication_date": "2024-10-31",
+      "raw_sha256": "38bc23935bb5bcd5466fe75c61cf86199900b846bb6010b7509f25299b99a72c",
+      "evidence": "2024年10月 从业人员 45.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202411/t20241130_1957624.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-11-01",
+        "end": "2024-11-30"
+      },
+      "frequency": "monthly",
+      "value": 45.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:08.233Z",
+      "published_at": "2024-11-30T01:30:00.000Z",
+      "publication_date": "2024-11-30",
+      "raw_sha256": "58f94d1be062d4ce9d298fdcbbe2ce38e551e38219d38939f40a6e54b3d3925b",
+      "evidence": "2024年11月 从业人员 45.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202412/t20241231_1958118.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2024-12-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 45.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.843Z",
+      "published_at": "2024-12-31T01:30:00.000Z",
+      "publication_date": "2024-12-31",
+      "raw_sha256": "f2962a5abb0136b9af70143b9eed57a8b66d9b1fe03ea119bc60281e76815d0c",
+      "evidence": "2024年12月 从业人员 45.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202501/t20250127_1958493.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-01-31"
+      },
+      "frequency": "monthly",
+      "value": 46.7,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.657Z",
+      "published_at": "2025-01-27T01:30:00.000Z",
+      "publication_date": "2025-01-27",
+      "raw_sha256": "3b0148c2b0bbabef8de7d9aade2edf6fb8cc848b03c627320a281ca59adb2285",
+      "evidence": "2025年1月 从业人员 46.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250301_1958837.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-02-01",
+        "end": "2025-02-28"
+      },
+      "frequency": "monthly",
+      "value": 46.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.235Z",
+      "published_at": "2025-03-01T01:30:00.000Z",
+      "publication_date": "2025-03-01",
+      "raw_sha256": "2948fee7b46e8b69160e68a4743e38d4b2d53cec24883d5cb48a506f3bcf2d26",
+      "evidence": "2025年2月 从业人员 46.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250331_1959176.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-03-01",
+        "end": "2025-03-31"
+      },
+      "frequency": "monthly",
+      "value": 45.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:07.148Z",
+      "published_at": "2025-03-31T01:30:00.000Z",
+      "publication_date": "2025-03-31",
+      "raw_sha256": "f367072c1707a0b6efdfaa5cfaa21c698f9d1fb477bb5e383c84ef7ac60347db",
+      "evidence": "2025年3月 从业人员 45.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202504/t20250430_1959521.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-04-01",
+        "end": "2025-04-30"
+      },
+      "frequency": "monthly",
+      "value": 45.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.691Z",
+      "published_at": "2025-04-30T01:30:00.000Z",
+      "publication_date": "2025-04-30",
+      "raw_sha256": "7f1cf3f39b1e1b57bf28aa0d659d3902b18a15274a4905ac8d4b1ae7b479cbb1",
+      "evidence": "2025年4月 从业人员 45.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250531_1959985.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-05-01",
+        "end": "2025-05-31"
+      },
+      "frequency": "monthly",
+      "value": 45.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.740Z",
+      "published_at": "2025-05-31T01:30:00.000Z",
+      "publication_date": "2025-05-31",
+      "raw_sha256": "0c888875e9877594d61e7318137e5f62dba840f3c2547f1deecfa0f3f810b053",
+      "evidence": "2025年5月 从业人员 45.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202506/t20250630_1960283.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-06-01",
+        "end": "2025-06-30"
+      },
+      "frequency": "monthly",
+      "value": 45.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.035Z",
+      "published_at": "2025-06-30T01:30:00.000Z",
+      "publication_date": "2025-06-30",
+      "raw_sha256": "b8252d18f3455391170ca85adee8a769b750858405301314032cbe14bccc6dc2",
+      "evidence": "2025年6月 从业人员 45.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202507/t20250731_1960551.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-07-01",
+        "end": "2025-07-31"
+      },
+      "frequency": "monthly",
+      "value": 45.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:06.183Z",
+      "published_at": "2025-07-31T01:30:00.000Z",
+      "publication_date": "2025-07-31",
+      "raw_sha256": "454616b0f81d2a7e1c6a6fb640b9f56699f61cd6c703b09537dc77e3f6cd7adc",
+      "evidence": "2025年7月 从业人员 45.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202508/t20250831_1960937.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-08-01",
+        "end": "2025-08-31"
+      },
+      "frequency": "monthly",
+      "value": 45.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.595Z",
+      "published_at": "2025-08-31T01:30:00.000Z",
+      "publication_date": "2025-08-31",
+      "raw_sha256": "701f0d652788ed6c967237438dbab342eeebf6d7af3facdedca87efd985ec410",
+      "evidence": "2025年8月 从业人员 45.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202509/t20250930_1961438.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-09-01",
+        "end": "2025-09-30"
+      },
+      "frequency": "monthly",
+      "value": 45,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.561Z",
+      "published_at": "2025-09-30T01:30:00.000Z",
+      "publication_date": "2025-09-30",
+      "raw_sha256": "9d859168b7f9084f95c438e38f177d7c99045ca29014d32916b34a9933a75329",
+      "evidence": "2025年9月 从业人员 45.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202510/t20251031_1961740.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-10-01",
+        "end": "2025-10-31"
+      },
+      "frequency": "monthly",
+      "value": 45.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.888Z",
+      "published_at": "2025-10-31T01:30:00.000Z",
+      "publication_date": "2025-10-31",
+      "raw_sha256": "17a4fdc08f6eebb7fdf9052dba3f00350de765164f0becdab858ccfcd777db95",
+      "evidence": "2025年10月 从业人员 45.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202511/t20251130_1961945.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-11-01",
+        "end": "2025-11-30"
+      },
+      "frequency": "monthly",
+      "value": 45.3,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:05.051Z",
+      "published_at": "2025-11-30T01:30:00.000Z",
+      "publication_date": "2025-11-30",
+      "raw_sha256": "ec6031a794b00a74bf5120632f6ba8895c55931c69b77f9be6a0cfe884584533",
+      "evidence": "2025年11月 从业人员 45.3",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202512/t20251231_1962218.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2025-12-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 46.1,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.623Z",
+      "published_at": "2025-12-31T01:30:00.000Z",
+      "publication_date": "2025-12-31",
+      "raw_sha256": "3ce7093cbb77b57e5fe1d6d6a322ea5065af84eaa3c4597eb6fffd32a036ccd7",
+      "evidence": "2025年12月 从业人员 46.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260131_1962416.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-01-01",
+        "end": "2026-01-31"
+      },
+      "frequency": "monthly",
+      "value": 46.1,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.378Z",
+      "published_at": "2026-01-31T01:30:00.000Z",
+      "publication_date": "2026-01-31",
+      "raw_sha256": "cf2d1924fb061af9816bc23a88184e9691786925d7f10f0c5836569b67bd37dd",
+      "evidence": "2026年1月 从业人员 46.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202603/t20260304_1962699.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-02-01",
+        "end": "2026-02-28"
+      },
+      "frequency": "monthly",
+      "value": 46,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:04.487Z",
+      "published_at": "2026-03-04T01:30:00.000Z",
+      "publication_date": "2026-03-04",
+      "raw_sha256": "7fc3380bffe2ac913e5dec3c794fff664c943c036e8682e9bddbcb7c29184c04",
+      "evidence": "2026年2月 从业人员 46.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202603/t20260331_1962889.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-03-01",
+        "end": "2026-03-31"
+      },
+      "frequency": "monthly",
+      "value": 45.2,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.822Z",
+      "published_at": "2026-03-31T01:30:00.000Z",
+      "publication_date": "2026-03-31",
+      "raw_sha256": "7ee3d5e5219e97b20cb2bcbcb1351a6d7c255a937c059d8483caf7fc9b37ff4e",
+      "evidence": "2026年3月 从业人员 45.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202604/t20260430_1963473.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-04-01",
+        "end": "2026-04-30"
+      },
+      "frequency": "monthly",
+      "value": 45.5,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.702Z",
+      "published_at": "2026-04-30T01:30:00.000Z",
+      "publication_date": "2026-04-30",
+      "raw_sha256": "991e65ff83eee38114fbf278791b4ecae96180cd5e94c9282ed8284cb960d7c5",
+      "evidence": "2026年4月 从业人员 45.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202605/t20260531_1963824.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-05-01",
+        "end": "2026-05-31"
+      },
+      "frequency": "monthly",
+      "value": 45.6,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.325Z",
+      "published_at": "2026-05-31T01:30:00.000Z",
+      "publication_date": "2026-05-31",
+      "raw_sha256": "02457a92c92706cbd54abb0b3bec030730585d977225853c5dc983a394db0936",
+      "evidence": "2026年5月 从业人员 45.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202606/t20260630_1964032.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-06-01",
+        "end": "2026-06-30"
+      },
+      "frequency": "monthly",
+      "value": 45.8,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:03.397Z",
+      "published_at": "2026-06-30T01:30:00.000Z",
+      "publication_date": "2026-06-30",
+      "raw_sha256": "dc61b3114d23fe637b5b81586b72f45f4ec37bc0440e43bd25f78150854c0723",
+      "evidence": "2026年6月 从业人员 45.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202607/t20260731_1964253.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-07-01",
+        "end": "2026-07-31"
+      },
+      "frequency": "monthly",
+      "value": 45.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.898Z",
+      "published_at": "2026-07-31T01:30:00.000Z",
+      "publication_date": "2026-07-31",
+      "raw_sha256": "013fe0cd839e4b90d3af3dbba7ba2adf1c6a5ef082d2da76cf5928310ae3ab16",
+      "evidence": "2026年7月 从业人员 45.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202608/t20260831_1965154.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "frequency": "monthly",
+      "value": 45.4,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.968Z",
+      "published_at": "2026-08-31T01:30:00.000Z",
+      "publication_date": "2026-08-31",
+      "raw_sha256": "8f4ce99e5fabde96755ae9b5ec21262b2ba118cd1376f00a76b34a99e07f85cb",
+      "evidence": "2026年8月 从业人员 45.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260930_1965449.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "frequency": "monthly",
+      "value": 45.9,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.409Z",
+      "published_at": "2026-09-30T01:30:00.000Z",
+      "publication_date": "2026-09-30",
+      "raw_sha256": "047cf98e1029862267438906eafa9d6f4aa7a0653d2c5857b1d37b7707df813e",
+      "evidence": "2026年9月 从业人员 45.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-pmi",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202610/t20261031_1965718.html",
+      "series_id": "nonmanufacturing_pmi_employment",
+      "observation_period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31"
+      },
+      "frequency": "monthly",
+      "value": 46,
+      "unit": "diffusion_points",
+      "status": "observed",
+      "fetched_at": "2026-11-17T13:32:02.316Z",
+      "published_at": "2026-10-31T01:30:00.000Z",
+      "publication_date": "2026-10-31",
+      "raw_sha256": "9b9fb05abd638bc38fd709db8bf467795f9705f9c4b253117cdc4ef001329f28",
+      "evidence": "2026年10月 从业人员 46.0",
+      "revision_id": null
+    }
+  ],
+  "coverage": [
+    {
+      "series_id": "urban_unemployment",
+      "first": "2023-02-01",
+      "last": "2026-10-31",
+      "fetched_at": "2026-11-17T13:32:16.671Z",
+      "available": 42,
+      "missing": [
+        {
+          "start": "2023-01-01",
+          "end": "2023-01-31"
+        },
+        {
+          "start": "2024-01-01",
+          "end": "2024-01-31"
+        },
+        {
+          "start": "2025-01-01",
+          "end": "2025-01-31"
+        },
+        {
+          "start": "2026-01-01",
+          "end": "2026-01-31"
+        }
+      ],
+      "not_yet_published": {
+        "start": "2026-11-01",
+        "end": "2026-11-30"
+      }
+    },
+    {
+      "series_id": "city_unemployment",
+      "first": "2023-02-01",
+      "last": "2026-10-31",
+      "fetched_at": "2026-11-17T13:32:16.671Z",
+      "available": 42,
+      "missing": [
+        {
+          "start": "2023-01-01",
+          "end": "2023-01-31"
+        },
+        {
+          "start": "2024-01-01",
+          "end": "2024-01-31"
+        },
+        {
+          "start": "2025-01-01",
+          "end": "2025-01-31"
+        },
+        {
+          "start": "2026-01-01",
+          "end": "2026-01-31"
+        }
+      ],
+      "not_yet_published": {
+        "start": "2026-11-01",
+        "end": "2026-11-30"
+      }
+    },
+    {
+      "series_id": "manufacturing_pmi_employment",
+      "first": "2023-01-01",
+      "last": "2026-10-31",
+      "fetched_at": "2026-11-17T13:32:16.597Z",
+      "available": 46,
+      "missing": [],
+      "not_yet_published": {
+        "start": "2026-11-01",
+        "end": "2026-11-30"
+      }
+    },
+    {
+      "series_id": "nonmanufacturing_pmi_employment",
+      "first": "2023-01-01",
+      "last": "2026-10-31",
+      "fetched_at": "2026-11-17T13:32:16.597Z",
+      "available": 46,
+      "missing": [],
+      "not_yet_published": {
+        "start": "2026-11-01",
+        "end": "2026-11-30"
+      }
+    }
+  ],
+  "indices": [
+    {
+      "id": "search_pressure",
+      "frequency": "monthly",
+      "status": "insufficient_data",
+      "values": []
+    },
+    {
+      "id": "employment_demand",
+      "frequency": "monthly",
+      "status": "insufficient_data",
+      "values": []
+    },
+    {
+      "id": "shadow_pressure",
+      "frequency": "monthly",
+      "status": "insufficient_data",
+      "values": []
+    },
+    {
+      "id": "exam_search",
+      "frequency": "monthly",
+      "status": "insufficient_data",
+      "values": []
+    }
+  ],
+  "revision_count": 0
+}

@@ -41,3 +41,12 @@ export async function readOriginal(hash: string): Promise<Original> {
   if (sha256(body) !== hash) throw new Error(`Original digest mismatch: ${hash}`);
   return { body, meta: responseMetadata.parse(metadata) };
 }
+
+export async function readOptionalJson(path: string): Promise<unknown> {
+  try {
+    return await readJson(path);
+  } catch (error) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') return undefined;
+    throw error;
+  }
+}
