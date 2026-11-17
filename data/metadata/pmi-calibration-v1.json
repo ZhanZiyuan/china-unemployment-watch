@@ -1,0 +1,16 @@
+{
+  "algorithm_version": "pmi-demand-1.0.0",
+  "baseline_start": "2023-01-01",
+  "baseline_end": "2024-12-31",
+  "observations_sha256": "84727b73be674808843e75f36833f6e57e6fdc35815e38de9cde5bf057368723",
+  "manufacturing_pmi_employment": {
+    "median": 49.55,
+    "scale": 1.0378200000000042,
+    "n": 24
+  },
+  "nonmanufacturing_pmi_employment": {
+    "median": 46.75,
+    "scale": 0.7413,
+    "n": 24
+  }
+}

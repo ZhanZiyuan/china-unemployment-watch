@@ -1,108 +1,76 @@
-<p align="center"><img alt="logo" src="./app/icon.svg" width="138" /></p>
+<p align="center">
+  <a href="https://cuwatch.vercel.app/"><img src="./src/app/icon.svg" width="128" alt="China Employment Watch logo" /></a>
+</p>
 
-# China Unemployment Watch
+# China Employment Watch
 
-<p align="right">    <b>English</b> | <a href="./README_zh.md">简体中文</a></p>
+<p align="right"><strong>English</strong> · <a href="./README_zh.md">简体中文</a></p>
 
 [![GitHub deployments](https://img.shields.io/github/deployments/ZhanZiyuan/china-unemployment-watch/Production)](https://github.com/ZhanZiyuan/china-unemployment-watch/deployments)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ZhanZiyuan/china-unemployment-watch)](https://github.com/ZhanZiyuan/china-unemployment-watch/commits/main/)
-[![GitHub License](https://img.shields.io/github/license/ZhanZiyuan/china-unemployment-watch)](https://github.com/ZhanZiyuan/china-unemployment-watch/blob/main/LICENSE)
-[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/cuwatch)](https://cuwatch.vercel.app/)
+[![GitHub License](https://img.shields.io/github/license/ZhanZiyuan/china-unemployment-watch)](./LICENSE)
+[![Vercel](https://img.shields.io/badge/Hosted%20on-Vercel-000000?logo=vercel)](https://cuwatch.vercel.app/)
 
-An unofficial job anxiety monitoring index built using Google Trends search data (over the past 5 years).
+## About the project
 
-## About The Project
+[China Employment Watch](https://cuwatch.vercel.app/) is a research dashboard for China's labour market. It publishes traceable monthly unemployment and PMI employment observations from the National Bureau of Statistics of China.
 
-This dashboard presents a "Composite Unemployment Index" derived from Google Trends data for various keywords related to job searching, recruitment, civil service exams, and unemployment phenomena. By aggregating and weighting these trends, the index offers a proxy for the collective anxiety and activity surrounding employment in China.
-
-The data is automatically updated daily, providing a near real-time view of the employment landscape.
+The initial collection covers releases from 1 January 2023 through 17 November 2026, inclusive, in Asia/Shanghai. The initial archive contains 176 verified observations through October 2026. January 2023, 2024, 2025 and 2026 are missing from both unemployment series.
 
 ## Features
 
-- **Composite Unemployment Index:** A weighted index that synthesizes multiple search categories into a single, comprehensive metric.
-- **Historical Trend Chart:** An interactive chart from [Recharts](https://recharts.org/) displaying the index and its underlying components since 2021.
-- **Categorized Metrics:** View individual trend data for four key categories: Job Searching, Recruitment, Public Exams, and Unemployment.
-- **Daily Data Updates:** A GitHub Action runs every day to fetch the latest data from Google Trends, ensuring the dashboard stays current.
-- **Transparent Methodology:** The entire data processing pipeline is open-source, from the keywords used to the weighting in the final index.
-- **Modern Tech Stack:** Built with Next.js 15, React 19, and TypeScript for a fast, reliable, and maintainable application.
-- **Responsive Design & Dark Mode:** A clean, mobile-friendly UI built with Shadcn/ui and Tailwind CSS.
-## Data & Methodology
+- **Interactive historical charts** show national urban and 31-city unemployment, manufacturing and non-manufacturing PMI employment, and an experimental PMI employment demand index. Recharts provides independent date ranges, zoom, brush selection, and tooltips with source links.
+- **Traceable publications** link observations to archived official releases. The version manifest opens on the dashboard and shows the dataset and algorithm versions, publication time, covered period, quality status and checksum. The dataset and manifest are available as JSON downloads.
+- **Daily collection** checks for new releases and revisions at 11:17 Asia/Shanghai. Pushes to `main` and manual dispatch can also start a collection. Failed collections retain the previous verified snapshot.
+- **Responsive interface** supports English, Japanese, Simplified Chinese and Traditional Chinese. The theme follows the device setting until manually changed.
 
-The core of this project is its data pipeline, which can be found in `scripts/fetch-trends.ts`.
+## Data and methodology
 
-- **Data Source:** The raw data is sourced from the **Google Trends API**, targeting the geo-location 'CN' (China).
-- **Keyword Categories:** We track a curated list of keywords grouped into four categories:
+The collection pipeline starts in [scripts/fetch-data.ts](scripts/fetch-data.ts). It validates the native observation period, archives the official release and metadata, and publishes a versioned JSON snapshot after the quality gate passes.
 
-  - **Job Seeking:** "找工作" (find job), "求职" (job search), etc.
-  - **Recruitment:** "招聘" (hiring), "社招" (experienced hire), etc.
-  - **Public Exams:** "考研" (postgrad exam), "国考" (national civil service exam), etc.
-  - **Unemployment:** "失业" (unemployed), "裁员" (layoffs), etc.
+The experimental employment demand index averages two robustly standardized PMI employment series with equal weights and a fixed January 2023–December 2024 baseline. The search, exam and shadow indices display insufficient data while comparable search inputs remain unavailable.
 
-- **Data Fetching:** To overcome Google Trends' scaling limitations, the script fetches data in overlapping 6-month windows.
-- **Processing & Indexing:**
+[Data sources and coverage](docs/data-sources.md) · [Methodology and backtest](docs/methodology.md) · [Pipeline and deployment](docs/data-pipeline.md) · [Repository audit](docs/repository-audit.md)
 
-  - The raw daily data is aggregated into weekly medians for each category.
-  - The data for each category is normalized using a Z-score calculation.
-  - A final **Composite Index** is calculated using the following weights:
+## Tech stack
 
-    - `Job Seeking`: 35%
-    - `Unemployment`: 25%
-    - `Recruitment`: 20%
-    - `Public Exams`: 20%
+- **Application** — Next.js 16 with Turbopack, React 19 and strict TypeScript.
+- **Interface** — Tailwind CSS 4, shadcn/ui, Lucide icons, Recharts 3 and next-intl.
+- **Data and deployment** — Zod, GitHub Actions and Vercel.
 
-  - This processed data is then saved as `src/lib/trends-data.json`.
+The App Router lives in `src/app/`, with UI in `src/components/`, locale files in `src/i18n/` and shared code in `src/lib/`. The dashboard reads verified files from `public/data/`. Original releases and collection metadata live in `data/`.
 
-- **Automation:** A GitHub Actions workflow (see `.github/workflows/update-trends.yml`) runs daily at 00:00 UTC to execute the fetching script and commit the updated data back to the repository.
-## Tech Stack
+## Getting started
 
-- **Framework:** [Next.js](https://nextjs.org/) 15 (with Turbopack)
-- **UI Library:** [React](https://react.dev/) 19
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Data Visualization:** [Recharts](https://recharts.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components:** [Shadcn/ui](https://ui.shadcn.com/)
-- **Data Fetching:** [google-trends-api](https://www.npmjs.com/package/google-trends-api)
-- **CI/CD:** [GitHub Actions](https://github.com/features/actions)
-- **Hosting:** [Vercel](https://vercel.com/)
-## Getting Started
+Use Node.js 22.12 or newer and pnpm 10.33.0. GitHub Actions uses Node.js 24.
 
-To run a local copy of this project:
-
-### Prerequisites
-
-- Node.js v20 or newer
-- `npm` or `yarn`
-### Installation
-
-- Clone the repository:
 ```bash
 git clone https://github.com/ZhanZiyuan/china-unemployment-watch.git
 cd china-unemployment-watch
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-- Install NPM packages:
-```bash
-npm install
-```
+Open [localhost:9002](http://localhost:9002/).
 
-### Running Locally
+### Update data
 
-Start the development server (with Turbopack):
+- `pnpm fetch-data` collects recent releases and confirmed revisions.
+- `pnpm fetch-data --backfill` attempts the initial historical collection.
+- `pnpm fetch-data --from-archive` regenerates the publication offline from the archived evidence.
 
-```bash
-npm run dev
-```
-
-Open <http://localhost:9002> in your browser.
-
-### Manually Updating Data
-
-You can manually trigger the data fetching script:
+### Run checks
 
 ```bash
-npm run fetch-trends
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm validate-data
+pnpm build
+pnpm exec playwright install chromium
+pnpm test:e2e
 ```
 
 ## License
 
-This project is licensed under the GPLv3 License - see the [LICENSE](./LICENSE) file for details.
+The project code is licensed under [GPLv3](./LICENSE). Source links and archive metadata identify the publishers of the underlying statistics.

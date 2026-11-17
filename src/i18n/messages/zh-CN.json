@@ -1,0 +1,115 @@
+{
+  "title": "中国就业市场观察",
+  "description": "查阅中国就业市场的官方发布、历史覆盖范围和实验性指标。",
+  "nav": {
+    "brand": "中国就业观察",
+    "language": "语言",
+    "theme": "切换显示主题",
+    "github": "GitHub 仓库"
+  },
+  "dashboard": {
+    "latest": "最新有效观测日期",
+    "collection": "最近一次采集尝试",
+    "latest_capture": "最近的观测采集时间",
+    "quality": "数据质量",
+    "dataset_version": "数据版本",
+    "algorithm_version": "算法版本",
+    "revisions": "已记录修订",
+    "not_available": "暂无",
+    "no_data": "暂无通过验证的观测。",
+    "failure": "采集失败，当前显示上一次通过验证的数据。",
+    "invalid": "本次数据未通过质量检查，当前显示上一次通过验证的数据。",
+    "run_log": "采集日志",
+    "official": "调查失业率",
+    "official_explainer": "官方月度失业率，分别覆盖全国城镇和 31 个大城市。",
+    "pmi": "PMI 从业人员指数",
+    "pmi_explainer": "制造业和非制造业的月度调查指标，50 为景气变化的分界线。",
+    "index_explainer": "将两条 PMI 从业人员序列按固定稳健尺度标准化后等权平均。实验性指标。",
+    "data_download": "下载 JSON",
+    "manifest": "版本清单",
+    "coverage": "来源覆盖",
+    "history_window": "初始采集范围 {start} 至 {end}",
+    "missing_periods": "缺失周期",
+    "awaiting": "待发布",
+    "observations": "{count, number} 条观测",
+    "unusual": "数据中已标记需核查的异常变动",
+    "methodology": "统计方法",
+    "method_baseline": "实验性就业需求指数的固定基准期为 2023 年 1 月至 2024 年 12 月。各月 PMI 分项减去基准期中位数，再除以 1.4826 × MAD，限制在 ±5 后等权平均。",
+    "method_shadow": "影子指数需要同一统计周期的可比搜索数据与就业需求指数。官方失业率是独立参照，考试搜索另行统计。",
+    "method_validation": "PMI 对比采用按时间顺序的滚动验证。影子指数暂无可用回测样本。",
+    "source_link": "来源"
+  },
+  "sources": {
+    "nbs-labour": "国家统计局就业统计",
+    "nbs-pmi": "国家统计局 PMI",
+    "google-trends": "Google Trends API Alpha",
+    "baidu-index": "百度指数",
+    "recruitment": "招聘岗位数据"
+  },
+  "series": {
+    "urban_unemployment": "全国城镇调查失业率",
+    "city_unemployment": "31 个大城市调查失业率",
+    "manufacturing_pmi_employment": "制造业 PMI 从业人员",
+    "nonmanufacturing_pmi_employment": "非制造业 PMI 从业人员"
+  },
+  "indices": {
+    "search_pressure": "搜索压力指数",
+    "employment_demand": "就业需求指数",
+    "shadow_pressure": "影子就业压力指数",
+    "exam_search": "考试相关搜索"
+  },
+  "units": {
+    "percent": "%",
+    "diffusion_points": "点",
+    "score": "标准化分值"
+  },
+  "frequency": {
+    "daily": "日度",
+    "weekly": "周度",
+    "monthly": "月度"
+  },
+  "status": {
+    "observed": "有效观测",
+    "zero": "真实零值",
+    "missing": "缺失",
+    "not_yet_published": "尚未发布",
+    "fetch_failed": "采集失败",
+    "invalid": "无效",
+    "suppressed": "来源未公开",
+    "not_applicable": "不适用",
+    "revised": "已修订",
+    "insufficient_data": "数据不足",
+    "experimental": "实验性",
+    "verified": "已验证",
+    "retained": "保留上次数据",
+    "connected": "已接入",
+    "approval_required": "需要访问授权",
+    "unconnected": "未接入",
+    "passed": "验证通过",
+    "partial_coverage": "已验证，覆盖有缺口"
+  },
+  "chart": {
+    "from": "开始日期",
+    "to": "结束日期",
+    "zoom_in": "放大",
+    "zoom_out": "缩小",
+    "reset": "重置",
+    "brush": "拖动调整日期范围",
+    "legend": "显示序列",
+    "release": "原始发布",
+    "derived": "由官方 PMI 发布数据计算",
+    "no_points": "此日期范围内没有实际观测。",
+    "all_hidden": "所有序列均已隐藏。",
+    "range_label": "{start} 至 {end}",
+    "period_end": "观测点按统计周期末日显示"
+  },
+  "manifest": {
+    "description": "当前页面所用数据快照的发布信息。",
+    "schema_version": "数据结构版本",
+    "coverage": "观测时间范围",
+    "generated_at": "快照发布时间",
+    "checksum": "数据文件 SHA-256",
+    "download": "下载清单 JSON",
+    "close": "关闭"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "title": "中國就業市場觀察",
+  "description": "查閱中國就業市場的官方發布、歷史涵蓋範圍和實驗性指標。",
+  "nav": {
+    "brand": "中國就業觀察",
+    "language": "語言",
+    "theme": "切換顯示主題",
+    "github": "GitHub 儲存庫"
+  },
+  "dashboard": {
+    "latest": "最新有效觀測日期",
+    "collection": "最近一次擷取嘗試",
+    "latest_capture": "最近的觀測擷取時間",
+    "quality": "資料品質",
+    "dataset_version": "資料版本",
+    "algorithm_version": "演算法版本",
+    "revisions": "已記錄修訂",
+    "not_available": "暫無",
+    "no_data": "暫無通過驗證的觀測。",
+    "failure": "擷取失敗，目前顯示上一次通過驗證的資料。",
+    "invalid": "本次資料未通過品質檢查，目前顯示上一次通過驗證的資料。",
+    "run_log": "擷取日誌",
+    "official": "調查失業率",
+    "official_explainer": "官方月度失業率，分別涵蓋全國城鎮和 31 個大城市。",
+    "pmi": "PMI 從業人員指數",
+    "pmi_explainer": "製造業和非製造業的月度調查指標，50 為景氣變化的分界線。",
+    "index_explainer": "將兩條 PMI 從業人員序列按固定穩健尺度標準化後等權平均。實驗性指標。",
+    "data_download": "下載 JSON",
+    "manifest": "版本清單",
+    "coverage": "來源涵蓋",
+    "history_window": "初始擷取範圍 {start} 至 {end}",
+    "missing_periods": "缺漏週期",
+    "awaiting": "待發布",
+    "observations": "{count, number} 筆觀測",
+    "unusual": "資料中已標記待查核的異常變動",
+    "methodology": "統計方法",
+    "method_baseline": "實驗性就業需求指數的固定基準期為 2023 年 1 月至 2024 年 12 月。各月 PMI 分項減去基準期中位數，再除以 1.4826 × MAD，限制在 ±5 後等權平均。",
+    "method_shadow": "影子指數需要同一統計週期的可比搜尋資料與就業需求指數。官方失業率是獨立參照，考試搜尋另行統計。",
+    "method_validation": "PMI 比較採用按時間順序的滾動驗證。影子指數暫無可用回測樣本。",
+    "source_link": "來源"
+  },
+  "sources": {
+    "nbs-labour": "國家統計局就業統計",
+    "nbs-pmi": "國家統計局 PMI",
+    "google-trends": "Google Trends API Alpha",
+    "baidu-index": "百度指數",
+    "recruitment": "招聘職缺資料"
+  },
+  "series": {
+    "urban_unemployment": "全國城鎮調查失業率",
+    "city_unemployment": "31 個大城市調查失業率",
+    "manufacturing_pmi_employment": "製造業 PMI 從業人員",
+    "nonmanufacturing_pmi_employment": "非製造業 PMI 從業人員"
+  },
+  "indices": {
+    "search_pressure": "搜尋壓力指數",
+    "employment_demand": "就業需求指數",
+    "shadow_pressure": "影子就業壓力指數",
+    "exam_search": "考試相關搜尋"
+  },
+  "units": {
+    "percent": "%",
+    "diffusion_points": "點",
+    "score": "標準化分數"
+  },
+  "frequency": {
+    "daily": "日頻",
+    "weekly": "週頻",
+    "monthly": "月頻"
+  },
+  "status": {
+    "observed": "有效觀測",
+    "zero": "真實零值",
+    "missing": "缺漏",
+    "not_yet_published": "尚未發布",
+    "fetch_failed": "擷取失敗",
+    "invalid": "無效",
+    "suppressed": "來源未公開",
+    "not_applicable": "不適用",
+    "revised": "已修訂",
+    "insufficient_data": "資料不足",
+    "experimental": "實驗性",
+    "verified": "已驗證",
+    "retained": "保留上次資料",
+    "connected": "已接入",
+    "approval_required": "需要存取授權",
+    "unconnected": "未接入",
+    "passed": "驗證通過",
+    "partial_coverage": "已驗證，涵蓋有缺漏"
+  },
+  "chart": {
+    "from": "開始日期",
+    "to": "結束日期",
+    "zoom_in": "放大",
+    "zoom_out": "縮小",
+    "reset": "重設",
+    "brush": "拖曳調整日期範圍",
+    "legend": "顯示序列",
+    "release": "原始發布",
+    "derived": "由官方 PMI 發布資料計算",
+    "no_points": "此日期範圍內沒有實際觀測。",
+    "all_hidden": "所有序列均已隱藏。",
+    "range_label": "{start} 至 {end}",
+    "period_end": "觀測點按統計週期末日顯示"
+  },
+  "manifest": {
+    "description": "目前頁面所用資料快照的發布資訊。",
+    "schema_version": "資料結構版本",
+    "coverage": "觀測時間範圍",
+    "generated_at": "快照發布時間",
+    "checksum": "資料檔案 SHA-256",
+    "download": "下載清單 JSON",
+    "close": "關閉"
+  }
+}

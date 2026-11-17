@@ -1,113 +1,76 @@
 <p align="center">
-    <img alt="logo" src="./src/app/icon.svg"
-        width="138" />
+  <a href="https://cuwatch.vercel.app/"><img src="./src/app/icon.svg" width="128" alt="中国就业市场观察标志" /></a>
 </p>
 
-# 中国失业观察
+# 中国就业市场观察
 
-<p align="right">
-    <a href="./README.md">English</a> | <b>简体中文</b>
-</p>
+<p align="right"><a href="./README.md">English</a> · <strong>简体中文</strong></p>
 
 [![GitHub deployments](https://img.shields.io/github/deployments/ZhanZiyuan/china-unemployment-watch/Production)](https://github.com/ZhanZiyuan/china-unemployment-watch/deployments)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ZhanZiyuan/china-unemployment-watch)](https://github.com/ZhanZiyuan/china-unemployment-watch/commits/main/)
-[![GitHub License](https://img.shields.io/github/license/ZhanZiyuan/china-unemployment-watch)](https://github.com/ZhanZiyuan/china-unemployment-watch/blob/main/LICENSE)
-[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/cuwatch)](https://cuwatch.vercel.app/)
-
-基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标 (过去5年)。
+[![GitHub License](https://img.shields.io/github/license/ZhanZiyuan/china-unemployment-watch)](./LICENSE)
+[![Vercel](https://img.shields.io/badge/Hosted%20on-Vercel-000000?logo=vercel)](https://cuwatch.vercel.app/)
 
 ## 关于项目
 
-该仪表板展示了一个“综合失业指数”，该指数来源于与求职、招聘、公务员考试和失业现象相关的各种关键词的谷歌趋势数据。通过汇总和加权这些趋势，该指数为了解中国就业市场的集体焦虑和活动提供了一个代理指标。
+[中国就业市场观察](https://cuwatch.vercel.app/) 是面向中国就业市场的开放数据研究仪表板，发布可追溯的国家统计局月度调查失业率和 PMI 从业人员数据。
 
-数据每日自动更新，近乎实时地反映就业市场的动态。
+初始采集范围为北京时间 2023 年 1 月 1 日至 2026 年 11 月 17 日，首尾日期均包含。初始档案有 176 条通过验证的观测，截至 2026 年 10 月。两条失业率序列均缺少 2023、2024、2025 和 2026 年的 1 月数据。
 
 ## 功能特性
 
-- **综合失业指数：** 一个将多个搜索类别综合成单一、全面指标的加权指数。
-- **历史趋势图：** 使用 [Recharts](https://recharts.org/) 制作的交互式图表，展示自2021年以来该指数及其基本组成部分。
-- **分类指标：** 可查看四个关键类别的独立趋势数据：求职、招聘、考试和失业。
-- **每日数据更新：** 通过 GitHub Action 每日运行，从谷歌趋势获取最新数据，确保仪表板的时效性。
-- **透明的方法论：** 从使用的关键词到最终指数的权重，整个数据处理流程完全开源。
-- **现代技术栈：** 使用 Next.js 15、React 19 和 TypeScript 构建，应用快速、可靠且易于维护。
-- **响应式设计与深色模式：** 使用 Shadcn/ui 和 Tailwind CSS 构建的简洁、移动端友好的用户界面。
+- **交互式历史图表**展示全国城镇和 31 个大城市调查失业率、制造业和非制造业 PMI 从业人员数据，以及实验性 PMI 就业需求指数。Recharts 提供独立日期范围、缩放、Brush 和带来源链接的提示。
+- **可追溯的数据发布**将观测关联到官方发布稿。可在仪表板内打开版本清单，查看数据版本、算法版本、发布时间、覆盖区间、质量状态和校验和，也可下载数据及清单 JSON。
+- **每日采集**于北京时间 11:17 检查新发布和修订。推送到 `main` 或手动触发也可启动采集。采集失败时保留上一个通过验证的快照。
+- **响应式界面**支持简体中文、繁體中文、日本語和 English。主题默认跟随设备设置，也可手动切换。
 
 ## 数据与方法论
 
-本项目的核心是其数据管道，具体实现位于 `scripts/fetch-trends.ts`。
+采集管道的入口位于 [scripts/fetch-data.ts](scripts/fetch-data.ts)。流程校验实际统计周期，归档原始发布稿及元数据，并在通过质量检查后发布带版本的 JSON 快照。
 
-- **数据来源：** 原始数据来源于 **Google Trends API**，地理位置定位为 'CN' (中国)。
-- **关键词分类：** 我们跟踪一组精心挑选的关键词，并将其分为四类：
-  - **求职：** "找工作"、"求职" 等。
-  - **招聘：** "招聘"、"社招" 等。
-  - **考试：** "考研"、"国考" 等。
-  - **失业：** "失业"、"裁员" 等。
-- **数据获取：** 为规避谷歌趋势的伸缩限制，脚本以重叠的6个月窗口期获取数据。
-- **处理与指数计算：**
-  - 原始每日数据被聚合成每个类别的每周中位数。
-  - 使用 Z-score 对每个类别的数据进行归一化处理。
-  - 最终的 **综合指数** 使用以下权重计算得出：
-    - `求职`: 35%
-    - `失业`: 25%
-    - `招聘`: 20%
-    - `考试`: 20%
-  - 处理后的数据被保存为 `src/lib/trends-data.json`。
-- **自动化：** 一个 GitHub Actions 工作流 (见 `.github/workflows/update-trends.yml`) 在每天 UTC 时间 00:00 运行，执行数据获取脚本并将更新后的数据提交回代码仓库。
+实验性就业需求指数使用 2023 年 1 月至 2024 年 12 月作为固定基准，对两条 PMI 从业人员序列做稳健标准化后等权平均。搜索、考试和影子指数暂无可比的搜索输入，页面显示数据不足。
+
+[数据来源与覆盖范围](docs/data-sources.md) · [统计方法和回测](docs/methodology.md) · [采集架构与部署](docs/data-pipeline.md) · [仓库审计](docs/repository-audit.md)
 
 ## 技术栈
 
-- **框架:** [Next.js](https://nextjs.org/) 15 (使用 Turbopack)
-- **UI 库:** [React](https://react.dev/) 19
-- **语言:** [TypeScript](https://www.typescriptlang.org/)
-- **数据可视化:** [Recharts](https://recharts.org/)
-- **样式:** [Tailwind CSS](https://tailwindcss.com/)
-- **UI 组件:** [Shadcn/ui](https://ui.shadcn.com/)
-- **数据获取:** [google-trends-api](https://www.npmjs.com/package/google-trends-api)
-- **CI/CD:** [GitHub Actions](https://github.com/features/actions)
-- **托管:** [Vercel](https://vercel.com/)
+- **应用** — Next.js 16 与 Turbopack、React 19、TypeScript strict。
+- **界面** — Tailwind CSS 4、shadcn/ui、Lucide 图标、Recharts 3、next-intl。
+- **数据与部署** — Zod、GitHub Actions、Vercel。
+
+App Router 位于 `src/app/`，界面组件位于 `src/components/`，翻译文件位于 `src/i18n/`，共享代码位于 `src/lib/`。仪表板读取 `public/data/` 中通过验证的快照。原始发布稿和采集元数据保存在 `data/`。
 
 ## 本地运行
 
-要在本地运行此项目副本：
-
-### 先决条件
-
-- Node.js v20 或更高版本
-- `npm` 或 `yarn`
-
-### 安装
-
-- 克隆代码仓库:
+使用 Node.js 22.12 或更新版本和 pnpm 10.33.0。GitHub Actions 使用 Node.js 24。
 
 ```bash
 git clone https://github.com/ZhanZiyuan/china-unemployment-watch.git
 cd china-unemployment-watch
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-- 安装 NPM 依赖包:
-
-```bash
-npm install
-```
-
-### 运行
-
-启动开发服务器 (使用 Turbopack):
-
-```bash
-npm run dev
-```
-
-在浏览器中打开 [http://localhost:9002](http://localhost:9002)。
+在浏览器中打开 [localhost:9002](http://localhost:9002/)。
 
 ### 手动更新数据
 
-您可以手动触发数据获取脚本：
+- `pnpm fetch-data` 增量采集近期发布并记录已确认的修订。
+- `pnpm fetch-data --backfill` 尝试补采初始历史范围。
+- `pnpm fetch-data --from-archive` 使用归档证据离线重建发布快照。
+
+### 运行检查
 
 ```bash
-npm run fetch-trends
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm validate-data
+pnpm build
+pnpm exec playwright install chromium
+pnpm test:e2e
 ```
 
 ## 许可证
 
-本项目基于 GPLv3 许可证 - 详情请参阅 [LICENSE](./LICENSE) 文件。
+项目代码遵循 [GPLv3](./LICENSE)。来源链接和归档元数据标明原始统计数据的发布主体。

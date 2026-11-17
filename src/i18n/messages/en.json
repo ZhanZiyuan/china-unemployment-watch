@@ -1,0 +1,115 @@
+{
+  "title": "China Employment Watch",
+  "description": "Track China’s labour market through official releases, historical coverage and experimental indicators.",
+  "nav": {
+    "brand": "China Employment Watch",
+    "language": "Language",
+    "theme": "Toggle color theme",
+    "github": "GitHub repository"
+  },
+  "dashboard": {
+    "latest": "Latest observation",
+    "collection": "Last collection attempt",
+    "latest_capture": "Latest observation retrieval",
+    "quality": "Data quality",
+    "dataset_version": "Dataset version",
+    "algorithm_version": "Algorithm version",
+    "revisions": "Recorded revisions",
+    "not_available": "Unavailable",
+    "no_data": "No verified observations are available.",
+    "failure": "Collection failed. The last verified snapshot is shown.",
+    "invalid": "Quality checks failed. The last verified snapshot is shown.",
+    "run_log": "Collection log",
+    "official": "Surveyed unemployment rates",
+    "official_explainer": "Official monthly rates for urban China and for 31 major cities.",
+    "pmi": "PMI employment subindices",
+    "pmi_explainer": "Monthly survey measures for manufacturing and non-manufacturing. The reference line at 50 marks no change.",
+    "index_explainer": "Equal-weight average of the two PMI employment signals on a fixed robust scale. Experimental.",
+    "data_download": "Download JSON",
+    "manifest": "Version manifest",
+    "coverage": "Source coverage",
+    "history_window": "Initial collection window {start} – {end}",
+    "missing_periods": "Missing periods",
+    "awaiting": "Awaiting publication",
+    "observations": "{count, number} observations",
+    "unusual": "Unusual changes flagged in the dataset",
+    "methodology": "Methodology",
+    "method_baseline": "The experimental demand index uses January 2023 through December 2024 as its frozen baseline. Each monthly PMI component is centered by its median and divided by 1.4826 × MAD before equal-weight averaging. Component scores are capped at ±5.",
+    "method_shadow": "The shadow index requires both comparable search data and the demand index for the same period. Official unemployment is an independent reference. Exam-search indicators are separate.",
+    "method_validation": "The PMI comparison uses rolling time-ordered validation. The shadow index lacks eligible test cases.",
+    "source_link": "Source"
+  },
+  "sources": {
+    "nbs-labour": "NBS labour statistics",
+    "nbs-pmi": "NBS PMI release",
+    "google-trends": "Google Trends API Alpha",
+    "baidu-index": "Baidu Index",
+    "recruitment": "Recruitment listings"
+  },
+  "series": {
+    "urban_unemployment": "National urban unemployment",
+    "city_unemployment": "31 major cities unemployment",
+    "manufacturing_pmi_employment": "Manufacturing PMI employment",
+    "nonmanufacturing_pmi_employment": "Non-manufacturing PMI employment"
+  },
+  "indices": {
+    "search_pressure": "Search Pressure Index",
+    "employment_demand": "Employment Demand Index",
+    "shadow_pressure": "Shadow Employment Pressure Index",
+    "exam_search": "Exam-related searches"
+  },
+  "units": {
+    "percent": "%",
+    "diffusion_points": "points",
+    "score": "score"
+  },
+  "frequency": {
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly"
+  },
+  "status": {
+    "observed": "Observed",
+    "zero": "Observed zero",
+    "missing": "Missing",
+    "not_yet_published": "Awaiting publication",
+    "fetch_failed": "Collection failed",
+    "invalid": "Invalid",
+    "suppressed": "Withheld by source",
+    "not_applicable": "Not applicable",
+    "revised": "Revised",
+    "insufficient_data": "Insufficient data",
+    "experimental": "Experimental",
+    "verified": "Verified",
+    "retained": "Previous data retained",
+    "connected": "Connected",
+    "approval_required": "Access approval required",
+    "unconnected": "Unconnected",
+    "passed": "Passed",
+    "partial_coverage": "Verified with coverage gaps"
+  },
+  "chart": {
+    "from": "Start date",
+    "to": "End date",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "reset": "Reset",
+    "brush": "Drag to change date range",
+    "legend": "Visible series",
+    "release": "Original release",
+    "derived": "Calculated from official PMI releases",
+    "no_points": "No observations in this date range.",
+    "all_hidden": "All series are hidden.",
+    "range_label": "{start} – {end}",
+    "period_end": "Points appear at period end"
+  },
+  "manifest": {
+    "description": "Publication details for the dataset displayed on this page.",
+    "schema_version": "Schema version",
+    "coverage": "Observation window",
+    "generated_at": "Published snapshot",
+    "checksum": "Dataset SHA-256",
+    "download": "Download manifest JSON",
+    "close": "Close"
+  }
+}

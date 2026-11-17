@@ -1,0 +1,37 @@
+name: Verify employment watch
+
+on:
+  push:
+    branches: [develop, main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm validate-data
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - name: Keep browser traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: browser-test-results
+          path: test-results
+          if-no-files-found: ignore

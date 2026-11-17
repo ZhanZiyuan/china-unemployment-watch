@@ -1,0 +1,111 @@
+name: Update official employment data
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: Replay collection for the initial historical window
+        type: boolean
+        default: false
+
+concurrency:
+  group: employment-data-main
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Collect the staged snapshot
+        id: collect
+        continue-on-error: true
+        env:
+          BACKFILL: ${{ inputs.backfill }}
+        run: |
+          if [[ "$BACKFILL" == true ]]; then
+            pnpm fetch-data --backfill
+          else
+            pnpm fetch-data
+          fi
+      - name: Check the application against the candidate data
+        if: steps.collect.outcome == 'success'
+        run: |
+          pnpm validate-data
+          pnpm lint
+          pnpm typecheck
+          pnpm test
+          pnpm build
+      - name: Store collection logs
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: collection-${{ github.run_id }}-${{ github.run_attempt }}
+          path: data/runs
+          if-no-files-found: ignore
+      - name: Commit the approved paths
+        id: commit
+        env:
+          RESULT: ${{ steps.collect.outcome }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ "$RESULT" == success ]]; then
+            git add -- data/raw data/metadata/releases.json data/processed/observations.json \
+              public/data/latest.json public/data/manifest.json
+            if [[ -f data/revisions/observations.json ]]; then
+              git add -- data/revisions/observations.json
+            fi
+          fi
+          if [[ -f public/data/collection-status.json ]]; then
+            health_result=$(jq -er .result public/data/collection-status.json)
+            if [[ "$RESULT" == success || "$health_result" != success ]]; then
+              git add -- public/data/collection-status.json
+            fi
+          fi
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Publish employment data and collection status" \
+            -m "Record the verified snapshot and the latest collection outcome from the main data writer."
+          git push origin HEAD:refs/heads/main
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+      - name: Request Vercel rebuild when a deploy hook is configured
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [[ -n "$VERCEL_DEPLOY_HOOK" ]]; then
+            curl --fail --silent --output /dev/null --max-time 20 --request POST "$VERCEL_DEPLOY_HOOK"
+          fi
+      - name: Verify the Vercel data version
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          PRODUCTION_URL: ${{ vars.PRODUCTION_URL || 'https://cuwatch.vercel.app' }}
+        run: node --import tsx scripts/verify-online.ts
+      - name: Mark failed collection and notify via GitHub Actions
+        if: always() && steps.collect.outcome == 'failure'
+        run: |
+          echo "::error::Collection or data validation failed. The previous verified dataset was retained."
+          echo "The data refresh failed. See the collection artifact and step logs." >> "$GITHUB_STEP_SUMMARY"
+          exit 1

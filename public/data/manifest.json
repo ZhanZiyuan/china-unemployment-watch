@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "de656430e957984e6914378b2e852c224b7839031ba852afa6b5d9a93c0149fa",
+  "algorithm_version": "pmi-demand-1.0.0",
+  "generated_at": "2026-11-17T13:40:57.156Z",
+  "observation_start": "2023-01-01",
+  "observation_end": "2026-10-31",
+  "quality_status": "partial_coverage",
+  "latest": "/data/latest.json",
+  "sha256": "bc91adf8839749ba9a69d2c85e2226a89e9da5068711c3bb291f335ed139822d",
+  "health": "/data/collection-status.json"
+}
