@@ -24,32 +24,35 @@ export function ThemeProvider({
   children,
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = React.useState<Theme>("light")
+  const [theme, setTheme] = React.useState<Theme>(() => {
+    if (typeof window === "undefined") return "light"
+    const stored = window.localStorage.getItem("theme")
+    if (stored === "light" || stored === "dark") return stored
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  })
 
   React.useEffect(() => {
-    const storedTheme = window.localStorage.getItem("theme") as Theme | null
-    if (storedTheme) {
-      setTheme(storedTheme)
-    } else {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
-      setTheme(systemTheme)
+    const preference = window.matchMedia("(prefers-color-scheme: dark)")
+    const followSystem = (event: MediaQueryListEvent) => {
+      if (!window.localStorage.getItem("theme")) {
+        setTheme(event.matches ? "dark" : "light")
+      }
     }
+    preference.addEventListener("change", followSystem)
+    return () => preference.removeEventListener("change", followSystem)
   }, [])
 
   React.useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove("light", "dark")
-    root.classList.add(theme)
-    localStorage.setItem("theme", theme)
+    const root = document.documentElement
+    root.classList.toggle("dark", theme === "dark")
+    root.style.colorScheme = theme
   }, [theme])
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      setTheme(theme)
+    setTheme(next: Theme) {
+      window.localStorage.setItem("theme", next)
+      setTheme(next)
     },
   }
 

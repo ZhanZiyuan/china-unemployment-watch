@@ -5,7 +5,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'China Unemployment Watch',
-  description: '基于 Google Trends 搜索数据构建的非官方就业焦虑监测指标。',
+  description: '中国就业市场公开数据监测。',
 };
 
 export default function RootLayout({
@@ -15,11 +15,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-      </head>
       <body className="font-body antialiased">
         <ThemeProvider>
           {children}
