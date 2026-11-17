@@ -1,7 +1,11 @@
 import type {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  async headers() {
+    return [{ source: '/data/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }] }];
+  },
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
@@ -29,4 +33,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default createNextIntlPlugin()(nextConfig);

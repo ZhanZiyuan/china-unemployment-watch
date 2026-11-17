@@ -197,3 +197,15 @@
     @apply min-h-svh bg-background text-foreground;
   }
 }
+
+@layer base {
+  :root {
+    --chart-blue: #2268bb;
+    --chart-teal: #087d72;
+  }
+
+  .dark {
+    --chart-blue: #7db9ff;
+    --chart-teal: #57d6be;
+  }
+}

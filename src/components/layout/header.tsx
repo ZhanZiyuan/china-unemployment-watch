@@ -1,25 +1,47 @@
+'use client';
+
 import { TrendingUp } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
-import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
 import { Button } from '../ui/button';
 
+const localeNames = { en: 'English', ja: '日本語', 'zh-CN': '简体中文', 'zh-TW': '繁體中文' };
+
 export function Header() {
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-xs supports-backdrop-filter:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <TrendingUp className="h-6 w-6 text-primary" />
-          <span className="font-bold sm:inline-block font-headline">
-            China Unemployment Watch
+      <div className="container flex min-h-16 items-center justify-between gap-1 px-4 sm:px-8">
+        <Link href="/" className="flex min-w-0 items-center gap-2">
+          <TrendingUp className="h-5 w-5 shrink-0 text-primary" />
+          <span className="text-sm font-bold leading-tight sm:text-base">
+            {t('nav.brand')}
           </span>
         </Link>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex shrink-0 items-center gap-0.5 sm:gap-2">
+          <ThemeToggle />
+          <select
+            aria-label={t('nav.language')}
+            value={locale}
+            onChange={(event) => {
+              const next = routing.locales.find((lang) => lang === event.target.value);
+              if (next) router.replace(`${pathname}${window.location.search}${window.location.hash}`, { locale: next });
+            }}
+            className="max-w-28 rounded-md border bg-background px-2 py-2 text-xs focus-visible:outline-2 focus-visible:outline-primary"
+          >
+            {routing.locales.map((lang) => <option key={lang} value={lang} lang={lang}>{localeNames[lang]}</option>)}
+          </select>
           <Button variant="ghost" size="icon" asChild>
             <a
               href="https://github.com/ZhanZiyuan/china-unemployment-watch"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub Repository"
+              aria-label={t('nav.github')}
             >
               <svg
                 aria-hidden="true"
@@ -31,7 +53,6 @@ export function Header() {
               </svg>
             </a>
           </Button>
-          <ThemeToggle />
         </div>
       </div>
     </header>

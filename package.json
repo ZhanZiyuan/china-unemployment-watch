@@ -11,10 +11,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "fetch-data": "node --import tsx scripts/fetch-data.ts",
-    "validate-data": "node --import tsx scripts/validate-data.ts"
+    "validate-data": "node --import tsx scripts/validate-data.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

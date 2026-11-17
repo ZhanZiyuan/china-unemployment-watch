@@ -1,0 +1,106 @@
+{
+  "title": "中国雇用ウォッチ",
+  "description": "中国の雇用市場を公式統計、収録期間、実験的指標から確認できます。",
+  "nav": {
+    "brand": "中国雇用ウォッチ",
+    "language": "言語",
+    "theme": "表示テーマを切り替え",
+    "github": "GitHub リポジトリ"
+  },
+  "dashboard": {
+    "latest": "最新の観測日",
+    "collection": "最終取得試行",
+    "latest_capture": "直近の観測取得日時",
+    "quality": "データ品質",
+    "dataset_version": "データ版",
+    "algorithm_version": "アルゴリズム版",
+    "revisions": "記録済み改訂",
+    "not_available": "利用不可",
+    "no_data": "検証済みの観測値がありません。",
+    "failure": "取得できませんでした。直近の検証済みデータを表示しています。",
+    "invalid": "品質検証に失敗しました。直近の検証済みデータを表示しています。",
+    "run_log": "取得ログ",
+    "official": "調査失業率",
+    "official_explainer": "中国の都市部全体と主要31都市の公式月次失業率。",
+    "pmi": "PMI 雇用指数",
+    "pmi_explainer": "製造業と非製造業の月次調査指標。基準線の50は横ばいを示します。",
+    "index_explainer": "2つの PMI 雇用指標を固定したロバスト尺度で等加重平均した実験指標。",
+    "data_download": "JSON を取得",
+    "manifest": "版管理マニフェスト",
+    "coverage": "収録範囲",
+    "history_window": "初回収録対象期間 {start} – {end}",
+    "missing_periods": "欠落期間",
+    "awaiting": "公開待ち",
+    "observations": "観測値 {count, number} 件",
+    "unusual": "データ内の急変を要確認として記録",
+    "methodology": "算出方法",
+    "method_baseline": "実験的な雇用需要指数の固定基準期間は2023年1月から2024年12月です。各月の PMI から中央値を引いて 1.4826 × MAD で割り、±5に制限した値を等加重で平均します。",
+    "method_shadow": "シャドー雇用圧力指数には、同月の比較可能な検索データと雇用需要指数の両方が必要です。公式失業率は独立した参照系列です。試験関連の検索指標は別に集計します。",
+    "method_validation": "PMI の比較には時系列順のローリング検証を使用します。シャドー指数に利用できる検証事例はありません。",
+    "source_link": "出典"
+  },
+  "sources": {
+    "nbs-labour": "国家統計局の雇用統計",
+    "nbs-pmi": "国家統計局の PMI",
+    "google-trends": "Google Trends API アルファ版",
+    "baidu-index": "百度指数",
+    "recruitment": "求人掲載データ"
+  },
+  "series": {
+    "urban_unemployment": "全国都市部の失業率",
+    "city_unemployment": "主要31都市の失業率",
+    "manufacturing_pmi_employment": "製造業 PMI 雇用",
+    "nonmanufacturing_pmi_employment": "非製造業 PMI 雇用"
+  },
+  "indices": {
+    "search_pressure": "検索圧力指数",
+    "employment_demand": "雇用需要指数",
+    "shadow_pressure": "シャドー雇用圧力指数",
+    "exam_search": "試験関連の検索"
+  },
+  "units": {
+    "percent": "%",
+    "diffusion_points": "ポイント",
+    "score": "標準化スコア"
+  },
+  "frequency": {
+    "daily": "日次",
+    "weekly": "週次",
+    "monthly": "月次"
+  },
+  "status": {
+    "observed": "観測済み",
+    "zero": "観測値ゼロ",
+    "missing": "欠落",
+    "not_yet_published": "公開待ち",
+    "fetch_failed": "取得に失敗",
+    "invalid": "無効",
+    "suppressed": "提供元が非公開",
+    "not_applicable": "対象外",
+    "revised": "改訂済み",
+    "insufficient_data": "データ不足",
+    "experimental": "実験的",
+    "verified": "検証済み",
+    "retained": "前回値を保持",
+    "connected": "接続済み",
+    "approval_required": "アクセス承認が必要",
+    "unconnected": "未接続",
+    "passed": "検証通過",
+    "partial_coverage": "検証済み、一部欠落"
+  },
+  "chart": {
+    "from": "開始日",
+    "to": "終了日",
+    "zoom_in": "拡大",
+    "zoom_out": "縮小",
+    "reset": "リセット",
+    "brush": "ドラッグして期間を変更",
+    "legend": "表示系列",
+    "release": "公表資料",
+    "derived": "公式 PMI 公表値から算出",
+    "no_points": "この期間に観測値がありません。",
+    "all_hidden": "すべての系列が非表示です。",
+    "range_label": "{start} ～ {end}",
+    "period_end": "観測点は各期間の末日"
+  }
+}
