@@ -1,0 +1,694 @@
+{
+  "status": "exploratory_proxy_only",
+  "shadow_pressure": {
+    "status": "insufficient_data",
+    "folds": 0
+  },
+  "eligible_cases": 38,
+  "metrics": {
+    "persistence": {
+      "n": 20,
+      "mae": 0.10000000000000005,
+      "rmse": 0.1183215956619924,
+      "directional_accuracy": 0.2,
+      "level_correlation": 0.5177136294514074,
+      "slope_min": null,
+      "slope_max": null
+    },
+    "equal": {
+      "n": 20,
+      "mae": 0.09602343797831554,
+      "rmse": 0.11470796417322757,
+      "directional_accuracy": 0.5,
+      "level_correlation": 0.5376597882303308,
+      "slope_min": -0.05679041282329138,
+      "slope_max": -0.039563128790240605
+    },
+    "manufacturing_heavy": {
+      "n": 20,
+      "mae": 0.09277329093097557,
+      "rmse": 0.11360676801426704,
+      "directional_accuracy": 0.5,
+      "level_correlation": 0.550032674636366,
+      "slope_min": -0.058235062302659235,
+      "slope_max": -0.042557069736931005
+    },
+    "nonmanufacturing_heavy": {
+      "n": 20,
+      "mae": 0.0989389265410916,
+      "rmse": 0.11665568442314461,
+      "directional_accuracy": 0.5,
+      "level_correlation": 0.5234347324667188,
+      "slope_min": -0.05103164782295421,
+      "slope_max": -0.03407818183955893
+    },
+    "pca": {
+      "n": 20,
+      "mae": 0.09515659816720468,
+      "rmse": 0.11439029377377022,
+      "directional_accuracy": 0.5,
+      "level_correlation": 0.5413975333251472,
+      "slope_min": -0.05754105818377506,
+      "slope_max": -0.039020007455428087
+    }
+  },
+  "descriptive_lags": [
+    {
+      "lag_months": -3,
+      "n": 39,
+      "correlation": 0.0810763129159731
+    },
+    {
+      "lag_months": -2,
+      "n": 40,
+      "correlation": 0.18990766980609583
+    },
+    {
+      "lag_months": -1,
+      "n": 41,
+      "correlation": 0.5248341777208272
+    },
+    {
+      "lag_months": 0,
+      "n": 42,
+      "correlation": 0.39543210721551436
+    },
+    {
+      "lag_months": 1,
+      "n": 42,
+      "correlation": 0.06311886990284343
+    },
+    {
+      "lag_months": 2,
+      "n": 41,
+      "correlation": 0.028995062311089302
+    },
+    {
+      "lag_months": 3,
+      "n": 40,
+      "correlation": 0.07020120718187478
+    }
+  ],
+  "predictions": [
+    {
+      "month": "2024-11-01",
+      "forecast_date": "2024-11-15",
+      "training_n": 18,
+      "actual": 5,
+      "previous": 5,
+      "pca_manufacturing_weight": 0.480145360474053,
+      "models": {
+        "persistence": {
+          "prediction": 5,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 4.988843338550177,
+          "slope": -0.039563128790240605
+        },
+        "manufacturing_heavy": {
+          "prediction": 4.9817165859177175,
+          "slope": -0.042557069736931005
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 4.991952409520095,
+          "slope": -0.03407818183955893
+        },
+        "pca": {
+          "prediction": 4.989439944762843,
+          "slope": -0.039020007455428087
+        }
+      }
+    },
+    {
+      "month": "2024-12-01",
+      "forecast_date": "2024-12-16",
+      "training_n": 19,
+      "actual": 5.1,
+      "previous": 5,
+      "pca_manufacturing_weight": 0.59010435809434,
+      "models": {
+        "persistence": {
+          "prediction": 5,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 4.977554226462326,
+          "slope": -0.04329970629597702
+        },
+        "manufacturing_heavy": {
+          "prediction": 4.960287272307633,
+          "slope": -0.043394376655004493
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 4.991901172617981,
+          "slope": -0.039870088316651224
+        },
+        "pca": {
+          "prediction": 4.968318062563022,
+          "slope": -0.04372602438057738
+        }
+      }
+    },
+    {
+      "month": "2025-03-01",
+      "forecast_date": "2025-03-17",
+      "training_n": 20,
+      "actual": 5.2,
+      "previous": 5.4,
+      "pca_manufacturing_weight": 0.6234561277787098,
+      "models": {
+        "persistence": {
+          "prediction": 5.4,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.348255097043637,
+          "slope": -0.049953905455001
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.339117357728711,
+          "slope": -0.04778104575952414
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.358781731235995,
+          "slope": -0.048307927803788606
+        },
+        "pca": {
+          "prediction": 5.3412627521997615,
+          "slope": -0.04862610277952972
+        }
+      }
+    },
+    {
+      "month": "2025-04-01",
+      "forecast_date": "2025-04-16",
+      "training_n": 21,
+      "actual": 5.1,
+      "previous": 5.2,
+      "pca_manufacturing_weight": 0.5155125333171096,
+      "models": {
+        "persistence": {
+          "prediction": 5.2,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.14699357440302,
+          "slope": -0.04879316931048807
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.124761930478642,
+          "slope": -0.05020911743647469
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.1671108179996,
+          "slope": -0.0435455542710253
+        },
+        "pca": {
+          "prediction": 5.1449340638410215,
+          "slope": -0.04909593663259059
+        }
+      }
+    },
+    {
+      "month": "2025-05-01",
+      "forecast_date": "2025-05-19",
+      "training_n": 22,
+      "actual": 5,
+      "previous": 5.1,
+      "pca_manufacturing_weight": 0.5352479345969359,
+      "models": {
+        "persistence": {
+          "prediction": 5.1,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.114598499722422,
+          "slope": -0.05679041282329138
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.113527736275382,
+          "slope": -0.058235062302659235
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.109882664376768,
+          "slope": -0.05021207703356005
+        },
+        "pca": {
+          "prediction": 5.114849287663422,
+          "slope": -0.05754105818377506
+        }
+      }
+    },
+    {
+      "month": "2025-06-01",
+      "forecast_date": "2025-06-16",
+      "training_n": 23,
+      "actual": 5,
+      "previous": 5,
+      "pca_manufacturing_weight": 0.6645723192839462,
+      "models": {
+        "persistence": {
+          "prediction": 5,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 4.9902538607450095,
+          "slope": -0.0533116141022217
+        },
+        "manufacturing_heavy": {
+          "prediction": 4.983947342344154,
+          "slope": -0.05124508845452775
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 4.993106966510466,
+          "slope": -0.05062519459220302
+        },
+        "pca": {
+          "prediction": 4.98403685275505,
+          "slope": -0.05129146696514452
+        }
+      }
+    },
+    {
+      "month": "2025-07-01",
+      "forecast_date": "2025-07-15",
+      "training_n": 24,
+      "actual": 5.2,
+      "previous": 5,
+      "pca_manufacturing_weight": 0.5928661564792058,
+      "models": {
+        "persistence": {
+          "prediction": 5,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 4.982102238606022,
+          "slope": -0.0534416502674686
+        },
+        "manufacturing_heavy": {
+          "prediction": 4.973222140315077,
+          "slope": -0.053342267219621244
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 4.987688107990951,
+          "slope": -0.048706715081646285
+        },
+        "pca": {
+          "prediction": 4.977384260172807,
+          "slope": -0.05392991100925348
+        }
+      }
+    },
+    {
+      "month": "2025-08-01",
+      "forecast_date": "2025-08-15",
+      "training_n": 25,
+      "actual": 5.3,
+      "previous": 5.2,
+      "pca_manufacturing_weight": 0.5859111932680781,
+      "models": {
+        "persistence": {
+          "prediction": 5.2,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.210872544540886,
+          "slope": -0.05357407948835104
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.208280390802237,
+          "slope": -0.05214267229467963
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.20932666108715,
+          "slope": -0.050329082107132245
+        },
+        "pca": {
+          "prediction": 5.209974707201456,
+          "slope": -0.053355600838666764
+        }
+      }
+    },
+    {
+      "month": "2025-09-01",
+      "forecast_date": "2025-09-15",
+      "training_n": 26,
+      "actual": 5.2,
+      "previous": 5.3,
+      "pca_manufacturing_weight": 0.65604769112054,
+      "models": {
+        "persistence": {
+          "prediction": 5.3,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.31302932679828,
+          "slope": -0.051589545043983685
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.308995352685916,
+          "slope": -0.04809175458332944
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.313685166724999,
+          "slope": -0.05103164782295421
+        },
+        "pca": {
+          "prediction": 5.309312745918184,
+          "slope": -0.04839307987873547
+        }
+      }
+    },
+    {
+      "month": "2025-10-01",
+      "forecast_date": "2025-10-20",
+      "training_n": 27,
+      "actual": 5.1,
+      "previous": 5.2,
+      "pca_manufacturing_weight": 0.6504785276233479,
+      "models": {
+        "persistence": {
+          "prediction": 5.2,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.215666730608996,
+          "slope": -0.04934035532958738
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.205464730997748,
+          "slope": -0.04632050777264721
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.222297335935309,
+          "slope": -0.04843319541706252
+        },
+        "pca": {
+          "prediction": 5.206513799697642,
+          "slope": -0.046730323742662894
+        }
+      }
+    },
+    {
+      "month": "2025-11-01",
+      "forecast_date": "2025-11-14",
+      "training_n": 28,
+      "actual": 5.1,
+      "previous": 5.1,
+      "pca_manufacturing_weight": 0.6998891842261133,
+      "models": {
+        "persistence": {
+          "prediction": 5.1,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.128603305170542,
+          "slope": -0.04631488483038898
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.127067843020483,
+          "slope": -0.04260244740743369
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.124920703950843,
+          "slope": -0.046508835935394344
+        },
+        "pca": {
+          "prediction": 5.126371742722458,
+          "slope": -0.041651364906584575
+        }
+      }
+    },
+    {
+      "month": "2025-12-01",
+      "forecast_date": "2025-12-15",
+      "training_n": 29,
+      "actual": 5.1,
+      "previous": 5.1,
+      "pca_manufacturing_weight": 0.6342980246956103,
+      "models": {
+        "persistence": {
+          "prediction": 5.1,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.113368411682979,
+          "slope": -0.0457032859316882
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.110874927950925,
+          "slope": -0.04373289308790613
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.112032311926427,
+          "slope": -0.04401335606431322
+        },
+        "pca": {
+          "prediction": 5.111578677654421,
+          "slope": -0.0443297218160197
+        }
+      }
+    },
+    {
+      "month": "2026-03-01",
+      "forecast_date": "2026-03-16",
+      "training_n": 30,
+      "actual": 5.4,
+      "previous": 5.3,
+      "pca_manufacturing_weight": 0.5938182846905455,
+      "models": {
+        "persistence": {
+          "prediction": 5.3,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.311552429160802,
+          "slope": -0.043780634883186266
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.31954464399216,
+          "slope": -0.04279709502344056
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.3002712010306965,
+          "slope": -0.041235889372093375
+        },
+        "pca": {
+          "prediction": 5.316534656155715,
+          "slope": -0.04360511988546183
+        }
+      }
+    },
+    {
+      "month": "2026-04-01",
+      "forecast_date": "2026-04-16",
+      "training_n": 31,
+      "actual": 5.2,
+      "previous": 5.4,
+      "pca_manufacturing_weight": 0.5606826168411674,
+      "models": {
+        "persistence": {
+          "prediction": 5.4,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.3609209373680065,
+          "slope": -0.04379543472319393
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.338445234853475,
+          "slope": -0.04374576599703565
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.382437668243172,
+          "slope": -0.040296607373207186
+        },
+        "pca": {
+          "prediction": 5.352567012709761,
+          "slope": -0.04417274488235911
+        }
+      }
+    },
+    {
+      "month": "2026-05-01",
+      "forecast_date": "2026-05-18",
+      "training_n": 32,
+      "actual": 5.1,
+      "previous": 5.2,
+      "pca_manufacturing_weight": 0.6138642356625194,
+      "models": {
+        "persistence": {
+          "prediction": 5.2,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.172126228243968,
+          "slope": -0.05012134917143665
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.160910445959741,
+          "slope": -0.05013372229581064
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.181654047260964,
+          "slope": -0.04534908639976072
+        },
+        "pca": {
+          "prediction": 5.164453932687578,
+          "slope": -0.050580548500050206
+        }
+      }
+    },
+    {
+      "month": "2026-06-01",
+      "forecast_date": "2026-06-16",
+      "training_n": 33,
+      "actual": 5,
+      "previous": 5.1,
+      "pca_manufacturing_weight": 0.572640802907075,
+      "models": {
+        "persistence": {
+          "prediction": 5.1,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.085921025122666,
+          "slope": -0.044129880434157595
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.0822198358557955,
+          "slope": -0.045466119225803216
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.086803001657872,
+          "slope": -0.0385323533238948
+        },
+        "pca": {
+          "prediction": 5.084580968149183,
+          "slope": -0.04523376036400729
+        }
+      }
+    },
+    {
+      "month": "2026-07-01",
+      "forecast_date": "2026-07-15",
+      "training_n": 34,
+      "actual": 5.2,
+      "previous": 5,
+      "pca_manufacturing_weight": 0.5714333062468848,
+      "models": {
+        "persistence": {
+          "prediction": 5,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 4.946540663832894,
+          "slope": -0.04323044199637285
+        },
+        "manufacturing_heavy": {
+          "prediction": 4.932589152740967,
+          "slope": -0.04478934420026337
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 4.959780228149537,
+          "slope": -0.037495694728333584
+        },
+        "pca": {
+          "prediction": 4.940428640113244,
+          "slope": -0.04441199981411348
+        }
+      }
+    },
+    {
+      "month": "2026-08-01",
+      "forecast_date": "2026-08-17",
+      "training_n": 35,
+      "actual": 5.3,
+      "previous": 5.2,
+      "pca_manufacturing_weight": 0.4848732584422321,
+      "models": {
+        "persistence": {
+          "prediction": 5.2,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.2245166547217545,
+          "slope": -0.044041270242728636
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.232107196752444,
+          "slope": -0.04647206095556676
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.2128815073572365,
+          "slope": -0.03776213263589251
+        },
+        "pca": {
+          "prediction": 5.223584118782419,
+          "slope": -0.04360905189292054
+        }
+      }
+    },
+    {
+      "month": "2026-09-01",
+      "forecast_date": "2026-09-15",
+      "training_n": 36,
+      "actual": 5.2,
+      "previous": 5.3,
+      "pca_manufacturing_weight": 0.49245040492255276,
+      "models": {
+        "persistence": {
+          "prediction": 5.3,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.28251729457763,
+          "slope": -0.046110635569391566
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.271265044958203,
+          "slope": -0.04839915450209685
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.2908097217374745,
+          "slope": -0.03986042802297141
+        },
+        "pca": {
+          "prediction": 5.282976461550362,
+          "slope": -0.04590369172173322
+        }
+      }
+    },
+    {
+      "month": "2026-10-01",
+      "forecast_date": "2026-10-19",
+      "training_n": 37,
+      "actual": 5.1,
+      "previous": 5.2,
+      "pca_manufacturing_weight": 0.4101731843126111,
+      "models": {
+        "persistence": {
+          "prediction": 5.2,
+          "slope": null
+        },
+        "equal": {
+          "prediction": 5.170704285444034,
+          "slope": -0.04761684635003994
+        },
+        "manufacturing_heavy": {
+          "prediction": 5.164510103026876,
+          "slope": -0.05266348105618277
+        },
+        "nonmanufacturing_heavy": {
+          "prediction": 5.175271614036521,
+          "slope": -0.03919353055859818
+        },
+        "pca": {
+          "prediction": 5.173431761056855,
+          "slope": -0.04332168920915666
+        }
+      }
+    }
+  ]
+}

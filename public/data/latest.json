@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "c52c4f6b6607e58d62fe04919108b47e5fa8229053bbc59ea30149d9c42fd766",
-  "algorithm_version": "pending-calibration",
-  "generated_at": "2026-11-17T13:38:13.479Z",
+  "dataset_version": "de656430e957984e6914378b2e852c224b7839031ba852afa6b5d9a93c0149fa",
+  "algorithm_version": "pmi-demand-1.0.0",
+  "generated_at": "2026-11-17T13:40:57.156Z",
   "time_zone": "Asia/Shanghai",
   "observation_start": "2023-01-01",
   "observation_end": "2026-10-31",
@@ -3460,8 +3460,331 @@
     {
       "id": "employment_demand",
       "frequency": "monthly",
-      "status": "insufficient_data",
-      "values": []
+      "status": "experimental",
+      "values": [
+        {
+          "observation_period": {
+            "start": "2023-01-01",
+            "end": "2023-01-31"
+          },
+          "value": 0.6167
+        },
+        {
+          "observation_period": {
+            "start": "2023-02-01",
+            "end": "2023-02-28"
+          },
+          "value": 4.5191
+        },
+        {
+          "observation_period": {
+            "start": "2023-03-01",
+            "end": "2023-03-31"
+          },
+          "value": 3.6037
+        },
+        {
+          "observation_period": {
+            "start": "2023-04-01",
+            "end": "2023-04-30"
+          },
+          "value": 0.6841
+        },
+        {
+          "observation_period": {
+            "start": "2023-05-01",
+            "end": "2023-05-31"
+          },
+          "value": 0.5107
+        },
+        {
+          "observation_period": {
+            "start": "2023-06-01",
+            "end": "2023-06-30"
+          },
+          "value": -0.424
+        },
+        {
+          "observation_period": {
+            "start": "2023-07-01",
+            "end": "2023-07-31"
+          },
+          "value": -0.1253
+        },
+        {
+          "observation_period": {
+            "start": "2023-08-01",
+            "end": "2023-08-31"
+          },
+          "value": 0.3469
+        },
+        {
+          "observation_period": {
+            "start": "2023-09-01",
+            "end": "2023-09-30"
+          },
+          "value": 0.4914
+        },
+        {
+          "observation_period": {
+            "start": "2023-10-01",
+            "end": "2023-10-31"
+          },
+          "value": -0.1927
+        },
+        {
+          "observation_period": {
+            "start": "2023-11-01",
+            "end": "2023-11-30"
+          },
+          "value": 0.0289
+        },
+        {
+          "observation_period": {
+            "start": "2023-12-01",
+            "end": "2023-12-31"
+          },
+          "value": -0.1734
+        },
+        {
+          "observation_period": {
+            "start": "2024-01-01",
+            "end": "2024-01-31"
+          },
+          "value": -0.0964
+        },
+        {
+          "observation_period": {
+            "start": "2024-02-01",
+            "end": "2024-02-29"
+          },
+          "value": -0.0964
+        },
+        {
+          "observation_period": {
+            "start": "2024-03-01",
+            "end": "2024-03-31"
+          },
+          "value": 1.561
+        },
+        {
+          "observation_period": {
+            "start": "2024-04-01",
+            "end": "2024-04-30"
+          },
+          "value": 1.0503
+        },
+        {
+          "observation_period": {
+            "start": "2024-05-01",
+            "end": "2024-05-31"
+          },
+          "value": -0.3469
+        },
+        {
+          "observation_period": {
+            "start": "2024-06-01",
+            "end": "2024-06-30"
+          },
+          "value": -0.6649
+        },
+        {
+          "observation_period": {
+            "start": "2024-07-01",
+            "end": "2024-07-31"
+          },
+          "value": -0.9636
+        },
+        {
+          "observation_period": {
+            "start": "2024-08-01",
+            "end": "2024-08-31"
+          },
+          "value": -1.3586
+        },
+        {
+          "observation_period": {
+            "start": "2024-09-01",
+            "end": "2024-09-30"
+          },
+          "value": -1.2141
+        },
+        {
+          "observation_period": {
+            "start": "2024-10-01",
+            "end": "2024-10-31"
+          },
+          "value": -0.424
+        },
+        {
+          "observation_period": {
+            "start": "2024-11-01",
+            "end": "2024-11-30"
+          },
+          "value": -0.3083
+        },
+        {
+          "observation_period": {
+            "start": "2024-12-01",
+            "end": "2024-12-31"
+          },
+          "value": 0.0578
+        },
+        {
+          "observation_period": {
+            "start": "2025-01-01",
+            "end": "2025-01-31"
+          },
+          "value": -0.2023
+        },
+        {
+          "observation_period": {
+            "start": "2025-02-01",
+            "end": "2025-02-28"
+          },
+          "value": 0.5781
+        },
+        {
+          "observation_period": {
+            "start": "2025-03-01",
+            "end": "2025-03-31"
+          },
+          "value": 0.4432
+        },
+        {
+          "observation_period": {
+            "start": "2025-04-01",
+            "end": "2025-04-30"
+          },
+          "value": -1.0117
+        },
+        {
+          "observation_period": {
+            "start": "2025-05-01",
+            "end": "2025-05-31"
+          },
+          "value": -0.7227
+        },
+        {
+          "observation_period": {
+            "start": "2025-06-01",
+            "end": "2025-06-30"
+          },
+          "value": -0.53
+        },
+        {
+          "observation_period": {
+            "start": "2025-07-01",
+            "end": "2025-07-31"
+          },
+          "value": -0.8479
+        },
+        {
+          "observation_period": {
+            "start": "2025-08-01",
+            "end": "2025-08-31"
+          },
+          "value": -0.7998
+        },
+        {
+          "observation_period": {
+            "start": "2025-09-01",
+            "end": "2025-09-30"
+          },
+          "value": -1.1081
+        },
+        {
+          "observation_period": {
+            "start": "2025-10-01",
+            "end": "2025-10-31"
+          },
+          "value": -1.4068
+        },
+        {
+          "observation_period": {
+            "start": "2025-11-01",
+            "end": "2025-11-30"
+          },
+          "value": -1.1466
+        },
+        {
+          "observation_period": {
+            "start": "2025-12-01",
+            "end": "2025-12-31"
+          },
+          "value": 0.1638
+        },
+        {
+          "observation_period": {
+            "start": "2026-01-01",
+            "end": "2026-01-31"
+          },
+          "value": -0.607
+        },
+        {
+          "observation_period": {
+            "start": "2026-02-01",
+            "end": "2026-02-28"
+          },
+          "value": -0.9636
+        },
+        {
+          "observation_period": {
+            "start": "2026-03-01",
+            "end": "2026-03-31"
+          },
+          "value": -0.0578
+        },
+        {
+          "observation_period": {
+            "start": "2026-04-01",
+            "end": "2026-04-30"
+          },
+          "value": -0.3372
+        },
+        {
+          "observation_period": {
+            "start": "2026-05-01",
+            "end": "2026-05-31"
+          },
+          "value": -0.607
+        },
+        {
+          "observation_period": {
+            "start": "2026-06-01",
+            "end": "2026-06-30"
+          },
+          "value": 0.1542
+        },
+        {
+          "observation_period": {
+            "start": "2026-07-01",
+            "end": "2026-07-31"
+          },
+          "value": -1.4164
+        },
+        {
+          "observation_period": {
+            "start": "2026-08-01",
+            "end": "2026-08-31"
+          },
+          "value": -0.4047
+        },
+        {
+          "observation_period": {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          },
+          "value": -0.1156
+        },
+        {
+          "observation_period": {
+            "start": "2026-10-01",
+            "end": "2026-10-31"
+          },
+          "value": -0.5781
+        }
+      ]
     },
     {
       "id": "shadow_pressure",

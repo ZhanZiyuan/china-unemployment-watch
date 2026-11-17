@@ -1,19 +1,14 @@
 import { businessDate, HISTORY_START, INITIAL_END } from '../src/lib/market/dates';
-import { datasetSchema, indexIds, manifestSchema, type Dataset, type Index, type Observation } from '../src/lib/market/schema';
+import { datasetSchema, manifestSchema, type Dataset, type Observation } from '../src/lib/market/schema';
 import { profile, validateEvidence, type Revision } from './quality';
 import { sha256 } from './sources/http';
-import { readOptionalJson, writeAtomic, writeJson } from './storage';
+import { readJson, readOptionalJson, writeAtomic, writeJson } from './storage';
+import { ALGORITHM_VERSION, calibrationSchema, experimentalIndices } from './indexing/model';
+import { calibrationFile } from './indexing/calibrate';
 
 export const latestFile = 'public/data/latest.json';
 export const manifestFile = 'public/data/manifest.json';
 export const healthFile = 'public/data/collection-status.json';
-
-export function calculateIndices(): { version: string; indices: Index[] } {
-  return {
-    version: 'pending-calibration',
-    indices: indexIds.map((id) => ({ id, frequency: 'monthly', status: 'insufficient_data', values: [] })),
-  };
-}
 
 export function dataFingerprint(dataset: Omit<Dataset, 'dataset_version' | 'generated_at'>) {
   return sha256(JSON.stringify(dataset, (_key, value: unknown) => {
@@ -25,10 +20,11 @@ export function dataFingerprint(dataset: Omit<Dataset, 'dataset_version' | 'gene
 export async function preparePublication(rows: Observation[], revisions: Revision[], asOf: string) {
   await validateEvidence(rows, revisions);
   const quality = profile(rows, asOf);
-  const { version, indices } = calculateIndices();
+  const calibration = calibrationSchema.parse(await readJson(calibrationFile));
+  const indices = experimentalIndices(rows, calibration);
   const content = {
     schema_version: '1.0.0',
-    algorithm_version: version,
+    algorithm_version: ALGORITHM_VERSION,
     time_zone: 'Asia/Shanghai',
     observation_start: HISTORY_START,
     observation_end: rows.filter((row) => row.value !== null).map((row) => row.observation_period.end).sort().at(-1) ?? null,
