@@ -1,11 +1,18 @@
 'use client';
 
-import { TrendingUp } from 'lucide-react';
+import { Languages, TrendingUp } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { Button } from '../ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from '../ui/dropdown-menu';
 
 const localeNames = { en: 'English', ja: '日本語', 'zh-CN': '简体中文', 'zh-TW': '繁體中文' };
 
@@ -25,18 +32,31 @@ export function Header() {
         </Link>
         <div className="flex shrink-0 items-center gap-0.5 sm:gap-2">
           <ThemeToggle />
-          <select
-            aria-label={t('nav.language')}
-            value={locale}
-            onChange={(event) => {
-              const next = routing.locales.find((lang) => lang === event.target.value);
-              if (next) router.replace(`${pathname}${window.location.search}${window.location.hash}`, { locale: next });
-            }}
-            className="max-w-28 rounded-md border bg-background px-2 py-2 text-xs focus-visible:outline-2 focus-visible:outline-primary"
-          >
-            {routing.locales.map((lang) => <option key={lang} value={lang} lang={lang}>{localeNames[lang]}</option>)}
-          </select>
-          <Button variant="ghost" size="icon" asChild>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="h-11 w-11" aria-label={t('nav.language')}>
+                <Languages aria-hidden="true" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuRadioGroup
+                value={locale}
+                onValueChange={(value) => {
+                  const next = routing.locales.find((lang) => lang === value);
+                  if (next && next !== locale) {
+                    router.replace(`${pathname}${window.location.search}${window.location.hash}`, { locale: next });
+                  }
+                }}
+              >
+                {routing.locales.map((lang) => (
+                  <DropdownMenuRadioItem key={lang} value={lang} lang={lang} className="min-h-11">
+                    {localeNames[lang]}
+                  </DropdownMenuRadioItem>
+                ))}
+              </DropdownMenuRadioGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button variant="ghost" size="icon" className="h-11 w-11" asChild>
             <a
               href="https://github.com/ZhanZiyuan/china-unemployment-watch"
               target="_blank"

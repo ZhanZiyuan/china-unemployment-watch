@@ -27,7 +27,13 @@ test('negotiates the browser language, keeps the current page and follows the sy
     await page.getByRole('button', { name: '表示テーマを切り替え' }).click();
     await expect(page.locator('html')).not.toHaveClass(/dark/);
     await page.goto('/ja?source=test#pmi-chart');
-    await page.getByRole('combobox', { name: '言語' }).selectOption('zh-TW');
+    const language = page.getByRole('button', { name: '言語' });
+    await expect(language.locator('svg.lucide-languages')).toBeVisible();
+    await language.focus();
+    await page.keyboard.press('Enter');
+    await expect(page.getByRole('menuitemradio')).toHaveText(['English', '日本語', '简体中文', '繁體中文']);
+    await expect(page.getByRole('menuitemradio', { name: '日本語' })).toHaveAttribute('aria-checked', 'true');
+    await page.getByRole('menuitemradio', { name: '繁體中文' }).click();
     await expect(page).toHaveURL(/\/zh-TW\?source=test#pmi-chart$/);
     await expect(page.locator('html')).not.toHaveClass(/dark/);
   } finally {
@@ -42,6 +48,19 @@ test('negotiates the browser language, keeps the current page and follows the sy
   } finally {
     await unmatched.close();
   }
+});
+
+test('orders the theme, language and GitHub icons from left to right on desktop', async ({ page }) => {
+  await page.goto('/en');
+  const header = page.getByRole('banner');
+  const theme = await header.getByRole('button', { name: 'Toggle color theme' }).boundingBox();
+  const language = await header.getByRole('button', { name: 'Language' }).boundingBox();
+  const githubLink = header.getByRole('link', { name: 'GitHub repository' });
+  const github = await githubLink.boundingBox();
+  if (!theme || !language || !github) throw new Error('Header controls are not visible');
+  expect(theme.x + theme.width).toBeLessThanOrEqual(language.x);
+  expect(language.x + language.width).toBeLessThanOrEqual(github.x);
+  await expect(githubLink).toHaveAttribute('href', 'https://github.com/ZhanZiyuan/china-unemployment-watch');
 });
 
 test('zooms from full coverage to one exact day without changing other charts', async ({ page }) => {
@@ -91,6 +110,22 @@ test('shows a source-linked tooltip and supports a brush drag', async ({ page })
 
 test.describe('touch viewport', () => {
   test.use({ viewport: { width: 390, height: 664 }, hasTouch: true, isMobile: true });
+
+  test('fits the language menu and switches locale at narrow phone width', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 664 });
+    await page.goto('/en');
+    const trigger = page.getByRole('button', { name: 'Language' });
+    const button = await trigger.boundingBox();
+    expect(button?.width).toBeGreaterThanOrEqual(44);
+    await trigger.tap();
+    const menu = await page.getByRole('menu').boundingBox();
+    if (!menu) throw new Error('Language menu is not visible');
+    expect(menu.x).toBeGreaterThanOrEqual(0);
+    expect(menu.x + menu.width).toBeLessThanOrEqual(320);
+    await page.getByRole('menuitemradio', { name: '简体中文' }).tap();
+    await expect(page).toHaveURL(/\/zh-CN$/);
+  });
+
   test('fits the dashboard on mobile and shows a touched observation', async ({ page }) => {
     await page.goto('/en');
     const chart = page.getByTestId('official-chart');
