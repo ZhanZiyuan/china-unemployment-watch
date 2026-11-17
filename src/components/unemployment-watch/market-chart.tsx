@@ -98,34 +98,34 @@ export function MarketChart({ id, title, description, series, bounds, reference 
   }
 
   return (
-    <Card id={id} data-testid={id} className="min-w-0 shadow-none">
-      <CardHeader className="gap-2">
-        <CardTitle className="text-xl">{title}</CardTitle>
+    <Card id={id} data-testid={id} className="min-w-0 scroll-mt-20 rounded-xl">
+      <CardHeader className="p-4 sm:p-6">
+        <CardTitle className="text-xl"><h2>{title}</h2></CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4 px-3 sm:px-6">
-        <div className="flex flex-wrap items-end gap-2">
+      <CardContent className="space-y-4 px-4 sm:px-6">
+        <div className="flex flex-wrap items-end gap-2 rounded-lg border bg-muted/45 p-3">
           <label className="flex min-w-0 flex-col gap-1 text-xs text-muted-foreground">
             {t('chart.from')}
-            <input type="date" aria-label={t('chart.from')} className="max-w-full rounded-md border bg-background px-2 py-1.5 text-sm text-foreground"
+            <input type="date" aria-label={t('chart.from')} className="h-9 max-w-full rounded-md border bg-card px-2 text-sm text-foreground shadow-xs focus-visible:outline-2 focus-visible:outline-ring"
               min={bounds.start} max={range.end} value={range.start} onChange={(event) => updateRange({ ...range, start: event.target.value })} />
           </label>
           <label className="flex min-w-0 flex-col gap-1 text-xs text-muted-foreground">
             {t('chart.to')}
-            <input type="date" aria-label={t('chart.to')} className="max-w-full rounded-md border bg-background px-2 py-1.5 text-sm text-foreground"
+            <input type="date" aria-label={t('chart.to')} className="h-9 max-w-full rounded-md border bg-card px-2 text-sm text-foreground shadow-xs focus-visible:outline-2 focus-visible:outline-ring"
               min={range.start} max={bounds.end} value={range.end} onChange={(event) => updateRange({ ...range, end: event.target.value })} />
           </label>
           <div className="flex flex-wrap gap-1.5">
             <Button size="sm" variant="outline" onClick={() => zoom(0.5)} disabled={lo === hi}>{t('chart.zoom_in')}</Button>
             <Button size="sm" variant="outline" onClick={() => zoom(2)} disabled={range.start === bounds.start && range.end === bounds.end}>{t('chart.zoom_out')}</Button>
-            <Button size="sm" variant="outline" onClick={() => setRange(bounds)}>{t('chart.reset')}</Button>
+            <Button size="sm" variant="ghost" onClick={() => setRange(bounds)}>{t('chart.reset')}</Button>
           </div>
         </div>
         <div aria-label={t('chart.legend')} role="group" className="flex flex-wrap gap-2">
           {series.map((item) => (
             <Button key={item.id} size="sm" variant="outline" aria-pressed={!hidden.includes(item.id)} onClick={() => {
               setHidden((previous) => previous.includes(item.id) ? previous.filter((key) => key !== item.id) : [...previous, item.id]);
-            }} className="h-auto min-h-8 max-w-full whitespace-normal text-left text-xs aria-pressed:border-current">
+            }} className="h-auto min-h-9 max-w-full whitespace-normal rounded-full px-3 text-left text-xs text-muted-foreground aria-pressed:border-primary/30 aria-pressed:bg-primary/5 aria-pressed:text-foreground">
               <span className="size-2 shrink-0 rounded-full" style={{ background: item.color }} />
               {item.label}
             </Button>
@@ -138,8 +138,10 @@ export function MarketChart({ id, title, description, series, bounds, reference 
                 <CartesianGrid vertical={false} stroke="var(--color-border)" />
                 <XAxis type="number" dataKey="date" domain={lo === hi ? [lo - 43_200_000, hi + 43_200_000] : [lo, hi]}
                   tickFormatter={(tick) => formatDate(tick, hi - lo > 62 * 86_400_000)} minTickGap={30}
-                  ticks={lo === hi ? [lo] : undefined} tick={{ fontSize: 11, fill: 'var(--color-muted-foreground)' }} />
-                <YAxis width={42} domain={['auto', 'auto']} tick={{ fontSize: 11, fill: 'var(--color-muted-foreground)' }}
+                  ticks={lo === hi ? [lo] : undefined} axisLine={false} tickLine={false} tickMargin={8}
+                  tick={{ fontSize: 11, fill: 'var(--color-muted-foreground)' }} />
+                <YAxis width={42} domain={['auto', 'auto']} axisLine={false} tickLine={false} tickMargin={8}
+                  tick={{ fontSize: 11, fill: 'var(--color-muted-foreground)' }}
                   tickFormatter={(tick) => format.number(tick, { maximumFractionDigits: 2 })} />
                 {reference !== undefined && <ReferenceLine y={reference} stroke="var(--color-muted-foreground)" strokeDasharray="3 3" />}
                 <Tooltip trigger={touch ? "click" : "hover"} content={({ active, label }) => {

@@ -1,4 +1,7 @@
+import { createHash } from 'node:crypto';
+import { readFile } from 'node:fs/promises';
 import { expect, test } from '@playwright/test';
+import { manifestSchema } from '../../src/lib/market/schema';
 
 const locales = {
   en: 'China Employment Watch',
@@ -63,6 +66,39 @@ test('orders the theme, language and GitHub icons from left to right on desktop'
   await expect(githubLink).toHaveAttribute('href', 'https://github.com/ZhanZiyuan/china-unemployment-watch');
 });
 
+test('reads the localized version manifest and downloads the matching publication', async ({ page, request }) => {
+  const response = await request.get('/data/manifest.json');
+  expect(response.ok()).toBe(true);
+  const manifest = manifestSchema.parse(await response.json());
+  await page.goto('/zh-CN');
+  const trigger = page.getByRole('button', { name: '版本清单' });
+  await trigger.press('Enter');
+  const dialog = page.getByRole('dialog', { name: '版本清单' });
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByText(manifest.dataset_version, { exact: true })).toBeVisible();
+  await expect(dialog.getByText(manifest.algorithm_version, { exact: true })).toBeVisible();
+  await expect(dialog.getByText(manifest.sha256, { exact: true })).toBeVisible();
+
+  const [manifestDownload] = await Promise.all([
+    page.waitForEvent('download'),
+    dialog.getByRole('link', { name: '下载清单 JSON' }).click(),
+  ]);
+  expect(manifestDownload.suggestedFilename()).toBe('manifest.json');
+  expect(await readFile(await manifestDownload.path())).toEqual(await response.body());
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  await expect(page).toHaveURL(/\/zh-CN$/);
+
+  const [datasetDownload] = await Promise.all([
+    page.waitForEvent('download'),
+    page.getByRole('link', { name: '下载 JSON', exact: true }).click(),
+  ]);
+  expect(datasetDownload.suggestedFilename()).toBe('latest.json');
+  const bytes = await readFile(await datasetDownload.path());
+  expect(createHash('sha256').update(bytes).digest('hex')).toBe(manifest.sha256);
+});
+
 test('zooms from full coverage to one exact day without changing other charts', async ({ page }) => {
   await page.goto('/en');
   const official = page.getByTestId('official-chart');
@@ -124,6 +160,24 @@ test.describe('touch viewport', () => {
     expect(menu.x + menu.width).toBeLessThanOrEqual(320);
     await page.getByRole('menuitemradio', { name: '简体中文' }).tap();
     await expect(page).toHaveURL(/\/zh-CN$/);
+  });
+
+  test('fits the version manifest on a narrow phone and closes on touch', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 568 });
+    await page.goto('/zh-CN');
+    const trigger = page.getByRole('button', { name: '版本清单' });
+    await trigger.tap();
+    const dialog = page.getByRole('dialog', { name: '版本清单' });
+    const box = await dialog.boundingBox();
+    if (!box) throw new Error('Version manifest is not visible');
+    expect(box.x).toBeGreaterThanOrEqual(0);
+    expect(box.y).toBeGreaterThanOrEqual(0);
+    expect(box.x + box.width).toBeLessThanOrEqual(320);
+    expect(box.y + box.height).toBeLessThanOrEqual(568);
+    await expect(dialog.getByRole('link', { name: '下载清单 JSON' })).toBeVisible();
+    await dialog.getByRole('button', { name: '关闭' }).tap();
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
   });
 
   test('fits the dashboard on mobile and shows a touched observation', async ({ page }) => {

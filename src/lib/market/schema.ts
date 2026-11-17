@@ -136,3 +136,4 @@ export const healthSchema = z.object({
 
 export type Dataset = z.infer<typeof datasetSchema>;
 export type Health = z.infer<typeof healthSchema>;
+export type Manifest = z.infer<typeof manifestSchema>;

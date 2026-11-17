@@ -102,5 +102,14 @@
     "all_hidden": "すべての系列が非表示です。",
     "range_label": "{start} ～ {end}",
     "period_end": "観測点は各期間の末日"
+  },
+  "manifest": {
+    "description": "このページに表示されているデータの公開情報です。",
+    "schema_version": "スキーマ版",
+    "coverage": "観測期間",
+    "generated_at": "スナップショット公開日時",
+    "checksum": "データの SHA-256",
+    "download": "マニフェスト JSON をダウンロード",
+    "close": "閉じる"
   }
 }

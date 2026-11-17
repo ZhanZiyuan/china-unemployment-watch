@@ -23,7 +23,7 @@ export function Header() {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-xs supports-backdrop-filter:bg-background/60">
-      <div className="container flex min-h-16 items-center justify-between gap-1 px-4 sm:px-8">
+      <div className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between gap-1 px-4 sm:px-8 lg:px-10">
         <Link href="/" className="flex min-w-0 items-center gap-2">
           <TrendingUp className="h-5 w-5 shrink-0 text-primary" />
           <span className="text-sm font-bold leading-tight sm:text-base">

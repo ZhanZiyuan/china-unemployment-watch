@@ -102,5 +102,14 @@
     "all_hidden": "所有序列均已隱藏。",
     "range_label": "{start} 至 {end}",
     "period_end": "觀測點按統計週期末日顯示"
+  },
+  "manifest": {
+    "description": "目前頁面所用資料快照的發布資訊。",
+    "schema_version": "資料結構版本",
+    "coverage": "觀測時間範圍",
+    "generated_at": "快照發布時間",
+    "checksum": "資料檔案 SHA-256",
+    "download": "下載清單 JSON",
+    "close": "關閉"
   }
 }

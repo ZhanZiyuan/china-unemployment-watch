@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { datasetSchema, healthSchema } from './schema';
+import { datasetSchema, healthSchema, manifestSchema } from './schema';
 
 async function readPublicFile(name: string): Promise<unknown> {
   try {
@@ -12,9 +12,15 @@ async function readPublicFile(name: string): Promise<unknown> {
 }
 
 export async function readMarketData() {
-  const [dataset, health] = await Promise.all([readPublicFile('latest.json'), readPublicFile('collection-status.json')]);
-  return {
-    dataset: datasetSchema.nullable().parse(dataset),
-    health: healthSchema.nullable().parse(health),
-  };
+  const [rawDataset, rawHealth, rawManifest] = await Promise.all([
+    readPublicFile('latest.json'),
+    readPublicFile('collection-status.json'),
+    readPublicFile('manifest.json'),
+  ]);
+  const dataset = datasetSchema.nullable().parse(rawDataset);
+  const manifest = manifestSchema.nullable().parse(rawManifest);
+  if (dataset?.dataset_version !== manifest?.dataset_version) {
+    throw new Error('Dataset and version manifest must come from the same publication');
+  }
+  return { dataset, manifest, health: healthSchema.nullable().parse(rawHealth) };
 }

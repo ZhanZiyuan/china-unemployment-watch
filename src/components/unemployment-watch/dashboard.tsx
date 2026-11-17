@@ -4,12 +4,13 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { dayNumber, HISTORY_START, INITIAL_END } from '@/lib/market/dates';
-import { definitions, indexIds, sourceCatalog, sources, type Dataset, type Health, type SeriesId } from '@/lib/market/schema';
+import { definitions, indexIds, sourceCatalog, sources, type Dataset, type Health, type Manifest, type SeriesId } from '@/lib/market/schema';
 import { MarketChart, type ChartSeries } from './market-chart';
+import { ManifestDialog } from './manifest-dialog';
 
 const colors = ['var(--chart-blue)', 'var(--chart-teal)'];
 
-export async function Dashboard({ dataset, health }: { dataset: Dataset | null; health: Health | null }) {
+export async function Dashboard({ dataset, health, manifest }: { dataset: Dataset | null; health: Health | null; manifest: Manifest | null }) {
   const [t, format] = await Promise.all([getTranslations(), getFormatter()]);
   const date = (value: string | null | undefined) => value
     ? format.dateTime(new Date(dayNumber(value)), { dateStyle: 'medium' }) : t('dashboard.not_available');
@@ -25,6 +26,7 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
   }));
   const national = dataset?.series.filter((row) => row.series_id === 'urban_unemployment' && row.value !== null).at(-1);
   const demand = dataset?.indices.find((index) => index.id === 'employment_demand');
+  const latestDemand = demand?.values.at(-1);
   const range = { start: HISTORY_START, end: dataset?.observation_end ?? HISTORY_START };
   const recentCapture = dataset?.series.map((row) => row.fetched_at).sort().at(-1);
   const hasFailure = health && health.result !== 'success';
@@ -35,16 +37,21 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
   ];
 
   return (
-    <main className="container flex max-w-6xl flex-col gap-6 px-4 py-8 sm:gap-8 sm:px-8 sm:py-12">
-      <section aria-labelledby="page-title" className="flex flex-col items-start justify-between gap-4 border-b pb-6 lg:flex-row lg:items-end">
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-7 sm:gap-6 sm:px-8 sm:py-10 lg:px-10">
+      <section aria-labelledby="page-title" className="flex flex-col items-start justify-between gap-4 pb-1 lg:flex-row lg:items-end">
         <div>
-          <h1 id="page-title" className="max-w-3xl text-3xl font-extrabold tracking-tight sm:text-5xl">{t('title')}</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{t('description')}</p>
+          <h1 id="page-title" className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{t('title')}</h1>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{t('description')}</p>
         </div>
         {dataset && (
-          <div className="flex shrink-0 flex-wrap gap-2">
-            <Button size="sm" variant="outline" asChild><a href="/data/latest.json"><Download />{t('dashboard.data_download')}</a></Button>
-            <Button size="sm" variant="ghost" asChild><a href="/data/manifest.json">{t('dashboard.manifest')}</a></Button>
+          <div className="flex max-w-full shrink-0 flex-wrap gap-2">
+            {manifest && <ManifestDialog manifest={manifest} />}
+            <Button asChild>
+              <a href="/data/latest.json" download="latest.json">
+                <Download aria-hidden="true" />
+                {t('dashboard.data_download')}
+              </a>
+            </Button>
           </div>
         )}
       </section>
@@ -56,36 +63,53 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
           {health.workflow_url && <a href={health.workflow_url} className="underline">{t('dashboard.run_log')}</a>}
         </div>
       )}
-      <dl className="grid divide-y rounded-xl border bg-card sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      {!dataset?.observation_end ? (
+        <p role="status" className="rounded-xl border border-dashed p-8 text-center text-muted-foreground">{t('dashboard.no_data')}</p>
+      ) : (
+        <div className="grid gap-3 md:grid-cols-3">
+          <Card className="min-w-0 rounded-xl">
+            <CardHeader className="space-y-3 p-5">
+              <CardDescription>{t('series.urban_unemployment')}</CardDescription>
+              <CardTitle className="text-4xl font-semibold tabular-nums">{national?.value == null
+                ? t('dashboard.not_available') : format.number(national.value / 100, { style: 'percent', minimumFractionDigits: 1 })}</CardTitle>
+              {national && <CardDescription>{month(national.observation_period.start)} · {t('frequency.monthly')}</CardDescription>}
+            </CardHeader>
+          </Card>
+          <Card className="min-w-0 rounded-xl">
+            <CardHeader className="space-y-3 p-5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <CardDescription>{t('indices.employment_demand')}</CardDescription>
+                {latestDemand && <Badge variant="secondary" className="font-medium">{t('status.experimental')}</Badge>}
+              </div>
+              <CardTitle className="text-4xl font-semibold tabular-nums">{latestDemand
+                ? format.number(latestDemand.value, { maximumFractionDigits: 2 }) : t('status.insufficient_data')}</CardTitle>
+              {latestDemand && <CardDescription>{month(latestDemand.observation_period.start)} · {t('units.score')}</CardDescription>}
+            </CardHeader>
+          </Card>
+          <Card className="min-w-0 rounded-xl">
+            <CardHeader className="space-y-3 p-5">
+              <CardDescription>{t('indices.shadow_pressure')}</CardDescription>
+              <CardTitle className="text-2xl font-semibold">{t('status.insufficient_data')}</CardTitle>
+              <CardDescription>{t('dashboard.method_shadow')}</CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+      )}
+
+      <dl className="grid divide-y overflow-hidden rounded-xl border bg-card sm:grid-cols-3 sm:divide-x sm:divide-y-0">
         {metadata.map(({ icon: Icon, label, value }) => (
-          <div key={label} className="min-w-0 px-4 py-3 sm:px-5">
-            <dt className="flex items-center gap-2 text-xs text-muted-foreground"><Icon className="size-4" />{label}</dt>
-            <dd className="mt-2 break-words text-sm font-semibold tabular-nums">{value}</dd>
+          <div key={label} className="min-w-0 p-4">
+            <dt className="flex items-center gap-3 text-xs text-muted-foreground">
+              <Icon aria-hidden="true" className="size-4 shrink-0 text-primary" />
+              {label}
+            </dt>
+            <dd className="mt-1 wrap-break-word pl-7 text-sm font-medium tabular-nums">{value}</dd>
           </div>
         ))}
       </dl>
 
-      {!dataset?.observation_end ? (
-        <p role="status" className="rounded-xl border border-dashed p-8 text-center text-muted-foreground">{t('dashboard.no_data')}</p>
-      ) : (
+      {dataset?.observation_end && (
         <>
-          <div className="grid gap-3 md:grid-cols-2">
-            <Card className="shadow-none">
-              <CardHeader>
-                <CardDescription>{t('series.urban_unemployment')}</CardDescription>
-                <CardTitle className="text-4xl font-semibold tabular-nums">{national?.value == null
-                  ? t('dashboard.not_available') : format.number(national.value / 100, { style: 'percent', minimumFractionDigits: 1 })}</CardTitle>
-                <CardDescription>{national && month(national.observation_period.start)} · {t('frequency.monthly')}</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="shadow-none">
-              <CardHeader>
-                <CardDescription>{t('indices.shadow_pressure')}</CardDescription>
-                <CardTitle className="text-2xl font-semibold">{t('status.insufficient_data')}</CardTitle>
-                <CardDescription>{t('dashboard.method_shadow')}</CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
           <MarketChart id="official-chart" title={t('dashboard.official')} description={t('dashboard.official_explainer')}
             series={chartSeries(['urban_unemployment', 'city_unemployment'])} bounds={range} />
           <MarketChart id="pmi-chart" title={t('dashboard.pmi')} description={t('dashboard.pmi_explainer')} reference={50}
@@ -106,9 +130,9 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
         </>
       )}
 
-      <Card className="shadow-none">
+      <Card className="rounded-xl">
         <CardHeader>
-          <CardTitle>{t('dashboard.coverage')}</CardTitle>
+          <CardTitle><h2>{t('dashboard.coverage')}</h2></CardTitle>
           <CardDescription>{t('dashboard.history_window', { start: date(HISTORY_START), end: date(INITIAL_END) })}</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-3 sm:grid-cols-2">
@@ -117,7 +141,7 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
             const state = source === 'nbs-labour' || source === 'nbs-pmi' ? health?.source_status[source] ?? info.access : info.access;
             const coverage = dataset?.coverage.filter((item) => definitions[item.series_id].source === source) ?? [];
             return (
-              <div key={source} className="min-w-0 rounded-lg border bg-background/50 p-3">
+              <div key={source} className="min-w-0 rounded-lg border bg-muted/40 p-4">
                 <div className="flex flex-wrap items-center gap-2">
                   <h3 className="text-sm font-semibold">{t(`sources.${source}`)}</h3>
                   <Badge variant="outline">{t(`status.${state}`)}</Badge>
@@ -138,9 +162,9 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
         </CardContent>
       </Card>
 
-      <Card className="shadow-none">
+      <Card className="rounded-xl">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2"><Activity className="size-5" />{t('dashboard.methodology')}</CardTitle>
+          <CardTitle><h2 className="flex items-center gap-2"><Activity aria-hidden="true" className="size-5 text-primary" />{t('dashboard.methodology')}</h2></CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4 lg:grid-cols-[2fr_1fr]">
           <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
@@ -149,7 +173,7 @@ export async function Dashboard({ dataset, health }: { dataset: Dataset | null; 
             <p>{t('dashboard.method_validation')}</p>
           </div>
           {dataset && (
-            <dl className="min-w-0 space-y-3 rounded-lg border bg-background/50 p-3 text-xs">
+            <dl className="min-w-0 space-y-3 rounded-lg border bg-muted/40 p-4 text-xs">
               <div><dt className="text-muted-foreground">{t('dashboard.dataset_version')}</dt><dd className="mt-1 break-all font-mono">{dataset.dataset_version}</dd></div>
               <div><dt className="text-muted-foreground">{t('dashboard.algorithm_version')}</dt><dd>{dataset.algorithm_version}</dd></div>
               <div><dt className="text-muted-foreground">{t('dashboard.latest_capture')}</dt><dd>{timestamp(recentCapture)} (UTC+8)</dd></div>

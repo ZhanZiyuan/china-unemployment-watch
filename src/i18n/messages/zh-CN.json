@@ -102,5 +102,14 @@
     "all_hidden": "所有序列均已隐藏。",
     "range_label": "{start} 至 {end}",
     "period_end": "观测点按统计周期末日显示"
+  },
+  "manifest": {
+    "description": "当前页面所用数据快照的发布信息。",
+    "schema_version": "数据结构版本",
+    "coverage": "观测时间范围",
+    "generated_at": "快照发布时间",
+    "checksum": "数据文件 SHA-256",
+    "download": "下载清单 JSON",
+    "close": "关闭"
   }
 }

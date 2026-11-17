@@ -102,5 +102,14 @@
     "all_hidden": "All series are hidden.",
     "range_label": "{start} – {end}",
     "period_end": "Points appear at period end"
+  },
+  "manifest": {
+    "description": "Publication details for the dataset displayed on this page.",
+    "schema_version": "Schema version",
+    "coverage": "Observation window",
+    "generated_at": "Published snapshot",
+    "checksum": "Dataset SHA-256",
+    "download": "Download manifest JSON",
+    "close": "Close"
   }
 }
