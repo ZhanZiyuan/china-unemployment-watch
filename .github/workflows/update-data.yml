@@ -14,7 +14,7 @@ on:
         default: false
 
 concurrency:
-  group: employment-data-main
+  group: employment-data-${{ github.ref_name }}
   cancel-in-progress: false
 
 permissions:
@@ -22,7 +22,10 @@ permissions:
 
 jobs:
   update:
-    if: github.ref == 'refs/heads/main' && github.actor != 'github-actions[bot]'
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      (github.ref == 'refs/heads/main' ||
+       (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop'))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -30,7 +33,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: main
+          ref: ${{ github.ref }}
+          persist-credentials: ${{ github.ref == 'refs/heads/main' }}
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
@@ -65,14 +69,21 @@ jobs:
           if-no-files-found: ignore
       - name: Commit the approved paths
         id: commit
+        if: github.ref == 'refs/heads/main'
         env:
           RESULT: ${{ steps.collect.outcome }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ "$RESULT" == success ]]; then
+            sidecars=()
+            for path in data/metadata/*.json; do
+              if [[ "$path" =~ ^data/metadata/[a-f0-9]{64}\.json$ ]]; then
+                sidecars+=("$path")
+              fi
+            done
             git add -- data/raw data/metadata/releases.json data/processed/observations.json \
-              public/data/latest.json public/data/manifest.json
+              public/data/latest.json public/data/manifest.json "${sidecars[@]}"
             if [[ -f data/revisions/observations.json ]]; then
               git add -- data/revisions/observations.json
             fi

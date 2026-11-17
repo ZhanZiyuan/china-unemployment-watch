@@ -1,6 +1,6 @@
 import { businessDate, HISTORY_START } from '../../src/lib/market/dates';
 import { observationKey, type Observation } from '../../src/lib/market/schema';
-import { fetchOriginal, type Original } from './http';
+import { errorDetails, fetchOriginal, retryOriginal, type Original } from './http';
 import { parseLabour } from './nbs-labour';
 import { parsePmi } from './nbs-pmi';
 import { archive, parseArchive, pmiTitle, releaseUrls, type Release } from './nbs-release';
@@ -8,29 +8,33 @@ import { archive, parseArchive, pmiTitle, releaseUrls, type Release } from './nb
 export type Collection = Awaited<ReturnType<typeof collect>>;
 export type ReleaseFailure = { source_id: Release['kind']; release: Release; errors: string[] };
 
+async function archivePage(url: string, page: number, request: typeof fetchOriginal) {
+  try {
+    const listing = parseArchive((await retryOriginal(url, request)).body.toString('utf8'));
+    if (listing.page !== page) throw new Error(`Expected page ${page}, received page ${listing.page}`);
+    return listing;
+  } catch (error) {
+    throw new Error(`${url}: ${errorDetails(error)}`, { cause: error });
+  }
+}
+
 export async function discover(since: string, until: string, request = fetchOriginal) {
   let latest;
   try {
-    latest = parseArchive((await request(archive)).body.toString('utf8'));
+    latest = await archivePage(archive, 0, request);
   } catch (firstError) {
     try {
-      latest = parseArchive((await request(`${archive}index.html`)).body.toString('utf8'));
+      latest = await archivePage(`${archive}index.html`, 0, request);
     } catch (secondError) {
-      const label = (error: unknown) => error instanceof Error ? error.message : String(error);
-      throw new Error(`NBS release archive failed: ${label(firstError)}; ${label(secondError)}`);
+      throw new Error(`NBS release archive failed: ${errorDetails(firstError)}; ${errorDetails(secondError)}`);
     }
   }
   const releases = [...latest.releases];
   let oldest = latest.oldest;
-  for (let page = 1; page < latest.count && oldest >= since; page += 4) {
-    const pages = Array.from({ length: Math.min(4, latest.count - page) }, (_, offset) => page + offset);
-    const results = await Promise.all(pages.map(async (index) => {
-      return parseArchive((await request(`${archive}index_${index}.html`)).body.toString('utf8'));
-    }));
-    for (const result of results) {
-      if (result.oldest < oldest) oldest = result.oldest;
-      releases.push(...result.releases);
-    }
+  for (let page = 1; page < latest.count && oldest >= since; page += 1) {
+    const listing = await archivePage(`${archive}index_${page}.html`, page, request);
+    if (listing.oldest < oldest) oldest = listing.oldest;
+    releases.push(...listing.releases);
   }
   return [...new Map(releases
     .filter((release) => release.listedDate >= since && release.listedDate <= until)
@@ -54,7 +58,7 @@ export async function collect(since: string, until: string, request = fetchOrigi
           const parse = release.kind === 'nbs-pmi' ? parsePmi : parseLabour;
           return { release, original, rows: parse(original, release), errors };
         } catch (error) {
-          errors.push(`${url}: ${error instanceof Error ? error.message : String(error)}`);
+          errors.push(`${url}: ${errorDetails(error)}`);
         }
       }
       return { release, errors };
