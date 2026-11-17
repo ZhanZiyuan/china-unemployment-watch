@@ -26,3 +26,12 @@ jobs:
       - run: pnpm test
       - run: pnpm validate-data
       - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - name: Keep browser traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: browser-test-results
+          path: test-results
+          if-no-files-found: ignore
