@@ -164,7 +164,8 @@ export const researchObservationSchema = observationFields.extend({
   }[row.frequency];
   if (row.source_id !== metric.source_id || row.frequency !== metric.frequency || row.unit !== metric.unit ||
       start < HISTORY_START || !correctPeriod || row.publication_date < (row.source_id === 'nbs-pmi' ? start : end) ||
-      row.publication_date > businessDate(row.fetched_at) || end > businessDate(row.fetched_at) ||
+      row.publication_date > businessDate(row.fetched_at) ||
+      (row.source_id !== 'nbs-pmi' && end > businessDate(row.fetched_at)) ||
       (row.published_at && (businessDate(row.published_at) !== row.publication_date || row.published_at > row.fetched_at)) ||
       (min !== null && row.value < min) || (max !== null && row.value > max) || (row.status === 'zero') !== (row.value === 0)) {
     ctx.addIssue({ code: 'custom', message: 'Inconsistent research series, period, publication date, or value' });

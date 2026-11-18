@@ -2,6 +2,7 @@ import { expect, it } from 'vitest';
 import { INITIAL_END } from '../../src/lib/market/dates';
 import { researchDatasetSchema, researchObservationSchema } from '../../src/lib/market/schema';
 import { replayPmi } from '../../scripts/research/replay';
+import { replayResearch } from '../../scripts/research/collect-data';
 import { makeResearchDataset, researchFile } from '../../scripts/research/publication';
 import { readJson } from '../../scripts/storage';
 
@@ -16,4 +17,24 @@ it('replays the construction and service PMI from exact monthly source bodies', 
     first: '2023-01-01', last: '2026-10-31', count: 46, missing: [],
   });
   expect(researchObservationSchema.safeParse({ ...series[0], value: 101 }).success).toBe(false);
+});
+
+it('keeps original joint real-estate and annual survey periods in the warehouse', async () => {
+  const snapshot = researchDatasetSchema.parse(await readJson(researchFile));
+  expect(makeResearchDataset(await replayResearch(), snapshot.source_status)).toEqual(snapshot);
+  const investment = snapshot.series.find((row) => row.series_id === 'real_estate_investment_yoy' &&
+    row.observation_period.end === '2026-02-28');
+  expect(investment).toMatchObject({
+    observation_period: { start: '2026-01-01', end: '2026-02-28' },
+    frequency: 'monthly', unit: 'percent', value: -11.1,
+  });
+  expect(researchObservationSchema.safeParse({
+    ...investment, observation_period: { start: '2026-02-01', end: '2026-02-28' },
+  }).success).toBe(false);
+  const migrant = snapshot.series.find((row) => row.series_id === 'migrant_total' &&
+    row.observation_period.end === '2025-12-31');
+  expect(migrant).toMatchObject({
+    frequency: 'yearly', value: 30115, unit: 'people_10k', publication_date: '2026-04-30',
+  });
+  expect(researchObservationSchema.safeParse({ ...migrant, frequency: 'monthly' }).success).toBe(false);
 });

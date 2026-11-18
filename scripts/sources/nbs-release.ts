@@ -8,7 +8,8 @@ export const archive = `${origin}/sj/zxfb/`;
 const articlePath = /^\.\/(\d{6}\/t(\d{4})(\d{2})(\d{2})_\d+\.html)$/;
 export const pmiTitle = /^(20\d{2})年(1[0-2]|[1-9])月中国采购经理指数运行情况$/;
 const labourTitle = /^(?:20\d{2}年)?(?:[\d—–－-]+月份|一季度|上半年|前三季度)?(?:国民经济|经济运行|经济发展)(?!新动能)/;
-export type Release = { suffix: string; listedDate: string; title: string; kind: 'nbs-labour' | 'nbs-pmi' };
+export type Article = { suffix: string; listedDate: string; title: string };
+export type Release = Article & { kind: 'nbs-labour' | 'nbs-pmi' };
 
 export function classify(title: string): Release['kind'] | null {
   if (pmiTitle.test(title)) return 'nbs-pmi';
@@ -21,7 +22,7 @@ export function parseArchive(html: string) {
   const pagination = /createPageHTML\((\d+),\s*(\d+),\s*"index",\s*"html"\)/.exec(html);
   const count = Number(pagination?.[1]);
   const page = Number(pagination?.[2]);
-  const releases = new Map<string, Release>();
+  const articles = new Map<string, Article>();
   const dates: string[] = [];
   $('a.pc_1600[title][href]').each((_i, a) => {
     const path = articlePath.exec($(a).attr('href') ?? '');
@@ -30,16 +31,15 @@ export function parseArchive(html: string) {
     const listedDate = `${year}-${month}-${day}`;
     dates.push(listedDate);
     const title = $(a).attr('title')?.trim() ?? '';
-    const kind = classify(title);
-    if (kind) releases.set(suffix, { suffix, listedDate, title, kind });
+    if (title) articles.set(suffix, { suffix, listedDate, title });
   });
   if (!dates.length || !Number.isInteger(count) || count < 1 || count > 500 || !Number.isInteger(page) || page >= count) {
     throw new Error('Official release archive markup is unavailable or changed');
   }
-  return { count, page, oldest: dates.sort()[0], releases: [...releases.values()] };
+  return { count, page, oldest: dates.sort()[0], articles: [...articles.values()] };
 }
 
-export function releaseUrls(release: Release) {
+export function releaseUrls(release: Pick<Article, 'suffix'>) {
   const urls = ['zwfwck/sjfb', 'sj/xwfbh/fbhwd', 'sj/zxfb', 'sj/zxfbhjd'].map((path) => `${origin}/${path}/${release.suffix}`);
   if (release.suffix === '202302/t20230203_1901737.html') {
     urls.push('https://app.www.gov.cn/govdata/gov/202302/01/496666/article.html');

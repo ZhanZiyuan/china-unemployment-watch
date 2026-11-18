@@ -8,7 +8,10 @@ export const researchFile = 'public/data/research.json';
 export function makeResearchDataset(vintages: ResearchObservation[], source_status: ResearchDataset['source_status']) {
   const latest = new Map<string, ResearchObservation>();
   for (const row of [...vintages].sort((a, b) => a.publication_date.localeCompare(b.publication_date) || a.fetched_at.localeCompare(b.fetched_at))) {
-    latest.set(researchKey(row), row);
+    const key = researchKey(row);
+    const prior = latest.get(key);
+    if (prior?.publication_date === row.publication_date && prior.value === row.value) continue;
+    latest.set(key, row);
   }
   const series = [...latest.values()].sort((a, b) => researchKey(a).localeCompare(researchKey(b)));
   const coverage = researchIds.map((series_id) => {
