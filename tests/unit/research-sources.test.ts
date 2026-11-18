@@ -6,7 +6,7 @@ import { replayResearch } from '../../scripts/research/collect-data';
 import { makeResearchDataset, researchFile } from '../../scripts/research/publication';
 import { readJson } from '../../scripts/storage';
 
-it('replays the construction and service PMI from exact monthly source bodies', async () => {
+it('replays the construction and service PMI from exact monthly source bodies', { timeout: 30_000 }, async () => {
   const series = (await replayPmi()).filter((r) => r.publication_date <= INITIAL_END);
   const replayed = makeResearchDataset(series, { 'nbs-pmi': 'available' });
   expect(replayed.series.find((r) => r.series_id === 'construction_pmi_employment' &&
@@ -18,7 +18,7 @@ it('replays the construction and service PMI from exact monthly source bodies', 
   expect(researchObservationSchema.safeParse({ ...series[0], value: 101 }).success).toBe(false);
 });
 
-it('keeps original joint real-estate and annual survey periods in the warehouse', async () => {
+it('keeps original joint real-estate and annual survey periods in the warehouse', { timeout: 30_000 }, async () => {
   const snapshot = researchDatasetSchema.parse(await readJson(researchFile));
   const today = businessDate(new Date());
   const rows = (await replayResearch()).filter((row) => row.publication_date <= today && row.observation_period.end <= today);
@@ -41,7 +41,7 @@ it('keeps original joint real-estate and annual survey periods in the warehouse'
   expect(researchObservationSchema.safeParse({ ...migrant, frequency: 'monthly' }).success).toBe(false);
 });
 
-it('keeps each changed vintage and publishes only one value per series and period', async () => {
+it('keeps each changed vintage and publishes only one value per series and period', { timeout: 30_000 }, async () => {
   const snapshots = await replayPmi();
   const first = snapshots.find((row) => row.series_id === 'construction_pmi_employment')!;
   const later = { ...first, fetched_at: '2026-12-01T00:00:00.000Z', value: first.value + 0.1 };

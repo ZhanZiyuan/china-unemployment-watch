@@ -28,7 +28,7 @@ it('identifies constant and collinear features without reading holdout rows', ()
   });
 });
 
-it('replays the research report and aligns candidate folds to publication time', async () => {
+it('replays the research report and aligns candidate folds to publication time', { timeout: 30_000 }, async () => {
   const actual = await buildResearchModels();
   expect(actual).toEqual(await readJson(researchModelFile));
   for (const { folds, metrics } of Object.values(actual.evaluations)) {

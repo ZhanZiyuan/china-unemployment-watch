@@ -8,4 +8,6 @@ The new source ranges, statistical units, attribution terms and verification lim
 
 Local checks passed for lint, Next.js type generation and strict TypeScript, 23 unit/integration tests, source replay and JSON Schemas, the Turbopack production build, and 18 Playwright tests. Browser checks included all four locales, the original version manifest and navigation, grouped property periods, a dated source link and a 320-pixel touch viewport. A separate isolated failure test checks that the verified research observations and release ledger survive archive unavailability.
 
+The first hosted checks replayed the source data but exceeded Vitest's default five-second limit during the full-archive model integration test. Tests that read the entire archive now have explicit time budgets. The replay checks, assertions and collector HTTP timeouts are unchanged.
+
 The future main update retains the 11:17 Shanghai schedule, main push and manual dispatch. Static workflow tests cover the trigger configuration and allowlisted writer. The feature branch can run a hosted manual check. Live research scheduling, main-only writes and exact Vercel production research bytes require a merge by the repository owner.

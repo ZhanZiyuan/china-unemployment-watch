@@ -30,7 +30,7 @@ it('keeps the last verified JSON files byte-for-byte when an HTTP 200 response f
   }
 });
 
-it('retains the verified research archive when discovery is unavailable', () => {
+it('retains the verified research archive when discovery is unavailable', { timeout: 35_000 }, () => {
   const workspace = mkdtempSync(join(tmpdir(), 'employment-research-test-'));
   try {
     const publication = 'public/data/research.json';
@@ -46,7 +46,7 @@ it('retains the verified research archive when discovery is unavailable', () => 
       '--import', tsx, '-e', `const {refreshResearch}=require(${modulePath});
         refreshResearch(false, 'available', async () => { throw new Error('Test archive failure'); })
           .catch((error) => { console.error(error); process.exitCode = 1; });`,
-    ], { cwd: workspace, encoding: 'utf8', timeout: 10_000 });
+    ], { cwd: workspace, encoding: 'utf8', timeout: 30_000 });
     expect(result.status, result.stderr).toBe(0);
     const published = researchDatasetSchema.parse(JSON.parse(readFileSync(join(workspace, publication), 'utf8')));
     expect(published.series).toEqual(initial.series);
