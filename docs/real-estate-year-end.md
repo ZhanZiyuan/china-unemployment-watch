@@ -1,0 +1,7 @@
+# Year-end property release audit
+
+The branch starts at main commit `ee500129a75075c4b759150bb75735d1b1de26b3`. Its 32 research series contain 944 observations under dataset version `c20df0998157db500c8ff625b8c42c6be656b448f1ffd35f6330e3d762cebdb2`. Each of the 14 property series is missing the periods ending December 31 in 2023, 2024 and 2025. The production sources remain official NBS HTML releases. The post-merge [collection run](https://github.com/ZhanZiyuan/china-unemployment-watch/actions/runs/44227299341) recorded zero current fetch errors and a partial property history.
+
+The scheduled incremental collector's four-month window excludes all three gaps. Earlier attempts encountered access challenge pages. Fresh direct probes returned three complete NBS article bodies and the existing property table parser extracted 14 values from each. The 2023 news article URL contains January 16 while the article displays January 17 at 10:00 Shanghai time. Its information-disclosure companion uses a different article ID and template. It labels January 17 as the date of document formation and has no explicit publication time. Any fallback must pass the same publication-date and table checks as the news original. [2023 news article](https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html) · [2023 disclosure companion](https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202401/t20240117_1946633.html)
+
+Baseline lint, TypeScript, 23 tests, archived replay, model reproduction and production build passed.
