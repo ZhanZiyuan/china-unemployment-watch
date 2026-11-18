@@ -61,12 +61,18 @@
   "units": {
     "percent": "%",
     "diffusion_points": "points",
-    "score": "score"
+    "score": "score",
+    "cny_100m": "100m CNY",
+    "sqm_10k": "10k m²",
+    "people_10k": "10k people",
+    "cny_per_month": "CNY/month"
   },
   "frequency": {
     "daily": "Daily",
     "weekly": "Weekly",
-    "monthly": "Monthly"
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "yearly": "Annual"
   },
   "status": {
     "observed": "Observed",
@@ -97,7 +103,7 @@
     "brush": "Drag to change date range",
     "legend": "Visible series",
     "release": "Original release",
-    "derived": "Calculated from official PMI releases",
+    "derived": "Calculated from archived official data",
     "no_points": "No observations in this date range.",
     "all_hidden": "All series are hidden.",
     "range_label": "{start} – {end}",
@@ -111,5 +117,113 @@
     "checksum": "Dataset SHA-256",
     "download": "Download manifest JSON",
     "close": "Close"
+  },
+  "research": {
+    "title": "Multidimensional research",
+    "summary": "Explore official industry surveys, property development and migrant-worker statistics alongside publication-aware model tests.",
+    "data": "Research JSON",
+    "financial_pending": "Market prices are unavailable pending licensed historical data and reuse rights.",
+    "folds": "Download test folds",
+    "nowcast": "Same-month estimate",
+    "next_period": "Next-period forecast",
+    "actual": "Official unemployment",
+    "evaluation_note": "Expanding-window ridge and persistence on {n, number} shared test months, {first} – {last}. Errors in percentage points.",
+    "association": "Same-month associations",
+    "association_note": "Pearson correlation of first reported levels for shared months. These are descriptive associations.",
+    "sections": {
+      "construction": "Construction",
+      "real_estate": "Real estate",
+      "migrant": "Migrant workers",
+      "real_economy": "Manufacturing & services",
+      "financial": "Financial markets",
+      "models": "Model comparison"
+    },
+    "charts": {
+      "construction-pmi": "Construction PMI",
+      "construction-annual": "Annual construction statistics",
+      "property-growth": "Property development growth",
+      "property-area": "Property area",
+      "property-amount": "Property investment, sales and funds",
+      "migrant-count": "Migrant worker population",
+      "migrant-industry": "Migrant workers by industry",
+      "migrant-income": "Migrant worker income",
+      "manufacturing-pmi": "Manufacturing PMI",
+      "services-pmi": "Services PMI",
+      "sector-pressure": "Sector employment pressure"
+    },
+    "explain": {
+      "construction-pmi": "Monthly seasonally adjusted activity, orders and staffing. A value of 50 denotes no change.",
+      "construction-annual": "Sector value added and profits of qualified general and specialist contractors use different populations.",
+      "property-growth": "Official comparable-basis growth versus the same cumulative period a year earlier. January–February is a joint release.",
+      "property-area": "Official area from January through the period end. January–February is a joint release.",
+      "property-amount": "Official amounts from January through the period end. January–February is a joint release.",
+      "migrant-count": "National monitoring survey. Counts describe worker populations and mobility.",
+      "migrant-industry": "Annual employment shares in the survey population.",
+      "migrant-income": "Annual survey average of monthly earnings.",
+      "manufacturing-pmi": "Monthly seasonally adjusted production and new orders.",
+      "services-pmi": "Monthly seasonally adjusted activity, orders and staffing.",
+      "sector-pressure": "Equal-weight PMI employment scores for manufacturing, construction and services, with higher values indicating weaker staffing. Fixed 2023–2024 calibration."
+    },
+    "series": {
+      "construction_pmi_activity": "Construction activity",
+      "construction_pmi_orders": "Construction orders",
+      "construction_pmi_employment": "Construction employment",
+      "services_pmi_activity": "Services activity",
+      "services_pmi_orders": "Services orders",
+      "services_pmi_employment": "Services employment",
+      "manufacturing_pmi_production": "Manufacturing production",
+      "manufacturing_pmi_orders": "Manufacturing orders",
+      "migrant_total": "Total migrant workers",
+      "migrant_outbound": "Out-of-town migrant workers",
+      "migrant_local": "Local migrant workers",
+      "migrant_urban": "Living in urban areas at year end",
+      "migrant_interprovincial": "Interprovincial migrant workers",
+      "migrant_construction_share": "Share working in construction",
+      "migrant_manufacturing_share": "Share working in manufacturing",
+      "migrant_monthly_income": "Average monthly income",
+      "construction_value_added": "Construction value added",
+      "construction_qualified_profits": "Qualified contractor profits",
+      "real_estate_investment_ytd": "Development investment (YTD)",
+      "real_estate_investment_yoy": "Development investment (cumulative YoY)",
+      "real_estate_starts_ytd": "New floor space started (YTD)",
+      "real_estate_starts_yoy": "New floor space started (cumulative YoY)",
+      "real_estate_construction_ytd": "Floor space under construction (YTD)",
+      "real_estate_construction_yoy": "Floor space under construction (cumulative YoY)",
+      "real_estate_completions_ytd": "Floor space completed (YTD)",
+      "real_estate_completions_yoy": "Floor space completed (cumulative YoY)",
+      "real_estate_sales_area_ytd": "Commodity housing sales area (YTD)",
+      "real_estate_sales_area_yoy": "Commodity housing sales area (cumulative YoY)",
+      "real_estate_sales_value_ytd": "Commodity housing sales value (YTD)",
+      "real_estate_sales_value_yoy": "Commodity housing sales value (cumulative YoY)",
+      "real_estate_funds_ytd": "Funds available to developers (YTD)",
+      "real_estate_funds_yoy": "Funds available to developers (cumulative YoY)"
+    },
+    "table": {
+      "model": "Model",
+      "mae": "MAE (pp)",
+      "rmse": "RMSE (pp)",
+      "direction": "Direction accuracy",
+      "correlation": "Pearson r"
+    },
+    "names": {
+      "M0": "Persistence",
+      "M1": "PMI baseline",
+      "M2": "Sector PMI",
+      "M3": "With property",
+      "M4": "With manufacturing production"
+    },
+    "sources": {
+      "nbs-pmi": "NBS PMI releases",
+      "nbs-real-estate": "NBS real estate reports",
+      "nbs-migrant": "NBS migrant-worker survey",
+      "nbs-construction": "NBS statistical communiqué",
+      "financial": "Financial providers"
+    },
+    "states": {
+      "available": "Available",
+      "partial": "Partial coverage",
+      "fetch_failed": "Collection failed",
+      "unconnected": "Unconnected"
+    }
   }
 }

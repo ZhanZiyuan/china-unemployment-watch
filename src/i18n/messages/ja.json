@@ -61,12 +61,18 @@
   "units": {
     "percent": "%",
     "diffusion_points": "ポイント",
-    "score": "標準化スコア"
+    "score": "標準化スコア",
+    "cny_100m": "億元",
+    "sqm_10k": "万 m²",
+    "people_10k": "万人",
+    "cny_per_month": "元/月"
   },
   "frequency": {
     "daily": "日次",
     "weekly": "週次",
-    "monthly": "月次"
+    "monthly": "月次",
+    "quarterly": "四半期",
+    "yearly": "年次"
   },
   "status": {
     "observed": "観測済み",
@@ -97,7 +103,7 @@
     "brush": "ドラッグして期間を変更",
     "legend": "表示系列",
     "release": "公表資料",
-    "derived": "公式 PMI 公表値から算出",
+    "derived": "公的統計のアーカイブから算出",
     "no_points": "この期間に観測値がありません。",
     "all_hidden": "すべての系列が非表示です。",
     "range_label": "{start} ～ {end}",
@@ -111,5 +117,113 @@
     "checksum": "データの SHA-256",
     "download": "マニフェスト JSON をダウンロード",
     "close": "閉じる"
+  },
+  "research": {
+    "title": "多次元分析",
+    "summary": "公的な業種別調査、不動産開発、出稼ぎ労働者の統計を、公表時点を考慮したモデル検証とともに確認できます。",
+    "data": "分析 JSON",
+    "financial_pending": "過去の相場データの取得・再利用に必要な許諾が確認できていません。",
+    "folds": "検証記録をダウンロード",
+    "nowcast": "当月推計",
+    "next_period": "次期予測",
+    "actual": "公式失業率",
+    "evaluation_note": "拡大型のリッジ回帰と直近値据え置き。共通の検証月は {n, number} か月、{first}～{last}。誤差の単位はパーセントポイント。",
+    "association": "同月の相関",
+    "association_note": "共通月の初回公表値を使ったピアソン相関。記述的な関連を示します。",
+    "sections": {
+      "construction": "建設業",
+      "real_estate": "不動産",
+      "migrant": "出稼ぎ労働者",
+      "real_economy": "製造・サービス業",
+      "financial": "金融市場",
+      "models": "モデル比較"
+    },
+    "charts": {
+      "construction-pmi": "建設業 PMI",
+      "construction-annual": "建設業の年次統計",
+      "property-growth": "不動産開発の増減率",
+      "property-area": "不動産の面積",
+      "property-amount": "不動産の投資・販売・調達資金",
+      "migrant-count": "出稼ぎ労働者数",
+      "migrant-industry": "出稼ぎ労働者の業種別割合",
+      "migrant-income": "出稼ぎ労働者の収入",
+      "manufacturing-pmi": "製造業 PMI",
+      "services-pmi": "サービス業 PMI",
+      "sector-pressure": "業種別の雇用圧力"
+    },
+    "explain": {
+      "construction-pmi": "月次、季節調整済みの事業活動・新規受注・雇用。50は前月と変化がない水準です。",
+      "construction-annual": "建設業の付加価値と、一定の資格を持つ元請・専門工事業者の利益は対象範囲が異なります。",
+      "property-growth": "前年の同じ累計期間に対する比較可能ベースの増減率。1〜2月は合算公表です。",
+      "property-area": "年初から対象期末までの公式面積。1〜2月は合算公表です。",
+      "property-amount": "年初から対象期末までの公式金額。1〜2月は合算公表です。",
+      "migrant-count": "全国のモニタリング調査。労働者の規模と移動を示します。",
+      "migrant-industry": "調査対象者の業種別就業割合（年次）。",
+      "migrant-income": "月収の年次調査平均。",
+      "manufacturing-pmi": "月次、季節調整済みの生産と新規受注。",
+      "services-pmi": "月次、季節調整済みの事業活動・新規受注・雇用。",
+      "sector-pressure": "製造・建設・サービス業の雇用PMIを均等加重。高い値ほど雇用の弱さを示します。基準期間は2023〜2024年です。"
+    },
+    "series": {
+      "construction_pmi_activity": "建設業の事業活動",
+      "construction_pmi_orders": "建設業の新規受注",
+      "construction_pmi_employment": "建設業の雇用",
+      "services_pmi_activity": "サービス業の事業活動",
+      "services_pmi_orders": "サービス業の新規受注",
+      "services_pmi_employment": "サービス業の雇用",
+      "manufacturing_pmi_production": "製造業の生産",
+      "manufacturing_pmi_orders": "製造業の新規受注",
+      "migrant_total": "出稼ぎ労働者総数",
+      "migrant_outbound": "地元郷鎮外で働く農民工",
+      "migrant_local": "地元郷鎮内で働く農民工",
+      "migrant_urban": "年末時点で都市部に居住",
+      "migrant_interprovincial": "省をまたいで働く農民工",
+      "migrant_construction_share": "建設業の就業割合",
+      "migrant_manufacturing_share": "製造業の就業割合",
+      "migrant_monthly_income": "月収平均",
+      "construction_value_added": "建設業付加価値",
+      "construction_qualified_profits": "有資格の建設企業利益",
+      "real_estate_investment_ytd": "不動産開発投資（年初来累計）",
+      "real_estate_investment_yoy": "不動産開発投資（累計前年比）",
+      "real_estate_starts_ytd": "着工床面積（年初来累計）",
+      "real_estate_starts_yoy": "着工床面積（累計前年比）",
+      "real_estate_construction_ytd": "施工中床面積（年初来累計）",
+      "real_estate_construction_yoy": "施工中床面積（累計前年比）",
+      "real_estate_completions_ytd": "竣工床面積（年初来累計）",
+      "real_estate_completions_yoy": "竣工床面積（累計前年比）",
+      "real_estate_sales_area_ytd": "商品住宅販売面積（年初来累計）",
+      "real_estate_sales_area_yoy": "商品住宅販売面積（累計前年比）",
+      "real_estate_sales_value_ytd": "商品住宅販売額（年初来累計）",
+      "real_estate_sales_value_yoy": "商品住宅販売額（累計前年比）",
+      "real_estate_funds_ytd": "開発業者の調達資金（年初来累計）",
+      "real_estate_funds_yoy": "開発業者の調達資金（累計前年比）"
+    },
+    "table": {
+      "model": "モデル",
+      "mae": "MAE（ポイント）",
+      "rmse": "RMSE（ポイント）",
+      "direction": "方向一致率",
+      "correlation": "ピアソン r"
+    },
+    "names": {
+      "M0": "直近値据え置き",
+      "M1": "PMI基準",
+      "M2": "業種別PMI",
+      "M3": "不動産を追加",
+      "M4": "製造業生産を追加"
+    },
+    "sources": {
+      "nbs-pmi": "国家統計局 PMI",
+      "nbs-real-estate": "国家統計局 不動産統計",
+      "nbs-migrant": "国家統計局 農民工調査",
+      "nbs-construction": "国家統計局 統計公報",
+      "financial": "金融データ提供者"
+    },
+    "states": {
+      "available": "取得済み",
+      "partial": "一部期間のみ",
+      "fetch_failed": "取得失敗",
+      "unconnected": "未接続"
+    }
   }
 }

@@ -61,12 +61,18 @@
   "units": {
     "percent": "%",
     "diffusion_points": "點",
-    "score": "標準化分數"
+    "score": "標準化分數",
+    "cny_100m": "億元",
+    "sqm_10k": "萬平方公尺",
+    "people_10k": "萬人",
+    "cny_per_month": "元／月"
   },
   "frequency": {
     "daily": "日頻",
     "weekly": "週頻",
-    "monthly": "月頻"
+    "monthly": "月頻",
+    "quarterly": "季度",
+    "yearly": "年度"
   },
   "status": {
     "observed": "有效觀測",
@@ -97,7 +103,7 @@
     "brush": "拖曳調整日期範圍",
     "legend": "顯示序列",
     "release": "原始發布",
-    "derived": "由官方 PMI 發布資料計算",
+    "derived": "根據歸檔官方資料計算",
     "no_points": "此日期範圍內沒有實際觀測。",
     "all_hidden": "所有序列均已隱藏。",
     "range_label": "{start} 至 {end}",
@@ -111,5 +117,113 @@
     "checksum": "資料檔案 SHA-256",
     "download": "下載清單 JSON",
     "close": "關閉"
+  },
+  "research": {
+    "title": "多維度研究",
+    "summary": "查看官方分行業調查、房地產開發與農民工統計，以及按實際發布時間約束的模型回測。",
+    "data": "研究資料 JSON",
+    "financial_pending": "金融行情暫未接入，歷史資料存取與再分發授權尚待核實。",
+    "folds": "下載逐折回測",
+    "nowcast": "當期估計",
+    "next_period": "下一期預測",
+    "actual": "官方失業率",
+    "evaluation_note": "擴展視窗嶺迴歸與延續基準使用 {n, number} 個共同測試月，{first} 至 {last}。誤差以百分點計。",
+    "association": "同期相關性",
+    "association_note": "對共同月份的首次公布水準值計算 Pearson 相關係數，用於描述性分析。",
+    "sections": {
+      "construction": "建築業",
+      "real_estate": "房地產",
+      "migrant": "農民工",
+      "real_economy": "製造業與服務業",
+      "financial": "金融市場",
+      "models": "模型對照"
+    },
+    "charts": {
+      "construction-pmi": "建築業 PMI",
+      "construction-annual": "建築業年度統計",
+      "property-growth": "房地產開發累計年增率",
+      "property-area": "房地產面積指標",
+      "property-amount": "房地產投資、銷售與資金",
+      "migrant-count": "農民工規模",
+      "migrant-industry": "農民工行業分布",
+      "migrant-income": "農民工收入",
+      "manufacturing-pmi": "製造業 PMI",
+      "services-pmi": "服務業 PMI",
+      "sector-pressure": "分行業就業壓力指數"
+    },
+    "explain": {
+      "construction-pmi": "月度經季節調整的商務活動、新訂單與從業人員指數，50 表示較上月無變化。",
+      "construction-annual": "建築業增加值與資質總承包和專業承包企業利潤採用不同統計總體。",
+      "property-growth": "官方可比口徑的累計年增率。1–2 月合併發布。",
+      "property-area": "年初至報告期末的官方面積。1–2 月合併發布。",
+      "property-amount": "年初至報告期末的官方金額。1–2 月合併發布。",
+      "migrant-count": "全國農民工監測調查。統計人數規模及流動情形。",
+      "migrant-industry": "監測調查總體中的年度分行業就業占比。",
+      "migrant-income": "監測調查公布的年度月均收入。",
+      "manufacturing-pmi": "月度經季節調整的生產與新訂單指數。",
+      "services-pmi": "月度經季節調整的商務活動、新訂單與從業人員指數。",
+      "sector-pressure": "等權彙整製造業、建築業與服務業從業人員 PMI。分數越高，調查用工越弱。固定基準期為 2023–2024 年。"
+    },
+    "series": {
+      "construction_pmi_activity": "建築業商務活動",
+      "construction_pmi_orders": "建築業新訂單",
+      "construction_pmi_employment": "建築業從業人員",
+      "services_pmi_activity": "服務業商務活動",
+      "services_pmi_orders": "服務業新訂單",
+      "services_pmi_employment": "服務業從業人員",
+      "manufacturing_pmi_production": "製造業生產",
+      "manufacturing_pmi_orders": "製造業新訂單",
+      "migrant_total": "農民工總量",
+      "migrant_outbound": "外出農民工",
+      "migrant_local": "本地農民工",
+      "migrant_urban": "年末在城鎮居住的農民工",
+      "migrant_interprovincial": "跨省流動農民工",
+      "migrant_construction_share": "建築業就業占比",
+      "migrant_manufacturing_share": "製造業就業占比",
+      "migrant_monthly_income": "月均收入",
+      "construction_value_added": "建築業增加值",
+      "construction_qualified_profits": "資質建築企業利潤",
+      "real_estate_investment_ytd": "房地產開發投資（年初累計）",
+      "real_estate_investment_yoy": "房地產開發投資（累計年增率）",
+      "real_estate_starts_ytd": "房屋新開工面積（年初累計）",
+      "real_estate_starts_yoy": "房屋新開工面積（累計年增率）",
+      "real_estate_construction_ytd": "房屋施工面積（年初累計）",
+      "real_estate_construction_yoy": "房屋施工面積（累計年增率）",
+      "real_estate_completions_ytd": "房屋竣工面積（年初累計）",
+      "real_estate_completions_yoy": "房屋竣工面積（累計年增率）",
+      "real_estate_sales_area_ytd": "商品房銷售面積（年初累計）",
+      "real_estate_sales_area_yoy": "商品房銷售面積（累計年增率）",
+      "real_estate_sales_value_ytd": "商品房銷售額（年初累計）",
+      "real_estate_sales_value_yoy": "商品房銷售額（累計年增率）",
+      "real_estate_funds_ytd": "房地產開發企業到位資金（年初累計）",
+      "real_estate_funds_yoy": "房地產開發企業到位資金（累計年增率）"
+    },
+    "table": {
+      "model": "模型",
+      "mae": "MAE（百分點）",
+      "rmse": "RMSE（百分點）",
+      "direction": "方向準確率",
+      "correlation": "Pearson r"
+    },
+    "names": {
+      "M0": "延續基準",
+      "M1": "PMI 基準",
+      "M2": "分行業 PMI",
+      "M3": "加入房地產",
+      "M4": "加入製造業生產"
+    },
+    "sources": {
+      "nbs-pmi": "國家統計局 PMI",
+      "nbs-real-estate": "國家統計局房地產報告",
+      "nbs-migrant": "國家統計局農民工監測調查",
+      "nbs-construction": "國家統計局統計公報",
+      "financial": "金融資料提供方"
+    },
+    "states": {
+      "available": "可用",
+      "partial": "部分覆蓋",
+      "fetch_failed": "採集失敗",
+      "unconnected": "未接入"
+    }
   }
 }
