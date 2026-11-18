@@ -3,8 +3,9 @@ import type { ResearchSeries } from '../../src/lib/market/research-catalog';
 import type { Original } from '../sources/http';
 import { readRelease, type Article } from '../sources/nbs-release';
 import { exactMatch, researchRow } from './observations';
+import { propertyYearEnd } from './real-estate-year-end';
 
-const estateTitle = /^(20\d{2})年(?:(?:1[-—–至－](1[01]|[2-9])月份)|(上半年)|(前三季度)|全年)?全国房地产(?:市场(?:基本|运行)情况|开发投资)/u;
+const estateTitle = /^(20\d{2})年(?:(?:1[-—–至－](1[0-2]|[2-9])月份)|(上半年)|(前三季度)|全年)?全国房地产(?:市场(?:基本|运行)情况|开发投资)/u;
 const migrantTitle = /^(20\d{2})年农民工监测调查报告$/;
 const constructionTitle = /^中华人民共和国(20\d{2})年国民经济和社会发展统计公报$/;
 export const extensionKinds = ['nbs-real-estate', 'nbs-migrant', 'nbs-construction'] as const;
@@ -40,6 +41,9 @@ function numeric(cell: string | undefined) {
 
 function parseEstate(original: Original, release: ResearchRelease) {
   const content = readRelease(original, release);
+  const target = propertyYearEnd(release);
+  if (target && (content.title.replace(/-国家统计局$/, '') !== `${target.year}年全国房地产市场基本情况` ||
+    content.publicationDate !== target.published)) throw new Error('Unexpected year-end property release title or publication date');
   const title = estateTitle.exec(content.normalize(release.title));
   if (!title) throw new Error('No unambiguous year-to-date period');
   const year = Number(title[1]);
@@ -51,7 +55,7 @@ function parseEstate(original: Original, release: ResearchRelease) {
     .find((rows) => rows.some(([label, absolute, yoy]) =>
       label === '指标' && absolute === '绝对量' && /^(同比增长|比上年增长)\(%\)$/.test(yoy ?? '')));
   if (!table) throw new Error('Missing labeled real-estate development table');
-  return estateColumns.flatMap(([id, label]) => {
+  const rows = estateColumns.flatMap(([id, label]) => {
     const matches = table.filter(([text]) => label.test(text));
     if (matches.length > 1) throw new Error(`Duplicate real-estate row: ${id}`);
     const [name, level, yoy] = matches[0] ?? [];
@@ -60,6 +64,10 @@ function parseEstate(original: Original, release: ResearchRelease) {
       return value === undefined ? [] : [researchRow(original, content, `${id}_${type}`, period, value, `${name} ${type} ${entry}`)];
     });
   });
+  if (target && (year !== target.year || month !== 12 || rows.length !== estateColumns.length * 2)) {
+    throw new Error('Incomplete January–December property release table');
+  }
+  return rows;
 }
 
 const migrantFields: Partial<Record<ResearchSeries, RegExp>> = {

@@ -50,10 +50,11 @@ export function releaseUrls(release: Pick<Article, 'suffix'>) {
 export function readRelease(original: Original, release: Pick<Release, 'title'>) {
   const $ = load(original.body.toString('utf8'));
   const normalize = (text: string) => text.normalize('NFKC').replace(/\s+/g, '');
-  const title = normalize($('meta[name="ArticleTitle"]').attr('content') ?? $('title').text());
+  const title = normalize($('meta[name="ArticleTitle"]').attr('content') ?? ($('.xxgkNbXqTitle').first().text() || $('title').text()));
   if (!title.includes(normalize(release.title))) throw new Error('Response does not contain the listed title');
   const root = $('.detail-text-content .txt-content, #UCAP-CONTENT, .trs_editor_view, #content, #articleins').first();
-  const text = normalize(root.text());
+  const body = root.length ? root : $('.xxgkNbXqCenter').first();
+  const text = normalize(body.text());
   if (!text) throw new Error('Official release body is missing');
   const dateTime = $('meta[name="PubDate"]').attr('content') ??
     $('.detail-text-content').prevAll().text().match(/20\d{2}[/-]\d{2}[/-]\d{2}\s+\d{2}:\d{2}/)?.[0] ??
@@ -65,7 +66,7 @@ export function readRelease(original: Original, release: Pick<Release, 'title'>)
   if (!date) throw new Error('Original publication date is missing');
   const publicationDate = `${date[1]}-${date[2]}-${date[3]}`;
   const publishedAt = pageDate ? new Date(`${publicationDate}T${pageDate[4]}:00+08:00`).toISOString() : null;
-  return { $, root, text, normalize, publicationDate, publishedAt };
+  return { $, root: body, text, title, normalize, publicationDate, publishedAt };
 }
 
 export type ReleaseContent = ReturnType<typeof readRelease>;

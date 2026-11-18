@@ -1,14 +1,14 @@
 {
-  "attempted_at": "2026-11-18T03:01:07.365Z",
-  "completed_at": "2026-11-18T03:01:28.435Z",
+  "attempted_at": "2026-11-18T03:40:56.606Z",
+  "completed_at": "2026-11-18T03:40:58.529Z",
   "source_status": {
     "nbs-pmi": "available",
-    "nbs-real-estate": "partial",
+    "nbs-real-estate": "available",
     "nbs-migrant": "available",
     "nbs-construction": "available",
     "financial": "unconnected"
   },
   "stale_series": [],
-  "dataset_version": "c20df0998157db500c8ff625b8c42c6be656b448f1ffd35f6330e3d762cebdb2",
-  "result": "partial"
+  "dataset_version": "f1a2c761376325989f7a67f85c59081c78f770ce659cdeeb511b21a744dedf27",
+  "result": "success"
 }
