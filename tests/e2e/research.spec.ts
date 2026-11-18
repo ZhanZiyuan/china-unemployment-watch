@@ -43,7 +43,10 @@ test.describe('research at phone width', () => {
     await chart.locator('.recharts-line-dot').last().tap();
     await expect(chart.getByRole('link', { name: 'Original release' })).toBeVisible();
     await page.getByRole('tab', { name: 'Financial markets' }).tap();
-    await expect(page.getByRole('tabpanel').getByRole('status')).toContainText('pending licensed historical data');
+    const financial = page.getByRole('tabpanel');
+    await expect(financial.getByRole('status')).toHaveText('A-share index closes are unavailable pending licensed historical data and reuse rights.');
+    await expect(financial.getByRole('link', { name: 'Source' })).toHaveAttribute('href', /docs\/financial-data\.md$/);
+    await expect(financial.locator('.recharts-surface')).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
   });
 });
