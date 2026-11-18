@@ -129,8 +129,7 @@ jobs:
           fi
           git commit -m "Publish employment data and collection status" \
             -m "Record the verified snapshot and the latest collection outcome from the main data writer."
-          git push origin HEAD:refs/heads/main
-          echo "pushed=true" >> "$GITHUB_OUTPUT"
+          bash .github/scripts/push-data-commit.sh
       - name: Request Vercel rebuild when a deploy hook is configured
         if: steps.commit.outputs.pushed == 'true'
         env:
