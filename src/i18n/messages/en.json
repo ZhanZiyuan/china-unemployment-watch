@@ -122,7 +122,7 @@
     "title": "Multidimensional research",
     "summary": "Explore official industry surveys, property development and migrant-worker statistics alongside publication-aware model tests.",
     "data": "Research JSON",
-    "financial_pending": "Market prices are unavailable pending licensed historical data and reuse rights.",
+    "financial_pending": "A-share index closes are unavailable pending licensed historical data and reuse rights.",
     "folds": "Download test folds",
     "nowcast": "Same-month estimate",
     "next_period": "Next-period forecast",
