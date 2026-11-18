@@ -4,6 +4,7 @@ All published estimates are sourced from the [National Bureau of Statistics of C
 
 | Source and scope | Verified coverage in the initial snapshot | Definition |
 |---|---|---|
+| Manufacturing PMI | 46 months per series, January 2023–October 2026 | Production and new orders from the manufacturing PMI table. Original seasonally adjusted diffusion points. |
 | Construction and services PMI | 46 months per series, January 2023–October 2026 | Activity, new orders and employment per sector. Published diffusion points, source seasonally adjusted. |
 | Real estate development and sales | 39 reporting periods per series, January–February 2023 to January–October 2026 | Investment and sales amounts and developer funds in 100 million CNY. Starts, construction area, completions and sales area in 10,000 m². Each has an original cumulative level and a comparable-basis cumulative year-over-year rate as published. The period begins in January. |
 | Migrant-worker survey | Three annual observations per series, 2023–2025 | Total, out-of-town, local, living in urban areas at year-end, and interprovincial counts in 10,000 persons. Construction and manufacturing shares use the survey population. Monthly wage is the survey's annual average in CNY per month. |

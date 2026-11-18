@@ -57,6 +57,8 @@ export const researchCatalog = {
   services_pmi_activity: pmi('real_economy', 'Service enterprises in the NBS nonmanufacturing PMI survey'),
   services_pmi_orders: pmi('real_economy', 'Service enterprises in the NBS nonmanufacturing PMI survey'),
   services_pmi_employment: pmi('real_economy', 'Service enterprises in the NBS nonmanufacturing PMI survey'),
+  manufacturing_pmi_production: pmi('real_economy', 'Manufacturing enterprises in the NBS manufacturing PMI survey'),
+  manufacturing_pmi_orders: pmi('real_economy', 'Manufacturing enterprises in the NBS manufacturing PMI survey'),
   real_estate_investment_ytd: estate('cny_100m'),
   real_estate_investment_yoy: estateYoy(),
   real_estate_starts_ytd: estate('sqm_10k'),

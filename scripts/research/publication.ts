@@ -6,6 +6,7 @@ import { sha256 } from '../sources/http';
 export const researchFile = 'public/data/research.json';
 
 export function makeResearchDataset(vintages: ResearchObservation[], source_status: ResearchDataset['source_status']) {
+  source_status = { ...source_status, financial: 'unconnected' };
   const latest = new Map<string, ResearchObservation>();
   for (const row of [...vintages].sort((a, b) => a.publication_date.localeCompare(b.publication_date) || a.fetched_at.localeCompare(b.fetched_at))) {
     const key = researchKey(row);
