@@ -22,3 +22,8 @@ export function exactMatch(text: string, pattern: RegExp): RegExpMatchArray | un
   if (new Set(matches.map((m) => m[1])).size > 1) throw new Error(`Conflicting evidence for ${pattern.source}`);
   return matches[0];
 }
+
+export function releaseSignature(rows: ResearchObservation[]) {
+  return JSON.stringify(rows.map(({ series_id, observation_period, value, publication_date, published_at, evidence }) =>
+    ({ series_id, observation_period, value, publication_date, published_at, evidence })));
+}

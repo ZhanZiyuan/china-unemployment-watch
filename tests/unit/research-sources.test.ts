@@ -40,3 +40,12 @@ it('keeps original joint real-estate and annual survey periods in the warehouse'
   });
   expect(researchObservationSchema.safeParse({ ...migrant, frequency: 'monthly' }).success).toBe(false);
 });
+
+it('keeps each changed vintage and publishes only one value per series and period', async () => {
+  const snapshots = await replayPmi();
+  const first = snapshots.find((row) => row.series_id === 'construction_pmi_employment')!;
+  const later = { ...first, fetched_at: '2026-12-01T00:00:00.000Z', value: first.value + 0.1 };
+  const data = makeResearchDataset([later, first], { 'nbs-pmi': 'available' });
+  expect(data.series).toEqual([later]);
+  expect(data.revisions).toEqual([{ previous: first, replacement: later }]);
+});

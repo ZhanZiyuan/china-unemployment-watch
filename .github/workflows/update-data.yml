@@ -25,7 +25,8 @@ jobs:
     if: >-
       github.actor != 'github-actions[bot]' &&
       (github.ref == 'refs/heads/main' ||
-       (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop'))
+       (github.event_name == 'workflow_dispatch' &&
+        (github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/feature/multidimensional-employment')))
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -52,8 +53,33 @@ jobs:
           else
             pnpm fetch-data
           fi
+      - name: Restore the last validated core snapshot after a failed refresh
+        if: steps.collect.outcome == 'failure'
+        run: |
+          git restore --source=HEAD --worktree -- data/metadata/releases.json data/processed/observations.json \
+            public/data/latest.json public/data/manifest.json
+          if git ls-files --error-unmatch data/revisions/observations.json >/dev/null 2>&1; then
+            git restore --source=HEAD --worktree -- data/revisions/observations.json
+          elif [[ -f data/revisions/observations.json ]]; then
+            rm -- data/revisions/observations.json
+          fi
+      - name: Refresh independent research sources and rerun archived model folds
+        id: research
+        env:
+          BACKFILL: ${{ inputs.backfill }}
+          CORE_RESULT: ${{ steps.collect.outcome }}
+        run: |
+          args=()
+          if [[ "$BACKFILL" == true ]]; then args+=(--backfill); fi
+          if [[ "$CORE_RESULT" != success ]]; then args+=(--core-failed); fi
+          pnpm fetch-research "${args[@]}"
+          pnpm build-research-models
+          result=$(jq -er .result public/data/research-collection-status.json)
+          echo "result=$result" >> "$GITHUB_OUTPUT"
+          if [[ "$result" != success ]]; then
+            echo "::warning::Research availability is $result. See the research collection artifact."
+          fi
       - name: Check the application against the candidate data
-        if: steps.collect.outcome == 'success'
         run: |
           pnpm validate-data
           pnpm lint
@@ -76,18 +102,22 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ "$RESULT" == success ]]; then
-            sidecars=()
-            for path in data/metadata/*.json; do
-              if [[ "$path" =~ ^data/metadata/[a-f0-9]{64}\.json$ ]]; then
-                sidecars+=("$path")
-              fi
-            done
-            git add -- data/raw data/metadata/releases.json data/processed/observations.json \
-              public/data/latest.json public/data/manifest.json "${sidecars[@]}"
+            git add -- data/metadata/releases.json data/processed/observations.json \
+              public/data/latest.json public/data/manifest.json
             if [[ -f data/revisions/observations.json ]]; then
               git add -- data/revisions/observations.json
             fi
           fi
+          git add -- data/metadata/research-releases.json public/data/research.json \
+            public/data/research-models.json public/data/research-collection-status.json
+          while read -r hash; do
+            [[ "$hash" =~ ^[a-f0-9]{64}$ ]] || exit 1
+            archive="data/raw/$hash.html.gz"
+            metadata="data/metadata/$hash.json"
+            if ! git ls-files --error-unmatch -- "$archive" "$metadata" >/dev/null 2>&1; then
+              git add -- "$archive" "$metadata"
+            fi
+          done < <(jq -r 'keys[]' data/metadata/releases.json data/metadata/research-releases.json | sort -u)
           if [[ -f public/data/collection-status.json ]]; then
             health_result=$(jq -er .result public/data/collection-status.json)
             if [[ "$RESULT" == success || "$health_result" != success ]]; then
@@ -115,8 +145,8 @@ jobs:
           PRODUCTION_URL: ${{ vars.PRODUCTION_URL || 'https://cuwatch.vercel.app' }}
         run: node --import tsx scripts/verify-online.ts
       - name: Mark failed collection and notify via GitHub Actions
-        if: always() && steps.collect.outcome == 'failure'
+        if: always() && (steps.collect.outcome == 'failure' || steps.research.outputs.result == 'fetch_failed')
         run: |
-          echo "::error::Collection or data validation failed. The previous verified dataset was retained."
-          echo "The data refresh failed. See the collection artifact and step logs." >> "$GITHUB_STEP_SUMMARY"
+          echo "::error::One or more required collection sources failed. Verified data were retained for those sources."
+          echo "See the collection artifact for source-specific outcomes." >> "$GITHUB_STEP_SUMMARY"
           exit 1

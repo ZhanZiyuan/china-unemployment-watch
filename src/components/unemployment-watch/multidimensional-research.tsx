@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { dayNumber, endOfMonth, HISTORY_START } from '@/lib/market/dates';
 import { categories, researchCatalog, type ResearchSeries } from '@/lib/market/research-catalog';
-import type { ResearchDataset } from '@/lib/market/schema';
+import type { ResearchDataset, ResearchHealth } from '@/lib/market/schema';
 import type { ResearchModels } from '@/lib/market/research-model-schema';
 import { MarketChart, type ChartSeries } from './market-chart';
 
@@ -17,11 +17,14 @@ const modelIds = ['M0', 'M1', 'M2', 'M3', 'M4'] as const;
 const methodology = 'https://github.com/ZhanZiyuan/china-unemployment-watch/blob/main/docs/multidimensional-methodology.md';
 const sources = 'https://github.com/ZhanZiyuan/china-unemployment-watch/blob/main/docs/multidimensional-data.md';
 
-export async function MultidimensionalResearch({ research, models }: { research: ResearchDataset | null; models: ResearchModels | null }) {
+export async function MultidimensionalResearch({ research, models, researchHealth }: {
+  research: ResearchDataset | null; models: ResearchModels | null; researchHealth: ResearchHealth | null;
+}) {
   const [t, format] = await Promise.all([getTranslations(), getFormatter()]);
   const end = research?.series.map((row) => row.observation_period.end).sort().at(-1) ?? HISTORY_START;
   const bounds = { start: HISTORY_START, end };
   const month = (day: string | null) => day ? format.dateTime(new Date(dayNumber(day)), { year: 'numeric', month: 'short' }) : '—';
+  const timestamp = (time: string) => format.dateTime(new Date(time), { dateStyle: 'medium', timeStyle: 'medium' });
   const number = (value: number | null, percentage = false) => value === null ? '—' : format.number(value,
     percentage ? { style: 'percent', maximumFractionDigits: 1 } : { maximumFractionDigits: 4 });
   const series = (ids: ResearchSeries[]): ChartSeries[] => ids.map((id, index) => ({
@@ -48,6 +51,10 @@ export async function MultidimensionalResearch({ research, models }: { research:
         <Button size="sm" variant="ghost" asChild><a href={sources}>{t('dashboard.source_link')}</a></Button>
       </div>
     </div>
+    {researchHealth && <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+      <Badge variant="outline">{t(`research.states.${researchHealth.result === 'success' ? 'available' : researchHealth.result}`)}</Badge>
+      <p>{t('dashboard.collection')} · {timestamp(researchHealth.attempted_at)} (UTC+8)</p>
+    </div>}
     <Tabs defaultValue="construction">
       <TabsList aria-label={t('research.title')} className="h-auto w-full flex-wrap justify-start gap-1 p-1 sm:w-auto">
         {[...categories, 'models'].map((section) => <TabsTrigger className="min-h-10 whitespace-normal text-left" key={section} value={section}>{t(`research.sections.${section}`)}</TabsTrigger>)}
@@ -138,6 +145,10 @@ export async function MultidimensionalResearch({ research, models }: { research:
         {Object.entries(research.source_status).map(([id, status]) => <div key={id} className="space-y-2 rounded-lg border p-3">
           <div className="flex flex-wrap items-center gap-2"><h3 className="font-medium">{t(`research.sources.${id}`)}</h3>
             <Badge variant="outline">{t(`research.states.${status}`)}</Badge></div>
+          {(() => {
+            const fetched = research.series.filter((row) => row.source_id === id).map((row) => row.fetched_at).sort().at(-1);
+            return fetched ? <p className="text-xs text-muted-foreground">{t('dashboard.latest_capture')} · {timestamp(fetched)} (UTC+8)</p> : null;
+          })()}
           {research.coverage.filter((row) => researchCatalog[row.series_id].source_id === id).map((row) =>
             <div key={row.series_id} className="text-xs text-muted-foreground">
               <p>{t(`research.series.${row.series_id}`)} · {t('dashboard.observations', { count: row.count })} · {month(row.first)} – {month(row.last)}</p>

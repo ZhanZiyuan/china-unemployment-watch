@@ -14,6 +14,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "fetch-data": "node --import tsx scripts/fetch-data.ts",
+    "fetch-research": "node --import tsx scripts/research/collect-data.ts --collect-research",
+    "build-research-models": "node --import tsx scripts/indexing/multidimensional.ts --publish-research-models",
     "validate-data": "node --import tsx scripts/validate-data.ts",
     "test:e2e": "playwright test"
   },

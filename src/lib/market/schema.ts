@@ -176,6 +176,7 @@ export type ResearchObservation = z.infer<typeof researchObservationSchema>;
 export const researchKey = (row: ResearchObservation) => `${row.series_id}/${row.observation_period.end}`;
 
 const researchSourceStatus = z.enum(['available', 'partial', 'fetch_failed', 'unconnected']);
+const researchSourceStatuses = z.partialRecord(z.enum(researchSources), researchSourceStatus);
 export const researchDatasetSchema = z.object({
   schema_version: z.literal('research-1.0.0'),
   dataset_version: digestSchema,
@@ -184,6 +185,21 @@ export const researchDatasetSchema = z.object({
     series_id: z.enum(researchIds), count: z.number().int().nonnegative(),
     first: z.iso.date().nullable(), last: z.iso.date().nullable(), missing: z.array(z.iso.date()),
   }).strict()),
-  source_status: z.partialRecord(z.enum(researchSources), researchSourceStatus),
+  source_status: researchSourceStatuses,
+  revisions: z.array(z.object({
+    previous: researchObservationSchema, replacement: researchObservationSchema,
+  }).strict()),
+  quality_flags: z.array(z.object({
+    series_id: z.enum(researchIds), period_end: z.iso.date(), code: z.enum(['unusual_change', 'zero_variance']),
+  }).strict()),
 }).strict();
 export type ResearchDataset = z.infer<typeof researchDatasetSchema>;
+
+export const researchHealthSchema = z.object({
+  attempted_at: z.iso.datetime(), completed_at: z.iso.datetime(),
+  source_status: researchSourceStatuses,
+  stale_series: z.array(z.enum(researchIds)),
+  dataset_version: digestSchema,
+  result: z.enum(['success', 'partial', 'fetch_failed']),
+}).strict().refine((health) => health.attempted_at <= health.completed_at);
+export type ResearchHealth = z.infer<typeof researchHealthSchema>;

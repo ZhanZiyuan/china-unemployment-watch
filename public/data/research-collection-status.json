@@ -1,0 +1,14 @@
+{
+  "attempted_at": "2026-11-18T02:43:41.236Z",
+  "completed_at": "2026-11-18T02:43:51.185Z",
+  "source_status": {
+    "nbs-pmi": "available",
+    "nbs-real-estate": "partial",
+    "nbs-migrant": "available",
+    "nbs-construction": "available",
+    "financial": "unconnected"
+  },
+  "stale_series": [],
+  "dataset_version": "c20df0998157db500c8ff625b8c42c6be656b448f1ffd35f6330e3d762cebdb2",
+  "result": "partial"
+}

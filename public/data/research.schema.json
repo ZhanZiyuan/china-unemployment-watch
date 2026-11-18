@@ -1,0 +1,683 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "research-1.0.0"
+    },
+    "dataset_version": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "series": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "enum": [
+              "nbs-pmi",
+              "nbs-real-estate",
+              "nbs-migrant",
+              "nbs-construction",
+              "financial"
+            ]
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "series_id": {
+            "type": "string",
+            "enum": [
+              "construction_pmi_activity",
+              "construction_pmi_orders",
+              "construction_pmi_employment",
+              "services_pmi_activity",
+              "services_pmi_orders",
+              "services_pmi_employment",
+              "manufacturing_pmi_production",
+              "manufacturing_pmi_orders",
+              "real_estate_investment_ytd",
+              "real_estate_investment_yoy",
+              "real_estate_starts_ytd",
+              "real_estate_starts_yoy",
+              "real_estate_construction_ytd",
+              "real_estate_construction_yoy",
+              "real_estate_completions_ytd",
+              "real_estate_completions_yoy",
+              "real_estate_sales_area_ytd",
+              "real_estate_sales_area_yoy",
+              "real_estate_sales_value_ytd",
+              "real_estate_sales_value_yoy",
+              "real_estate_funds_ytd",
+              "real_estate_funds_yoy",
+              "migrant_total",
+              "migrant_outbound",
+              "migrant_local",
+              "migrant_urban",
+              "migrant_interprovincial",
+              "migrant_construction_share",
+              "migrant_manufacturing_share",
+              "migrant_monthly_income",
+              "construction_value_added",
+              "construction_qualified_profits"
+            ]
+          },
+          "observation_period": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "end": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              }
+            },
+            "required": [
+              "start",
+              "end"
+            ],
+            "additionalProperties": false
+          },
+          "frequency": {
+            "type": "string",
+            "enum": [
+              "monthly",
+              "quarterly",
+              "yearly"
+            ]
+          },
+          "value": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "diffusion_points",
+              "percent",
+              "cny_100m",
+              "sqm_10k",
+              "people_10k",
+              "cny_per_month"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "zero"
+            ]
+          },
+          "fetched_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+          },
+          "published_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "publication_date": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+          },
+          "raw_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "revision_id": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "source_id",
+          "source_url",
+          "series_id",
+          "observation_period",
+          "frequency",
+          "value",
+          "unit",
+          "status",
+          "fetched_at",
+          "published_at",
+          "publication_date",
+          "raw_sha256",
+          "evidence",
+          "revision_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "series_id": {
+            "type": "string",
+            "enum": [
+              "construction_pmi_activity",
+              "construction_pmi_orders",
+              "construction_pmi_employment",
+              "services_pmi_activity",
+              "services_pmi_orders",
+              "services_pmi_employment",
+              "manufacturing_pmi_production",
+              "manufacturing_pmi_orders",
+              "real_estate_investment_ytd",
+              "real_estate_investment_yoy",
+              "real_estate_starts_ytd",
+              "real_estate_starts_yoy",
+              "real_estate_construction_ytd",
+              "real_estate_construction_yoy",
+              "real_estate_completions_ytd",
+              "real_estate_completions_yoy",
+              "real_estate_sales_area_ytd",
+              "real_estate_sales_area_yoy",
+              "real_estate_sales_value_ytd",
+              "real_estate_sales_value_yoy",
+              "real_estate_funds_ytd",
+              "real_estate_funds_yoy",
+              "migrant_total",
+              "migrant_outbound",
+              "migrant_local",
+              "migrant_urban",
+              "migrant_interprovincial",
+              "migrant_construction_share",
+              "migrant_manufacturing_share",
+              "migrant_monthly_income",
+              "construction_value_added",
+              "construction_qualified_profits"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "first": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "last": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "missing": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+            }
+          }
+        },
+        "required": [
+          "series_id",
+          "count",
+          "first",
+          "last",
+          "missing"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "source_status": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "nbs-pmi",
+          "nbs-real-estate",
+          "nbs-migrant",
+          "nbs-construction",
+          "financial"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string",
+        "enum": [
+          "available",
+          "partial",
+          "fetch_failed",
+          "unconnected"
+        ]
+      }
+    },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "previous": {
+            "type": "object",
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "enum": [
+                  "nbs-pmi",
+                  "nbs-real-estate",
+                  "nbs-migrant",
+                  "nbs-construction",
+                  "financial"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "series_id": {
+                "type": "string",
+                "enum": [
+                  "construction_pmi_activity",
+                  "construction_pmi_orders",
+                  "construction_pmi_employment",
+                  "services_pmi_activity",
+                  "services_pmi_orders",
+                  "services_pmi_employment",
+                  "manufacturing_pmi_production",
+                  "manufacturing_pmi_orders",
+                  "real_estate_investment_ytd",
+                  "real_estate_investment_yoy",
+                  "real_estate_starts_ytd",
+                  "real_estate_starts_yoy",
+                  "real_estate_construction_ytd",
+                  "real_estate_construction_yoy",
+                  "real_estate_completions_ytd",
+                  "real_estate_completions_yoy",
+                  "real_estate_sales_area_ytd",
+                  "real_estate_sales_area_yoy",
+                  "real_estate_sales_value_ytd",
+                  "real_estate_sales_value_yoy",
+                  "real_estate_funds_ytd",
+                  "real_estate_funds_yoy",
+                  "migrant_total",
+                  "migrant_outbound",
+                  "migrant_local",
+                  "migrant_urban",
+                  "migrant_interprovincial",
+                  "migrant_construction_share",
+                  "migrant_manufacturing_share",
+                  "migrant_monthly_income",
+                  "construction_value_added",
+                  "construction_qualified_profits"
+                ]
+              },
+              "observation_period": {
+                "type": "object",
+                "properties": {
+                  "start": {
+                    "type": "string",
+                    "format": "date",
+                    "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                  },
+                  "end": {
+                    "type": "string",
+                    "format": "date",
+                    "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                  }
+                },
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "additionalProperties": false
+              },
+              "frequency": {
+                "type": "string",
+                "enum": [
+                  "monthly",
+                  "quarterly",
+                  "yearly"
+                ]
+              },
+              "value": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "diffusion_points",
+                  "percent",
+                  "cny_100m",
+                  "sqm_10k",
+                  "people_10k",
+                  "cny_per_month"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "observed",
+                  "zero"
+                ]
+              },
+              "fetched_at": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+              },
+              "published_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date-time",
+                    "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "publication_date": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "raw_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "revision_id": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "source_id",
+              "source_url",
+              "series_id",
+              "observation_period",
+              "frequency",
+              "value",
+              "unit",
+              "status",
+              "fetched_at",
+              "published_at",
+              "publication_date",
+              "raw_sha256",
+              "evidence",
+              "revision_id"
+            ],
+            "additionalProperties": false
+          },
+          "replacement": {
+            "type": "object",
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "enum": [
+                  "nbs-pmi",
+                  "nbs-real-estate",
+                  "nbs-migrant",
+                  "nbs-construction",
+                  "financial"
+                ]
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "series_id": {
+                "type": "string",
+                "enum": [
+                  "construction_pmi_activity",
+                  "construction_pmi_orders",
+                  "construction_pmi_employment",
+                  "services_pmi_activity",
+                  "services_pmi_orders",
+                  "services_pmi_employment",
+                  "manufacturing_pmi_production",
+                  "manufacturing_pmi_orders",
+                  "real_estate_investment_ytd",
+                  "real_estate_investment_yoy",
+                  "real_estate_starts_ytd",
+                  "real_estate_starts_yoy",
+                  "real_estate_construction_ytd",
+                  "real_estate_construction_yoy",
+                  "real_estate_completions_ytd",
+                  "real_estate_completions_yoy",
+                  "real_estate_sales_area_ytd",
+                  "real_estate_sales_area_yoy",
+                  "real_estate_sales_value_ytd",
+                  "real_estate_sales_value_yoy",
+                  "real_estate_funds_ytd",
+                  "real_estate_funds_yoy",
+                  "migrant_total",
+                  "migrant_outbound",
+                  "migrant_local",
+                  "migrant_urban",
+                  "migrant_interprovincial",
+                  "migrant_construction_share",
+                  "migrant_manufacturing_share",
+                  "migrant_monthly_income",
+                  "construction_value_added",
+                  "construction_qualified_profits"
+                ]
+              },
+              "observation_period": {
+                "type": "object",
+                "properties": {
+                  "start": {
+                    "type": "string",
+                    "format": "date",
+                    "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                  },
+                  "end": {
+                    "type": "string",
+                    "format": "date",
+                    "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                  }
+                },
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "additionalProperties": false
+              },
+              "frequency": {
+                "type": "string",
+                "enum": [
+                  "monthly",
+                  "quarterly",
+                  "yearly"
+                ]
+              },
+              "value": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "diffusion_points",
+                  "percent",
+                  "cny_100m",
+                  "sqm_10k",
+                  "people_10k",
+                  "cny_per_month"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "observed",
+                  "zero"
+                ]
+              },
+              "fetched_at": {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+              },
+              "published_at": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date-time",
+                    "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "publication_date": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "raw_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "revision_id": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "source_id",
+              "source_url",
+              "series_id",
+              "observation_period",
+              "frequency",
+              "value",
+              "unit",
+              "status",
+              "fetched_at",
+              "published_at",
+              "publication_date",
+              "raw_sha256",
+              "evidence",
+              "revision_id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "previous",
+          "replacement"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "series_id": {
+            "type": "string",
+            "enum": [
+              "construction_pmi_activity",
+              "construction_pmi_orders",
+              "construction_pmi_employment",
+              "services_pmi_activity",
+              "services_pmi_orders",
+              "services_pmi_employment",
+              "manufacturing_pmi_production",
+              "manufacturing_pmi_orders",
+              "real_estate_investment_ytd",
+              "real_estate_investment_yoy",
+              "real_estate_starts_ytd",
+              "real_estate_starts_yoy",
+              "real_estate_construction_ytd",
+              "real_estate_construction_yoy",
+              "real_estate_completions_ytd",
+              "real_estate_completions_yoy",
+              "real_estate_sales_area_ytd",
+              "real_estate_sales_area_yoy",
+              "real_estate_sales_value_ytd",
+              "real_estate_sales_value_yoy",
+              "real_estate_funds_ytd",
+              "real_estate_funds_yoy",
+              "migrant_total",
+              "migrant_outbound",
+              "migrant_local",
+              "migrant_urban",
+              "migrant_interprovincial",
+              "migrant_construction_share",
+              "migrant_manufacturing_share",
+              "migrant_monthly_income",
+              "construction_value_added",
+              "construction_qualified_profits"
+            ]
+          },
+          "period_end": {
+            "type": "string",
+            "format": "date",
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+          },
+          "code": {
+            "type": "string",
+            "enum": [
+              "unusual_change",
+              "zero_variance"
+            ]
+          }
+        },
+        "required": [
+          "series_id",
+          "period_end",
+          "code"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "dataset_version",
+    "series",
+    "coverage",
+    "source_status",
+    "revisions",
+    "quality_flags"
+  ],
+  "additionalProperties": false
+}

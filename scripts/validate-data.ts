@@ -1,17 +1,47 @@
 import { readFile } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import { z } from 'zod';
-import { datasetSchema, healthSchema, manifestSchema } from '../src/lib/market/schema';
+import { businessDate } from '../src/lib/market/dates';
+import { datasetSchema, healthSchema, manifestSchema, researchDatasetSchema, researchHealthSchema } from '../src/lib/market/schema';
+import { researchModelSchema } from '../src/lib/market/research-model-schema';
+import { buildResearchModels, researchModelFile } from './indexing/multidimensional';
 import { dataFingerprint, healthFile, latestFile, manifestFile, preparePublication } from './publish';
 import { readRevisions } from './quality';
 import { sha256 } from './sources/http';
 import { observationsFile, observationsSchema, readJson, readOptionalJson, writeJson } from './storage';
+import { replayResearch } from './research/collect-data';
+import { makeResearchDataset, researchFile, researchHealthFile } from './research/publication';
 
 const schemas = {
   'latest.schema.json': datasetSchema,
   'manifest.schema.json': manifestSchema,
   'collection-status.schema.json': healthSchema,
+  'research.schema.json': researchDatasetSchema,
+  'research-models.schema.json': researchModelSchema,
+  'research-collection-status.schema.json': researchHealthSchema,
 };
+
+async function validateResearch() {
+  const published = researchDatasetSchema.parse(await readJson(researchFile));
+  const today = businessDate(new Date());
+  const evidence = (await replayResearch()).filter((row) => row.observation_period.end <= today && row.publication_date <= today);
+  if (!isDeepStrictEqual(makeResearchDataset(evidence, published.source_status), published)) {
+    throw new Error('Research observations, coverage, quality flags or revisions differ from the archive');
+  }
+  if (published.quality_flags.some((flag) => flag.code === 'zero_variance')) {
+    throw new Error('Constant research series requires source review');
+  }
+  const health = await readOptionalJson(researchHealthFile);
+  if (health !== undefined) {
+    const status = researchHealthSchema.parse(health);
+    if (status.dataset_version !== published.dataset_version || !isDeepStrictEqual(status.source_status, published.source_status)) {
+      throw new Error('Research health does not match the verified publication');
+    }
+  }
+  const models = researchModelSchema.parse(await readJson(researchModelFile));
+  if (!isDeepStrictEqual(await buildResearchModels(false, evidence), models)) throw new Error('Research model evaluation differs from the archive');
+  console.log(`Verified ${published.series.length} research observations and rolling folds (${published.dataset_version.slice(0, 12)}).`);
+}
 
 async function main() {
   for (const [name, schema] of Object.entries(schemas)) {
@@ -43,6 +73,7 @@ async function main() {
     throw new Error('Dataset version or manifest does not match the verified publication');
   }
   console.log(`Verified ${series.length} official observations with raw replay and JSON schemas (${dataset_version.slice(0, 12)}).`);
+  await validateResearch();
 }
 
 void main().catch((error: unknown) => {
