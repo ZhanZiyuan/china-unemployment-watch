@@ -3,7 +3,7 @@ import { observationKey, type Observation } from '../../src/lib/market/schema';
 import { errorDetails, fetchOriginal, retryOriginal, type Original } from './http';
 import { parseLabour } from './nbs-labour';
 import { parsePmi } from './nbs-pmi';
-import { archive, parseArchive, pmiTitle, releaseUrls, type Release } from './nbs-release';
+import { archive, classify, parseArchive, pmiTitle, releaseUrls, type Release } from './nbs-release';
 
 export type Collection = Awaited<ReturnType<typeof collect>>;
 export type ReleaseFailure = { source_id: Release['kind']; release: Release; errors: string[] };
@@ -18,7 +18,7 @@ async function archivePage(url: string, page: number, request: typeof fetchOrigi
   }
 }
 
-export async function discover(since: string, until: string, request = fetchOriginal) {
+export async function discoverArticles(since: string, until: string, request = fetchOriginal) {
   let latest;
   try {
     latest = await archivePage(archive, 0, request);
@@ -29,18 +29,25 @@ export async function discover(since: string, until: string, request = fetchOrig
       throw new Error(`NBS release archive failed: ${errorDetails(firstError)}; ${errorDetails(secondError)}`);
     }
   }
-  const releases = [...latest.releases];
+  const articles = [...latest.articles];
   let oldest = latest.oldest;
   for (let page = 1; page < latest.count && oldest >= since; page += 1) {
     const listing = await archivePage(`${archive}index_${page}.html`, page, request);
     if (listing.oldest < oldest) oldest = listing.oldest;
-    releases.push(...listing.releases);
+    articles.push(...listing.articles);
   }
-  return [...new Map(releases
-    .filter((release) => release.listedDate >= since && release.listedDate <= until)
-    .filter((release) => release.kind !== 'nbs-pmi' || Number(pmiTitle.exec(release.title)?.[1]) >= 2023)
-    .filter((release) => release.kind !== 'nbs-labour' || release.listedDate >= '2023-03-01')
-    .map((release) => [release.suffix, release])).values()];
+  return [...new Map(articles.filter((article) => article.listedDate >= since && article.listedDate <= until)
+    .map((article) => [article.suffix, article])).values()];
+}
+
+export async function discover(since: string, until: string, request = fetchOriginal) {
+  const articles = await discoverArticles(since, until, request);
+  return articles.flatMap((article): Release[] => {
+    const kind = classify(article.title);
+    if (!kind || (kind === 'nbs-pmi' && Number(pmiTitle.exec(article.title)?.[1]) < 2023) ||
+        (kind === 'nbs-labour' && article.listedDate < '2023-03-01')) return [];
+    return [{ ...article, kind }];
+  });
 }
 
 export async function collect(since: string, until: string, request = fetchOriginal, select: 'earliest' | 'latest' = 'earliest') {

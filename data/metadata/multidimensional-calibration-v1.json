@@ -1,0 +1,23 @@
+{
+  "algorithm_version": "sector-pressure-1.0.0",
+  "baseline_start": "2023-01-01",
+  "baseline_end": "2024-12-31",
+  "archive_sha256": "d77d95e0a6a612f917cc8a0c10203610dbb35cf59dca617a603e2739a2dee7cc",
+  "parameters": {
+    "manufacturing_pmi_employment": {
+      "median": 49.55,
+      "scale": 1.0378200000000042,
+      "n": 24
+    },
+    "construction_pmi_employment": {
+      "median": 46.2,
+      "scale": 4.596060000000007,
+      "n": 24
+    },
+    "services_pmi_employment": {
+      "median": 46.7,
+      "scale": 0.5930400000000084,
+      "n": 24
+    }
+  }
+}

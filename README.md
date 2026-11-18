@@ -17,6 +17,8 @@
 
 The initial collection covers releases from 1 January 2023 through 17 November 2026, inclusive, in Asia/Shanghai. The initial archive contains 176 verified observations through October 2026. January 2023, 2024, 2025 and 2026 are missing from both unemployment series.
 
+The multidimensional study adds 32 official series with 944 verified observations in its initial snapshot. It covers construction and services PMI, manufacturing production and orders, property development, migrant workers and annual construction statistics. Financial data await a licensed history and reuse rights.
+
 ## Features
 
 - **Interactive historical charts** show national urban and 31-city unemployment, manufacturing and non-manufacturing PMI employment, and an experimental PMI employment demand index. Recharts provides independent date ranges, zoom, brush selection, and tooltips with source links.
@@ -31,6 +33,10 @@ The collection pipeline starts in [scripts/fetch-data.ts](scripts/fetch-data.ts)
 The experimental employment demand index averages two robustly standardized PMI employment series with equal weights and a fixed January 2023–December 2024 baseline. The search, exam and shadow indices display insufficient data while comparable search inputs remain unavailable.
 
 [Data sources and coverage](docs/data-sources.md) · [Methodology and backtest](docs/methodology.md) · [Pipeline and deployment](docs/data-pipeline.md) · [Repository audit](docs/repository-audit.md)
+
+The sector pressure score and publication-aware rolling comparison are published separately. The added features did not consistently improve over the PMI benchmark in the initial held-out sample.
+
+[Multidimensional sources](docs/multidimensional-data.md) · [Model methodology and results](docs/multidimensional-methodology.md) · [Financial data access](docs/financial-data.md)
 
 ## Tech stack
 
@@ -58,6 +64,8 @@ Open [localhost:9002](http://localhost:9002/).
 - `pnpm fetch-data` collects recent releases and confirmed revisions.
 - `pnpm fetch-data --backfill` attempts the initial historical collection.
 - `pnpm fetch-data --from-archive` regenerates the publication offline from the archived evidence.
+- `pnpm fetch-research` updates the additional official sources. Add `--backfill` for the initial window.
+- `pnpm build-research-models` rebuilds the independent research model report offline. Rerun it after either snapshot changes.
 
 ### Run checks
 

@@ -14,14 +14,17 @@ it('schedules Shanghai 11:17, accepts all main pushes and manual backfills, and 
   expect(writer.if).toBe("github.ref == 'refs/heads/main'");
   expect(writer.run).toContain('git push origin HEAD:refs/heads/main');
   expect(writer.run).toContain('if [[ "$RESULT" == success ]]');
-  expect(writer.run).toContain('"${sidecars[@]}"');
-  expect(writer.run).toContain('^data/metadata/[a-f0-9]{64}\\.json$');
+  expect(writer.run).toContain('git add -- "$archive" "$metadata"');
+  expect(writer.run).toContain('^[a-f0-9]{64}$');
+  expect(writer.run).toContain('public/data/research-models.json');
   expect(writer.run).not.toMatch(/git add\s+\./);
 });
 
-it('permits a manual hosted-runner check on develop without persisting push credentials', () => {
+it('permits a manual hosted-runner check on the development branches without persisting push credentials', () => {
   const { jobs: { update } } = parse(readFileSync('.github/workflows/update-data.yml', 'utf8'));
-  expect(update.if).toContain("github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/develop'");
+  expect(update.if).toContain("github.event_name == 'workflow_dispatch'");
+  expect(update.if).toContain("github.ref == 'refs/heads/develop'");
+  expect(update.if).toContain("github.ref == 'refs/heads/feature/multidimensional-employment'");
   const checkout = update.steps.find((step: { uses?: string }) => step.uses?.startsWith('actions/checkout@'));
   expect(checkout.with.ref).toBe('${{ github.ref }}');
   expect(checkout.with['persist-credentials']).toBe("${{ github.ref == 'refs/heads/main' }}");

@@ -1,5 +1,6 @@
 import { z } from 'zod';
-import { businessDate, endOfMonth, HISTORY_START, shiftDay } from './dates';
+import { businessDate, endOfMonth, HISTORY_START, shiftDay, shiftMonth } from './dates';
+import { researchCatalog, researchFrequencies, researchIds, researchSources, researchUnits } from './research-catalog';
 
 export const sources = ['nbs-labour', 'nbs-pmi', 'google-trends', 'baidu-index', 'recruitment'] as const;
 export const frequencySchema = z.enum(['daily', 'weekly', 'monthly']);
@@ -26,7 +27,7 @@ const nbsUrl = z.url().refine((url) => {
   ) && !u.username && !u.password && !u.port;
 }, 'Expected an official NBS release or its State Council mirror');
 
-export const observationSchema = z.object({
+const observationFields = z.object({
   source_id: z.enum(['nbs-labour', 'nbs-pmi']),
   source_url: nbsUrl,
   series_id: z.enum(['urban_unemployment', 'city_unemployment', 'manufacturing_pmi_employment', 'nonmanufacturing_pmi_employment']),
@@ -41,7 +42,9 @@ export const observationSchema = z.object({
   raw_sha256: digestSchema,
   evidence: z.string().min(1).max(240),
   revision_id: digestSchema.nullable(),
-}).strict().superRefine((row, ctx) => {
+}).strict();
+
+export const observationSchema = observationFields.superRefine((row, ctx) => {
   const definition = definitions[row.series_id];
   const { start, end } = row.observation_period;
   const observed = ['observed', 'zero', 'revised'].includes(row.status);
@@ -137,3 +140,66 @@ export const healthSchema = z.object({
 export type Dataset = z.infer<typeof datasetSchema>;
 export type Health = z.infer<typeof healthSchema>;
 export type Manifest = z.infer<typeof manifestSchema>;
+
+// The research contract extends the supported grains while keeping the 1.0.0 publication schema stable.
+export const researchObservationSchema = observationFields.extend({
+  source_id: z.enum(researchSources),
+  series_id: z.enum(researchIds),
+  frequency: z.enum(researchFrequencies),
+  value: z.number().finite(),
+  unit: z.enum(researchUnits),
+  status: z.enum(['observed', 'zero']),
+  revision_id: z.null(),
+}).superRefine((row, ctx) => {
+  const metric = researchCatalog[row.series_id];
+  const { start, end } = row.observation_period;
+  const [min, max] = metric.valid_range;
+  const isCumulative = metric.metric_type.startsWith('cumulative_');
+  const correctPeriod = {
+    monthly: endOfMonth(end) === end && (isCumulative
+      ? start === `${end.slice(0, 4)}-01-01` && !end.endsWith('-01-31')
+      : start === `${end.slice(0, 7)}-01`),
+    quarterly: /^\d{4}-(01|04|07|10)-01$/.test(start) && end === shiftDay(shiftMonth(start, 3), -1),
+    yearly: start === `${end.slice(0, 4)}-01-01` && end.endsWith('-12-31'),
+  }[row.frequency];
+  if (row.source_id !== metric.source_id || row.frequency !== metric.frequency || row.unit !== metric.unit ||
+      start < HISTORY_START || !correctPeriod || row.publication_date < (row.source_id === 'nbs-pmi' ? start : end) ||
+      row.publication_date > businessDate(row.fetched_at) ||
+      (row.source_id !== 'nbs-pmi' && end > businessDate(row.fetched_at)) ||
+      (row.published_at && (businessDate(row.published_at) !== row.publication_date || row.published_at > row.fetched_at)) ||
+      (min !== null && row.value < min) || (max !== null && row.value > max) || (row.status === 'zero') !== (row.value === 0)) {
+    ctx.addIssue({ code: 'custom', message: 'Inconsistent research series, period, publication date, or value' });
+  }
+});
+
+export type ResearchObservation = z.infer<typeof researchObservationSchema>;
+export const researchKey = (row: ResearchObservation) => `${row.series_id}/${row.observation_period.end}`;
+
+const researchSourceStatus = z.enum(['available', 'partial', 'fetch_failed', 'unconnected']);
+const researchSourceStatuses = z.partialRecord(z.enum(researchSources), researchSourceStatus);
+export const researchDatasetSchema = z.object({
+  schema_version: z.literal('research-1.0.0'),
+  dataset_version: digestSchema,
+  series: z.array(researchObservationSchema),
+  coverage: z.array(z.object({
+    series_id: z.enum(researchIds), count: z.number().int().nonnegative(),
+    first: z.iso.date().nullable(), last: z.iso.date().nullable(), missing: z.array(z.iso.date()),
+  }).strict()),
+  source_status: researchSourceStatuses,
+  revisions: z.array(z.object({
+    previous: researchObservationSchema, replacement: researchObservationSchema,
+  }).strict()),
+  quality_flags: z.array(z.object({
+    series_id: z.enum(researchIds), period_end: z.iso.date(), code: z.enum(['unusual_change', 'zero_variance']),
+  }).strict()),
+}).strict();
+export type ResearchDataset = z.infer<typeof researchDatasetSchema>;
+
+export const researchHealthSchema = z.object({
+  attempted_at: z.iso.datetime(), completed_at: z.iso.datetime(),
+  source_status: researchSourceStatuses,
+  stale_series: z.array(z.enum(researchIds)),
+  dataset_version: digestSchema,
+  result: z.enum(['success', 'partial', 'fetch_failed']),
+}).strict().refine((health) => health.attempted_at <= health.completed_at);
+export type ResearchHealth = z.infer<typeof researchHealthSchema>;

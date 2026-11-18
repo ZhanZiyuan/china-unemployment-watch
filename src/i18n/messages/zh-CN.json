@@ -61,12 +61,18 @@
   "units": {
     "percent": "%",
     "diffusion_points": "点",
-    "score": "标准化分值"
+    "score": "标准化分值",
+    "cny_100m": "亿元",
+    "sqm_10k": "万平方米",
+    "people_10k": "万人",
+    "cny_per_month": "元/月"
   },
   "frequency": {
     "daily": "日度",
     "weekly": "周度",
-    "monthly": "月度"
+    "monthly": "月度",
+    "quarterly": "季度",
+    "yearly": "年度"
   },
   "status": {
     "observed": "有效观测",
@@ -97,7 +103,7 @@
     "brush": "拖动调整日期范围",
     "legend": "显示序列",
     "release": "原始发布",
-    "derived": "由官方 PMI 发布数据计算",
+    "derived": "根据归档官方数据计算",
     "no_points": "此日期范围内没有实际观测。",
     "all_hidden": "所有序列均已隐藏。",
     "range_label": "{start} 至 {end}",
@@ -111,5 +117,113 @@
     "checksum": "数据文件 SHA-256",
     "download": "下载清单 JSON",
     "close": "关闭"
+  },
+  "research": {
+    "title": "多维度研究",
+    "summary": "查看官方分行业调查、房地产开发与农民工统计，以及按实际发布时间约束的模型回测。",
+    "data": "研究数据 JSON",
+    "financial_pending": "金融行情暂未接入，历史数据访问与再分发授权待核实。",
+    "folds": "下载逐折回测",
+    "nowcast": "当期估计",
+    "next_period": "下一期预测",
+    "actual": "官方失业率",
+    "evaluation_note": "扩展窗口岭回归与延续基准使用 {n, number} 个共同测试月，{first} 至 {last}。误差以百分点计。",
+    "association": "同期相关性",
+    "association_note": "对共同月份的首次公布水平值计算 Pearson 相关系数，用于描述性分析。",
+    "sections": {
+      "construction": "建筑业",
+      "real_estate": "房地产",
+      "migrant": "农民工",
+      "real_economy": "制造业与服务业",
+      "financial": "金融市场",
+      "models": "模型对照"
+    },
+    "charts": {
+      "construction-pmi": "建筑业 PMI",
+      "construction-annual": "建筑业年度统计",
+      "property-growth": "房地产开发累计同比",
+      "property-area": "房地产面积指标",
+      "property-amount": "房地产投资、销售与资金",
+      "migrant-count": "农民工规模",
+      "migrant-industry": "农民工行业分布",
+      "migrant-income": "农民工收入",
+      "manufacturing-pmi": "制造业 PMI",
+      "services-pmi": "服务业 PMI",
+      "sector-pressure": "分行业就业压力指数"
+    },
+    "explain": {
+      "construction-pmi": "月度经季节调整的商务活动、新订单和从业人员指数，50 表示较上月无变化。",
+      "construction-annual": "建筑业增加值与资质总承包和专业承包企业利润采用不同统计总体。",
+      "property-growth": "官方可比口径的累计同比。1–2 月合并发布。",
+      "property-area": "年初至报告期末的官方面积。1–2 月合并发布。",
+      "property-amount": "年初至报告期末的官方金额。1–2 月合并发布。",
+      "migrant-count": "全国农民工监测调查。统计人数规模及流动情况。",
+      "migrant-industry": "监测调查总体中的年度分行业就业占比。",
+      "migrant-income": "监测调查公布的年度月均收入。",
+      "manufacturing-pmi": "月度经季节调整的生产与新订单指数。",
+      "services-pmi": "月度经季节调整的商务活动、新订单与从业人员指数。",
+      "sector-pressure": "等权汇总制造业、建筑业和服务业从业人员 PMI。分数越高，调查用工越弱。固定基准期为 2023–2024 年。"
+    },
+    "series": {
+      "construction_pmi_activity": "建筑业商务活动",
+      "construction_pmi_orders": "建筑业新订单",
+      "construction_pmi_employment": "建筑业从业人员",
+      "services_pmi_activity": "服务业商务活动",
+      "services_pmi_orders": "服务业新订单",
+      "services_pmi_employment": "服务业从业人员",
+      "manufacturing_pmi_production": "制造业生产",
+      "manufacturing_pmi_orders": "制造业新订单",
+      "migrant_total": "农民工总量",
+      "migrant_outbound": "外出农民工",
+      "migrant_local": "本地农民工",
+      "migrant_urban": "年末在城镇居住的农民工",
+      "migrant_interprovincial": "跨省流动农民工",
+      "migrant_construction_share": "建筑业就业占比",
+      "migrant_manufacturing_share": "制造业就业占比",
+      "migrant_monthly_income": "月均收入",
+      "construction_value_added": "建筑业增加值",
+      "construction_qualified_profits": "资质建筑企业利润",
+      "real_estate_investment_ytd": "房地产开发投资（年初累计）",
+      "real_estate_investment_yoy": "房地产开发投资（累计同比）",
+      "real_estate_starts_ytd": "房屋新开工面积（年初累计）",
+      "real_estate_starts_yoy": "房屋新开工面积（累计同比）",
+      "real_estate_construction_ytd": "房屋施工面积（年初累计）",
+      "real_estate_construction_yoy": "房屋施工面积（累计同比）",
+      "real_estate_completions_ytd": "房屋竣工面积（年初累计）",
+      "real_estate_completions_yoy": "房屋竣工面积（累计同比）",
+      "real_estate_sales_area_ytd": "商品房销售面积（年初累计）",
+      "real_estate_sales_area_yoy": "商品房销售面积（累计同比）",
+      "real_estate_sales_value_ytd": "商品房销售额（年初累计）",
+      "real_estate_sales_value_yoy": "商品房销售额（累计同比）",
+      "real_estate_funds_ytd": "房地产开发企业到位资金（年初累计）",
+      "real_estate_funds_yoy": "房地产开发企业到位资金（累计同比）"
+    },
+    "table": {
+      "model": "模型",
+      "mae": "MAE（百分点）",
+      "rmse": "RMSE（百分点）",
+      "direction": "方向准确率",
+      "correlation": "Pearson r"
+    },
+    "names": {
+      "M0": "延续基准",
+      "M1": "PMI 基准",
+      "M2": "分行业 PMI",
+      "M3": "加入房地产",
+      "M4": "加入制造业生产"
+    },
+    "sources": {
+      "nbs-pmi": "国家统计局 PMI",
+      "nbs-real-estate": "国家统计局房地产报告",
+      "nbs-migrant": "国家统计局农民工监测调查",
+      "nbs-construction": "国家统计局统计公报",
+      "financial": "金融数据提供方"
+    },
+    "states": {
+      "available": "可用",
+      "partial": "部分覆盖",
+      "fetch_failed": "采集失败",
+      "unconnected": "未接入"
+    }
   }
 }

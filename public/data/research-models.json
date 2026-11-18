@@ -1,0 +1,5888 @@
+{
+  "algorithm_version": "sector-pressure-1.0.0",
+  "dataset_version": "c20df0998157db500c8ff625b8c42c6be656b448f1ffd35f6330e3d762cebdb2",
+  "core_dataset_version": "de656430e957984e6914378b2e852c224b7839031ba852afa6b5d9a93c0149fa",
+  "calibration_sha256": "8780c1b6a0863fd1270529b7e74152fa311f66a09ddc9f1c138789ab423fd604",
+  "pressure": {
+    "status": "exploratory",
+    "values": [
+      {
+        "observation_period": {
+          "start": "2023-01-01",
+          "end": "2023-01-31"
+        },
+        "value": -0.2595
+      },
+      {
+        "observation_period": {
+          "start": "2023-02-01",
+          "end": "2023-02-28"
+        },
+        "value": -3.4849
+      },
+      {
+        "observation_period": {
+          "start": "2023-03-01",
+          "end": "2023-03-31"
+        },
+        "value": -2.851
+      },
+      {
+        "observation_period": {
+          "start": "2023-04-01",
+          "end": "2023-04-30"
+        },
+        "value": -0.7545
+      },
+      {
+        "observation_period": {
+          "start": "2023-05-01",
+          "end": "2023-05-31"
+        },
+        "value": -0.6646
+      },
+      {
+        "observation_period": {
+          "start": "2023-06-01",
+          "end": "2023-06-30"
+        },
+        "value": 0.2326
+      },
+      {
+        "observation_period": {
+          "start": "2023-07-01",
+          "end": "2023-07-31"
+        },
+        "value": 0.0324
+      },
+      {
+        "observation_period": {
+          "start": "2023-08-01",
+          "end": "2023-08-31"
+        },
+        "value": -0.381
+      },
+      {
+        "observation_period": {
+          "start": "2023-09-01",
+          "end": "2023-09-30"
+        },
+        "value": -0.4248
+      },
+      {
+        "observation_period": {
+          "start": "2023-10-01",
+          "end": "2023-10-31"
+        },
+        "value": 0.114
+      },
+      {
+        "observation_period": {
+          "start": "2023-11-01",
+          "end": "2023-11-30"
+        },
+        "value": -0.0969
+      },
+      {
+        "observation_period": {
+          "start": "2023-12-01",
+          "end": "2023-12-31"
+        },
+        "value": 0.0989
+      },
+      {
+        "observation_period": {
+          "start": "2024-01-01",
+          "end": "2024-01-31"
+        },
+        "value": 0.0624
+      },
+      {
+        "observation_period": {
+          "start": "2024-02-01",
+          "end": "2024-02-29"
+        },
+        "value": -0.0373
+      },
+      {
+        "observation_period": {
+          "start": "2024-03-01",
+          "end": "2024-03-31"
+        },
+        "value": -1.128
+      },
+      {
+        "observation_period": {
+          "start": "2024-04-01",
+          "end": "2024-04-30"
+        },
+        "value": -0.884
+      },
+      {
+        "observation_period": {
+          "start": "2024-05-01",
+          "end": "2024-05-31"
+        },
+        "value": 0.1943
+      },
+      {
+        "observation_period": {
+          "start": "2024-06-01",
+          "end": "2024-06-30"
+        },
+        "value": 0.4802
+      },
+      {
+        "observation_period": {
+          "start": "2024-07-01",
+          "end": "2024-07-31"
+        },
+        "value": 0.6841
+      },
+      {
+        "observation_period": {
+          "start": "2024-08-01",
+          "end": "2024-08-31"
+        },
+        "value": 1.0356
+      },
+      {
+        "observation_period": {
+          "start": "2024-09-01",
+          "end": "2024-09-30"
+        },
+        "value": 1.0117
+      },
+      {
+        "observation_period": {
+          "start": "2024-10-01",
+          "end": "2024-10-31"
+        },
+        "value": 0.2779
+      },
+      {
+        "observation_period": {
+          "start": "2024-11-01",
+          "end": "2024-11-30"
+        },
+        "value": 0.2784
+      },
+      {
+        "observation_period": {
+          "start": "2024-12-01",
+          "end": "2024-12-31"
+        },
+        "value": 0.013
+      },
+      {
+        "observation_period": {
+          "start": "2025-01-01",
+          "end": "2025-01-31"
+        },
+        "value": 0.1559
+      },
+      {
+        "observation_period": {
+          "start": "2025-02-01",
+          "end": "2025-02-28"
+        },
+        "value": -0.4543
+      },
+      {
+        "observation_period": {
+          "start": "2025-03-01",
+          "end": "2025-03-31"
+        },
+        "value": -0.2621
+      },
+      {
+        "observation_period": {
+          "start": "2025-04-01",
+          "end": "2025-04-30"
+        },
+        "value": 0.6654
+      },
+      {
+        "observation_period": {
+          "start": "2025-05-01",
+          "end": "2025-05-31"
+        },
+        "value": 0.4618
+      },
+      {
+        "observation_period": {
+          "start": "2025-06-01",
+          "end": "2025-06-30"
+        },
+        "value": 0.4168
+      },
+      {
+        "observation_period": {
+          "start": "2025-07-01",
+          "end": "2025-07-31"
+        },
+        "value": 0.6012
+      },
+      {
+        "observation_period": {
+          "start": "2025-08-01",
+          "end": "2025-08-31"
+        },
+        "value": 0.6543
+      },
+      {
+        "observation_period": {
+          "start": "2025-09-01",
+          "end": "2025-09-30"
+        },
+        "value": 0.8729
+      },
+      {
+        "observation_period": {
+          "start": "2025-10-01",
+          "end": "2025-10-31"
+        },
+        "value": 1.035
+      },
+      {
+        "observation_period": {
+          "start": "2025-11-01",
+          "end": "2025-11-30"
+        },
+        "value": 0.8812
+      },
+      {
+        "observation_period": {
+          "start": "2025-12-01",
+          "end": "2025-12-31"
+        },
+        "value": -0.193
+      },
+      {
+        "observation_period": {
+          "start": "2026-01-01",
+          "end": "2026-01-31"
+        },
+        "value": 0.3137
+      },
+      {
+        "observation_period": {
+          "start": "2026-02-01",
+          "end": "2026-02-28"
+        },
+        "value": 0.6297
+      },
+      {
+        "observation_period": {
+          "start": "2026-03-01",
+          "end": "2026-03-31"
+        },
+        "value": 0.1375
+      },
+      {
+        "observation_period": {
+          "start": "2026-04-01",
+          "end": "2026-04-30"
+        },
+        "value": 0.2538
+      },
+      {
+        "observation_period": {
+          "start": "2026-05-01",
+          "end": "2026-05-31"
+        },
+        "value": 0.4043
+      },
+      {
+        "observation_period": {
+          "start": "2026-06-01",
+          "end": "2026-06-30"
+        },
+        "value": -0.0785
+      },
+      {
+        "observation_period": {
+          "start": "2026-07-01",
+          "end": "2026-07-31"
+        },
+        "value": 1.0027
+      },
+      {
+        "observation_period": {
+          "start": "2026-08-01",
+          "end": "2026-08-31"
+        },
+        "value": 0.4007
+      },
+      {
+        "observation_period": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "value": 0.1137
+      },
+      {
+        "observation_period": {
+          "start": "2026-10-01",
+          "end": "2026-10-31"
+        },
+        "value": 0.3528
+      }
+    ]
+  },
+  "unavailable": {
+    "M5": "financial_source_unconnected"
+  },
+  "evaluations": {
+    "nowcast": {
+      "folds": [
+        {
+          "month": "2024-11-01",
+          "forecast_origin": "2024-11-19T16:00:00.000Z",
+          "outcome_available_at": "2024-12-16T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5,
+          "training_count": 18,
+          "training_first": "2023-03-01",
+          "training_last": "2024-10-01",
+          "input": {
+            "manufacturing_employment": 50,
+            "nonmanufacturing_employment": 45.8,
+            "construction_employment": 42.7,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -22.6,
+            "manufacturing_production": 52
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.9880860712145445,
+              "intercept": -0.02796187073439124,
+              "coefficients": {
+                "sector_demand": -0.03866310294192566
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.8,
+                  "scale": 0.7413,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.988791607224468,
+              "intercept": -0.029398646860870112,
+              "coefficients": {
+                "sector_demand": -0.04174561883869223
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 46.2,
+                  "scale": 3.0393299999999956,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.8,
+                  "scale": 0.5930400000000031,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 4.995173955118683,
+              "intercept": -0.028155390355652735,
+              "coefficients": {
+                "sector_demand": -0.04673276751327813,
+                "property_starts_cumulative_yoy": 0.006910161310410836
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 46.2,
+                  "scale": 3.0393299999999956,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.8,
+                  "scale": 0.5930400000000031,
+                  "n": 18
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.6308599999999993,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 4.954795668923966,
+              "intercept": -0.01958636570187868,
+              "coefficients": {
+                "sector_demand": -0.016631404907112887,
+                "property_starts_cumulative_yoy": 0.012639819231607277,
+                "manufacturing_production": -0.036332213001500975
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 46.2,
+                  "scale": 3.0393299999999956,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.8,
+                  "scale": 0.5930400000000031,
+                  "n": 18
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.6308599999999993,
+                  "n": 18
+                },
+                "manufacturing_production": {
+                  "median": 50.75,
+                  "scale": 1.186080000000001,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2024-12-01",
+          "forecast_origin": "2024-12-19T16:00:00.000Z",
+          "outcome_available_at": "2025-01-17T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5.1,
+          "training_count": 19,
+          "training_first": "2023-03-01",
+          "training_last": "2024-11-01",
+          "input": {
+            "manufacturing_employment": 50.8,
+            "nonmanufacturing_employment": 45.4,
+            "construction_employment": 40.7,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -23,
+            "manufacturing_production": 52.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.977064920599625,
+              "intercept": -0.02530827615426122,
+              "coefficients": {
+                "sector_demand": -0.04222201808773056
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 19
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.8,
+                  "scale": 0.8895599999999915,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.989705658711143,
+              "intercept": -0.027394371266712843,
+              "coefficients": {
+                "sector_demand": -0.042540643052063856
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 19
+                },
+                "construction_employment": {
+                  "median": 46.1,
+                  "scale": 3.2617199999999933,
+                  "n": 19
+                },
+                "services_employment": {
+                  "median": 46.8,
+                  "scale": 0.5930399999999979,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 4.993866756235553,
+              "intercept": -0.026009133090653072,
+              "coefficients": {
+                "sector_demand": -0.047350551778554295,
+                "property_starts_cumulative_yoy": 0.006869377947425538
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 19
+                },
+                "construction_employment": {
+                  "median": 46.1,
+                  "scale": 3.2617199999999933,
+                  "n": 19
+                },
+                "services_employment": {
+                  "median": 46.8,
+                  "scale": 0.5930399999999979,
+                  "n": 19
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.630860000000002,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 4.950665288142889,
+              "intercept": -0.018356960112219683,
+              "coefficients": {
+                "sector_demand": -0.022641915478142347,
+                "property_starts_cumulative_yoy": 0.012340251684115027,
+                "manufacturing_production": -0.03854060228841577
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 19
+                },
+                "construction_employment": {
+                  "median": 46.1,
+                  "scale": 3.2617199999999933,
+                  "n": 19
+                },
+                "services_employment": {
+                  "median": 46.8,
+                  "scale": 0.5930399999999979,
+                  "n": 19
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.630860000000002,
+                  "n": 19
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.4826,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-03-01",
+          "forecast_origin": "2025-03-19T16:00:00.000Z",
+          "outcome_available_at": "2025-04-16T02:00:00.000Z",
+          "prior": 5.4,
+          "actual": 5.2,
+          "training_count": 20,
+          "training_first": "2023-03-01",
+          "training_last": "2024-12-01",
+          "input": {
+            "manufacturing_employment": 51.1,
+            "nonmanufacturing_employment": 46.5,
+            "construction_employment": 45.6,
+            "services_employment": 46.7,
+            "property_starts_cumulative_yoy": -29.6,
+            "manufacturing_production": 52.5
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.4,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.348761857696986,
+              "intercept": -0.01694864335469245,
+              "coefficients": {
+                "sector_demand": -0.048442121610587974
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.7,
+                  "scale": 1.0378200000000042,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.35760968259492,
+              "intercept": -0.019634831865444312,
+              "coefficients": {
+                "sector_demand": -0.047303758101078286
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "construction_employment": {
+                  "median": 45.900000000000006,
+                  "scale": 3.7064999999999895,
+                  "n": 20
+                },
+                "services_employment": {
+                  "median": 46.75,
+                  "scale": 0.5930400000000031,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.3215981118567335,
+              "intercept": -0.017902832504713057,
+              "coefficients": {
+                "sector_demand": -0.053541485041879715,
+                "property_starts_cumulative_yoy": 0.008450832827412309
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "construction_employment": {
+                  "median": 45.900000000000006,
+                  "scale": 3.7064999999999895,
+                  "n": 20
+                },
+                "services_employment": {
+                  "median": 46.75,
+                  "scale": 0.5930400000000031,
+                  "n": 20
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.556730000000001,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.29301317537027,
+              "intercept": -0.012909263612619605,
+              "coefficients": {
+                "sector_demand": -0.038291709760131354,
+                "property_starts_cumulative_yoy": 0.011987620050504551,
+                "manufacturing_production": -0.024883186231416585
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "construction_employment": {
+                  "median": 45.900000000000006,
+                  "scale": 3.7064999999999895,
+                  "n": 20
+                },
+                "services_employment": {
+                  "median": 46.75,
+                  "scale": 0.5930400000000031,
+                  "n": 20
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.556730000000001,
+                  "n": 20
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.5567299999999957,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-04-01",
+          "forecast_origin": "2025-04-19T16:00:00.000Z",
+          "outcome_available_at": "2025-05-19T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.1,
+          "training_count": 21,
+          "training_first": "2023-03-01",
+          "training_last": "2025-03-01",
+          "input": {
+            "manufacturing_employment": 51.8,
+            "nonmanufacturing_employment": 45.8,
+            "construction_employment": 41.4,
+            "services_employment": 46.5,
+            "property_starts_cumulative_yoy": -24.4,
+            "manufacturing_production": 52.6
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.147282997202134,
+              "intercept": -0.02378991370706767,
+              "coefficients": {
+                "sector_demand": -0.04740175515823063
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 21
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.6,
+                  "scale": 0.889560000000002,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.166493398892344,
+              "intercept": -0.026375005959410766,
+              "coefficients": {
+                "sector_demand": -0.04194698280275161
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 21
+                },
+                "construction_employment": {
+                  "median": 45.7,
+                  "scale": 3.7064999999999997,
+                  "n": 21
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.159607873291509,
+              "intercept": -0.020114180596384507,
+              "coefficients": {
+                "sector_demand": -0.05218376673487673,
+                "property_starts_cumulative_yoy": 0.015501255397457564
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 21
+                },
+                "construction_employment": {
+                  "median": 45.7,
+                  "scale": 3.7064999999999997,
+                  "n": 21
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 21
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.630860000000002,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.1276505363055715,
+              "intercept": -0.013074818304644738,
+              "coefficients": {
+                "sector_demand": -0.031044804186546898,
+                "property_starts_cumulative_yoy": 0.018653076764398306,
+                "manufacturing_production": -0.0386336283141454
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 21
+                },
+                "construction_employment": {
+                  "median": 45.7,
+                  "scale": 3.7064999999999997,
+                  "n": 21
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 21
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.630860000000002,
+                  "n": 21
+                },
+                "manufacturing_production": {
+                  "median": 50.9,
+                  "scale": 1.630860000000002,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-05-01",
+          "forecast_origin": "2025-05-19T16:00:00.000Z",
+          "outcome_available_at": "2025-06-16T02:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5,
+          "training_count": 22,
+          "training_first": "2023-03-01",
+          "training_last": "2025-04-01",
+          "input": {
+            "manufacturing_employment": 49.2,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 37.8,
+            "services_employment": 46.8,
+            "property_starts_cumulative_yoy": -23.8,
+            "manufacturing_production": 49.8
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.112340849490696,
+              "intercept": -0.02929637135647104,
+              "coefficients": {
+                "sector_demand": -0.05465541886432618
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.75,
+                  "scale": 1.186080000000001,
+                  "n": 22
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.6,
+                  "scale": 1.0378200000000042,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.100118328198127,
+              "intercept": -0.032003673854402226,
+              "coefficients": {
+                "sector_demand": -0.04235262623042529
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.75,
+                  "scale": 1.186080000000001,
+                  "n": 22
+                },
+                "construction_employment": {
+                  "median": 45.650000000000006,
+                  "scale": 3.8547599999999913,
+                  "n": 22
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.108765712162784,
+              "intercept": -0.026770572901095985,
+              "coefficients": {
+                "sector_demand": -0.05323008461269865,
+                "property_starts_cumulative_yoy": 0.015772490974501587
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.75,
+                  "scale": 1.186080000000001,
+                  "n": 22
+                },
+                "construction_employment": {
+                  "median": 45.650000000000006,
+                  "scale": 3.8547599999999913,
+                  "n": 22
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 22
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.6308599999999993,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.129370798454817,
+              "intercept": -0.0200292442622309,
+              "coefficients": {
+                "sector_demand": -0.029532078522371323,
+                "property_starts_cumulative_yoy": 0.0192344189207005,
+                "manufacturing_production": -0.04097151102981396
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.75,
+                  "scale": 1.186080000000001,
+                  "n": 22
+                },
+                "construction_employment": {
+                  "median": 45.650000000000006,
+                  "scale": 3.8547599999999913,
+                  "n": 22
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 22
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.6308599999999993,
+                  "n": 22
+                },
+                "manufacturing_production": {
+                  "median": 51.05,
+                  "scale": 1.5567300000000062,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-06-01",
+          "forecast_origin": "2025-06-19T16:00:00.000Z",
+          "outcome_available_at": "2025-07-15T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5,
+          "training_count": 23,
+          "training_first": "2023-03-01",
+          "training_last": "2025-05-01",
+          "input": {
+            "manufacturing_employment": 49.8,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 39.5,
+            "services_employment": 46.6,
+            "property_starts_cumulative_yoy": -22.8,
+            "manufacturing_production": 50.7
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.988921881663262,
+              "intercept": -0.029977458502998044,
+              "coefficients": {
+                "sector_demand": -0.051446854324846025
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 23
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.6,
+                  "scale": 1.1860800000000062,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.9862615191837145,
+              "intercept": -0.03421963805860383,
+              "coefficients": {
+                "sector_demand": -0.03948890191162914
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 23
+                },
+                "construction_employment": {
+                  "median": 45.6,
+                  "scale": 4.003019999999993,
+                  "n": 23
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.0025567798205595,
+              "intercept": -0.029355946411152883,
+              "coefficients": {
+                "sector_demand": -0.049581101965503346,
+                "property_starts_cumulative_yoy": 0.015313252876703706
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 23
+                },
+                "construction_employment": {
+                  "median": 45.6,
+                  "scale": 4.003019999999993,
+                  "n": 23
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 23
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.4,
+                  "scale": 1.4826,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.003201710935129,
+              "intercept": -0.023241744178940267,
+              "coefficients": {
+                "sector_demand": -0.028992816022828178,
+                "property_starts_cumulative_yoy": 0.017465992308257655,
+                "manufacturing_production": -0.03537144446571818
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 23
+                },
+                "construction_employment": {
+                  "median": 45.6,
+                  "scale": 4.003019999999993,
+                  "n": 23
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 23
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.4,
+                  "scale": 1.4826,
+                  "n": 23
+                },
+                "manufacturing_production": {
+                  "median": 50.9,
+                  "scale": 1.630860000000002,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-07-01",
+          "forecast_origin": "2025-07-19T16:00:00.000Z",
+          "outcome_available_at": "2025-08-15T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5.2,
+          "training_count": 24,
+          "training_first": "2023-03-01",
+          "training_last": "2025-06-01",
+          "input": {
+            "manufacturing_employment": 50.2,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 39.9,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -20,
+            "manufacturing_production": 51
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.981117071191688,
+              "intercept": -0.03163365783090255,
+              "coefficients": {
+                "sector_demand": -0.05155699322425451
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 24
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.55,
+                  "scale": 1.11195,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.986347336473733,
+              "intercept": -0.03474166037075387,
+              "coefficients": {
+                "sector_demand": -0.03702617374930655
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 24
+                },
+                "construction_employment": {
+                  "median": 45.400000000000006,
+                  "scale": 4.07715,
+                  "n": 24
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.37065000000000525,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.026295155855526,
+              "intercept": -0.030403032011255108,
+              "coefficients": {
+                "sector_demand": -0.04581245199401037,
+                "property_starts_cumulative_yoy": 0.014437392695908468
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 24
+                },
+                "construction_employment": {
+                  "median": 45.400000000000006,
+                  "scale": 4.07715,
+                  "n": 24
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.37065000000000525,
+                  "n": 24
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.556730000000001,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.026381373455809,
+              "intercept": -0.02141801103062494,
+              "coefficients": {
+                "sector_demand": -0.02521467241072555,
+                "property_starts_cumulative_yoy": 0.017471726211111364,
+                "manufacturing_production": -0.03735313481740389
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 24
+                },
+                "construction_employment": {
+                  "median": 45.400000000000006,
+                  "scale": 4.07715,
+                  "n": 24
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.37065000000000525,
+                  "n": 24
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.556730000000001,
+                  "n": 24
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.5567299999999957,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-08-01",
+          "forecast_origin": "2025-08-19T16:00:00.000Z",
+          "outcome_available_at": "2025-09-15T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.3,
+          "training_count": 25,
+          "training_first": "2023-03-01",
+          "training_last": "2025-07-01",
+          "input": {
+            "manufacturing_employment": 49.4,
+            "nonmanufacturing_employment": 45.6,
+            "construction_employment": 40.9,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -19.4,
+            "manufacturing_production": 50.5
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.209439347835165,
+              "intercept": -0.02308881966798167,
+              "coefficients": {
+                "sector_demand": -0.05193597353556302
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.8,
+                  "scale": 1.0378200000000042,
+                  "n": 25
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.5,
+                  "scale": 1.0378200000000042,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.206070588187824,
+              "intercept": -0.02468020083371828,
+              "coefficients": {
+                "sector_demand": -0.045518867632493666
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.8,
+                  "scale": 1.0378200000000042,
+                  "n": 25
+                },
+                "construction_employment": {
+                  "median": 45.2,
+                  "scale": 4.4478,
+                  "n": 25
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.268881416491039,
+              "intercept": -0.01989332006578365,
+              "coefficients": {
+                "sector_demand": -0.05818071994666696,
+                "property_starts_cumulative_yoy": 0.02123126040412946
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.8,
+                  "scale": 1.0378200000000042,
+                  "n": 25
+                },
+                "construction_employment": {
+                  "median": 45.2,
+                  "scale": 4.4478,
+                  "n": 25
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 25
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.630860000000002,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.276094361715969,
+              "intercept": -0.013111845539250346,
+              "coefficients": {
+                "sector_demand": -0.03750481119802206,
+                "property_starts_cumulative_yoy": 0.023736480776455654,
+                "manufacturing_production": -0.03490857826227686
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.8,
+                  "scale": 1.0378200000000042,
+                  "n": 25
+                },
+                "construction_employment": {
+                  "median": 45.2,
+                  "scale": 4.4478,
+                  "n": 25
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 25
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.630860000000002,
+                  "n": 25
+                },
+                "manufacturing_production": {
+                  "median": 50.9,
+                  "scale": 1.630860000000002,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-09-01",
+          "forecast_origin": "2025-09-19T16:00:00.000Z",
+          "outcome_available_at": "2025-10-20T02:00:00.000Z",
+          "prior": 5.3,
+          "actual": 5.2,
+          "training_count": 26,
+          "training_first": "2023-03-01",
+          "training_last": "2025-08-01",
+          "input": {
+            "manufacturing_employment": 49.5,
+            "nonmanufacturing_employment": 45.6,
+            "construction_employment": 43.6,
+            "services_employment": 45.9,
+            "property_starts_cumulative_yoy": -19.5,
+            "manufacturing_production": 50.8
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.3,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.311927697612291,
+              "intercept": -0.015532531335882747,
+              "coefficients": {
+                "sector_demand": -0.05029195554175565
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.889560000000002,
+                  "n": 26
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.5,
+                  "scale": 1.0378200000000042,
+                  "n": 26
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.319612946241715,
+              "intercept": -0.016841690185499983,
+              "coefficients": {
+                "sector_demand": -0.047561926690951065
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.889560000000002,
+                  "n": 26
+                },
+                "construction_employment": {
+                  "median": 44.95,
+                  "scale": 4.892579999999995,
+                  "n": 26
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 26
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.380941041708406,
+              "intercept": -0.013976533493825206,
+              "coefficients": {
+                "sector_demand": -0.0591502673956925,
+                "property_starts_cumulative_yoy": 0.02284726260863639
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.889560000000002,
+                  "n": 26
+                },
+                "construction_employment": {
+                  "median": 44.95,
+                  "scale": 4.892579999999995,
+                  "n": 26
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 26
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.7049900000000004,
+                  "n": 26
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.376769695672266,
+              "intercept": -0.00863228179850448,
+              "coefficients": {
+                "sector_demand": -0.03960573379123503,
+                "property_starts_cumulative_yoy": 0.024909347990944505,
+                "manufacturing_production": -0.030814066568626
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.889560000000002,
+                  "n": 26
+                },
+                "construction_employment": {
+                  "median": 44.95,
+                  "scale": 4.892579999999995,
+                  "n": 26
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 26
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.7049900000000004,
+                  "n": 26
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.5567299999999957,
+                  "n": 26
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-11-01",
+          "forecast_origin": "2025-11-19T16:00:00.000Z",
+          "outcome_available_at": "2025-12-15T02:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5.1,
+          "training_count": 27,
+          "training_first": "2023-03-01",
+          "training_last": "2025-09-01",
+          "input": {
+            "manufacturing_employment": 48.8,
+            "nonmanufacturing_employment": 45.2,
+            "construction_employment": 39.9,
+            "services_employment": 46.1,
+            "property_starts_cumulative_yoy": -19.8,
+            "manufacturing_production": 49.7
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.13415149671806,
+              "intercept": -0.01761741826950479,
+              "coefficients": {
+                "sector_demand": -0.04811356598721907
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 27
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.5,
+                  "scale": 1.0378200000000042,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.128243116930675,
+              "intercept": -0.019656036576884625,
+              "coefficients": {
+                "sector_demand": -0.04449691907620639
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 44.7,
+                  "scale": 4.892580000000006,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.169761639597758,
+              "intercept": -0.019160057807317506,
+              "coefficients": {
+                "sector_demand": -0.05205025944976763,
+                "property_starts_cumulative_yoy": 0.017211246187666646
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 44.7,
+                  "scale": 4.892580000000006,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 27
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.181479058511156,
+              "intercept": -0.013284642263786853,
+              "coefficients": {
+                "sector_demand": -0.03126068703976589,
+                "property_starts_cumulative_yoy": 0.01972871945501526,
+                "manufacturing_production": -0.031552573505137314
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 44.7,
+                  "scale": 4.892580000000006,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 27
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 27
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.4826,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-12-01",
+          "forecast_origin": "2025-12-19T16:00:00.000Z",
+          "outcome_available_at": "2026-01-19T02:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5.1,
+          "training_count": 28,
+          "training_first": "2023-03-01",
+          "training_last": "2025-11-01",
+          "input": {
+            "manufacturing_employment": 49.2,
+            "nonmanufacturing_employment": 45.3,
+            "construction_employment": 41.8,
+            "services_employment": 45.9,
+            "property_starts_cumulative_yoy": -20.5,
+            "manufacturing_production": 50
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.118417862993045,
+              "intercept": -0.014529721166442123,
+              "coefficients": {
+                "sector_demand": -0.05039882123596176
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 28
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.35,
+                  "scale": 1.11195,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.119879550117593,
+              "intercept": -0.019015269316422397,
+              "coefficients": {
+                "sector_demand": -0.043913247145838115
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 28
+                },
+                "construction_employment": {
+                  "median": 44.150000000000006,
+                  "scale": 4.744320000000009,
+                  "n": 28
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.145448154634706,
+              "intercept": -0.019116213654925523,
+              "coefficients": {
+                "sector_demand": -0.04973659703237896,
+                "property_starts_cumulative_yoy": 0.0152053189762332
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 28
+                },
+                "construction_employment": {
+                  "median": 44.150000000000006,
+                  "scale": 4.744320000000009,
+                  "n": 28
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 28
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.1,
+                  "scale": 1.9273799999999957,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.151492970586421,
+              "intercept": -0.014632340185166959,
+              "coefficients": {
+                "sector_demand": -0.029099637361127348,
+                "property_starts_cumulative_yoy": 0.01763028018317846,
+                "manufacturing_production": -0.030705150624404712
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 28
+                },
+                "construction_employment": {
+                  "median": 44.150000000000006,
+                  "scale": 4.744320000000009,
+                  "n": 28
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 28
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.1,
+                  "scale": 1.9273799999999957,
+                  "n": 28
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.4826,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-03-01",
+          "forecast_origin": "2026-03-19T16:00:00.000Z",
+          "outcome_available_at": "2026-04-16T02:00:00.000Z",
+          "prior": 5.3,
+          "actual": 5.4,
+          "training_count": 29,
+          "training_first": "2023-03-01",
+          "training_last": "2025-12-01",
+          "input": {
+            "manufacturing_employment": 48.6,
+            "nonmanufacturing_employment": 46,
+            "construction_employment": 42.5,
+            "services_employment": 46.6,
+            "property_starts_cumulative_yoy": -23.1,
+            "manufacturing_production": 49.6
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.3,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.31755638184151,
+              "intercept": -0.010571219530651332,
+              "coefficients": {
+                "sector_demand": -0.04670621960968997
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.2,
+                  "scale": 1.0378200000000042,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.3037543289789,
+              "intercept": -0.017053670901605186,
+              "coefficients": {
+                "sector_demand": -0.041573182015800764
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "construction_employment": {
+                  "median": 43.6,
+                  "scale": 4.151279999999995,
+                  "n": 29
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.305287187863622,
+              "intercept": -0.017150553194461772,
+              "coefficients": {
+                "sector_demand": -0.0461755685648054,
+                "property_starts_cumulative_yoy": 0.013986122703006509
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "construction_employment": {
+                  "median": 43.6,
+                  "scale": 4.151279999999995,
+                  "n": 29
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 29
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23,
+                  "scale": 2.0756399999999977,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.322183129103404,
+              "intercept": -0.014291315040136733,
+              "coefficients": {
+                "sector_demand": -0.027280981840738544,
+                "property_starts_cumulative_yoy": 0.016410803232384853,
+                "manufacturing_production": -0.029170825388699834
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "construction_employment": {
+                  "median": 43.6,
+                  "scale": 4.151279999999995,
+                  "n": 29
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 29
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23,
+                  "scale": 2.0756399999999977,
+                  "n": 29
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.4826,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-04-01",
+          "forecast_origin": "2026-04-19T16:00:00.000Z",
+          "outcome_available_at": "2026-05-18T02:00:00.000Z",
+          "prior": 5.4,
+          "actual": 5.2,
+          "training_count": 30,
+          "training_first": "2023-03-01",
+          "training_last": "2026-03-01",
+          "input": {
+            "manufacturing_employment": 51.6,
+            "nonmanufacturing_employment": 45.2,
+            "construction_employment": 39.1,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -20.3,
+            "manufacturing_production": 51.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.4,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.364608252404221,
+              "intercept": -0.005189544379619149,
+              "coefficients": {
+                "sector_demand": -0.048509268695636446
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 30
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.1,
+                  "scale": 0.9636899999999978,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.388594870813816,
+              "intercept": -0.012527112561423344,
+              "coefficients": {
+                "sector_demand": -0.040637364360757704
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 30
+                },
+                "construction_employment": {
+                  "median": 43.45,
+                  "scale": 4.151279999999995,
+                  "n": 30
+                },
+                "services_employment": {
+                  "median": 46.650000000000006,
+                  "scale": 0.3706500000000105,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.406900995440216,
+              "intercept": -0.012932656916978615,
+              "coefficients": {
+                "sector_demand": -0.04469271560459284,
+                "property_starts_cumulative_yoy": 0.013537269041291732
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 30
+                },
+                "construction_employment": {
+                  "median": 43.45,
+                  "scale": 4.151279999999995,
+                  "n": 30
+                },
+                "services_employment": {
+                  "median": 46.650000000000006,
+                  "scale": 0.3706500000000105,
+                  "n": 30
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.05,
+                  "scale": 2.0015099999999966,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.398310264802261,
+              "intercept": -0.009410932116820574,
+              "coefficients": {
+                "sector_demand": -0.022453870986296292,
+                "property_starts_cumulative_yoy": 0.016774590430970945,
+                "manufacturing_production": -0.034553902290155314
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.9636900000000032,
+                  "n": 30
+                },
+                "construction_employment": {
+                  "median": 43.45,
+                  "scale": 4.151279999999995,
+                  "n": 30
+                },
+                "services_employment": {
+                  "median": 46.650000000000006,
+                  "scale": 0.3706500000000105,
+                  "n": 30
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.05,
+                  "scale": 2.0015099999999966,
+                  "n": 30
+                },
+                "manufacturing_production": {
+                  "median": 50.75,
+                  "scale": 1.408470000000004,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-05-01",
+          "forecast_origin": "2026-05-19T16:00:00.000Z",
+          "outcome_available_at": "2026-06-16T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.1,
+          "training_count": 31,
+          "training_first": "2023-03-01",
+          "training_last": "2026-04-01",
+          "input": {
+            "manufacturing_employment": 50.6,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 39.6,
+            "services_employment": 46.5,
+            "property_starts_cumulative_yoy": -22,
+            "manufacturing_production": 51.5
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.1795819875277225,
+              "intercept": -0.008428244280347219,
+              "coefficients": {
+                "sector_demand": -0.0481673079675439
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 1.0378200000000042,
+                  "n": 31
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46,
+                  "scale": 0.889560000000002,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.183612625106764,
+              "intercept": -0.016340700822625395,
+              "coefficients": {
+                "sector_demand": -0.043595355565279575
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 1.0378200000000042,
+                  "n": 31
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 31
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.44477999999999573,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.188307648692834,
+              "intercept": -0.0166042742694349,
+              "coefficients": {
+                "sector_demand": -0.04711664024866206,
+                "property_starts_cumulative_yoy": 0.01030008742240003
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 1.0378200000000042,
+                  "n": 31
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 31
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.44477999999999573,
+                  "n": 31
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23,
+                  "scale": 2.0756399999999977,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.1733519590835675,
+              "intercept": -0.015444615103138916,
+              "coefficients": {
+                "sector_demand": -0.021656633223581488,
+                "property_starts_cumulative_yoy": 0.013612763496443381,
+                "manufacturing_production": -0.03757032285708291
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 1.0378200000000042,
+                  "n": 31
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 31
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.44477999999999573,
+                  "n": 31
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23,
+                  "scale": 2.0756399999999977,
+                  "n": 31
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.4826,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-06-01",
+          "forecast_origin": "2026-06-19T16:00:00.000Z",
+          "outcome_available_at": "2026-07-15T02:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5,
+          "training_count": 32,
+          "training_first": "2023-03-01",
+          "training_last": "2026-05-01",
+          "input": {
+            "manufacturing_employment": 49.9,
+            "nonmanufacturing_employment": 45.6,
+            "construction_employment": 41.4,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -22.6,
+            "manufacturing_production": 51.2
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.089779802956655,
+              "intercept": -0.00895305983906066,
+              "coefficients": {
+                "sector_demand": -0.04884509809584176
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000084,
+                  "n": 32
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.9,
+                  "scale": 0.9636899999999978,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.087649824725874,
+              "intercept": -0.019659165384435188,
+              "coefficients": {
+                "sector_demand": -0.03969753385681809
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000084,
+                  "n": 32
+                },
+                "construction_employment": {
+                  "median": 43.099999999999994,
+                  "scale": 4.521930000000001,
+                  "n": 32
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.37065,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.089267008682766,
+              "intercept": -0.019678335076914584,
+              "coefficients": {
+                "sector_demand": -0.04233572085946456,
+                "property_starts_cumulative_yoy": 0.008529535841721282
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000084,
+                  "n": 32
+                },
+                "construction_employment": {
+                  "median": 43.099999999999994,
+                  "scale": 4.521930000000001,
+                  "n": 32
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.37065,
+                  "n": 32
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.9,
+                  "scale": 2.2239,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.07637196804576,
+              "intercept": -0.017352398115003387,
+              "coefficients": {
+                "sector_demand": -0.016903203831467026,
+                "property_starts_cumulative_yoy": 0.013105067933547375,
+                "manufacturing_production": -0.03721357556153619
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000084,
+                  "n": 32
+                },
+                "construction_employment": {
+                  "median": 43.099999999999994,
+                  "scale": 4.521930000000001,
+                  "n": 32
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.37065,
+                  "n": 32
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.9,
+                  "scale": 2.2239,
+                  "n": 32
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.3343399999999979,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-07-01",
+          "forecast_origin": "2026-07-19T16:00:00.000Z",
+          "outcome_available_at": "2026-08-17T07:00:00.000Z",
+          "prior": 5,
+          "actual": 5.2,
+          "training_count": 33,
+          "training_first": "2023-03-01",
+          "training_last": "2026-06-01",
+          "input": {
+            "manufacturing_employment": 51.2,
+            "nonmanufacturing_employment": 45.8,
+            "construction_employment": 42.3,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -23.4,
+            "manufacturing_production": 51.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.949228083928242,
+              "intercept": -0.010841767921474364,
+              "coefficients": {
+                "sector_demand": -0.04440032823570803
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 33
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 33
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.964709000807344,
+              "intercept": -0.02379831116981491,
+              "coefficients": {
+                "sector_demand": -0.03501727927209236
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 33
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 33
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.2965200000000042,
+                  "n": 33
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 4.962676971977295,
+              "intercept": -0.023705275629370387,
+              "coefficients": {
+                "sector_demand": -0.03665357152242089,
+                "property_starts_cumulative_yoy": 0.006278445138430466
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 33
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 33
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.2965200000000042,
+                  "n": 33
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.8,
+                  "scale": 2.3721599999999965,
+                  "n": 33
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 4.954911223678579,
+              "intercept": -0.0197255736093678,
+              "coefficients": {
+                "sector_demand": -0.011754778461032447,
+                "property_starts_cumulative_yoy": 0.012612212540332079,
+                "manufacturing_production": -0.03620552871538208
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 33
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 33
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.2965200000000042,
+                  "n": 33
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.8,
+                  "scale": 2.3721599999999965,
+                  "n": 33
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.1860799999999958,
+                  "n": 33
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-08-01",
+          "forecast_origin": "2026-08-19T16:00:00.000Z",
+          "outcome_available_at": "2026-09-15T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.3,
+          "training_count": 34,
+          "training_first": "2023-03-01",
+          "training_last": "2026-07-01",
+          "input": {
+            "manufacturing_employment": 48.5,
+            "nonmanufacturing_employment": 45.4,
+            "construction_employment": 40.9,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -24,
+            "manufacturing_production": 49.9
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.228388884864508,
+              "intercept": -0.007105166080177919,
+              "coefficients": {
+                "sector_demand": -0.04643248229169794
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 34
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 34
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.2159843742292376,
+              "intercept": -0.015850457786625215,
+              "coefficients": {
+                "sector_demand": -0.0386168088654962
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 34
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.225410000000002,
+                  "n": 34
+                },
+                "services_employment": {
+                  "median": 46.55,
+                  "scale": 0.37065,
+                  "n": 34
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.214228970391017,
+              "intercept": -0.015845819403845076,
+              "coefficients": {
+                "sector_demand": -0.040664207267577114,
+                "property_starts_cumulative_yoy": 0.006738300828500042
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 34
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.225410000000002,
+                  "n": 34
+                },
+                "services_employment": {
+                  "median": 46.55,
+                  "scale": 0.37065,
+                  "n": 34
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.9,
+                  "scale": 2.1497700000000015,
+                  "n": 34
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.219435387609235,
+              "intercept": -0.014121590487455163,
+              "coefficients": {
+                "sector_demand": -0.014721558790787322,
+                "property_starts_cumulative_yoy": 0.011609406629545753,
+                "manufacturing_production": -0.03416058567586919
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.11195,
+                  "n": 34
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.225410000000002,
+                  "n": 34
+                },
+                "services_employment": {
+                  "median": 46.55,
+                  "scale": 0.37065,
+                  "n": 34
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.9,
+                  "scale": 2.1497700000000015,
+                  "n": 34
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.1860799999999905,
+                  "n": 34
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-09-01",
+          "forecast_origin": "2026-09-19T16:00:00.000Z",
+          "outcome_available_at": "2026-10-19T02:00:00.000Z",
+          "prior": 5.3,
+          "actual": 5.2,
+          "training_count": 35,
+          "training_first": "2023-03-01",
+          "training_last": "2026-08-01",
+          "input": {
+            "manufacturing_employment": 50.6,
+            "nonmanufacturing_employment": 45.4,
+            "construction_employment": 43,
+            "services_employment": 45.8,
+            "property_starts_cumulative_yoy": -24.8,
+            "manufacturing_production": 50.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.3,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.286051286504497,
+              "intercept": -0.0017811780522569431,
+              "coefficients": {
+                "sector_demand": -0.04735391862641293
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 35
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 35
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.2993271414047145,
+              "intercept": -0.008467462700955813,
+              "coefficients": {
+                "sector_demand": -0.043465411520310936
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 35
+                },
+                "construction_employment": {
+                  "median": 42.7,
+                  "scale": 4.151280000000006,
+                  "n": 35
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 35
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.2921371087603095,
+              "intercept": -0.008487660955781236,
+              "coefficients": {
+                "sector_demand": -0.046149855036845815,
+                "property_starts_cumulative_yoy": 0.008192684904207905
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 35
+                },
+                "construction_employment": {
+                  "median": 42.7,
+                  "scale": 4.151280000000006,
+                  "n": 35
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 35
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23,
+                  "scale": 1.927380000000001,
+                  "n": 35
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.294990044455701,
+              "intercept": -0.008537632709922603,
+              "coefficients": {
+                "sector_demand": -0.019406275287764577,
+                "property_starts_cumulative_yoy": 0.011571470959925338,
+                "manufacturing_production": -0.03218513188375002
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 35
+                },
+                "construction_employment": {
+                  "median": 42.7,
+                  "scale": 4.151280000000006,
+                  "n": 35
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 35
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23,
+                  "scale": 1.927380000000001,
+                  "n": 35
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.1860799999999958,
+                  "n": 35
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-10-01",
+          "forecast_origin": "2026-10-19T16:00:00.000Z",
+          "outcome_available_at": "2026-11-16T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.1,
+          "training_count": 36,
+          "training_first": "2023-03-01",
+          "training_last": "2026-09-01",
+          "input": {
+            "manufacturing_employment": 50.5,
+            "nonmanufacturing_employment": 45.9,
+            "construction_employment": 44.3,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -24.9,
+            "manufacturing_production": 51.7
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.174339427665205,
+              "intercept": -0.00715484521237196,
+              "coefficients": {
+                "sector_demand": -0.04643115405365367
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.186080000000001,
+                  "n": 36
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8154299999999958,
+                  "n": 36
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.180900499397284,
+              "intercept": -0.013979185205506253,
+              "coefficients": {
+                "sector_demand": -0.04251172580426622
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.186080000000001,
+                  "n": 36
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.151280000000001,
+                  "n": 36
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 36
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.171754834295933,
+              "intercept": -0.014119137973987457,
+              "coefficients": {
+                "sector_demand": -0.04562849177941025,
+                "property_starts_cumulative_yoy": 0.008991294528437173
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.186080000000001,
+                  "n": 36
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.151280000000001,
+                  "n": 36
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 36
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.05,
+                  "scale": 1.9273799999999983,
+                  "n": 36
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.148527529012335,
+              "intercept": -0.012895826080790197,
+              "coefficients": {
+                "sector_demand": -0.019147494593178067,
+                "property_starts_cumulative_yoy": 0.012149413922037392,
+                "manufacturing_production": -0.030404156412087324
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 1.186080000000001,
+                  "n": 36
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.151280000000001,
+                  "n": 36
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 36
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.05,
+                  "scale": 1.9273799999999983,
+                  "n": 36
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.11195,
+                  "n": 36
+                }
+              },
+              "dropped": []
+            }
+          }
+        }
+      ],
+      "eligible_cases": 37,
+      "exclusions": {
+        "target_unavailable": 3,
+        "prior_unavailable": 1,
+        "incomplete_features": 4
+      },
+      "metrics": [
+        {
+          "n": 19,
+          "first": "2024-11-01",
+          "last": "2026-10-01",
+          "mae": 0.10000000000000002,
+          "rmse": 0.119207912135854,
+          "direction_accuracy": 0.21052631578947367,
+          "correlation": 0.5272743858924673,
+          "model": "M0",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0,
+          "mae_improvement_vs_pmi": -0.039705319791481175,
+          "paired_mae_vs_pmi": {
+            "difference": 0.0038189012824753356,
+            "interval": [
+              -0.008514490821137779,
+              0.01615229338608845
+            ]
+          },
+          "halves": [
+            {
+              "n": 10,
+              "first": "2024-11-01",
+              "last": "2025-11-01",
+              "mae": 0.08999999999999994,
+              "rmse": 0.11401754250991378,
+              "direction_accuracy": 0.3,
+              "correlation": 0.5613798443568248
+            },
+            {
+              "n": 9,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.11111111111111122,
+              "rmse": 0.12472191289246481,
+              "direction_accuracy": 0.1111111111111111,
+              "correlation": 0.42460388780422365
+            }
+          ]
+        },
+        {
+          "n": 19,
+          "first": "2024-11-01",
+          "last": "2026-10-01",
+          "mae": 0.09618109871752469,
+          "rmse": 0.11510651170409404,
+          "direction_accuracy": 0.5263157894736842,
+          "correlation": 0.5555883438527485,
+          "model": "M1",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0.03818901282475329,
+          "mae_improvement_vs_pmi": 0,
+          "paired_mae_vs_pmi": {
+            "difference": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "halves": [
+            {
+              "n": 10,
+              "first": "2024-11-01",
+              "last": "2025-11-01",
+              "mae": 0.09098356062158822,
+              "rmse": 0.1105301050444753,
+              "direction_accuracy": 0.3,
+              "correlation": 0.5684984538301647
+            },
+            {
+              "n": 9,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.10195614104634299,
+              "rmse": 0.1199868652467069,
+              "direction_accuracy": 0.7777777777777778,
+              "correlation": 0.4805588105058655
+            }
+          ]
+        },
+        {
+          "n": 19,
+          "first": "2024-11-01",
+          "last": "2026-10-01",
+          "mae": 0.09949566161197182,
+          "rmse": 0.11699560728962963,
+          "direction_accuracy": 0.5263157894736842,
+          "correlation": 0.5467185804055974,
+          "model": "M2",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0.005043383880282026,
+          "mae_improvement_vs_pmi": -0.034461686741401376,
+          "paired_mae_vs_pmi": {
+            "difference": 0.0033145628944471397,
+            "interval": [
+              -0.0009235395507919998,
+              0.007552665339686279
+            ]
+          },
+          "halves": [
+            {
+              "n": 10,
+              "first": "2024-11-01",
+              "last": "2025-11-01",
+              "mae": 0.09149007630768988,
+              "rmse": 0.11015453010523055,
+              "direction_accuracy": 0.3,
+              "correlation": 0.5802815182307933
+            },
+            {
+              "n": 9,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.1083907563945073,
+              "rmse": 0.12415548734876052,
+              "direction_accuracy": 0.7777777777777778,
+              "correlation": 0.44794850219614163
+            }
+          ]
+        },
+        {
+          "n": 19,
+          "first": "2024-11-01",
+          "last": "2026-10-01",
+          "mae": 0.09845455236904097,
+          "rmse": 0.11633417476430694,
+          "direction_accuracy": 0.5263157894736842,
+          "correlation": 0.566659264190887,
+          "model": "M3",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0.015454476309590515,
+          "mae_improvement_vs_pmi": -0.023637218557808426,
+          "paired_mae_vs_pmi": {
+            "difference": 0.0022734536515162866,
+            "interval": [
+              -0.01224392237792654,
+              0.016790829680959112
+            ]
+          },
+          "halves": [
+            {
+              "n": 10,
+              "first": "2024-11-01",
+              "last": "2025-11-01",
+              "mae": 0.08590138747369477,
+              "rmse": 0.1049815978277613,
+              "direction_accuracy": 0.4,
+              "correlation": 0.658138489537834
+            },
+            {
+              "n": 9,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.11240251336387007,
+              "rmse": 0.12777054317062797,
+              "direction_accuracy": 0.6666666666666666,
+              "correlation": 0.428660198412228
+            }
+          ]
+        },
+        {
+          "n": 19,
+          "first": "2024-11-01",
+          "last": "2026-10-01",
+          "mae": 0.09737175150554762,
+          "rmse": 0.1161425958922186,
+          "direction_accuracy": 0.5789473684210527,
+          "correlation": 0.587799340816912,
+          "model": "M4",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0.0262824849445239,
+          "mae_improvement_vs_pmi": -0.012379280377320168,
+          "paired_mae_vs_pmi": {
+            "difference": 0.0011906527880229476,
+            "interval": [
+              -0.013847566562146772,
+              0.016228872138192667
+            ]
+          },
+          "halves": [
+            {
+              "n": 10,
+              "first": "2024-11-01",
+              "last": "2025-11-01",
+              "mae": 0.09035482830105765,
+              "rmse": 0.10913689312897876,
+              "direction_accuracy": 0.4,
+              "correlation": 0.6456492782126776
+            },
+            {
+              "n": 9,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.10516833284386982,
+              "rmse": 0.12346134555336176,
+              "direction_accuracy": 0.7777777777777778,
+              "correlation": 0.48340537790708077
+            }
+          ]
+        }
+      ]
+    },
+    "next_period": {
+      "folds": [
+        {
+          "month": "2025-04-01",
+          "forecast_origin": "2025-03-31T16:00:00.000Z",
+          "outcome_available_at": "2025-05-19T02:00:00.000Z",
+          "prior": 5.4,
+          "actual": 5.1,
+          "training_count": 18,
+          "training_first": "2023-04-01",
+          "training_last": "2024-12-01",
+          "input": {
+            "manufacturing_employment": 51.8,
+            "nonmanufacturing_employment": 45.8,
+            "construction_employment": 41.4,
+            "services_employment": 46.5,
+            "property_starts_cumulative_yoy": -29.6,
+            "manufacturing_production": 52.6
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.4,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.274179460802309,
+              "intercept": -0.03964240038954753,
+              "coefficients": {
+                "sector_demand": -0.11020721784192178
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.6,
+                  "scale": 1.0378200000000042,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.326124425439158,
+              "intercept": -0.0442850625519164,
+              "coefficients": {
+                "sector_demand": -0.09664554694398193
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 45.45,
+                  "scale": 3.928890000000003,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.5189100000000073,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.282528364898581,
+              "intercept": -0.04316450727334023,
+              "coefficients": {
+                "sector_demand": -0.10243857473075703,
+                "property_starts_cumulative_yoy": 0.010611198457608592
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 45.45,
+                  "scale": 3.928890000000003,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.5189100000000073,
+                  "n": 18
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.556730000000001,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.221489511030886,
+              "intercept": -0.027500860148399774,
+              "coefficients": {
+                "sector_demand": -0.049905107434264184,
+                "property_starts_cumulative_yoy": 0.005866238436008895,
+                "manufacturing_production": -0.08538979894460794
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 45.45,
+                  "scale": 3.928890000000003,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.5189100000000073,
+                  "n": 18
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.556730000000001,
+                  "n": 18
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.3343399999999925,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-05-01",
+          "forecast_origin": "2025-04-30T16:00:00.000Z",
+          "outcome_available_at": "2025-06-16T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5,
+          "training_count": 18,
+          "training_first": "2023-04-01",
+          "training_last": "2024-12-01",
+          "input": {
+            "manufacturing_employment": 49.2,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 37.8,
+            "services_employment": 46.8,
+            "property_starts_cumulative_yoy": -24.4,
+            "manufacturing_production": 49.8
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.238775621653881,
+              "intercept": -0.03964240038954753,
+              "coefficients": {
+                "sector_demand": -0.11020721784192178
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.6,
+                  "scale": 1.0378200000000042,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.223933502131271,
+              "intercept": -0.0442850625519164,
+              "coefficients": {
+                "sector_demand": -0.09664554694398193
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 45.45,
+                  "scale": 3.928890000000003,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.5189100000000073,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.221645172092459,
+              "intercept": -0.04316450727334023,
+              "coefficients": {
+                "sector_demand": -0.10243857473075703,
+                "property_starts_cumulative_yoy": 0.010611198457608592
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 45.45,
+                  "scale": 3.928890000000003,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.5189100000000073,
+                  "n": 18
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.556730000000001,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.270773930363044,
+              "intercept": -0.027500860148399774,
+              "coefficients": {
+                "sector_demand": -0.049905107434264184,
+                "property_starts_cumulative_yoy": 0.005866238436008895,
+                "manufacturing_production": -0.08538979894460794
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 18
+                },
+                "construction_employment": {
+                  "median": 45.45,
+                  "scale": 3.928890000000003,
+                  "n": 18
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.5189100000000073,
+                  "n": 18
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.556730000000001,
+                  "n": 18
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.3343399999999925,
+                  "n": 18
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-06-01",
+          "forecast_origin": "2025-05-31T16:00:00.000Z",
+          "outcome_available_at": "2025-07-15T02:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5,
+          "training_count": 19,
+          "training_first": "2023-04-01",
+          "training_last": "2025-04-01",
+          "input": {
+            "manufacturing_employment": 49.8,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 39.5,
+            "services_employment": 46.6,
+            "property_starts_cumulative_yoy": -23.8,
+            "manufacturing_production": 50.7
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.09654723255313,
+              "intercept": -0.04979717556608486,
+              "coefficients": {
+                "sector_demand": -0.1261564685489422
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 19
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.6,
+                  "scale": 1.1860800000000062,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.087171717904427,
+              "intercept": -0.05812505546623173,
+              "coefficients": {
+                "sector_demand": -0.08655668495413996
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 19
+                },
+                "construction_employment": {
+                  "median": 45.2,
+                  "scale": 3.7064999999999997,
+                  "n": 19
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.0934538378105465,
+              "intercept": -0.052125831125782916,
+              "coefficients": {
+                "sector_demand": -0.09805221461829787,
+                "property_starts_cumulative_yoy": 0.021249125759811402
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 19
+                },
+                "construction_employment": {
+                  "median": 45.2,
+                  "scale": 3.7064999999999997,
+                  "n": 19
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 19
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.4,
+                  "scale": 1.4826,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.099698563899699,
+              "intercept": -0.03482849712349343,
+              "coefficients": {
+                "sector_demand": -0.045763489582168436,
+                "property_starts_cumulative_yoy": 0.012021661052345992,
+                "manufacturing_production": -0.10245914207467423
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 1.0378200000000042,
+                  "n": 19
+                },
+                "construction_employment": {
+                  "median": 45.2,
+                  "scale": 3.7064999999999997,
+                  "n": 19
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 19
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.4,
+                  "scale": 1.4826,
+                  "n": 19
+                },
+                "manufacturing_production": {
+                  "median": 50.9,
+                  "scale": 1.4826,
+                  "n": 19
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-07-01",
+          "forecast_origin": "2025-06-30T16:00:00.000Z",
+          "outcome_available_at": "2025-08-15T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5.2,
+          "training_count": 20,
+          "training_first": "2023-04-01",
+          "training_last": "2025-05-01",
+          "input": {
+            "manufacturing_employment": 50.2,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 39.9,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -22.8,
+            "manufacturing_production": 51
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.95638315273473,
+              "intercept": -0.05812419968463506,
+              "coefficients": {
+                "sector_demand": -0.10754300348476371
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.55,
+                  "scale": 1.11195,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.96883101580734,
+              "intercept": -0.06476698949523987,
+              "coefficients": {
+                "sector_demand": -0.08137669741747533
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "construction_employment": {
+                  "median": 44.95,
+                  "scale": 4.07715,
+                  "n": 20
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 4.988495330238843,
+              "intercept": -0.0602235775726892,
+              "coefficients": {
+                "sector_demand": -0.09137429707111853,
+                "property_starts_cumulative_yoy": 0.02064477583920907
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "construction_employment": {
+                  "median": 44.95,
+                  "scale": 4.07715,
+                  "n": 20
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 20
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.549999999999997,
+                  "scale": 1.4084699999999988,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 4.968927021294183,
+              "intercept": -0.04832546157338556,
+              "coefficients": {
+                "sector_demand": -0.04534638301701254,
+                "property_starts_cumulative_yoy": 0.013203054116032767,
+                "manufacturing_production": -0.08821690929830402
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.9636900000000032,
+                  "n": 20
+                },
+                "construction_employment": {
+                  "median": 44.95,
+                  "scale": 4.07715,
+                  "n": 20
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 20
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.549999999999997,
+                  "scale": 1.4084699999999988,
+                  "n": 20
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.5567299999999957,
+                  "n": 20
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-08-01",
+          "forecast_origin": "2025-07-31T16:00:00.000Z",
+          "outcome_available_at": "2025-09-15T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5.3,
+          "training_count": 21,
+          "training_first": "2023-04-01",
+          "training_last": "2025-06-01",
+          "input": {
+            "manufacturing_employment": 49.4,
+            "nonmanufacturing_employment": 45.6,
+            "construction_employment": 40.9,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -20,
+            "manufacturing_production": 50.5
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.991336681636033,
+              "intercept": -0.06241455499135115,
+              "coefficients": {
+                "sector_demand": -0.09844254422935042
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 21
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.5,
+                  "scale": 1.0378200000000042,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 4.981609707247267,
+              "intercept": -0.06548836948634879,
+              "coefficients": {
+                "sector_demand": -0.08430406399951798
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 21
+                },
+                "construction_employment": {
+                  "median": 44.7,
+                  "scale": 4.892580000000006,
+                  "n": 21
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.042262685925427,
+              "intercept": -0.0632961448960909,
+              "coefficients": {
+                "sector_demand": -0.09219969519383261,
+                "property_starts_cumulative_yoy": 0.019492077958545444
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 21
+                },
+                "construction_employment": {
+                  "median": 44.7,
+                  "scale": 4.892580000000006,
+                  "n": 21
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 21
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.7,
+                  "scale": 1.3343400000000032,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.027386799221185,
+              "intercept": -0.050136163870105034,
+              "coefficients": {
+                "sector_demand": -0.04667033572710378,
+                "property_starts_cumulative_yoy": 0.012708440768166329,
+                "manufacturing_production": -0.08011165119762445
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 21
+                },
+                "construction_employment": {
+                  "median": 44.7,
+                  "scale": 4.892580000000006,
+                  "n": 21
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 21
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.7,
+                  "scale": 1.3343400000000032,
+                  "n": 21
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.4826,
+                  "n": 21
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-09-01",
+          "forecast_origin": "2025-08-31T16:00:00.000Z",
+          "outcome_available_at": "2025-10-20T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.2,
+          "training_count": 22,
+          "training_first": "2023-04-01",
+          "training_last": "2025-07-01",
+          "input": {
+            "manufacturing_employment": 49.5,
+            "nonmanufacturing_employment": 45.6,
+            "construction_employment": 43.6,
+            "services_employment": 45.9,
+            "property_starts_cumulative_yoy": -19.4,
+            "manufacturing_production": 50.8
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.200317264099629,
+              "intercept": -0.04693456950436291,
+              "coefficients": {
+                "sector_demand": -0.09522116106969995
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 22
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.35,
+                  "scale": 1.0378200000000042,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.2124385374396125,
+              "intercept": -0.05088276837155581,
+              "coefficients": {
+                "sector_demand": -0.08813111329334744
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 22
+                },
+                "construction_employment": {
+                  "median": 44,
+                  "scale": 4.596060000000002,
+                  "n": 22
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.2798236731288855,
+              "intercept": -0.04775340660464135,
+              "coefficients": {
+                "sector_demand": -0.0946841997525118,
+                "property_starts_cumulative_yoy": 0.02020982995225827
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 22
+                },
+                "construction_employment": {
+                  "median": 44,
+                  "scale": 4.596060000000002,
+                  "n": 22
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 22
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.549999999999997,
+                  "scale": 1.4084699999999937,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.245920808298317,
+              "intercept": -0.039067835558190156,
+              "coefficients": {
+                "sector_demand": -0.054184915470599705,
+                "property_starts_cumulative_yoy": 0.014791318653948286,
+                "manufacturing_production": -0.06605814375994241
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 22
+                },
+                "construction_employment": {
+                  "median": 44,
+                  "scale": 4.596060000000002,
+                  "n": 22
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 22
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.549999999999997,
+                  "scale": 1.4084699999999937,
+                  "n": 22
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.3343399999999925,
+                  "n": 22
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-10-01",
+          "forecast_origin": "2025-09-30T16:00:00.000Z",
+          "outcome_available_at": "2025-11-14T02:00:00.000Z",
+          "prior": 5.3,
+          "actual": 5.1,
+          "training_count": 23,
+          "training_first": "2023-04-01",
+          "training_last": "2025-08-01",
+          "input": {
+            "manufacturing_employment": 49.7,
+            "nonmanufacturing_employment": 45,
+            "construction_employment": 39.7,
+            "services_employment": 45.9,
+            "property_starts_cumulative_yoy": -19.5,
+            "manufacturing_production": 51.9
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.3,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.338820485404535,
+              "intercept": -0.019548321180141902,
+              "coefficients": {
+                "sector_demand": -0.11183319664561586
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 23
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46.2,
+                  "scale": 1.0378199999999935,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.351575769267567,
+              "intercept": -0.029330985039116922,
+              "coefficients": {
+                "sector_demand": -0.09725866535277644
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 23
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 23
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.442370812938307,
+              "intercept": -0.024914941045396488,
+              "coefficients": {
+                "sector_demand": -0.10783548694999204,
+                "property_starts_cumulative_yoy": 0.02949250212425202
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 23
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 23
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 23
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.4,
+                  "scale": 1.4826,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.341618563421397,
+              "intercept": -0.015882008610217248,
+              "coefficients": {
+                "sector_demand": -0.06491960333625969,
+                "property_starts_cumulative_yoy": 0.023390980303602153,
+                "manufacturing_production": -0.05475399100904896
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 23
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 23
+                },
+                "services_employment": {
+                  "median": 46.7,
+                  "scale": 0.4447800000000063,
+                  "n": 23
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.4,
+                  "scale": 1.4826,
+                  "n": 23
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.0378199999999935,
+                  "n": 23
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-11-01",
+          "forecast_origin": "2025-10-31T16:00:00.000Z",
+          "outcome_available_at": "2025-12-15T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.1,
+          "training_count": 24,
+          "training_first": "2023-04-01",
+          "training_last": "2025-09-01",
+          "input": {
+            "manufacturing_employment": 48.8,
+            "nonmanufacturing_employment": 45.2,
+            "construction_employment": 39.9,
+            "services_employment": 46.1,
+            "property_starts_cumulative_yoy": -18.9,
+            "manufacturing_production": 49.7
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.283960996271535,
+              "intercept": -0.006570052527482398,
+              "coefficients": {
+                "sector_demand": -0.09953492106361818
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 24
+                },
+                "nonmanufacturing_employment": {
+                  "median": 46,
+                  "scale": 0.889560000000002,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.266900176828991,
+              "intercept": -0.027224613076405075,
+              "coefficients": {
+                "sector_demand": -0.08664986095470578
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 24
+                },
+                "construction_employment": {
+                  "median": 43.45,
+                  "scale": 4.151279999999995,
+                  "n": 24
+                },
+                "services_employment": {
+                  "median": 46.650000000000006,
+                  "scale": 0.3706500000000105,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.346468598554034,
+              "intercept": -0.025653714141320817,
+              "coefficients": {
+                "sector_demand": -0.09332731903054893,
+                "property_starts_cumulative_yoy": 0.02622127387765443
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 24
+                },
+                "construction_employment": {
+                  "median": 43.45,
+                  "scale": 4.151279999999995,
+                  "n": 24
+                },
+                "services_employment": {
+                  "median": 46.650000000000006,
+                  "scale": 0.3706500000000105,
+                  "n": 24
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.6308599999999993,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.36256914172496,
+              "intercept": -0.015595203352183284,
+              "coefficients": {
+                "sector_demand": -0.05288916380959161,
+                "property_starts_cumulative_yoy": 0.02103470108460794,
+                "manufacturing_production": -0.05603577308508865
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 24
+                },
+                "construction_employment": {
+                  "median": 43.45,
+                  "scale": 4.151279999999995,
+                  "n": 24
+                },
+                "services_employment": {
+                  "median": 46.650000000000006,
+                  "scale": 0.3706500000000105,
+                  "n": 24
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.299999999999997,
+                  "scale": 1.6308599999999993,
+                  "n": 24
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 0.9636899999999926,
+                  "n": 24
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2025-12-01",
+          "forecast_origin": "2025-11-30T16:00:00.000Z",
+          "outcome_available_at": "2026-01-19T02:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5.1,
+          "training_count": 25,
+          "training_first": "2023-04-01",
+          "training_last": "2025-10-01",
+          "input": {
+            "manufacturing_employment": 49.2,
+            "nonmanufacturing_employment": 45.3,
+            "construction_employment": 41.8,
+            "services_employment": 45.9,
+            "property_starts_cumulative_yoy": -19.8,
+            "manufacturing_production": 50
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.143859460374676,
+              "intercept": -0.010514183876260491,
+              "coefficients": {
+                "sector_demand": -0.09405009246084609
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.5930399999999979,
+                  "n": 25
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 1.0378200000000042,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.147711719497078,
+              "intercept": -0.036272717000659066,
+              "coefficients": {
+                "sector_demand": -0.07470919533092808
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.5930399999999979,
+                  "n": 25
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 25
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.2965200000000042,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.173043509050978,
+              "intercept": -0.03694861248509465,
+              "coefficients": {
+                "sector_demand": -0.07529948729250592,
+                "property_starts_cumulative_yoy": 0.013261826083013798
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.5930399999999979,
+                  "n": 25
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 25
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.2965200000000042,
+                  "n": 25
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.197975869567665,
+              "intercept": -0.020814978753372952,
+              "coefficients": {
+                "sector_demand": -0.03227254597347704,
+                "property_starts_cumulative_yoy": 0.013194134419086356,
+                "manufacturing_production": -0.0743298099637037
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.5930399999999979,
+                  "n": 25
+                },
+                "construction_employment": {
+                  "median": 43.3,
+                  "scale": 4.4478,
+                  "n": 25
+                },
+                "services_employment": {
+                  "median": 46.6,
+                  "scale": 0.2965200000000042,
+                  "n": 25
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 25
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.0378199999999935,
+                  "n": 25
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-04-01",
+          "forecast_origin": "2026-03-31T16:00:00.000Z",
+          "outcome_available_at": "2026-05-18T02:00:00.000Z",
+          "prior": 5.3,
+          "actual": 5.2,
+          "training_count": 27,
+          "training_first": "2023-04-01",
+          "training_last": "2025-12-01",
+          "input": {
+            "manufacturing_employment": 51.6,
+            "nonmanufacturing_employment": 45.2,
+            "construction_employment": 39.1,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -23.1,
+            "manufacturing_production": 51.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.3,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.193042094073469,
+              "intercept": -0.01635700738294075,
+              "coefficients": {
+                "sector_demand": -0.0839530576129541
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.235403023134433,
+              "intercept": -0.030795041586159602,
+              "coefficients": {
+                "sector_demand": -0.0795617369404498
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.233648279476574,
+              "intercept": -0.033172192115964116,
+              "coefficients": {
+                "sector_demand": -0.07951182522200673,
+                "property_starts_cumulative_yoy": 0.010696101392485243
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 27
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.219364302638223,
+              "intercept": -0.029587011341621942,
+              "coefficients": {
+                "sector_demand": -0.03218567954097981,
+                "property_starts_cumulative_yoy": 0.007602371371097561,
+                "manufacturing_production": -0.07472671231153481
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 27
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 27
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.1860799999999958,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-05-01",
+          "forecast_origin": "2026-04-30T16:00:00.000Z",
+          "outcome_available_at": "2026-06-16T02:00:00.000Z",
+          "prior": 5.4,
+          "actual": 5.1,
+          "training_count": 27,
+          "training_first": "2023-04-01",
+          "training_last": "2025-12-01",
+          "input": {
+            "manufacturing_employment": 50.6,
+            "nonmanufacturing_employment": 45.5,
+            "construction_employment": 39.6,
+            "services_employment": 46.5,
+            "property_starts_cumulative_yoy": -20.3,
+            "manufacturing_production": 51.5
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.4,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.335511265265778,
+              "intercept": -0.01635700738294075,
+              "coefficients": {
+                "sector_demand": -0.0839530576129541
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.350206790410086,
+              "intercept": -0.030795041586159602,
+              "coefficients": {
+                "sector_demand": -0.0795617369404498
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.365276410144838,
+              "intercept": -0.033172192115964116,
+              "coefficients": {
+                "sector_demand": -0.07951182522200673,
+                "property_starts_cumulative_yoy": 0.010696101392485243
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 27
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.331017368632325,
+              "intercept": -0.029587011341621942,
+              "coefficients": {
+                "sector_demand": -0.03218567954097981,
+                "property_starts_cumulative_yoy": 0.007602371371097561,
+                "manufacturing_production": -0.07472671231153481
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.5,
+                  "scale": 0.7413,
+                  "n": 27
+                },
+                "construction_employment": {
+                  "median": 42.9,
+                  "scale": 4.299539999999998,
+                  "n": 27
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 27
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.2,
+                  "scale": 1.779119999999999,
+                  "n": 27
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.1860799999999958,
+                  "n": 27
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-06-01",
+          "forecast_origin": "2026-05-31T16:00:00.000Z",
+          "outcome_available_at": "2026-07-15T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5,
+          "training_count": 28,
+          "training_first": "2023-04-01",
+          "training_last": "2026-04-01",
+          "input": {
+            "manufacturing_employment": 49.9,
+            "nonmanufacturing_employment": 45.6,
+            "construction_employment": 41.4,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -22,
+            "manufacturing_production": 51.2
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.171356159052872,
+              "intercept": -0.019971967905308773,
+              "coefficients": {
+                "sector_demand": -0.08485566521388968
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 28
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.1687797845755314,
+              "intercept": -0.034405171587106646,
+              "coefficients": {
+                "sector_demand": -0.0788192322983305
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 28
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.299539999999998,
+                  "n": 28
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.174289394455495,
+              "intercept": -0.03638674563607583,
+              "coefficients": {
+                "sector_demand": -0.07962524566478693,
+                "property_starts_cumulative_yoy": 0.012019719004616902
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 28
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.299539999999998,
+                  "n": 28
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 28
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.15,
+                  "scale": 1.8532499999999998,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.1497414505392225,
+              "intercept": -0.03074530628893451,
+              "coefficients": {
+                "sector_demand": -0.03144891869728842,
+                "property_starts_cumulative_yoy": 0.008154876198606265,
+                "manufacturing_production": -0.07184420158596586
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.55,
+                  "scale": 0.815430000000001,
+                  "n": 28
+                },
+                "construction_employment": {
+                  "median": 42.8,
+                  "scale": 4.299539999999998,
+                  "n": 28
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 28
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.15,
+                  "scale": 1.8532499999999998,
+                  "n": 28
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.1119499999999947,
+                  "n": 28
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-07-01",
+          "forecast_origin": "2026-06-30T16:00:00.000Z",
+          "outcome_available_at": "2026-08-17T07:00:00.000Z",
+          "prior": 5.1,
+          "actual": 5.2,
+          "training_count": 29,
+          "training_first": "2023-04-01",
+          "training_last": "2026-05-01",
+          "input": {
+            "manufacturing_employment": 51.2,
+            "nonmanufacturing_employment": 45.8,
+            "construction_employment": 42.3,
+            "services_employment": 46.4,
+            "property_starts_cumulative_yoy": -22.6,
+            "manufacturing_production": 51.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.1,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 4.989880384374883,
+              "intercept": -0.031537304308020896,
+              "coefficients": {
+                "sector_demand": -0.08737960106904503
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.016522769003224,
+              "intercept": -0.04572838752773304,
+              "coefficients": {
+                "sector_demand": -0.07664968316551693
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "construction_employment": {
+                  "median": 42.7,
+                  "scale": 4.151280000000006,
+                  "n": 29
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.016802281481135,
+              "intercept": -0.047181046948449455,
+              "coefficients": {
+                "sector_demand": -0.07748928272505616,
+                "property_starts_cumulative_yoy": 0.008271013413363584
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "construction_employment": {
+                  "median": 42.7,
+                  "scale": 4.151280000000006,
+                  "n": 29
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 29
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.1,
+                  "scale": 1.9273799999999957,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.007780923425327,
+              "intercept": -0.03813605777184037,
+              "coefficients": {
+                "sector_demand": -0.02475015618619389,
+                "property_starts_cumulative_yoy": 0.004465136872458498,
+                "manufacturing_production": -0.07446751830058185
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.6,
+                  "scale": 0.889560000000002,
+                  "n": 29
+                },
+                "construction_employment": {
+                  "median": 42.7,
+                  "scale": 4.151280000000006,
+                  "n": 29
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 29
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -23.1,
+                  "scale": 1.9273799999999957,
+                  "n": 29
+                },
+                "manufacturing_production": {
+                  "median": 50.8,
+                  "scale": 1.0378200000000042,
+                  "n": 29
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-08-01",
+          "forecast_origin": "2026-07-31T16:00:00.000Z",
+          "outcome_available_at": "2026-09-15T02:00:00.000Z",
+          "prior": 5,
+          "actual": 5.3,
+          "training_count": 30,
+          "training_first": "2023-04-01",
+          "training_last": "2026-06-01",
+          "input": {
+            "manufacturing_employment": 48.5,
+            "nonmanufacturing_employment": 45.4,
+            "construction_employment": 40.9,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -23.4,
+            "manufacturing_production": 49.9
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.036768802613595,
+              "intercept": -0.0347618615294145,
+              "coefficients": {
+                "sector_demand": -0.07313887079891392
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.7413,
+                  "n": 30
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.7,
+                  "scale": 0.7413,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.0139790050333595,
+              "intercept": -0.04868509237853563,
+              "coefficients": {
+                "sector_demand": -0.07258264908037135
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.7413,
+                  "n": 30
+                },
+                "construction_employment": {
+                  "median": 42.25,
+                  "scale": 3.7064999999999997,
+                  "n": 30
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.012613593550045,
+              "intercept": -0.04935731647391197,
+              "coefficients": {
+                "sector_demand": -0.07330781524200228,
+                "property_starts_cumulative_yoy": 0.006302448548792015
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.7413,
+                  "n": 30
+                },
+                "construction_employment": {
+                  "median": 42.25,
+                  "scale": 3.7064999999999997,
+                  "n": 30
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 30
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.950000000000003,
+                  "scale": 2.1497699999999935,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.041141584515384,
+              "intercept": -0.04554034207457991,
+              "coefficients": {
+                "sector_demand": -0.02141435926121913,
+                "property_starts_cumulative_yoy": 0.003618986321753258,
+                "manufacturing_production": -0.07532543656398684
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.7413,
+                  "n": 30
+                },
+                "construction_employment": {
+                  "median": 42.25,
+                  "scale": 3.7064999999999997,
+                  "n": 30
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 30
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.950000000000003,
+                  "scale": 2.1497699999999935,
+                  "n": 30
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.0378199999999989,
+                  "n": 30
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-09-01",
+          "forecast_origin": "2026-08-31T16:00:00.000Z",
+          "outcome_available_at": "2026-10-19T02:00:00.000Z",
+          "prior": 5.2,
+          "actual": 5.2,
+          "training_count": 31,
+          "training_first": "2023-04-01",
+          "training_last": "2026-07-01",
+          "input": {
+            "manufacturing_employment": 50.6,
+            "nonmanufacturing_employment": 45.4,
+            "construction_employment": 43,
+            "services_employment": 45.8,
+            "property_starts_cumulative_yoy": -24,
+            "manufacturing_production": 50.4
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.2,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.134404676880024,
+              "intercept": -0.03597718682537756,
+              "coefficients": {
+                "sector_demand": -0.0774914980065402
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 31
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.8,
+                  "scale": 0.8895599999999915,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.158765522865913,
+              "intercept": -0.04502600459202907,
+              "coefficients": {
+                "sector_demand": -0.06978188618247158
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 31
+                },
+                "construction_employment": {
+                  "median": 42.3,
+                  "scale": 3.558240000000008,
+                  "n": 31
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.155589071980534,
+              "intercept": -0.04521802781616906,
+              "coefficients": {
+                "sector_demand": -0.07078835198808985,
+                "property_starts_cumulative_yoy": 0.006007718483561554
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 31
+                },
+                "construction_employment": {
+                  "median": 42.3,
+                  "scale": 3.558240000000008,
+                  "n": 31
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 31
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.8,
+                  "scale": 2.3721599999999965,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.191793816092434,
+              "intercept": -0.04367366079749517,
+              "coefficients": {
+                "sector_demand": -0.01960299318398686,
+                "property_starts_cumulative_yoy": 0.0036209654939036375,
+                "manufacturing_production": -0.07520894549132796
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.7,
+                  "scale": 0.7413,
+                  "n": 31
+                },
+                "construction_employment": {
+                  "median": 42.3,
+                  "scale": 3.558240000000008,
+                  "n": 31
+                },
+                "services_employment": {
+                  "median": 46.5,
+                  "scale": 0.44477999999999573,
+                  "n": 31
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.8,
+                  "scale": 2.3721599999999965,
+                  "n": 31
+                },
+                "manufacturing_production": {
+                  "median": 50.9,
+                  "scale": 1.0378199999999935,
+                  "n": 31
+                }
+              },
+              "dropped": []
+            }
+          }
+        },
+        {
+          "month": "2026-10-01",
+          "forecast_origin": "2026-09-30T16:00:00.000Z",
+          "outcome_available_at": "2026-11-16T02:00:00.000Z",
+          "prior": 5.3,
+          "actual": 5.1,
+          "training_count": 32,
+          "training_first": "2023-04-01",
+          "training_last": "2026-08-01",
+          "input": {
+            "manufacturing_employment": 50.5,
+            "nonmanufacturing_employment": 45.9,
+            "construction_employment": 44.3,
+            "services_employment": 46.2,
+            "property_starts_cumulative_yoy": -24.8,
+            "manufacturing_production": 51.7
+          },
+          "forecasts": {
+            "M0": {
+              "estimate": 5.3,
+              "intercept": 0,
+              "coefficients": {},
+              "transforms": {},
+              "dropped": []
+            },
+            "M1": {
+              "estimate": 5.229825344979124,
+              "intercept": -0.01754991021792067,
+              "coefficients": {
+                "sector_demand": -0.08020896384051154
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.8154299999999958,
+                  "n": 32
+                },
+                "nonmanufacturing_employment": {
+                  "median": 45.7,
+                  "scale": 0.7413,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            },
+            "M2": {
+              "estimate": 5.2459975003539485,
+              "intercept": -0.029156970802507582,
+              "coefficients": {
+                "sector_demand": -0.07150513971138159
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.8154299999999958,
+                  "n": 32
+                },
+                "construction_employment": {
+                  "median": 42.05,
+                  "scale": 3.3358499999999944,
+                  "n": 32
+                },
+                "services_employment": {
+                  "median": 46.45,
+                  "scale": 0.37065,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            },
+            "M3": {
+              "estimate": 5.240631083628509,
+              "intercept": -0.02965796817654661,
+              "coefficients": {
+                "sector_demand": -0.07204485104652215,
+                "property_starts_cumulative_yoy": 0.005248439278746054
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.8154299999999958,
+                  "n": 32
+                },
+                "construction_employment": {
+                  "median": 42.05,
+                  "scale": 3.3358499999999944,
+                  "n": 32
+                },
+                "services_employment": {
+                  "median": 46.45,
+                  "scale": 0.37065,
+                  "n": 32
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.950000000000003,
+                  "scale": 2.075639999999995,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            },
+            "M4": {
+              "estimate": 5.195297514959218,
+              "intercept": -0.027756516289144315,
+              "coefficients": {
+                "sector_demand": -0.022156940784792835,
+                "property_starts_cumulative_yoy": 0.0025400948161658065,
+                "manufacturing_production": -0.08178417700398165
+              },
+              "transforms": {
+                "manufacturing_employment": {
+                  "median": 49.650000000000006,
+                  "scale": 0.8154299999999958,
+                  "n": 32
+                },
+                "construction_employment": {
+                  "median": 42.05,
+                  "scale": 3.3358499999999944,
+                  "n": 32
+                },
+                "services_employment": {
+                  "median": 46.45,
+                  "scale": 0.37065,
+                  "n": 32
+                },
+                "property_starts_cumulative_yoy": {
+                  "median": -22.950000000000003,
+                  "scale": 2.075639999999995,
+                  "n": 32
+                },
+                "manufacturing_production": {
+                  "median": 50.849999999999994,
+                  "scale": 1.0378199999999989,
+                  "n": 32
+                }
+              },
+              "dropped": []
+            }
+          }
+        }
+      ],
+      "eligible_cases": 34,
+      "exclusions": {
+        "target_unavailable": 3,
+        "prior_unavailable": 2,
+        "incomplete_features": 6
+      },
+      "metrics": [
+        {
+          "n": 16,
+          "first": "2025-04-01",
+          "last": "2026-10-01",
+          "mae": 0.16250000000000014,
+          "rmse": 0.19364916731037102,
+          "direction_accuracy": 0.1875,
+          "correlation": -0.438443850120786,
+          "model": "M0",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0,
+          "mae_improvement_vs_pmi": 0.004341644139368994,
+          "paired_mae_vs_pmi": {
+            "difference": -0.0007085936340459065,
+            "interval": [
+              -0.029390814940651405,
+              0.027973627672559592
+            ]
+          },
+          "halves": [
+            {
+              "n": 8,
+              "first": "2025-04-01",
+              "last": "2025-11-01",
+              "mae": 0.17500000000000016,
+              "rmse": 0.2000000000000002,
+              "direction_accuracy": 0.125,
+              "correlation": -0.4472135954999585
+            },
+            {
+              "n": 8,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.15000000000000013,
+              "rmse": 0.18708286933869725,
+              "direction_accuracy": 0.25,
+              "correlation": -0.4714045207910316
+            }
+          ]
+        },
+        {
+          "n": 16,
+          "first": "2025-04-01",
+          "last": "2026-10-01",
+          "mae": 0.16320859363404605,
+          "rmse": 0.18767852707464427,
+          "direction_accuracy": 0.4375,
+          "correlation": -0.5454557279517017,
+          "model": "M1",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": -0.004360576209513356,
+          "mae_improvement_vs_pmi": 0,
+          "paired_mae_vs_pmi": {
+            "difference": 0,
+            "interval": [
+              0,
+              0
+            ]
+          },
+          "halves": [
+            {
+              "n": 8,
+              "first": "2025-04-01",
+              "last": "2025-11-01",
+              "mae": 0.1856101533017821,
+              "rmse": 0.20681296973496263,
+              "direction_accuracy": 0.25,
+              "correlation": -0.5263268136319075
+            },
+            {
+              "n": 8,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.14080703396631,
+              "rmse": 0.16635761058401086,
+              "direction_accuracy": 0.625,
+              "correlation": -0.5682417151746754
+            }
+          ]
+        },
+        {
+          "n": 16,
+          "first": "2025-04-01",
+          "last": "2026-10-01",
+          "mae": 0.16728343293906267,
+          "rmse": 0.19171869059838437,
+          "direction_accuracy": 0.4375,
+          "correlation": -0.5065801687819094,
+          "model": "M2",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": -0.029436510394230897,
+          "mae_improvement_vs_pmi": -0.02496706340202537,
+          "paired_mae_vs_pmi": {
+            "difference": 0.00407483930501662,
+            "interval": [
+              -0.003730466443047745,
+              0.011880145053080986
+            ]
+          },
+          "halves": [
+            {
+              "n": 8,
+              "first": "2025-04-01",
+              "last": "2025-11-01",
+              "mae": 0.18971292574455267,
+              "rmse": 0.21065066141985103,
+              "direction_accuracy": 0.25,
+              "correlation": -0.48528581818364197
+            },
+            {
+              "n": 8,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.14485394013357267,
+              "rmse": 0.1706997700434812,
+              "direction_accuracy": 0.625,
+              "correlation": -0.5397680559267523
+            }
+          ]
+        },
+        {
+          "n": 16,
+          "first": "2025-04-01",
+          "last": "2026-10-01",
+          "mae": 0.17733851081270158,
+          "rmse": 0.19871361735204443,
+          "direction_accuracy": 0.5,
+          "correlation": -0.4395734540417415,
+          "model": "M3",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": -0.09131391269354716,
+          "mae_improvement_vs_pmi": -0.08657581604028941,
+          "paired_mae_vs_pmi": {
+            "difference": 0.014129917178655527,
+            "interval": [
+              -0.010616726615682005,
+              0.03887656097299306
+            ]
+          },
+          "halves": [
+            {
+              "n": 8,
+              "first": "2025-04-01",
+              "last": "2025-11-01",
+              "mae": 0.204441555407318,
+              "rmse": 0.21985106234679963,
+              "direction_accuracy": 0.375,
+              "correlation": -0.3387000895588489
+            },
+            {
+              "n": 8,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.15023546621808515,
+              "rmse": 0.17504203445816408,
+              "direction_accuracy": 0.625,
+              "correlation": -0.5663079707063463
+            }
+          ]
+        },
+        {
+          "n": 16,
+          "first": "2025-04-01",
+          "last": "2026-10-01",
+          "mae": 0.16240230503290287,
+          "rmse": 0.1860833305215387,
+          "direction_accuracy": 0.5,
+          "correlation": -0.4720768979946004,
+          "model": "M4",
+          "status": "exploratory",
+          "mae_improvement_vs_persistence": 0.000601199797521712,
+          "mae_improvement_vs_pmi": 0.004940233741313138,
+          "paired_mae_vs_pmi": {
+            "difference": -0.0008062886011431791,
+            "interval": [
+              -0.022643328755326896,
+              0.021030751553040537
+            ]
+          },
+          "halves": [
+            {
+              "n": 8,
+              "first": "2025-04-01",
+              "last": "2025-11-01",
+              "mae": 0.19321958727786703,
+              "rmse": 0.21070165816743683,
+              "direction_accuracy": 0.375,
+              "correlation": -0.46258264245732955
+            },
+            {
+              "n": 8,
+              "first": "2025-12-01",
+              "last": "2026-10-01",
+              "mae": 0.1315850227879387,
+              "rmse": 0.15766681020896262,
+              "direction_accuracy": 0.625,
+              "correlation": -0.4751853130424197
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "descriptive_lags": [
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": -3,
+      "n": 39,
+      "first": "2023-02-01",
+      "last": "2026-07-01",
+      "pearson": -0.046763507333971686
+    },
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": -2,
+      "n": 40,
+      "first": "2023-02-01",
+      "last": "2026-08-01",
+      "pearson": -0.08753332865259776
+    },
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": -1,
+      "n": 41,
+      "first": "2023-02-01",
+      "last": "2026-09-01",
+      "pearson": 0.08888169185469615
+    },
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": 0,
+      "n": 42,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": 0.3548812117866649
+    },
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": 1,
+      "n": 42,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": 0.385912213414823
+    },
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": 2,
+      "n": 41,
+      "first": "2023-03-01",
+      "last": "2026-10-01",
+      "pearson": 0.1829939440476274
+    },
+    {
+      "series_id": "construction_pmi_employment",
+      "lag": 3,
+      "n": 40,
+      "first": "2023-04-01",
+      "last": "2026-10-01",
+      "pearson": -0.027394771680580313
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": -3,
+      "n": 39,
+      "first": "2023-02-01",
+      "last": "2026-07-01",
+      "pearson": 0.50055771019431
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": -2,
+      "n": 40,
+      "first": "2023-02-01",
+      "last": "2026-08-01",
+      "pearson": 0.49800299964013406
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": -1,
+      "n": 41,
+      "first": "2023-02-01",
+      "last": "2026-09-01",
+      "pearson": 0.35978855308529495
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": 0,
+      "n": 42,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": 0.2849211664993273
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": 1,
+      "n": 42,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": -0.018958650298946222
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": 2,
+      "n": 41,
+      "first": "2023-03-01",
+      "last": "2026-10-01",
+      "pearson": 0.09704497816722811
+    },
+    {
+      "series_id": "services_pmi_employment",
+      "lag": 3,
+      "n": 40,
+      "first": "2023-04-01",
+      "last": "2026-10-01",
+      "pearson": 0.16839589065597887
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": -3,
+      "n": 33,
+      "first": "2023-02-01",
+      "last": "2026-07-01",
+      "pearson": 0.1254293306751032
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": -2,
+      "n": 34,
+      "first": "2023-02-01",
+      "last": "2026-08-01",
+      "pearson": 0.052191608522744196
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": -1,
+      "n": 35,
+      "first": "2023-02-01",
+      "last": "2026-09-01",
+      "pearson": 0.051985704519306
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": 0,
+      "n": 39,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": 0.23439210936357632
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": 1,
+      "n": 38,
+      "first": "2023-03-01",
+      "last": "2026-10-01",
+      "pearson": 0.21832882380026772
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": 2,
+      "n": 34,
+      "first": "2023-04-01",
+      "last": "2026-10-01",
+      "pearson": 0.32275610419751916
+    },
+    {
+      "series_id": "real_estate_starts_yoy",
+      "lag": 3,
+      "n": 33,
+      "first": "2023-05-01",
+      "last": "2026-10-01",
+      "pearson": 0.33770565056348967
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": -3,
+      "n": 39,
+      "first": "2023-02-01",
+      "last": "2026-07-01",
+      "pearson": -0.09207724432461384
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": -2,
+      "n": 40,
+      "first": "2023-02-01",
+      "last": "2026-08-01",
+      "pearson": 0.07188983165312887
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": -1,
+      "n": 41,
+      "first": "2023-02-01",
+      "last": "2026-09-01",
+      "pearson": 0.44727098000513654
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": 0,
+      "n": 42,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": 0.2621891894174416
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": 1,
+      "n": 42,
+      "first": "2023-02-01",
+      "last": "2026-10-01",
+      "pearson": -0.21675912336292805
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": 2,
+      "n": 41,
+      "first": "2023-03-01",
+      "last": "2026-10-01",
+      "pearson": -0.09217754331538519
+    },
+    {
+      "series_id": "manufacturing_pmi_production",
+      "lag": 3,
+      "n": 40,
+      "first": "2023-04-01",
+      "last": "2026-10-01",
+      "pearson": 0.07864387783275407
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { datasetSchema, healthSchema, manifestSchema } from './schema';
+import { datasetSchema, healthSchema, manifestSchema, researchDatasetSchema, researchHealthSchema } from './schema';
+import { researchModelSchema } from './research-model-schema';
 
 async function readPublicFile(name: string): Promise<unknown> {
   try {
@@ -9,6 +10,18 @@ async function readPublicFile(name: string): Promise<unknown> {
     if (error instanceof Error && 'code' in error && error.code === 'ENOENT') return null;
     throw error;
   }
+}
+
+export async function readResearchData() {
+  const [data, model, collection] = await Promise.all([
+    readPublicFile('research.json'), readPublicFile('research-models.json'), readPublicFile('research-collection-status.json'),
+  ]);
+  const research = researchDatasetSchema.nullable().parse(data);
+  const models = researchModelSchema.nullable().parse(model);
+  const researchHealth = researchHealthSchema.nullable().parse(collection);
+  if (models && models.dataset_version !== research?.dataset_version) throw new Error('Research models and data must match');
+  if (researchHealth && researchHealth.dataset_version !== research?.dataset_version) throw new Error('Research health and data must match');
+  return { research, models, researchHealth };
 }
 
 export async function readMarketData() {

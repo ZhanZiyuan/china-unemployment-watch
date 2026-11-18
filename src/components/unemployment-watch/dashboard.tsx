@@ -1,5 +1,6 @@
 import { Activity, CalendarDays, CircleAlert, Clock3, Database, Download } from 'lucide-react';
 import { getFormatter, getTranslations } from 'next-intl/server';
+import type { ReactNode } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,7 +11,9 @@ import { ManifestDialog } from './manifest-dialog';
 
 const colors = ['var(--chart-blue)', 'var(--chart-teal)'];
 
-export async function Dashboard({ dataset, health, manifest }: { dataset: Dataset | null; health: Health | null; manifest: Manifest | null }) {
+export async function Dashboard({ dataset, health, manifest, research }: {
+  dataset: Dataset | null; health: Health | null; manifest: Manifest | null; research: ReactNode;
+}) {
   const [t, format] = await Promise.all([getTranslations(), getFormatter()]);
   const date = (value: string | null | undefined) => value
     ? format.dateTime(new Date(dayNumber(value)), { dateStyle: 'medium' }) : t('dashboard.not_available');
@@ -42,6 +45,7 @@ export async function Dashboard({ dataset, health, manifest }: { dataset: Datase
         <div>
           <h1 id="page-title" className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">{t('title')}</h1>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{t('description')}</p>
+          <a href="#research" className="mt-2 inline-block text-sm font-medium text-primary underline underline-offset-4">{t('research.title')}</a>
         </div>
         {dataset && (
           <div className="flex max-w-full shrink-0 flex-wrap gap-2">
@@ -129,6 +133,8 @@ export async function Dashboard({ dataset, health, manifest }: { dataset: Datase
           </section>
         </>
       )}
+
+      {research}
 
       <Card className="rounded-xl">
         <CardHeader>

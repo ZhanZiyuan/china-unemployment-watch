@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "attempted_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$"
+    },
+    "source_status": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "nbs-pmi",
+          "nbs-real-estate",
+          "nbs-migrant",
+          "nbs-construction",
+          "financial"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string",
+        "enum": [
+          "available",
+          "partial",
+          "fetch_failed",
+          "unconnected"
+        ]
+      }
+    },
+    "stale_series": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "construction_pmi_activity",
+          "construction_pmi_orders",
+          "construction_pmi_employment",
+          "services_pmi_activity",
+          "services_pmi_orders",
+          "services_pmi_employment",
+          "manufacturing_pmi_production",
+          "manufacturing_pmi_orders",
+          "real_estate_investment_ytd",
+          "real_estate_investment_yoy",
+          "real_estate_starts_ytd",
+          "real_estate_starts_yoy",
+          "real_estate_construction_ytd",
+          "real_estate_construction_yoy",
+          "real_estate_completions_ytd",
+          "real_estate_completions_yoy",
+          "real_estate_sales_area_ytd",
+          "real_estate_sales_area_yoy",
+          "real_estate_sales_value_ytd",
+          "real_estate_sales_value_yoy",
+          "real_estate_funds_ytd",
+          "real_estate_funds_yoy",
+          "migrant_total",
+          "migrant_outbound",
+          "migrant_local",
+          "migrant_urban",
+          "migrant_interprovincial",
+          "migrant_construction_share",
+          "migrant_manufacturing_share",
+          "migrant_monthly_income",
+          "construction_value_added",
+          "construction_qualified_profits"
+        ]
+      }
+    },
+    "dataset_version": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "success",
+        "partial",
+        "fetch_failed"
+      ]
+    }
+  },
+  "required": [
+    "attempted_at",
+    "completed_at",
+    "source_status",
+    "stale_series",
+    "dataset_version",
+    "result"
+  ],
+  "additionalProperties": false
+}

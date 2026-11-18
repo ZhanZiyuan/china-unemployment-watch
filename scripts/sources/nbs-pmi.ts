@@ -1,17 +1,18 @@
 import type { Original } from './http';
-import { makeRow, pmiTitle, readRelease, type Release } from './nbs-release';
+import { monthPeriod } from '../../src/lib/market/dates';
+import type { ResearchSeries } from '../../src/lib/market/research-catalog';
+import { exactMatch, researchRow } from '../research/observations';
+import { makeRow, pmiTitle, readRelease, type Release, type ReleaseContent } from './nbs-release';
+
+function tableCells({ $, root, normalize }: ReleaseContent) {
+  return root.find('table').toArray().map((table) => $(table).find('tr').toArray().map((row) =>
+    $(row).children('td, th').toArray().map((cell) => normalize($(cell).text()))));
+}
 
 export function parsePmi(original: Original, release: Release) {
   const content = readRelease(original, release);
-  const { $, root, normalize } = content;
-  const title = pmiTitle.exec(release.title);
-  if (!title) throw new Error('PMI title has no monthly period');
-  const year = Number(title[1]);
-  const month = Number(title[2]);
-  const tables = root.find('table').toArray().map((table) => {
-    return $(table).find('tr').toArray().map((row) =>
-      $(row).children('td, th').toArray().map((cell) => normalize($(cell).text())));
-  });
+  const { year, month } = pmiPeriod(release);
+  const tables = tableCells(content);
   const result = [];
   for (const [id, label] of [
     ['manufacturing_pmi_employment', '供应商配送时间'],
@@ -40,4 +41,42 @@ export function parsePmi(original: Original, release: Release) {
     result.push(...points);
   }
   return result;
+}
+
+function pmiPeriod(release: Pick<Release, 'title'>) {
+  const title = pmiTitle.exec(release.title);
+  if (!title) throw new Error('PMI title has no monthly period');
+  return { year: Number(title[1]), month: Number(title[2]) };
+}
+
+const sectorLabels = {
+  construction_pmi_activity: '建筑业商务活动指数',
+  construction_pmi_orders: '建筑业新订单指数',
+  construction_pmi_employment: '建筑业从业人员指数',
+  services_pmi_activity: '服务业商务活动指数',
+  services_pmi_orders: '服务业新订单指数',
+  services_pmi_employment: '服务业从业人员指数',
+} satisfies Partial<Record<ResearchSeries, string>>;
+
+export function parseSectorPmi(original: Original, release: Pick<Release, 'title'>) {
+  const content = readRelease(original, release);
+  const { year, month } = pmiPeriod(release);
+  const period = monthPeriod(year, month);
+  const research = Object.entries(sectorLabels).flatMap(([id, label]) => {
+    const match = exactMatch(content.text, new RegExp(`${label}为(\\d+(?:\\.\\d+)?)%`, 'gu'));
+    return match ? [researchRow(original, content, id as keyof typeof sectorLabels, period, Number(match[1]), match[0])] : [];
+  });
+  const table = tableCells(content).find((rows) => rows.some((cells) => cells.includes('生产') && cells.includes('供应商配送时间')));
+  const header = table?.find((cells) => cells.includes('供应商配送时间'));
+  const label = `${year}年${month}月`;
+  const current = table?.find((cells) => cells[0] === label);
+  for (const [id, name] of [['manufacturing_pmi_production', '生产'], ['manufacturing_pmi_orders', '新订单']] as const) {
+    const index = header?.indexOf(name) ?? -1;
+    // The release uses row-spanning cells for the date and headline PMI.
+    const value = header && current && index >= 0 ? current[current.length - header.length + index] : undefined;
+    if (/^\d{1,3}(?:\.\d+)?$/.test(value ?? '')) {
+      research.push(researchRow(original, content, id, period, Number(value), `${label} ${name} ${value}`));
+    }
+  }
+  return research;
 }

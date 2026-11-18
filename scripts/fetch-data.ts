@@ -4,6 +4,8 @@ import { datasetSchema, healthSchema, type Health } from '../src/lib/market/sche
 import { collect } from './sources/collect';
 import type { ResponseMetadata } from './sources/http';
 import { cutoffForRun } from './sources/nbs-release';
+import { parseSectorPmi } from './sources/nbs-pmi';
+import { releaseSignature } from './research/observations';
 import { latestFile, healthFile, preparePublication, publish } from './publish';
 import { mergeObservations, readRevisions, revisionFile } from './quality';
 import { releaseIndexFile, releaseIndexSchema } from './replay-history';
@@ -64,6 +66,20 @@ async function main() {
     const { rows, revisions } = mergeObservations(prev, incoming, backfill ? '9999-12-31' : lookback);
     await Promise.all([mkdir('data/raw', { recursive: true }), mkdir('data/metadata', { recursive: true })]);
     const accepted = [...new Set(rows.map((row) => row.raw_sha256))].filter((hash) => !(hash in index));
+    if (!backfill) {
+      // Preserve sector-only revisions from a PMI release even when its core columns have not changed.
+      for (const [hash, release] of collected.originalsByRelease) {
+        if (release.kind !== 'nbs-pmi' || hash in index || accepted.includes(hash)) continue;
+        const original = collected.originals.get(hash);
+        if (!original) continue;
+        const sectors = parseSectorPmi(original, release).filter((row) => row.observation_period.end <= cutoff);
+        if (!sectors.length) continue;
+        const archived = await Promise.all(Object.entries(index).filter(([, item]) => item.suffix === release.suffix)
+          .map(async ([id, item]) => ({ original: await readOriginal(id), item })));
+        const latest = archived.sort((a, b) => b.original.meta.fetched_at.localeCompare(a.original.meta.fetched_at))[0];
+        if (!latest || releaseSignature(sectors) !== releaseSignature(parseSectorPmi(latest.original, latest.item))) accepted.push(hash);
+      }
+    }
     for (const hash of accepted) {
       const original = collected.originals.get(hash);
       const release = collected.originalsByRelease.get(hash);

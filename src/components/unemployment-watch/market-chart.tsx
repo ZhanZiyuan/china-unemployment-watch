@@ -6,14 +6,16 @@ import { Brush, CartesianGrid, Line, LineChart, ReferenceLine, ResponsiveContain
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { dayNumber, endOfMonth, isoDay, shiftMonth } from '@/lib/market/dates';
+import type { Metric, ResearchUnit } from '@/lib/market/research-catalog';
 import type { Observation } from '@/lib/market/schema';
 
 export type ChartSeries = {
   id: string;
   label: string;
   color: string;
-  frequency: Observation['frequency'];
-  unit: Observation['unit'] | 'score';
+  frequency: Observation['frequency'] | Metric['frequency'];
+  unit: Observation['unit'] | ResearchUnit | 'score';
+  jointJanuary?: boolean;
   points: {
     observation_period: Observation['observation_period'];
     value: number | null;
@@ -61,9 +63,11 @@ export function MarketChart({ id, title, description, series, bounds, reference 
       return row;
     }
     for (const item of series) {
-      if (item.frequency === 'monthly') {
+      if (item.frequency === 'monthly' || item.frequency === 'quarterly' || item.frequency === 'yearly') {
         // Existing period anchors with no reading provide line breaks in the chart.
-        for (let month = shiftMonth(bounds.start, 0); endOfMonth(month) <= bounds.end; month = shiftMonth(month, 1)) {
+        const step = { monthly: 1, quarterly: 3, yearly: 12 }[item.frequency];
+        for (let month = shiftMonth(bounds.start, step - 1); endOfMonth(month) <= bounds.end; month = shiftMonth(month, step)) {
+          if (item.jointJanuary && month.endsWith('-01-01')) continue;
           rowFor(endOfMonth(month));
         }
       }
@@ -203,7 +207,10 @@ export function MarketChart({ id, title, description, series, bounds, reference 
             {visible.map((item) => {
               const reading = rows[0]?.readings[item.id];
               if (reading?.value == null) return null;
-              return <li key={item.id}>{item.label} <strong>{format.number(reading.value, { maximumFractionDigits: 4 })} {t(`units.${item.unit}`)}</strong></li>;
+              return <li key={item.id}>{item.label} <strong>{format.number(reading.value, { maximumFractionDigits: 4 })} {t(`units.${item.unit}`)}</strong>
+                {' · '}{period(reading.observation_period)}
+                {reading.source_url && <> · <a className="underline" href={reading.source_url}>{t('chart.release')}</a></>}
+              </li>;
             })}
           </ul>
         )}
