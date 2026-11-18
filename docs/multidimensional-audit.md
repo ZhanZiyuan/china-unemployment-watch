@@ -1,0 +1,24 @@
+# M6 audit of the multidimensional extension
+
+The audited `main` head was `46e1bd0cc82b3ef70809fb35fcba29259b2ac737`, independently confirmed with GitHub and fetched on 2026-11-18 in Asia/Shanghai. Development is on `feature/multidimensional-employment`. The attached PRD informs source research. The chat request governs scope and delivery.
+
+## Baseline
+
+The [latest production collection](https://github.com/ZhanZiyuan/china-unemployment-watch/actions/runs/44104472065) succeeded. The [production manifest](https://cuwatch.vercel.app/data/manifest.json) references `pmi-demand-1.0.0` and 176 official monthly observations through October 2026. The two unemployment series each have 42 observations. The two headline PMI employment series each have 46. The replay gate verified the dataset digest, observation keys, release HTML and ledger. Baseline lint, type checking, 16 unit/integration tests and the Turbopack build passed.
+
+The core pipeline already isolates source URLs, response metadata and SHA-256-addressed bodies. It schedules 11:17 China time, runs on main pushes or dispatch, and serializes the main writer. The baseline backtest uses release dates and stores rolling predictions. It has no full vintage panel and its PMI proxy evaluation is exploratory. The existing production snapshot, calibration, test results, UI and file contracts will be retained. New evidence and model outputs will have a separate versioned contract.
+
+## Candidate source evidence
+
+| Dimension | Evidence reviewed | Grain and decision |
+|---|---|---|
+| Construction and services PMI | [NBS October 2026 release](https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html) and all 46 monthly PMI bodies in the existing archive | Construction and services each disclose activity, new orders and employment in sector-specific prose. All six labels appeared across January 2023–October 2026. Read each current-period statement from its own release. PMI measures diffusion, and services plus construction overlap with the nonmanufacturing aggregate. |
+| Real estate | [October 2026 release](https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html), [2025 year-end release](https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html) | The official table reports year-to-date levels and comparisons on a comparable basis. Keep the January-to-release-month interval, including the joint January–February release. May be a lagged explanatory variable. |
+| Migrant workers | [2023 monitoring](https://www.stats.gov.cn/sj/zxfb/202404/t20240430_1948783.html), [2024 monitoring](https://www.stats.gov.cn/sj/zxfb/202504/t20250430_1959523.html), [2025 monitoring](https://www.stats.gov.cn/sj/zxfb/202604/t20260430_1963472.html) | Annual national household-survey aggregates distinguish migrant workers, out-of-town workers, local workers and workers living in urban areas at year-end. Annual structural evidence stays annual. |
+| Construction enterprises | [NBS yearbook scope](https://www.stats.gov.cn/sj/ndsj/2025/html/sm14.htm), [NBS construction reporting standard](https://www.stats.gov.cn/xxgk/tjbzhzd/gjtjdczd/202604/t20260402_1962953.html) | Seek dated annual reports or tables with verified national scope and units. Qualified and independently accounted enterprises cover a subset and measure a different population than the migrant survey. Table access and national year coverage require verification. |
+| Real economy | Manufacturing production and new-order columns in the archived PMI tables | Monthly survey measures. Use a predeclared production feature for comparison and treat the other indicators as descriptive candidates. |
+| Market indices | [CSI](https://www.csindex.com.cn/), [Hang Seng data products](https://www.hsi.com.hk/solutions/data-analytics/our-data-analytics-offerings/), [S&P DJI terms](https://www.spglobal.com/spdji/en/documents/legal/dow-jones-indexes-terms-conditions.pdf), [Nasdaq distribution policy](https://nasdaqtrader.com/content/technicalsupport/dataproducts/indexdatapolicy.pdf) | No authorization for a reproducible and publicly redistributable historical feed was established. Track access status and exclude these variables from estimation and public observations. |
+
+NBS originals remain attributed to the National Bureau of Statistics and linked at the observation level. Its [site terms](https://www.stats.gov.cn/wzgl/202302/t20230217_1912857.html) permit use of its statistics with attribution and distinguish third-party rights. Public index pages alone do not establish permission to redistribute time series.
+
+The historical cutoff is 2026-11-17. The new sources will have evidence-level coverage checks after extraction. Unavailable intervals will be skipped and reported. Dates without a stated release time will use next-day availability in China time for model eligibility. Daily execution does not change data frequency.
