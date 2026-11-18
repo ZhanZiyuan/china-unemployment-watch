@@ -1,13 +1,13 @@
 import type { Original } from './http';
+import { monthPeriod } from '../../src/lib/market/dates';
+import type { ResearchSeries } from '../../src/lib/market/research-catalog';
+import { exactMatch, researchRow } from '../research/observations';
 import { makeRow, pmiTitle, readRelease, type Release } from './nbs-release';
 
 export function parsePmi(original: Original, release: Release) {
   const content = readRelease(original, release);
   const { $, root, normalize } = content;
-  const title = pmiTitle.exec(release.title);
-  if (!title) throw new Error('PMI title has no monthly period');
-  const year = Number(title[1]);
-  const month = Number(title[2]);
+  const { year, month } = pmiPeriod(release);
   const tables = root.find('table').toArray().map((table) => {
     return $(table).find('tr').toArray().map((row) =>
       $(row).children('td, th').toArray().map((cell) => normalize($(cell).text())));
@@ -40,4 +40,29 @@ export function parsePmi(original: Original, release: Release) {
     result.push(...points);
   }
   return result;
+}
+
+function pmiPeriod(release: Pick<Release, 'title'>) {
+  const title = pmiTitle.exec(release.title);
+  if (!title) throw new Error('PMI title has no monthly period');
+  return { year: Number(title[1]), month: Number(title[2]) };
+}
+
+const sectorLabels = {
+  construction_pmi_activity: '建筑业商务活动指数',
+  construction_pmi_orders: '建筑业新订单指数',
+  construction_pmi_employment: '建筑业从业人员指数',
+  services_pmi_activity: '服务业商务活动指数',
+  services_pmi_orders: '服务业新订单指数',
+  services_pmi_employment: '服务业从业人员指数',
+} satisfies Partial<Record<ResearchSeries, string>>;
+
+export function parseSectorPmi(original: Original, release: Pick<Release, 'title'>) {
+  const content = readRelease(original, release);
+  const { year, month } = pmiPeriod(release);
+  const period = monthPeriod(year, month);
+  return Object.entries(sectorLabels).flatMap(([id, label]) => {
+    const match = exactMatch(content.text, new RegExp(`${label}为(\\d+(?:\\.\\d+)?)%`, 'gu'));
+    return match ? [researchRow(original, content, id as keyof typeof sectorLabels, period, Number(match[1]), match[0])] : [];
+  });
 }

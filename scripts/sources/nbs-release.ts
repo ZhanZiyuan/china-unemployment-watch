@@ -47,7 +47,7 @@ export function releaseUrls(release: Release) {
   return urls;
 }
 
-export function readRelease(original: Original, release: Release) {
+export function readRelease(original: Original, release: Pick<Release, 'title'>) {
   const $ = load(original.body.toString('utf8'));
   const normalize = (text: string) => text.normalize('NFKC').replace(/\s+/g, '');
   const title = normalize($('meta[name="ArticleTitle"]').attr('content') ?? $('title').text());
