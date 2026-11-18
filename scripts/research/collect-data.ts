@@ -5,11 +5,11 @@ import { researchCatalog } from '../../src/lib/market/research-catalog';
 import { digestSchema, researchDatasetSchema, researchHealthSchema, type ResearchDataset } from '../../src/lib/market/schema';
 import { discoverArticles } from '../sources/collect';
 import { errorDetails, fetchOriginal, sha256 } from '../sources/http';
-import { releaseUrls } from '../sources/nbs-release';
 import { readOptionalJson, readOriginal, storeOriginal, writeJson } from '../storage';
 import { classifyResearch, extensionKinds, parseExtendedRelease, type ResearchRelease } from './nbs-extended';
 import { releaseSignature } from './observations';
 import { makeResearchDataset, researchFile, researchHealthFile } from './publication';
+import { propertyYearEndReleases, researchReleaseUrls } from './real-estate-year-end';
 import { replayPmi } from './replay';
 
 export const researchReleasesFile = 'data/metadata/research-releases.json';
@@ -29,7 +29,7 @@ export async function replayResearch() {
   const rows = await replayPmi();
   for (const [hash, release] of Object.entries(ledger)) {
     const original = await readOriginal(hash);
-    if (!releaseUrls(release).includes(original.meta.url)) throw new Error(`Unrecognized research URL: ${hash}`);
+    if (!researchReleaseUrls(release).includes(original.meta.url)) throw new Error(`Unrecognized research URL: ${hash}`);
     const observations = parseExtendedRelease(original, release);
     if (!observations.length) throw new Error(`No reproducible evidence in ${hash}`);
     rows.push(...observations);
@@ -39,7 +39,7 @@ export async function replayResearch() {
 
 async function fetchRelease(release: ResearchRelease) {
   const errors = [];
-  for (const url of releaseUrls(release)) {
+  for (const url of researchReleaseUrls(release)) {
     try {
       const original = await fetchOriginal(url);
       const rows = parseExtendedRelease(original, release);
@@ -52,7 +52,9 @@ async function fetchRelease(release: ResearchRelease) {
   throw new Error(errors.join(' | '));
 }
 
-export async function refreshResearch(backfill = false, pmiStatus: 'available' | 'fetch_failed' = 'available', discover = discoverArticles) {
+export async function refreshResearch(
+  backfill = false, pmiStatus: 'available' | 'fetch_failed' = 'available', discover = discoverArticles, yearEndOnly = false,
+) {
   const started = new Date();
   const ledger = await readResearchLedger();
   const saved = await readOptionalJson(researchFile);
@@ -60,16 +62,23 @@ export async function refreshResearch(backfill = false, pmiStatus: 'available' |
   const full = backfill || !Object.keys(ledger).length;
   const today = businessDate(started);
   const cutoff = full ? INITIAL_END : today;
-  const status: ResearchDataset['source_status'] = { ...previous?.source_status, 'nbs-pmi': pmiStatus };
+  const status: ResearchDataset['source_status'] = { ...previous?.source_status };
+  if (!yearEndOnly) status['nbs-pmi'] = pmiStatus;
   const failures: { source: string; release?: string; error: string }[] = [];
-  const discovered = await discover(full ? HISTORY_START : shiftMonth(today, -4), cutoff).catch((error: unknown) => {
+  const discovered = yearEndOnly ? [] : await discover(full ? HISTORY_START : shiftMonth(today, -4), cutoff).catch((error: unknown) => {
     failures.push({ source: 'release archive', error: errorDetails(error) });
     return null;
   });
-  const pending = (discovered ?? []).flatMap((article) => classifyResearch(article) ?? []);
+  const pending = new Map((discovered ?? []).flatMap((article) => {
+    const release = classifyResearch(article);
+    return release ? [[release.suffix, release] as const] : [];
+  }));
+  if (yearEndOnly || full) {
+    for (const release of propertyYearEndReleases) pending.set(release.suffix, release);
+  }
   await Promise.all(['data/raw', 'data/metadata'].map((dir) => mkdir(dir, { recursive: true })));
-  for (const source of extensionKinds) {
-    const articles = pending.filter((article) => article.kind === source);
+  for (const source of yearEndOnly ? ['nbs-real-estate'] as const : extensionKinds) {
+    const articles = [...pending.values()].filter((article) => article.kind === source);
     let succeeded = 0;
     for (let i = 0; i < articles.length; i += 3) {
       const batch = articles.slice(i, i + 3);
@@ -95,11 +104,11 @@ export async function refreshResearch(backfill = false, pmiStatus: 'available' |
       }
     }
     const retained = Object.values(ledger).some((item) => item.kind === source);
-    status[source] = discovered === null || (articles.length > 0 && !succeeded && !(full && retained)) ? 'fetch_failed'
+    status[source] = discovered === null || (articles.length > 0 && !succeeded && !((full || yearEndOnly) && retained)) ? 'fetch_failed'
       : failures.some((failure) => failure.source === source) ? 'partial'
         : retained ? 'available' : 'unconnected';
   }
-  const sortedLedger = Object.fromEntries(Object.entries(ledger).sort(([a], [b]) => a.localeCompare(b)));
+  const sortedLedger = ledgerSchema.parse(Object.fromEntries(Object.entries(ledger).sort(([a], [b]) => a.localeCompare(b))));
   await writeJson(researchReleasesFile, sortedLedger);
   const rows = (await replayResearch()).filter((row) => row.publication_date <= today && row.observation_period.end <= today);
   const publication = makeResearchDataset(rows, status);
@@ -117,7 +126,7 @@ export async function refreshResearch(backfill = false, pmiStatus: 'available' |
     result: states.includes('fetch_failed') ? 'fetch_failed' : states.includes('partial') || stale_series.length ? 'partial' : 'success',
   });
   await mkdir('data/runs', { recursive: true });
-  await writeJson('data/runs/research-collection.json', { ...health, cutoff, failures });
+  await writeJson('data/runs/research-collection.json', { ...health, cutoff, failures, ...(yearEndOnly ? { scope: 'property-year-end' } : {}) });
   if (failures.length) console.warn(failures);
   await writeJson(researchHealthFile, health);
   console.log(`Replayed ${publication.series.length} research observations from official originals`, publication.source_status);
@@ -125,6 +134,7 @@ export async function refreshResearch(backfill = false, pmiStatus: 'available' |
 }
 
 if (process.argv.includes('--collect-research')) {
-  void refreshResearch(process.argv.includes('--backfill'), process.argv.includes('--core-failed') ? 'fetch_failed' : 'available')
+  void refreshResearch(process.argv.includes('--backfill'), process.argv.includes('--core-failed') ? 'fetch_failed' : 'available',
+    undefined, process.argv.includes('--property-year-end'))
     .catch((error: unknown) => { console.error(error); process.exitCode = 1; });
 }

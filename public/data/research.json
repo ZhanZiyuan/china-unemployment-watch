@@ -1,6 +1,6 @@
 {
   "schema_version": "research-1.0.0",
-  "dataset_version": "c20df0998157db500c8ff625b8c42c6be656b448f1ffd35f6330e3d762cebdb2",
+  "dataset_version": "f1a2c761376325989f7a67f85c59081c78f770ce659cdeeb511b21a744dedf27",
   "series": [
     {
       "source_id": "nbs-pmi",
@@ -5134,6 +5134,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_completions_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 17,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房屋竣工面积(万平方米) yoy 17.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_completions_yoy",
       "observation_period": {
@@ -5324,6 +5343,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_completions_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -27.7,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房屋竣工面积(万平方米) yoy -27.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_completions_yoy",
       "observation_period": {
@@ -5510,6 +5548,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房屋竣工面积(万平方米) yoy -18.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_completions_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -18.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房屋竣工面积(万平方米) yoy -18.1",
       "revision_id": null
     },
     {
@@ -5875,6 +5932,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_completions_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 99831,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房屋竣工面积(万平方米) ytd 99831",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_completions_ytd",
       "observation_period": {
@@ -6065,6 +6141,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_completions_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 73743,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房屋竣工面积(万平方米) ytd 73743",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_completions_ytd",
       "observation_period": {
@@ -6251,6 +6346,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房屋竣工面积(万平方米) ytd 39454",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_completions_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 60348,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房屋竣工面积(万平方米) ytd 60348",
       "revision_id": null
     },
     {
@@ -6616,6 +6730,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_construction_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": -7.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房屋施工面积(万平方米) yoy -7.2",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_construction_yoy",
       "observation_period": {
@@ -6801,6 +6934,25 @@
       "published_at": "2024-12-16T02:00:00.000Z",
       "publication_date": "2024-12-16",
       "raw_sha256": "fae3df678a8311121a06a7e43b6b602310965bacea8ff2361dee703cbc79f8c4",
+      "evidence": "房屋施工面积(万平方米) yoy -12.7",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_construction_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -12.7,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
       "evidence": "房屋施工面积(万平方米) yoy -12.7",
       "revision_id": null
     },
@@ -6992,6 +7144,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房屋施工面积(万平方米) yoy -9.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_construction_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -10,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房屋施工面积(万平方米) yoy -10.0",
       "revision_id": null
     },
     {
@@ -7357,6 +7528,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_construction_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 838364,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房屋施工面积(万平方米) ytd 838364",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_construction_ytd",
       "observation_period": {
@@ -7547,6 +7737,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_construction_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 733247,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房屋施工面积(万平方米) ytd 733247",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_construction_ytd",
       "observation_period": {
@@ -7733,6 +7942,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房屋施工面积(万平方米) ytd 656066",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_construction_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 659890,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房屋施工面积(万平方米) ytd 659890",
       "revision_id": null
     },
     {
@@ -8098,6 +8326,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_funds_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": -13.6,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房地产开发企业本年到位资金(亿元) yoy -13.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_funds_yoy",
       "observation_period": {
@@ -8288,6 +8535,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_funds_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -17,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房地产开发企业本年到位资金(亿元) yoy -17.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_funds_yoy",
       "observation_period": {
@@ -8474,6 +8740,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房地产开发企业本年到位资金(亿元) yoy -11.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_funds_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -13.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房地产开发企业本年到位资金(亿元) yoy -13.4",
       "revision_id": null
     },
     {
@@ -8839,6 +9124,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_funds_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 127459,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房地产开发企业本年到位资金(亿元) ytd 127459",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_funds_ytd",
       "observation_period": {
@@ -9029,6 +9333,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_funds_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 107661,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房地产开发企业本年到位资金(亿元) ytd 107661",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_funds_ytd",
       "observation_period": {
@@ -9215,6 +9538,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房地产开发企业本年到位资金(亿元) ytd 85145",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_funds_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 93117,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房地产开发企业本年到位资金(亿元) ytd 93117",
       "revision_id": null
     },
     {
@@ -9580,6 +9922,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_investment_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": -9.6,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房地产开发投资(亿元) yoy -9.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_investment_yoy",
       "observation_period": {
@@ -9770,6 +10131,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_investment_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -10.6,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房地产开发投资(亿元) yoy -10.6",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_investment_yoy",
       "observation_period": {
@@ -9956,6 +10336,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房地产开发投资(亿元) yoy -15.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_investment_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -17.2,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房地产开发投资(亿元) yoy -17.2",
       "revision_id": null
     },
     {
@@ -10321,6 +10720,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_investment_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 110913,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房地产开发投资(亿元) ytd 110913",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_investment_ytd",
       "observation_period": {
@@ -10511,6 +10929,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_investment_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 100280,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房地产开发投资(亿元) ytd 100280",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_investment_ytd",
       "observation_period": {
@@ -10697,6 +11134,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房地产开发投资(亿元) ytd 78591",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_investment_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 82788,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房地产开发投资(亿元) ytd 82788",
       "revision_id": null
     },
     {
@@ -11062,6 +11518,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_sales_area_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": -8.5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "商品房销售面积(万平方米) yoy -8.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_sales_area_yoy",
       "observation_period": {
@@ -11252,6 +11727,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_sales_area_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -12.9,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "新建商品房销售面积(万平方米) yoy -12.9",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_sales_area_yoy",
       "observation_period": {
@@ -11438,6 +11932,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "新建商品房销售面积(万平方米) yoy -7.8",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_sales_area_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -8.7,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "新建商品房销售面积(万平方米) yoy -8.7",
       "revision_id": null
     },
     {
@@ -11803,6 +12316,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_sales_area_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 111735,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "商品房销售面积(万平方米) ytd 111735",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_sales_area_ytd",
       "observation_period": {
@@ -11993,6 +12525,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_sales_area_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 97385,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "新建商品房销售面积(万平方米) ytd 97385",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_sales_area_ytd",
       "observation_period": {
@@ -12179,6 +12730,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "新建商品房销售面积(万平方米) ytd 78702",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_sales_area_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 88101,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "新建商品房销售面积(万平方米) ytd 88101",
       "revision_id": null
     },
     {
@@ -12544,6 +13114,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_sales_value_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": -6.5,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "商品房销售额(亿元) yoy -6.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_sales_value_yoy",
       "observation_period": {
@@ -12734,6 +13323,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_sales_value_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -17.1,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "新建商品房销售额(亿元) yoy -17.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_sales_value_yoy",
       "observation_period": {
@@ -12920,6 +13528,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "新建商品房销售额(亿元) yoy -11.1",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_sales_value_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -12.6,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "新建商品房销售额(亿元) yoy -12.6",
       "revision_id": null
     },
     {
@@ -13285,6 +13912,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_sales_value_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 116622,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "商品房销售额(亿元) ytd 116622",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_sales_value_ytd",
       "observation_period": {
@@ -13475,6 +14121,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_sales_value_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 96750,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "新建商品房销售额(亿元) ytd 96750",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_sales_value_ytd",
       "observation_period": {
@@ -13661,6 +14326,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "新建商品房销售额(亿元) ytd 75130",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_sales_value_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 83937,
+      "unit": "cny_100m",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "新建商品房销售额(亿元) ytd 83937",
       "revision_id": null
     },
     {
@@ -14026,6 +14710,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_starts_yoy",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": -20.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房屋新开工面积(万平方米) yoy -20.4",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_starts_yoy",
       "observation_period": {
@@ -14211,6 +14914,25 @@
       "published_at": "2024-12-16T02:00:00.000Z",
       "publication_date": "2024-12-16",
       "raw_sha256": "fae3df678a8311121a06a7e43b6b602310965bacea8ff2361dee703cbc79f8c4",
+      "evidence": "房屋新开工面积(万平方米) yoy -23.0",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_starts_yoy",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": -23,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
       "evidence": "房屋新开工面积(万平方米) yoy -23.0",
       "revision_id": null
     },
@@ -14402,6 +15124,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房屋新开工面积(万平方米) yoy -20.5",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_starts_yoy",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": -20.4,
+      "unit": "percent",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房屋新开工面积(万平方米) yoy -20.4",
       "revision_id": null
     },
     {
@@ -14767,6 +15508,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202401/t20240116_1946623.html",
+      "series_id": "real_estate_starts_ytd",
+      "observation_period": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "frequency": "monthly",
+      "value": 95376,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.532Z",
+      "published_at": "2024-01-17T02:00:00.000Z",
+      "publication_date": "2024-01-17",
+      "raw_sha256": "4f25f2073d41f45127c3c60b0fa1c552f4dbc65698f5b897c1dbad8adfa57be3",
+      "evidence": "房屋新开工面积(万平方米) ytd 95376",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202403/t20240322_1948133.html",
       "series_id": "real_estate_starts_ytd",
       "observation_period": {
@@ -14957,6 +15717,25 @@
     },
     {
       "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958328.html",
+      "series_id": "real_estate_starts_ytd",
+      "observation_period": {
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "frequency": "monthly",
+      "value": 73893,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.658Z",
+      "published_at": "2025-01-17T02:00:00.000Z",
+      "publication_date": "2025-01-17",
+      "raw_sha256": "3c3aec5914c149e01ab22e594dd6b59ee45b0b98979aa71934a535af60e0df38",
+      "evidence": "房屋新开工面积(万平方米) ytd 73893",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
       "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202503/t20250317_1959016.html",
       "series_id": "real_estate_starts_ytd",
       "observation_period": {
@@ -15143,6 +15922,25 @@
       "publication_date": "2025-12-15",
       "raw_sha256": "4ee88f8d3ba300a2d047f780486fb150a15e448f524d9d58ab49bf78107dd15a",
       "evidence": "房屋新开工面积(万平方米) ytd 53457",
+      "revision_id": null
+    },
+    {
+      "source_id": "nbs-real-estate",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962324.html",
+      "series_id": "real_estate_starts_ytd",
+      "observation_period": {
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "frequency": "monthly",
+      "value": 58770,
+      "unit": "sqm_10k",
+      "status": "observed",
+      "fetched_at": "2026-11-18T03:39:50.589Z",
+      "published_at": "2026-01-19T02:00:00.000Z",
+      "publication_date": "2026-01-19",
+      "raw_sha256": "193910cc11c03b6dc4d55b7e6812098433daf5d4f4c6b8612af324b31645cbb0",
+      "evidence": "房屋新开工面积(万平方米) ytd 58770",
       "revision_id": null
     },
     {
@@ -17998,157 +18796,101 @@
     },
     {
       "series_id": "real_estate_investment_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_investment_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_starts_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_starts_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_construction_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_construction_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_completions_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_completions_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_sales_area_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_sales_area_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_sales_value_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_sales_value_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_funds_ytd",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "real_estate_funds_yoy",
-      "count": 39,
+      "count": 42,
       "first": "2023-01-01",
       "last": "2026-10-31",
-      "missing": [
-        "2023-12-31",
-        "2024-12-31",
-        "2025-12-31"
-      ]
+      "missing": []
     },
     {
       "series_id": "migrant_total",
@@ -18223,7 +18965,7 @@
   ],
   "source_status": {
     "nbs-pmi": "available",
-    "nbs-real-estate": "partial",
+    "nbs-real-estate": "available",
     "nbs-migrant": "available",
     "nbs-construction": "available",
     "financial": "unconnected"

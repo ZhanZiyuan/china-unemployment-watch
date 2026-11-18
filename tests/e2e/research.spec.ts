@@ -31,6 +31,12 @@ test('plots the official joint period with no observations on unrelated days', a
   await chart.getByLabel('Start date').fill('2024-12-30');
   await chart.getByLabel('End date').fill('2024-12-30');
   await expect(chart.getByRole('status')).toHaveText('No observations in this date range.');
+  await chart.getByRole('button', { name: 'Reset' }).click();
+  await chart.getByLabel('Start date').fill('2024-12-31');
+  await chart.getByLabel('End date').fill('2024-12-31');
+  await expect(point).toContainText('-10.6');
+  await expect(point).toContainText('Jan 1, 2024');
+  await expect(point.getByRole('link')).toHaveAttribute('href', /t20250117_1958328\.html$/);
 });
 
 test.describe('research at phone width', () => {
