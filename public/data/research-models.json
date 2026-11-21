@@ -1,10 +1,10 @@
 {
   "algorithm_version": "sector-pressure-1.0.0",
-  "dataset_version": "f1a2c761376325989f7a67f85c59081c78f770ce659cdeeb511b21a744dedf27",
+  "dataset_version": "e02620ca055f7366e5d5e32483d48b316a0d371fd8e2c4327e97c85ed5c44a4f",
   "core_dataset_version": "de656430e957984e6914378b2e852c224b7839031ba852afa6b5d9a93c0149fa",
   "calibration_sha256": "8780c1b6a0863fd1270529b7e74152fa311f66a09ddc9f1c138789ab423fd604",
   "pressure": {
-    "status": "exploratory",
+    "status": "fetch_failed",
     "values": [
       {
         "observation_period": {

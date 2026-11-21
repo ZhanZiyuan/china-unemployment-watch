@@ -1,6 +1,6 @@
 {
   "schema_version": "research-1.0.0",
-  "dataset_version": "f1a2c761376325989f7a67f85c59081c78f770ce659cdeeb511b21a744dedf27",
+  "dataset_version": "e02620ca055f7366e5d5e32483d48b316a0d371fd8e2c4327e97c85ed5c44a4f",
   "series": [
     {
       "source_id": "nbs-pmi",
@@ -18964,7 +18964,7 @@
     }
   ],
   "source_status": {
-    "nbs-pmi": "available",
+    "nbs-pmi": "fetch_failed",
     "nbs-real-estate": "available",
     "nbs-migrant": "available",
     "nbs-construction": "available",
